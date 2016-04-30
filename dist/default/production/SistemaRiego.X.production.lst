@@ -1,0 +1,3314 @@
+
+
+Microchip Technology PIC18 LITE Macro Assembler V1.36 build -262312587 
+                                                                                               Sat Apr 30 16:13:53 2016
+
+Microchip Technology Omniscient Code Generator v1.36 (Free mode) build 201601150325
+     1                           	processor	18F4585
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	lm
+     5                           	psect	idataCOMRAM,global,class=CODE,delta=1
+     6                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     7                           	psect	bssCOMRAM,global,class=COMRAM,space=1,delta=1
+     8                           	psect	dataCOMRAM,global,class=COMRAM,space=1,delta=1
+     9                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+    10                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1
+    11                           	psect	text0,global,reloc=2,class=CODE,delta=1
+    12                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    13                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    14                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    15                           	psect	text4,global,reloc=2,class=CODE,delta=1
+    16                           	psect	text5,global,reloc=2,class=CODE,delta=1
+    17                           	psect	text6,global,reloc=2,class=CODE,delta=1
+    18                           	psect	text7,global,reloc=2,class=CODE,delta=1
+    19                           	psect	intcodelo,global,reloc=2,class=CODE,delta=1
+    20                           	psect	intcode,global,reloc=2,class=CODE,delta=1
+    21                           	psect	intcode_body,global,reloc=2,class=CODE,delta=1
+    22                           	psect	text10,global,reloc=2,class=CODE,delta=1
+    23                           	psect	text11,global,reloc=2,class=CODE,delta=1
+    24                           	psect	text12,global,reloc=2,class=CODE,delta=1
+    25                           	psect	text13,global,reloc=2,class=CODE,delta=1
+    26                           	psect	text14,global,reloc=2,class=CODE,delta=1
+    27                           	psect	text15,global,reloc=2,class=CODE,delta=1
+    28                           	psect	text16,global,reloc=2,class=CODE,delta=1
+    29                           	psect	text17,global,reloc=2,class=CODE,delta=1
+    30                           	psect	text18,global,reloc=2,class=CODE,delta=1
+    31                           	psect	text19,global,reloc=2,class=CODE,delta=1
+    32                           	psect	text20,global,reloc=2,class=CODE,delta=1
+    33                           	psect	text21,global,reloc=2,class=CODE,delta=1
+    34                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1
+    35                           	psect	rparam,global,class=COMRAM,space=1,delta=1
+    36                           	psect	temp,global,ovrld,common,class=COMRAM,space=1,delta=1
+    37  0000                     
+    38                           	psect	idataCOMRAM
+    39  00054E                     __pidataCOMRAM:
+    40                           	opt stack 0
+    41                           
+    42                           ;initializer for _CASTELLO
+    43  00054E  43                 	db	67
+    44  00054F  61                 	db	97
+    45  000550  73                 	db	115
+    46  000551  74                 	db	116
+    47  000552  65                 	db	101
+    48  000553  6C                 	db	108
+    49  000554  6C                 	db	108
+    50  000555  6F                 	db	111
+    51  000556  20                 	db	32
+    52  000557  3C                 	db	60
+    53  000558  33                 	db	51
+    54  000559  00                 	db	0
+    55                           
+    56                           ;initializer for _GREETING
+    57  00055A  48                 	db	72
+    58  00055B  65                 	db	101
+    59  00055C  6C                 	db	108
+    60  00055D  6C                 	db	108
+    61  00055E  6F                 	db	111
+    62  00055F  20                 	db	32
+    63  000560  57                 	db	87
+    64  000561  6F                 	db	111
+    65  000562  72                 	db	114
+    66  000563  6C                 	db	108
+    67  000564  64                 	db	100
+    68  000565  00                 	db	0
+    69  0000                     _ADCON1	set	4033
+    70  0000                     _CMCON	set	4020
+    71  0000                     _CVRCONbits	set	4021
+    72  0000                     _INTCON2bits	set	4081
+    73  0000                     _INTCONbits	set	4082
+    74  0000                     _LATB	set	3978
+    75  0000                     _LATC	set	3979
+    76  0000                     _OSCCON	set	4051
+    77  0000                     _PORTB	set	3969
+    78  0000                     _PORTBbits	set	3969
+    79  0000                     _PORTC	set	3970
+    80  0000                     _PORTCbits	set	3970
+    81  0000                     _PORTD	set	3971
+    82  0000                     _PORTDbits	set	3971
+    83  0000                     _RCONbits	set	4048
+    84  0000                     _TRISB	set	3987
+    85  0000                     _TRISBbits	set	3987
+    86  0000                     _TRISC	set	3988
+    87  0000                     _TRISD	set	3989
+    88                           
+    89                           ; #config settings
+    90  0000                     
+    91                           	psect	cinit
+    92  000454                     __pcinit:
+    93                           	opt stack 0
+    94  000454                     start_initialization:
+    95                           	opt stack 0
+    96  000454                     __initialization:
+    97                           	opt stack 0
+    98                           
+    99                           ; Clear objects allocated to COMRAM (4 bytes)
+   100  000454  6A3B               	clrf	(__pbssCOMRAM+3)& (0+255),c
+   101  000456  6A3A               	clrf	(__pbssCOMRAM+2)& (0+255),c
+   102  000458  6A39               	clrf	(__pbssCOMRAM+1)& (0+255),c
+   103  00045A  6A38               	clrf	__pbssCOMRAM& (0+255),c
+   104                           
+   105                           ; Initialize objects allocated to COMRAM (24 bytes)
+   106                           ; load TBLPTR registers with __pidataCOMRAM
+   107  00045C  0E4E               	movlw	low __pidataCOMRAM
+   108  00045E  6EF6               	movwf	tblptrl,c
+   109  000460  0E05               	movlw	high __pidataCOMRAM
+   110  000462  6EF7               	movwf	tblptrh,c
+   111  000464  0E00               	movlw	low (__pidataCOMRAM shr (0+16))
+   112  000466  6EF8               	movwf	tblptru,c
+   113  000468  EE00  F020         	lfsr	0,__pdataCOMRAM
+   114  00046C  EE10 F018          	lfsr	1,24
+   115  000470                     copy_data0:
+   116  000470  0009               	tblrd		*+
+   117  000472  CFF5 FFEE          	movff	tablat,postinc0
+   118  000476  50E5               	movf	postdec1,w,c
+   119  000478  50E1               	movf	fsr1l,w,c
+   120  00047A  E1FA               	bnz	copy_data0
+   121  00047C                     end_of_initialization:
+   122                           	opt stack 0
+   123  00047C                     __end_of__initialization:
+   124                           	opt stack 0
+   125  00047C  903C               	bcf	int$flags,0,c	;clear compiler interrupt flag (level 1)
+   126  00047E  923C               	bcf	int$flags,1,c	;clear compiler interrupt flag (level 2)
+   127  000480  0E00               	movlw	low (__Lmediumconst shr (0+16))
+   128  000482  6EF8               	movwf	tblptru,c
+   129  000484  0100               	movlb	0
+   130  000486  EFE8  F001         	goto	_main	;jump to C main() function
+   131                           tblptru	equ	0xFF8
+   132                           tblptrh	equ	0xFF7
+   133                           tblptrl	equ	0xFF6
+   134                           tablat	equ	0xFF5
+   135                           postinc0	equ	0xFEE
+   136                           postdec1	equ	0xFE5
+   137                           fsr1l	equ	0xFE1
+   138                           
+   139                           	psect	bssCOMRAM
+   140  000038                     __pbssCOMRAM:
+   141                           	opt stack 0
+   142  000038                     _columnSelected:
+   143                           	opt stack 0
+   144  000038                     	ds	1
+   145  000039                     _keyCode:
+   146                           	opt stack 0
+   147  000039                     	ds	1
+   148  00003A                     _oneShotFlag:
+   149                           	opt stack 0
+   150  00003A                     	ds	1
+   151  00003B                     _rowSelected:
+   152                           	opt stack 0
+   153  00003B                     	ds	1
+   154                           tblptru	equ	0xFF8
+   155                           tblptrh	equ	0xFF7
+   156                           tblptrl	equ	0xFF6
+   157                           tablat	equ	0xFF5
+   158                           postinc0	equ	0xFEE
+   159                           postdec1	equ	0xFE5
+   160                           fsr1l	equ	0xFE1
+   161                           
+   162                           	psect	dataCOMRAM
+   163  000020                     __pdataCOMRAM:
+   164                           	opt stack 0
+   165  000020                     _CASTELLO:
+   166                           	opt stack 0
+   167  000020                     	ds	12
+   168  00002C                     _GREETING:
+   169                           	opt stack 0
+   170  00002C                     	ds	12
+   171                           tblptru	equ	0xFF8
+   172                           tblptrh	equ	0xFF7
+   173                           tblptrl	equ	0xFF6
+   174                           tablat	equ	0xFF5
+   175                           postinc0	equ	0xFEE
+   176                           postdec1	equ	0xFE5
+   177                           fsr1l	equ	0xFE1
+   178                           
+   179                           	psect	cstackBANK0
+   180  000060                     __pcstackBANK0:
+   181                           	opt stack 0
+   182  000060                     ??_ISRL:
+   183                           
+   184                           ; 1 bytes @ 0x0
+   185  000060                     	ds	17
+   186                           tblptru	equ	0xFF8
+   187                           tblptrh	equ	0xFF7
+   188                           tblptrl	equ	0xFF6
+   189                           tablat	equ	0xFF5
+   190                           postinc0	equ	0xFEE
+   191                           postdec1	equ	0xFE5
+   192                           fsr1l	equ	0xFE1
+   193                           
+   194                           	psect	cstackCOMRAM
+   195  000001                     __pcstackCOMRAM:
+   196                           	opt stack 0
+   197  000001                     ??_delay:
+   198  000001                     determinePressedRow@i:
+   199                           	opt stack 0
+   200  000001                     i2shortDelay@L1REG:
+   201                           	opt stack 0
+   202                           
+   203                           ; 1 bytes @ 0x0
+   204  000001                     	ds	1
+   205  000002                     displayCharOnLCD@character:
+   206                           	opt stack 0
+   207  000002                     delay@L1REG:
+   208                           	opt stack 0
+   209                           
+   210                           ; 1 bytes @ 0x1
+   211  000002                     	ds	1
+   212  000003                     delay@L2REG:
+   213                           	opt stack 0
+   214  000003                     displayLineOnLCD@array:
+   215                           	opt stack 0
+   216                           
+   217                           ; 2 bytes @ 0x2
+   218  000003                     	ds	1
+   219  000004                     
+   220                           ; 1 bytes @ 0x3
+   221  000004                     	ds	1
+   222  000005                     displayLineOnLCD@sizeOfArray:
+   223                           	opt stack 0
+   224                           
+   225                           ; 1 bytes @ 0x4
+   226  000005                     	ds	1
+   227  000006                     ??_displayLineOnLCD:
+   228                           
+   229                           ; 1 bytes @ 0x5
+   230  000006                     	ds	7
+   231  00000D                     displayLineOnLCD@i:
+   232                           	opt stack 0
+   233                           
+   234                           ; 1 bytes @ 0xC
+   235  00000D                     	ds	1
+   236  00000E                     pressedKeyAction@keyCode:
+   237                           	opt stack 0
+   238                           
+   239                           ; 1 bytes @ 0xD
+   240  00000E                     	ds	1
+   241  00000F                     ??_ISRH:
+   242                           
+   243                           ; 1 bytes @ 0xE
+   244  00000F                     	ds	14
+   245  00001D                     shortDelay@L1REG:
+   246                           	opt stack 0
+   247  00001D                     longDelay@L1REG:
+   248                           	opt stack 0
+   249                           
+   250                           ; 1 bytes @ 0x1C
+   251  00001D                     	ds	1
+   252  00001E                     longDelay@L2REG:
+   253                           	opt stack 0
+   254  00001E                     command@x:
+   255                           	opt stack 0
+   256                           
+   257                           ; 1 bytes @ 0x1D
+   258  00001E                     	ds	1
+   259  00001F                     longDelay@L3REG:
+   260                           	opt stack 0
+   261                           
+   262                           ; 1 bytes @ 0x1E
+   263  00001F                     	ds	1
+   264  000020                     tblptru	equ	0xFF8
+   265                           tblptrh	equ	0xFF7
+   266                           tblptrl	equ	0xFF6
+   267                           tablat	equ	0xFF5
+   268                           postinc0	equ	0xFEE
+   269                           postdec1	equ	0xFE5
+   270                           fsr1l	equ	0xFE1
+   271                           
+   272                           ; 1 bytes @ 0x1F
+   273 ;;
+   274 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   275 ;;
+   276 ;; *************** function _main *****************
+   277 ;; Defined at:
+   278 ;;		line 107 in file "SysRiego.c"
+   279 ;; Parameters:    Size  Location     Type
+   280 ;;		None
+   281 ;; Auto vars:     Size  Location     Type
+   282 ;;		None
+   283 ;; Return value:  Size  Location     Type
+   284 ;;                  1    wreg      void 
+   285 ;; Registers used:
+   286 ;;		wreg, status,2, status,0, cstack
+   287 ;; Tracked objects:
+   288 ;;		On entry : 0/0
+   289 ;;		On exit  : 0/0
+   290 ;;		Unchanged: 0/0
+   291 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+   292 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   293 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   294 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   295 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   296 ;;Total ram usage:        0 bytes
+   297 ;; Hardware stack levels required when called:   11
+   298 ;; This function calls:
+   299 ;;		_LCDSetup
+   300 ;;		_portDAsOutput
+   301 ;; This function is called by:
+   302 ;;		Startup code after reset
+   303 ;; This function uses a non-reentrant model
+   304 ;;
+   305                           
+   306                           	psect	text0
+   307  0003D0                     __ptext0:
+   308                           	opt stack 0
+   309  0003D0                     _main:
+   310                           	opt stack 20
+   311                           
+   312                           ;SysRiego.c: 110: OSCCON = 0x60;
+   313                           
+   314                           ;incstack = 0
+   315  0003D0  0E60               	movlw	96
+   316  0003D2  6ED3               	movwf	4051,c	;volatile
+   317                           
+   318                           ;SysRiego.c: 114: CMCON = 0x07;
+   319  0003D4  0E07               	movlw	7
+   320  0003D6  6EB4               	movwf	4020,c	;volatile
+   321                           
+   322                           ;SysRiego.c: 115: CVRCONbits.CVREN = 0;
+   323  0003D8  9EB5               	bcf	4021,7,c	;volatile
+   324                           
+   325                           ;SysRiego.c: 116: ADCON1 = 0x0F;
+   326  0003DA  0E0F               	movlw	15
+   327  0003DC  6EC1               	movwf	4033,c	;volatile
+   328                           
+   329                           ;SysRiego.c: 121: PORTB = 0X00;
+   330  0003DE  0E00               	movlw	0
+   331  0003E0  6E81               	movwf	3969,c	;volatile
+   332                           
+   333                           ;SysRiego.c: 122: LATB = 0X00;
+   334  0003E2  0E00               	movlw	0
+   335  0003E4  6E8A               	movwf	3978,c	;volatile
+   336                           
+   337                           ;SysRiego.c: 123: TRISB = 0XFF;
+   338  0003E6  6893               	setf	3987,c	;volatile
+   339                           
+   340                           ;SysRiego.c: 125: PORTC = 0X00;
+   341  0003E8  0E00               	movlw	0
+   342  0003EA  6E82               	movwf	3970,c	;volatile
+   343                           
+   344                           ;SysRiego.c: 126: LATC = 0X00;
+   345  0003EC  0E00               	movlw	0
+   346  0003EE  6E8B               	movwf	3979,c	;volatile
+   347                           
+   348                           ;SysRiego.c: 127: TRISC = 0X00;
+   349  0003F0  0E00               	movlw	0
+   350  0003F2  6E94               	movwf	3988,c	;volatile
+   351                           
+   352                           ;SysRiego.c: 130: TRISBbits.RB0 = 0;
+   353  0003F4  9093               	bcf	3987,0,c	;volatile
+   354                           
+   355                           ;SysRiego.c: 131: TRISBbits.RB1 = 0;
+   356  0003F6  9293               	bcf	3987,1,c	;volatile
+   357                           
+   358                           ;SysRiego.c: 132: TRISBbits.RB2 = 0;
+   359  0003F8  9493               	bcf	3987,2,c	;volatile
+   360                           
+   361                           ;SysRiego.c: 133: TRISBbits.RB3 = 0;
+   362  0003FA  9693               	bcf	3987,3,c	;volatile
+   363                           
+   364                           ;SysRiego.c: 136: RCONbits.IPEN = 1;
+   365  0003FC  8ED0               	bsf	4048,7,c	;volatile
+   366                           
+   367                           ;SysRiego.c: 139: INTCONbits.GIEH = 1;
+   368  0003FE  8EF2               	bsf	intcon,7,c	;volatile
+   369                           
+   370                           ;SysRiego.c: 142: INTCONbits.GIEL = 1;
+   371  000400  8CF2               	bsf	intcon,6,c	;volatile
+   372                           
+   373                           ;SysRiego.c: 145: INTCON2bits.RBPU = 0;
+   374  000402  9EF1               	bcf	intcon2,7,c	;volatile
+   375                           
+   376                           ;SysRiego.c: 148: INTCONbits.RBIE = 1;
+   377  000404  86F2               	bsf	intcon,3,c	;volatile
+   378                           
+   379                           ;SysRiego.c: 151: INTCONbits.RBIF = 0;
+   380  000406  90F2               	bcf	intcon,0,c	;volatile
+   381                           
+   382                           ;SysRiego.c: 154: INTCON2bits.RBIP = 1;
+   383  000408  80F1               	bsf	intcon2,0,c	;volatile
+   384                           
+   385                           ;SysRiego.c: 156: portDAsOutput();
+   386  00040A  ECDF  F002         	call	_portDAsOutput	;wreg free
+   387                           
+   388                           ;SysRiego.c: 159: LCDSetup();
+   389  00040E  EC5C  F002         	call	_LCDSetup	;wreg free
+   390  000412                     l69:
+   391  000412  D7FF               	goto	l69
+   392  000414                     __end_of_main:
+   393                           	opt stack 0
+   394                           tblptru	equ	0xFF8
+   395                           tblptrh	equ	0xFF7
+   396                           tblptrl	equ	0xFF6
+   397                           tablat	equ	0xFF5
+   398                           intcon	equ	0xFF2
+   399                           intcon2	equ	0xFF1
+   400                           postinc0	equ	0xFEE
+   401                           postdec1	equ	0xFE5
+   402                           fsr1l	equ	0xFE1
+   403                           
+   404 ;; *************** function _LCDSetup *****************
+   405 ;; Defined at:
+   406 ;;		line 183 in file "SysRiego.c"
+   407 ;; Parameters:    Size  Location     Type
+   408 ;;		None
+   409 ;; Auto vars:     Size  Location     Type
+   410 ;;		None
+   411 ;; Return value:  Size  Location     Type
+   412 ;;                  1    wreg      void 
+   413 ;; Registers used:
+   414 ;;		wreg, status,2, status,0, cstack
+   415 ;; Tracked objects:
+   416 ;;		On entry : 0/0
+   417 ;;		On exit  : 0/0
+   418 ;;		Unchanged: 0/0
+   419 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+   420 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   421 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   422 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   423 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   424 ;;Total ram usage:        0 bytes
+   425 ;; Hardware stack levels used:    1
+   426 ;; Hardware stack levels required when called:   10
+   427 ;; This function calls:
+   428 ;;		_command
+   429 ;;		_isReady
+   430 ;;		_longDelay
+   431 ;; This function is called by:
+   432 ;;		_main
+   433 ;; This function uses a non-reentrant model
+   434 ;;
+   435                           
+   436                           	psect	text1
+   437  0004B8                     __ptext1:
+   438                           	opt stack 0
+   439  0004B8                     _LCDSetup:
+   440                           	opt stack 20
+   441                           
+   442                           ;SysRiego.c: 184: PORTCbits.RC2 = 0;
+   443                           
+   444                           ;incstack = 0
+   445  0004B8  9482               	bcf	3970,2,c	;volatile
+   446                           
+   447                           ;SysRiego.c: 185: longDelay();
+   448  0004BA  EC45  F002         	call	_longDelay	;wreg free
+   449                           
+   450                           ;SysRiego.c: 186: command(0x38);
+   451  0004BE  0E38               	movlw	56
+   452  0004C0  ECB3  F002         	call	_command
+   453                           
+   454                           ;SysRiego.c: 187: longDelay();
+   455  0004C4  EC45  F002         	call	_longDelay	;wreg free
+   456                           
+   457                           ;SysRiego.c: 188: command(0x0F);
+   458  0004C8  0E0F               	movlw	15
+   459  0004CA  ECB3  F002         	call	_command
+   460                           
+   461                           ;SysRiego.c: 189: isReady();
+   462  0004CE  EC6F  F002         	call	_isReady	;wreg free
+   463                           
+   464                           ;SysRiego.c: 190: command(0x01);
+   465  0004D2  0E01               	movlw	1
+   466  0004D4  ECB3  F002         	call	_command
+   467                           
+   468                           ;SysRiego.c: 191: isReady();
+   469  0004D8  EC6F  F002         	call	_isReady	;wreg free
+   470  0004DC  0012               	return		;funcret
+   471  0004DE                     __end_of_LCDSetup:
+   472                           	opt stack 0
+   473                           tblptru	equ	0xFF8
+   474                           tblptrh	equ	0xFF7
+   475                           tblptrl	equ	0xFF6
+   476                           tablat	equ	0xFF5
+   477                           intcon	equ	0xFF2
+   478                           intcon2	equ	0xFF1
+   479                           postinc0	equ	0xFEE
+   480                           postdec1	equ	0xFE5
+   481                           fsr1l	equ	0xFE1
+   482                           
+   483 ;; *************** function _longDelay *****************
+   484 ;; Defined at:
+   485 ;;		line 201 in file "SysRiego.c"
+   486 ;; Parameters:    Size  Location     Type
+   487 ;;		None
+   488 ;; Auto vars:     Size  Location     Type
+   489 ;;  L3REG           1   30[COMRAM] unsigned char 
+   490 ;;  L2REG           1   29[COMRAM] unsigned char 
+   491 ;;  L1REG           1   28[COMRAM] unsigned char 
+   492 ;; Return value:  Size  Location     Type
+   493 ;;                  1    wreg      void 
+   494 ;; Registers used:
+   495 ;;		wreg, status,2, status,0
+   496 ;; Tracked objects:
+   497 ;;		On entry : 0/0
+   498 ;;		On exit  : 0/0
+   499 ;;		Unchanged: 0/0
+   500 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+   501 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   502 ;;      Locals:         3       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   503 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   504 ;;      Totals:         3       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   505 ;;Total ram usage:        3 bytes
+   506 ;; Hardware stack levels used:    1
+   507 ;; Hardware stack levels required when called:    8
+   508 ;; This function calls:
+   509 ;;		Nothing
+   510 ;; This function is called by:
+   511 ;;		_LCDSetup
+   512 ;; This function uses a non-reentrant model
+   513 ;;
+   514                           
+   515                           	psect	text2
+   516  00048A                     __ptext2:
+   517                           	opt stack 0
+   518  00048A                     _longDelay:
+   519                           	opt stack 21
+   520                           
+   521                           ;SysRiego.c: 202: unsigned char L1REG = 2;
+   522                           
+   523                           ;incstack = 0
+   524  00048A  0E02               	movlw	2
+   525  00048C  6E1D               	movwf	longDelay@L1REG,c
+   526                           
+   527                           ;SysRiego.c: 203: unsigned char L2REG = 162;
+   528  00048E  0EA2               	movlw	162
+   529  000490  6E1E               	movwf	longDelay@L2REG,c
+   530                           
+   531                           ;SysRiego.c: 204: unsigned char L3REG = 255;
+   532  000492  681F               	setf	longDelay@L3REG,c
+   533                           
+   534                           ;SysRiego.c: 206: while(L1REG-- > 0){
+   535  000494  D00C               	goto	l1173
+   536  000496                     l1167:
+   537                           
+   538                           ;SysRiego.c: 207: L2REG = 162;
+   539  000496  0EA2               	movlw	162
+   540  000498  6E1E               	movwf	longDelay@L2REG,c
+   541                           
+   542                           ;SysRiego.c: 208: while(L2REG-- > 0){
+   543  00049A  D005               	goto	l1171
+   544  00049C                     l93:
+   545                           
+   546                           ;SysRiego.c: 209: L3REG = 255;
+   547  00049C  681F               	setf	longDelay@L3REG,c
+   548  00049E                     l1169:
+   549  00049E  061F               	decf	longDelay@L3REG,f,c
+   550  0004A0  281F               	incf	longDelay@L3REG,w,c
+   551  0004A2  A4D8               	btfss	status,2,c
+   552  0004A4  D7FC               	goto	l1169
+   553  0004A6                     l1171:
+   554  0004A6  061E               	decf	longDelay@L2REG,f,c
+   555  0004A8  281E               	incf	longDelay@L2REG,w,c
+   556  0004AA  A4D8               	btfss	status,2,c
+   557  0004AC  D7F7               	goto	l93
+   558  0004AE                     l1173:
+   559  0004AE  061D               	decf	longDelay@L1REG,f,c
+   560  0004B0  281D               	incf	longDelay@L1REG,w,c
+   561  0004B2  B4D8               	btfsc	status,2,c
+   562  0004B4  0012               	return	
+   563  0004B6  D7EF               	goto	l1167
+   564  0004B8                     __end_of_longDelay:
+   565                           	opt stack 0
+   566                           tblptru	equ	0xFF8
+   567                           tblptrh	equ	0xFF7
+   568                           tblptrl	equ	0xFF6
+   569                           tablat	equ	0xFF5
+   570                           intcon	equ	0xFF2
+   571                           intcon2	equ	0xFF1
+   572                           postinc0	equ	0xFEE
+   573                           postdec1	equ	0xFE5
+   574                           fsr1l	equ	0xFE1
+   575                           status	equ	0xFD8
+   576                           
+   577 ;; *************** function _isReady *****************
+   578 ;; Defined at:
+   579 ;;		line 223 in file "SysRiego.c"
+   580 ;; Parameters:    Size  Location     Type
+   581 ;;		None
+   582 ;; Auto vars:     Size  Location     Type
+   583 ;;		None
+   584 ;; Return value:  Size  Location     Type
+   585 ;;                  1    wreg      void 
+   586 ;; Registers used:
+   587 ;;		wreg, status,2, status,0, cstack
+   588 ;; Tracked objects:
+   589 ;;		On entry : 0/0
+   590 ;;		On exit  : 0/0
+   591 ;;		Unchanged: 0/0
+   592 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+   593 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   594 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   595 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   596 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   597 ;;Total ram usage:        0 bytes
+   598 ;; Hardware stack levels used:    1
+   599 ;; Hardware stack levels required when called:    9
+   600 ;; This function calls:
+   601 ;;		_portDAsInput
+   602 ;;		_portDAsOutput
+   603 ;;		_shortDelay
+   604 ;; This function is called by:
+   605 ;;		_LCDSetup
+   606 ;; This function uses a non-reentrant model
+   607 ;;
+   608                           
+   609                           	psect	text3
+   610  0004DE                     __ptext3:
+   611                           	opt stack 0
+   612  0004DE                     _isReady:
+   613                           	opt stack 20
+   614                           
+   615                           ;SysRiego.c: 224: portDAsInput();
+   616                           
+   617                           ;incstack = 0
+   618  0004DE  ECE2  F002         	call	_portDAsInput	;wreg free
+   619                           
+   620                           ;SysRiego.c: 225: PORTCbits.RC0 = 0;
+   621  0004E2  9082               	bcf	3970,0,c	;volatile
+   622                           
+   623                           ;SysRiego.c: 226: PORTCbits.RC1 = 1;
+   624  0004E4  8282               	bsf	3970,1,c	;volatile
+   625                           
+   626                           ;SysRiego.c: 228: while(PORTDbits.RD7 == 1){
+   627  0004E6  D004               	goto	l1197
+   628  0004E8                     l106:
+   629                           
+   630                           ;SysRiego.c: 229: PORTCbits.RC2 = 1;
+   631  0004E8  8482               	bsf	3970,2,c	;volatile
+   632                           
+   633                           ;SysRiego.c: 230: shortDelay();
+   634  0004EA  ECC7  F002         	call	_shortDelay	;wreg free
+   635                           
+   636                           ;SysRiego.c: 231: PORTCbits.RC2 = 0;
+   637  0004EE  9482               	bcf	3970,2,c	;volatile
+   638  0004F0                     l1197:
+   639  0004F0  BE83               	btfsc	3971,7,c	;volatile
+   640  0004F2  D7FA               	goto	l106
+   641                           
+   642                           ;SysRiego.c: 232: }
+   643                           ;SysRiego.c: 233: portDAsOutput();
+   644  0004F4  ECDF  F002         	call	_portDAsOutput	;wreg free
+   645  0004F8  0012               	return		;funcret
+   646  0004FA                     __end_of_isReady:
+   647                           	opt stack 0
+   648                           tblptru	equ	0xFF8
+   649                           tblptrh	equ	0xFF7
+   650                           tblptrl	equ	0xFF6
+   651                           tablat	equ	0xFF5
+   652                           intcon	equ	0xFF2
+   653                           intcon2	equ	0xFF1
+   654                           postinc0	equ	0xFEE
+   655                           postdec1	equ	0xFE5
+   656                           fsr1l	equ	0xFE1
+   657                           status	equ	0xFD8
+   658                           
+   659 ;; *************** function _portDAsOutput *****************
+   660 ;; Defined at:
+   661 ;;		line 179 in file "SysRiego.c"
+   662 ;; Parameters:    Size  Location     Type
+   663 ;;		None
+   664 ;; Auto vars:     Size  Location     Type
+   665 ;;		None
+   666 ;; Return value:  Size  Location     Type
+   667 ;;                  1    wreg      void 
+   668 ;; Registers used:
+   669 ;;		wreg, status,2
+   670 ;; Tracked objects:
+   671 ;;		On entry : 0/0
+   672 ;;		On exit  : 0/0
+   673 ;;		Unchanged: 0/0
+   674 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+   675 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   676 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   677 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   678 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   679 ;;Total ram usage:        0 bytes
+   680 ;; Hardware stack levels used:    1
+   681 ;; Hardware stack levels required when called:    8
+   682 ;; This function calls:
+   683 ;;		Nothing
+   684 ;; This function is called by:
+   685 ;;		_main
+   686 ;;		_isReady
+   687 ;; This function uses a non-reentrant model
+   688 ;;
+   689                           
+   690                           	psect	text4
+   691  0005BE                     __ptext4:
+   692                           	opt stack 0
+   693  0005BE                     _portDAsOutput:
+   694                           	opt stack 22
+   695                           
+   696                           ;SysRiego.c: 180: TRISD = 0x00;
+   697                           
+   698                           ;incstack = 0
+   699  0005BE  0E00               	movlw	0
+   700  0005C0  6E95               	movwf	3989,c	;volatile
+   701  0005C2  0012               	return		;funcret
+   702  0005C4                     __end_of_portDAsOutput:
+   703                           	opt stack 0
+   704                           tblptru	equ	0xFF8
+   705                           tblptrh	equ	0xFF7
+   706                           tblptrl	equ	0xFF6
+   707                           tablat	equ	0xFF5
+   708                           intcon	equ	0xFF2
+   709                           intcon2	equ	0xFF1
+   710                           postinc0	equ	0xFEE
+   711                           postdec1	equ	0xFE5
+   712                           fsr1l	equ	0xFE1
+   713                           status	equ	0xFD8
+   714                           
+   715 ;; *************** function _portDAsInput *****************
+   716 ;; Defined at:
+   717 ;;		line 175 in file "SysRiego.c"
+   718 ;; Parameters:    Size  Location     Type
+   719 ;;		None
+   720 ;; Auto vars:     Size  Location     Type
+   721 ;;		None
+   722 ;; Return value:  Size  Location     Type
+   723 ;;                  1    wreg      void 
+   724 ;; Registers used:
+   725 ;;		None
+   726 ;; Tracked objects:
+   727 ;;		On entry : 0/0
+   728 ;;		On exit  : 0/0
+   729 ;;		Unchanged: 0/0
+   730 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+   731 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   732 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   733 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   734 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   735 ;;Total ram usage:        0 bytes
+   736 ;; Hardware stack levels used:    1
+   737 ;; Hardware stack levels required when called:    8
+   738 ;; This function calls:
+   739 ;;		Nothing
+   740 ;; This function is called by:
+   741 ;;		_isReady
+   742 ;; This function uses a non-reentrant model
+   743 ;;
+   744                           
+   745                           	psect	text5
+   746  0005C4                     __ptext5:
+   747                           	opt stack 0
+   748  0005C4                     _portDAsInput:
+   749                           	opt stack 20
+   750                           
+   751                           ;SysRiego.c: 176: TRISD = 0xFF;
+   752                           
+   753                           ;incstack = 0
+   754  0005C4  6895               	setf	3989,c	;volatile
+   755  0005C6  0012               	return		;funcret
+   756  0005C8                     __end_of_portDAsInput:
+   757                           	opt stack 0
+   758                           tblptru	equ	0xFF8
+   759                           tblptrh	equ	0xFF7
+   760                           tblptrl	equ	0xFF6
+   761                           tablat	equ	0xFF5
+   762                           intcon	equ	0xFF2
+   763                           intcon2	equ	0xFF1
+   764                           postinc0	equ	0xFEE
+   765                           postdec1	equ	0xFE5
+   766                           fsr1l	equ	0xFE1
+   767                           status	equ	0xFD8
+   768                           
+   769 ;; *************** function _command *****************
+   770 ;; Defined at:
+   771 ;;		line 215 in file "SysRiego.c"
+   772 ;; Parameters:    Size  Location     Type
+   773 ;;  x               1    wreg     unsigned char 
+   774 ;; Auto vars:     Size  Location     Type
+   775 ;;  x               1   29[COMRAM] unsigned char 
+   776 ;; Return value:  Size  Location     Type
+   777 ;;                  1    wreg      void 
+   778 ;; Registers used:
+   779 ;;		wreg, status,2, status,0, cstack
+   780 ;; Tracked objects:
+   781 ;;		On entry : 0/0
+   782 ;;		On exit  : 0/0
+   783 ;;		Unchanged: 0/0
+   784 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+   785 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   786 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   787 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   788 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   789 ;;Total ram usage:        1 bytes
+   790 ;; Hardware stack levels used:    1
+   791 ;; Hardware stack levels required when called:    9
+   792 ;; This function calls:
+   793 ;;		_shortDelay
+   794 ;; This function is called by:
+   795 ;;		_LCDSetup
+   796 ;; This function uses a non-reentrant model
+   797 ;;
+   798                           
+   799                           	psect	text6
+   800  000566                     __ptext6:
+   801                           	opt stack 0
+   802  000566                     _command:
+   803                           	opt stack 20
+   804                           
+   805                           ;incstack = 0
+   806                           ;command@x stored from wreg
+   807  000566  6E1E               	movwf	command@x,c
+   808                           
+   809                           ;SysRiego.c: 216: PORTD = x;
+   810  000568  C01E  FF83         	movff	command@x,3971	;volatile
+   811                           
+   812                           ;SysRiego.c: 217: PORTCbits.RC0 = 0;
+   813  00056C  9082               	bcf	3970,0,c	;volatile
+   814                           
+   815                           ;SysRiego.c: 218: PORTCbits.RC1 = 0;
+   816  00056E  9282               	bcf	3970,1,c	;volatile
+   817                           
+   818                           ;SysRiego.c: 219: PORTCbits.RC2 = 1;
+   819  000570  8482               	bsf	3970,2,c	;volatile
+   820                           
+   821                           ;SysRiego.c: 220: shortDelay();
+   822  000572  ECC7  F002         	call	_shortDelay	;wreg free
+   823                           
+   824                           ;SysRiego.c: 221: PORTCbits.RC2 = 0;
+   825  000576  9482               	bcf	3970,2,c	;volatile
+   826  000578  0012               	return		;funcret
+   827  00057A                     __end_of_command:
+   828                           	opt stack 0
+   829                           tblptru	equ	0xFF8
+   830                           tblptrh	equ	0xFF7
+   831                           tblptrl	equ	0xFF6
+   832                           tablat	equ	0xFF5
+   833                           intcon	equ	0xFF2
+   834                           intcon2	equ	0xFF1
+   835                           postinc0	equ	0xFEE
+   836                           postdec1	equ	0xFE5
+   837                           fsr1l	equ	0xFE1
+   838                           status	equ	0xFD8
+   839                           
+   840 ;; *************** function _shortDelay *****************
+   841 ;; Defined at:
+   842 ;;		line 195 in file "SysRiego.c"
+   843 ;; Parameters:    Size  Location     Type
+   844 ;;		None
+   845 ;; Auto vars:     Size  Location     Type
+   846 ;;  L1REG           1   28[COMRAM] unsigned char 
+   847 ;; Return value:  Size  Location     Type
+   848 ;;                  1    wreg      void 
+   849 ;; Registers used:
+   850 ;;		wreg, status,2, status,0
+   851 ;; Tracked objects:
+   852 ;;		On entry : 0/0
+   853 ;;		On exit  : 0/0
+   854 ;;		Unchanged: 0/0
+   855 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+   856 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   857 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   858 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   859 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   860 ;;Total ram usage:        1 bytes
+   861 ;; Hardware stack levels used:    1
+   862 ;; Hardware stack levels required when called:    8
+   863 ;; This function calls:
+   864 ;;		Nothing
+   865 ;; This function is called by:
+   866 ;;		_command
+   867 ;;		_isReady
+   868 ;; This function uses a non-reentrant model
+   869 ;;
+   870                           
+   871                           	psect	text7
+   872  00058E                     __ptext7:
+   873                           	opt stack 0
+   874  00058E                     _shortDelay:
+   875                           	opt stack 20
+   876                           
+   877                           ;SysRiego.c: 196: unsigned char L1REG = 2;
+   878                           
+   879                           ;incstack = 0
+   880  00058E  0E02               	movlw	2
+   881  000590  6E1D               	movwf	shortDelay@L1REG,c
+   882  000592                     l907:
+   883  000592  061D               	decf	shortDelay@L1REG,f,c
+   884  000594  281D               	incf	shortDelay@L1REG,w,c
+   885  000596  B4D8               	btfsc	status,2,c
+   886  000598  0012               	return	
+   887  00059A  D7FB               	goto	l907
+   888  00059C                     __end_of_shortDelay:
+   889                           	opt stack 0
+   890                           tblptru	equ	0xFF8
+   891                           tblptrh	equ	0xFF7
+   892                           tblptrl	equ	0xFF6
+   893                           tablat	equ	0xFF5
+   894                           intcon	equ	0xFF2
+   895                           intcon2	equ	0xFF1
+   896                           postinc0	equ	0xFEE
+   897                           postdec1	equ	0xFE5
+   898                           fsr1l	equ	0xFE1
+   899                           status	equ	0xFD8
+   900                           
+   901 ;; *************** function _ISRL *****************
+   902 ;; Defined at:
+   903 ;;		line 513 in file "SysRiego.c"
+   904 ;; Parameters:    Size  Location     Type
+   905 ;;		None
+   906 ;; Auto vars:     Size  Location     Type
+   907 ;;		None
+   908 ;; Return value:  Size  Location     Type
+   909 ;;                  1    wreg      void 
+   910 ;; Registers used:
+   911 ;;		None
+   912 ;; Tracked objects:
+   913 ;;		On entry : 0/0
+   914 ;;		On exit  : 0/0
+   915 ;;		Unchanged: 0/0
+   916 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+   917 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   918 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   919 ;;      Temps:          0      17       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   920 ;;      Totals:         0      17       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   921 ;;Total ram usage:       17 bytes
+   922 ;; Hardware stack levels used:    1
+   923 ;; Hardware stack levels required when called:    7
+   924 ;; This function calls:
+   925 ;;		Nothing
+   926 ;; This function is called by:
+   927 ;;		Interrupt level 1
+   928 ;; This function uses a non-reentrant model
+   929 ;;
+   930                           
+   931                           	psect	intcodelo
+   932  000018                     __pintcodelo:
+   933                           	opt stack 0
+   934  000018                     _ISRL:
+   935                           	opt stack 20
+   936                           
+   937                           ;incstack = 0
+   938  000018  803C               	bsf	btemp,0,c	;set compiler interrupt flag (level 1)
+   939  00001A  CFD8 F060          	movff	status,??_ISRL
+   940  00001E  CFE8 F061          	movff	wreg,??_ISRL+1
+   941  000022  CFE0 F062          	movff	bsr,??_ISRL+2
+   942  000026  CFFA F063          	movff	pclath,??_ISRL+3
+   943  00002A  CFFB F064          	movff	pclatu,??_ISRL+4
+   944  00002E  CFE9 F065          	movff	fsr0l,??_ISRL+5
+   945  000032  CFEA F066          	movff	fsr0h,??_ISRL+6
+   946  000036  CFE1 F067          	movff	fsr1l,??_ISRL+7
+   947  00003A  CFE2 F068          	movff	fsr1h,??_ISRL+8
+   948  00003E  CFD9 F069          	movff	fsr2l,??_ISRL+9
+   949  000042  CFDA F06A          	movff	fsr2h,??_ISRL+10
+   950  000046  CFF3 F06B          	movff	prodl,??_ISRL+11
+   951  00004A  CFF4 F06C          	movff	prodh,??_ISRL+12
+   952  00004E  CFF6 F06D          	movff	tblptrl,??_ISRL+13
+   953  000052  CFF7 F06E          	movff	tblptrh,??_ISRL+14
+   954  000056  CFF8 F06F          	movff	tblptru,??_ISRL+15
+   955  00005A  CFF5 F070          	movff	tablat,??_ISRL+16
+   956  00005E  C070  FFF5         	movff	??_ISRL+16,tablat
+   957  000062  C06F  FFF8         	movff	??_ISRL+15,tblptru
+   958  000066  C06E  FFF7         	movff	??_ISRL+14,tblptrh
+   959  00006A  C06D  FFF6         	movff	??_ISRL+13,tblptrl
+   960  00006E  C06C  FFF4         	movff	??_ISRL+12,prodh
+   961  000072  C06B  FFF3         	movff	??_ISRL+11,prodl
+   962  000076  C06A  FFDA         	movff	??_ISRL+10,fsr2h
+   963  00007A  C069  FFD9         	movff	??_ISRL+9,fsr2l
+   964  00007E  C068  FFE2         	movff	??_ISRL+8,fsr1h
+   965  000082  C067  FFE1         	movff	??_ISRL+7,fsr1l
+   966  000086  C066  FFEA         	movff	??_ISRL+6,fsr0h
+   967  00008A  C065  FFE9         	movff	??_ISRL+5,fsr0l
+   968  00008E  C064  FFFB         	movff	??_ISRL+4,pclatu
+   969  000092  C063  FFFA         	movff	??_ISRL+3,pclath
+   970  000096  C062  FFE0         	movff	??_ISRL+2,bsr
+   971  00009A  C061  FFE8         	movff	??_ISRL+1,wreg
+   972  00009E  C060  FFD8         	movff	??_ISRL,status
+   973  0000A2  903C               	bcf	btemp,0,c	;clear compiler interrupt flag (level 1)
+   974  0000A4  0010               	retfie	
+   975  0000A6                     __end_of_ISRL:
+   976                           	opt stack 0
+   977                           pclatu	equ	0xFFB
+   978                           pclath	equ	0xFFA
+   979                           tblptru	equ	0xFF8
+   980                           tblptrh	equ	0xFF7
+   981                           tblptrl	equ	0xFF6
+   982                           tablat	equ	0xFF5
+   983                           prodh	equ	0xFF4
+   984                           prodl	equ	0xFF3
+   985                           intcon	equ	0xFF2
+   986                           intcon2	equ	0xFF1
+   987                           postinc0	equ	0xFEE
+   988                           fsr0h	equ	0xFEA
+   989                           fsr0l	equ	0xFE9
+   990                           wreg	equ	0xFE8
+   991                           postdec1	equ	0xFE5
+   992                           fsr1h	equ	0xFE2
+   993                           fsr1l	equ	0xFE1
+   994                           bsr	equ	0xFE0
+   995                           fsr2h	equ	0xFDA
+   996                           fsr2l	equ	0xFD9
+   997                           status	equ	0xFD8
+   998                           
+   999 ;; *************** function _ISRH *****************
+  1000 ;; Defined at:
+  1001 ;;		line 517 in file "SysRiego.c"
+  1002 ;; Parameters:    Size  Location     Type
+  1003 ;;		None
+  1004 ;; Auto vars:     Size  Location     Type
+  1005 ;;		None
+  1006 ;; Return value:  Size  Location     Type
+  1007 ;;                  1    wreg      void 
+  1008 ;; Registers used:
+  1009 ;;		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+  1010 ;; Tracked objects:
+  1011 ;;		On entry : 0/0
+  1012 ;;		On exit  : 0/0
+  1013 ;;		Unchanged: 0/0
+  1014 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  1015 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1016 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1017 ;;      Temps:         14       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1018 ;;      Totals:        14       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1019 ;;Total ram usage:       14 bytes
+  1020 ;; Hardware stack levels used:    1
+  1021 ;; Hardware stack levels required when called:    6
+  1022 ;; This function calls:
+  1023 ;;		_groundAllRows
+  1024 ;;		_oneShot
+  1025 ;;		_resetOneShot
+  1026 ;; This function is called by:
+  1027 ;;		Interrupt level 2
+  1028 ;; This function uses a non-reentrant model
+  1029 ;;
+  1030                           
+  1031                           	psect	intcode
+  1032  000008                     __pintcode:
+  1033                           	opt stack 0
+  1034  000008                     _ISRH:
+  1035                           	opt stack 20
+  1036                           
+  1037                           ;incstack = 0
+  1038  000008  823C               	bsf	btemp,1,c	;set compiler interrupt flag (level 2)
+  1039  00000A  CFFA F00F          	movff	pclath,??_ISRH
+  1040  00000E  CFFB F010          	movff	pclatu,??_ISRH+1
+  1041  000012  ED56  F001         	call	int_func,f	;refresh shadow registers
+  1042                           pclatu	equ	0xFFB
+  1043                           pclath	equ	0xFFA
+  1044                           tblptru	equ	0xFF8
+  1045                           tblptrh	equ	0xFF7
+  1046                           tblptrl	equ	0xFF6
+  1047                           tablat	equ	0xFF5
+  1048                           prodh	equ	0xFF4
+  1049                           prodl	equ	0xFF3
+  1050                           intcon	equ	0xFF2
+  1051                           intcon2	equ	0xFF1
+  1052                           postinc0	equ	0xFEE
+  1053                           fsr0h	equ	0xFEA
+  1054                           fsr0l	equ	0xFE9
+  1055                           wreg	equ	0xFE8
+  1056                           postdec1	equ	0xFE5
+  1057                           fsr1h	equ	0xFE2
+  1058                           fsr1l	equ	0xFE1
+  1059                           bsr	equ	0xFE0
+  1060                           fsr2h	equ	0xFDA
+  1061                           fsr2l	equ	0xFD9
+  1062                           status	equ	0xFD8
+  1063                           
+  1064                           	psect	intcode_body
+  1065  0002AC                     __pintcode_body:
+  1066                           	opt stack 20
+  1067  0002AC                     int_func:
+  1068                           	opt stack 20
+  1069  0002AC  0006               	pop		; remove dummy address from shadow register refresh
+  1070  0002AE  CFE9 F011          	movff	fsr0l,??_ISRH+2
+  1071  0002B2  CFEA F012          	movff	fsr0h,??_ISRH+3
+  1072  0002B6  CFE1 F013          	movff	fsr1l,??_ISRH+4
+  1073  0002BA  CFE2 F014          	movff	fsr1h,??_ISRH+5
+  1074  0002BE  CFD9 F015          	movff	fsr2l,??_ISRH+6
+  1075  0002C2  CFDA F016          	movff	fsr2h,??_ISRH+7
+  1076  0002C6  CFF3 F017          	movff	prodl,??_ISRH+8
+  1077  0002CA  CFF4 F018          	movff	prodh,??_ISRH+9
+  1078  0002CE  CFF6 F019          	movff	tblptrl,??_ISRH+10
+  1079  0002D2  CFF7 F01A          	movff	tblptrh,??_ISRH+11
+  1080  0002D6  CFF8 F01B          	movff	tblptru,??_ISRH+12
+  1081  0002DA  CFF5 F01C          	movff	tablat,??_ISRH+13
+  1082                           
+  1083                           ;SysRiego.c: 519: if(INTCONbits.RBIF==1)
+  1084  0002DE  B0F2               	btfsc	intcon,0,c	;volatile
+  1085  0002E0  D00C               	goto	i2l1365
+  1086  0002E2  D00D               	goto	i2l261
+  1087  0002E4                     i2l1355:
+  1088                           
+  1089                           ;SysRiego.c: 523: groundAllRows();
+  1090  0002E4  ECDA  F002         	call	_groundAllRows	;wreg free
+  1091                           
+  1092                           ;SysRiego.c: 525: if(PORTB != 0xF0){
+  1093  0002E8  0EF0               	movlw	240
+  1094  0002EA  1881               	xorwf	3969,w,c	;volatile
+  1095  0002EC  A4D8               	btfss	status,2,c
+  1096                           
+  1097                           ;SysRiego.c: 526: oneShot();
+  1098  0002EE  EC8B  F002         	call	_oneShot	;wreg free
+  1099                           
+  1100                           ;SysRiego.c: 527: }
+  1101                           ;SysRiego.c: 528: if(oneShotFlag == 1){
+  1102  0002F2  043A               	decf	_oneShotFlag,w,c
+  1103  0002F4  B4D8               	btfsc	status,2,c
+  1104                           
+  1105                           ;SysRiego.c: 529: resetOneShot();
+  1106  0002F6  EC7D  F002         	call	_resetOneShot	;wreg free
+  1107  0002FA                     i2l1365:
+  1108  0002FA  B0F2               	btfsc	intcon,0,c	;volatile
+  1109  0002FC  D7F3               	goto	i2l1355
+  1110  0002FE                     i2l261:
+  1111  0002FE  C01C  FFF5         	movff	??_ISRH+13,tablat
+  1112  000302  C01B  FFF8         	movff	??_ISRH+12,tblptru
+  1113  000306  C01A  FFF7         	movff	??_ISRH+11,tblptrh
+  1114  00030A  C019  FFF6         	movff	??_ISRH+10,tblptrl
+  1115  00030E  C018  FFF4         	movff	??_ISRH+9,prodh
+  1116  000312  C017  FFF3         	movff	??_ISRH+8,prodl
+  1117  000316  C016  FFDA         	movff	??_ISRH+7,fsr2h
+  1118  00031A  C015  FFD9         	movff	??_ISRH+6,fsr2l
+  1119  00031E  C014  FFE2         	movff	??_ISRH+5,fsr1h
+  1120  000322  C013  FFE1         	movff	??_ISRH+4,fsr1l
+  1121  000326  C012  FFEA         	movff	??_ISRH+3,fsr0h
+  1122  00032A  C011  FFE9         	movff	??_ISRH+2,fsr0l
+  1123  00032E  C010  FFFB         	movff	??_ISRH+1,pclatu
+  1124  000332  C00F  FFFA         	movff	??_ISRH,pclath
+  1125  000336  923C               	bcf	btemp,1,c	;clear compiler interrupt flag (level 2)
+  1126  000338  0011               	retfie		f
+  1127  00033A                     __end_of_ISRH:
+  1128                           	opt stack 0
+  1129                           pclatu	equ	0xFFB
+  1130                           pclath	equ	0xFFA
+  1131                           tblptru	equ	0xFF8
+  1132                           tblptrh	equ	0xFF7
+  1133                           tblptrl	equ	0xFF6
+  1134                           tablat	equ	0xFF5
+  1135                           prodh	equ	0xFF4
+  1136                           prodl	equ	0xFF3
+  1137                           intcon	equ	0xFF2
+  1138                           intcon2	equ	0xFF1
+  1139                           postinc0	equ	0xFEE
+  1140                           fsr0h	equ	0xFEA
+  1141                           fsr0l	equ	0xFE9
+  1142                           wreg	equ	0xFE8
+  1143                           postdec1	equ	0xFE5
+  1144                           fsr1h	equ	0xFE2
+  1145                           fsr1l	equ	0xFE1
+  1146                           bsr	equ	0xFE0
+  1147                           fsr2h	equ	0xFDA
+  1148                           fsr2l	equ	0xFD9
+  1149                           status	equ	0xFD8
+  1150                           
+  1151 ;; *************** function _resetOneShot *****************
+  1152 ;; Defined at:
+  1153 ;;		line 262 in file "SysRiego.c"
+  1154 ;; Parameters:    Size  Location     Type
+  1155 ;;		None
+  1156 ;; Auto vars:     Size  Location     Type
+  1157 ;;		None
+  1158 ;; Return value:  Size  Location     Type
+  1159 ;;                  1    wreg      void 
+  1160 ;; Registers used:
+  1161 ;;		wreg, status,2, status,0, cstack
+  1162 ;; Tracked objects:
+  1163 ;;		On entry : 0/0
+  1164 ;;		On exit  : 0/0
+  1165 ;;		Unchanged: 0/0
+  1166 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  1167 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1168 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1169 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1170 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1171 ;;Total ram usage:        0 bytes
+  1172 ;; Hardware stack levels used:    1
+  1173 ;; Hardware stack levels required when called:    1
+  1174 ;; This function calls:
+  1175 ;;		_delay
+  1176 ;; This function is called by:
+  1177 ;;		_ISRH
+  1178 ;; This function uses a non-reentrant model
+  1179 ;;
+  1180                           
+  1181                           	psect	text10
+  1182  0004FA                     __ptext10:
+  1183                           	opt stack 0
+  1184  0004FA                     _resetOneShot:
+  1185                           	opt stack 24
+  1186                           
+  1187                           ;SysRiego.c: 263: if (PORTB == 0xF0)
+  1188                           
+  1189                           ;incstack = 0
+  1190  0004FA  0EF0               	movlw	240
+  1191  0004FC  1881               	xorwf	3969,w,c	;volatile
+  1192  0004FE  A4D8               	btfss	status,2,c
+  1193  000500  0012               	return	
+  1194                           
+  1195                           ;SysRiego.c: 264: delay();
+  1196  000502  EC99  F002         	call	_delay	;wreg free
+  1197                           
+  1198                           ;SysRiego.c: 267: if (PORTB == 0XF0){
+  1199                           
+  1200                           ;SysRiego.c: 265: else
+  1201                           ;SysRiego.c: 266: return;
+  1202  000506  0EF0               	movlw	240
+  1203  000508  1881               	xorwf	3969,w,c	;volatile
+  1204  00050A  A4D8               	btfss	status,2,c
+  1205  00050C  0012               	return	
+  1206                           
+  1207                           ;SysRiego.c: 269: INTCONbits.RBIF=0;
+  1208  00050E  90F2               	bcf	intcon,0,c	;volatile
+  1209                           
+  1210                           ;SysRiego.c: 270: oneShotFlag = 0;
+  1211  000510  0E00               	movlw	0
+  1212  000512  6E3A               	movwf	_oneShotFlag,c
+  1213  000514  0012               	return	
+  1214  000516                     __end_of_resetOneShot:
+  1215                           	opt stack 0
+  1216                           pclatu	equ	0xFFB
+  1217                           pclath	equ	0xFFA
+  1218                           tblptru	equ	0xFF8
+  1219                           tblptrh	equ	0xFF7
+  1220                           tblptrl	equ	0xFF6
+  1221                           tablat	equ	0xFF5
+  1222                           prodh	equ	0xFF4
+  1223                           prodl	equ	0xFF3
+  1224                           intcon	equ	0xFF2
+  1225                           intcon2	equ	0xFF1
+  1226                           postinc0	equ	0xFEE
+  1227                           fsr0h	equ	0xFEA
+  1228                           fsr0l	equ	0xFE9
+  1229                           wreg	equ	0xFE8
+  1230                           postdec1	equ	0xFE5
+  1231                           fsr1h	equ	0xFE2
+  1232                           fsr1l	equ	0xFE1
+  1233                           bsr	equ	0xFE0
+  1234                           fsr2h	equ	0xFDA
+  1235                           fsr2l	equ	0xFD9
+  1236                           status	equ	0xFD8
+  1237                           
+  1238 ;; *************** function _oneShot *****************
+  1239 ;; Defined at:
+  1240 ;;		line 252 in file "SysRiego.c"
+  1241 ;; Parameters:    Size  Location     Type
+  1242 ;;		None
+  1243 ;; Auto vars:     Size  Location     Type
+  1244 ;;		None
+  1245 ;; Return value:  Size  Location     Type
+  1246 ;;                  1    wreg      void 
+  1247 ;; Registers used:
+  1248 ;;		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+  1249 ;; Tracked objects:
+  1250 ;;		On entry : 0/0
+  1251 ;;		On exit  : 0/0
+  1252 ;;		Unchanged: 0/0
+  1253 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  1254 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1255 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1256 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1257 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1258 ;;Total ram usage:        0 bytes
+  1259 ;; Hardware stack levels used:    1
+  1260 ;; Hardware stack levels required when called:    5
+  1261 ;; This function calls:
+  1262 ;;		_delay
+  1263 ;;		_pressedKey
+  1264 ;; This function is called by:
+  1265 ;;		_ISRH
+  1266 ;; This function uses a non-reentrant model
+  1267 ;;
+  1268                           
+  1269                           	psect	text11
+  1270  000516                     __ptext11:
+  1271                           	opt stack 0
+  1272  000516                     _oneShot:
+  1273                           	opt stack 20
+  1274                           
+  1275                           ;SysRiego.c: 253: if (oneShotFlag == 1)
+  1276                           
+  1277                           ;incstack = 0
+  1278  000516  043A               	decf	_oneShotFlag,w,c
+  1279  000518  B4D8               	btfsc	status,2,c
+  1280  00051A  0012               	return	
+  1281                           
+  1282                           ;SysRiego.c: 255: delay();
+  1283                           
+  1284                           ;SysRiego.c: 254: return;
+  1285  00051C  EC99  F002         	call	_delay	;wreg free
+  1286                           
+  1287                           ;SysRiego.c: 256: if (PORTB != 0xF0){
+  1288  000520  0EF0               	movlw	240
+  1289  000522  1881               	xorwf	3969,w,c	;volatile
+  1290  000524  B4D8               	btfsc	status,2,c
+  1291  000526  0012               	return	
+  1292                           
+  1293                           ;SysRiego.c: 257: pressedKey();
+  1294  000528  ECC5  F001         	call	_pressedKey	;wreg free
+  1295                           
+  1296                           ;SysRiego.c: 258: oneShotFlag = 1;
+  1297  00052C  0E01               	movlw	1
+  1298  00052E  6E3A               	movwf	_oneShotFlag,c
+  1299  000530  0012               	return	
+  1300  000532                     __end_of_oneShot:
+  1301                           	opt stack 0
+  1302                           pclatu	equ	0xFFB
+  1303                           pclath	equ	0xFFA
+  1304                           tblptru	equ	0xFF8
+  1305                           tblptrh	equ	0xFF7
+  1306                           tblptrl	equ	0xFF6
+  1307                           tablat	equ	0xFF5
+  1308                           prodh	equ	0xFF4
+  1309                           prodl	equ	0xFF3
+  1310                           intcon	equ	0xFF2
+  1311                           intcon2	equ	0xFF1
+  1312                           postinc0	equ	0xFEE
+  1313                           fsr0h	equ	0xFEA
+  1314                           fsr0l	equ	0xFE9
+  1315                           wreg	equ	0xFE8
+  1316                           postdec1	equ	0xFE5
+  1317                           fsr1h	equ	0xFE2
+  1318                           fsr1l	equ	0xFE1
+  1319                           bsr	equ	0xFE0
+  1320                           fsr2h	equ	0xFDA
+  1321                           fsr2l	equ	0xFD9
+  1322                           status	equ	0xFD8
+  1323                           
+  1324 ;; *************** function _pressedKey *****************
+  1325 ;; Defined at:
+  1326 ;;		line 457 in file "SysRiego.c"
+  1327 ;; Parameters:    Size  Location     Type
+  1328 ;;		None
+  1329 ;; Auto vars:     Size  Location     Type
+  1330 ;;		None
+  1331 ;; Return value:  Size  Location     Type
+  1332 ;;                  1    wreg      void 
+  1333 ;; Registers used:
+  1334 ;;		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+  1335 ;; Tracked objects:
+  1336 ;;		On entry : 0/0
+  1337 ;;		On exit  : 0/0
+  1338 ;;		Unchanged: 0/0
+  1339 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  1340 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1341 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1342 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1343 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1344 ;;Total ram usage:        0 bytes
+  1345 ;; Hardware stack levels used:    1
+  1346 ;; Hardware stack levels required when called:    4
+  1347 ;; This function calls:
+  1348 ;;		_determinePressedRow
+  1349 ;;		_getKeyCode
+  1350 ;;		_pressedKeyAction
+  1351 ;; This function is called by:
+  1352 ;;		_oneShot
+  1353 ;; This function uses a non-reentrant model
+  1354 ;;
+  1355                           
+  1356                           	psect	text12
+  1357  00038A                     __ptext12:
+  1358                           	opt stack 0
+  1359  00038A                     _pressedKey:
+  1360                           	opt stack 20
+  1361                           
+  1362                           ;SysRiego.c: 458: switch(PORTB){
+  1363                           
+  1364                           ;incstack = 0
+  1365  00038A  D00B               	goto	i2l1333
+  1366  00038C                     i2l1323:
+  1367  00038C  0E01               	movlw	1
+  1368  00038E  D007               	goto	L4
+  1369  000390                     i2l1325:
+  1370  000390  0E02               	movlw	2
+  1371  000392  D005               	goto	L4
+  1372  000394                     i2l1327:
+  1373  000394  0E03               	movlw	3
+  1374  000396  D003               	goto	L4
+  1375  000398                     i2l1329:
+  1376  000398  0E04               	movlw	4
+  1377  00039A  D001               	goto	L4
+  1378  00039C                     i2l1331:
+  1379  00039C  0E64               	movlw	100
+  1380  00039E                     L4:
+  1381  00039E  6E38               	movwf	_columnSelected,c
+  1382                           
+  1383                           ;SysRiego.c: 464: }
+  1384  0003A0  D00E               	goto	i2l1335
+  1385  0003A2                     i2l1333:
+  1386  0003A2  5081               	movf	3969,w,c	;volatile
+  1387                           
+  1388                           ; Switch size 1, requested type "space"
+  1389                           ; Number of cases is 4, Range of values is 112 to 224
+  1390                           ; switch strategies available:
+  1391                           ; Name         Instructions Cycles
+  1392                           ; simple_byte           13     7 (average)
+  1393                           ;	Chosen strategy is simple_byte
+  1394  0003A4  0A70               	xorlw	112	; case 112
+  1395  0003A6  B4D8               	btfsc	status,2,c
+  1396  0003A8  D7F7               	goto	i2l1329
+  1397  0003AA  0AC0               	xorlw	192	; case 176
+  1398  0003AC  B4D8               	btfsc	status,2,c
+  1399  0003AE  D7F2               	goto	i2l1327
+  1400  0003B0  0A60               	xorlw	96	; case 208
+  1401  0003B2  B4D8               	btfsc	status,2,c
+  1402  0003B4  D7ED               	goto	i2l1325
+  1403  0003B6  0A30               	xorlw	48	; case 224
+  1404  0003B8  B4D8               	btfsc	status,2,c
+  1405  0003BA  D7E8               	goto	i2l1323
+  1406  0003BC  D7EF               	goto	i2l1331
+  1407  0003BE                     i2l1335:
+  1408                           
+  1409                           ;SysRiego.c: 465: determinePressedRow();
+  1410  0003BE  EC55  F000         	call	_determinePressedRow	;wreg free
+  1411                           
+  1412                           ;SysRiego.c: 466: keyCode = getKeyCode();
+  1413  0003C2  ECEA  F000         	call	_getKeyCode	;wreg free
+  1414  0003C6  6E39               	movwf	_keyCode,c
+  1415                           
+  1416                           ;SysRiego.c: 467: pressedKeyAction(keyCode);
+  1417  0003C8  5039               	movf	_keyCode,w,c
+  1418  0003CA  EC0A  F002         	call	_pressedKeyAction
+  1419  0003CE  0012               	return		;funcret
+  1420  0003D0                     __end_of_pressedKey:
+  1421                           	opt stack 0
+  1422                           pclatu	equ	0xFFB
+  1423                           pclath	equ	0xFFA
+  1424                           tblptru	equ	0xFF8
+  1425                           tblptrh	equ	0xFF7
+  1426                           tblptrl	equ	0xFF6
+  1427                           tablat	equ	0xFF5
+  1428                           prodh	equ	0xFF4
+  1429                           prodl	equ	0xFF3
+  1430                           intcon	equ	0xFF2
+  1431                           intcon2	equ	0xFF1
+  1432                           postinc0	equ	0xFEE
+  1433                           fsr0h	equ	0xFEA
+  1434                           fsr0l	equ	0xFE9
+  1435                           wreg	equ	0xFE8
+  1436                           postdec1	equ	0xFE5
+  1437                           fsr1h	equ	0xFE2
+  1438                           fsr1l	equ	0xFE1
+  1439                           bsr	equ	0xFE0
+  1440                           fsr2h	equ	0xFDA
+  1441                           fsr2l	equ	0xFD9
+  1442                           status	equ	0xFD8
+  1443                           
+  1444 ;; *************** function _pressedKeyAction *****************
+  1445 ;; Defined at:
+  1446 ;;		line 418 in file "SysRiego.c"
+  1447 ;; Parameters:    Size  Location     Type
+  1448 ;;  keyCode         1    wreg     unsigned char 
+  1449 ;; Auto vars:     Size  Location     Type
+  1450 ;;  keyCode         1   13[COMRAM] unsigned char 
+  1451 ;; Return value:  Size  Location     Type
+  1452 ;;                  1    wreg      void 
+  1453 ;; Registers used:
+  1454 ;;		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+  1455 ;; Tracked objects:
+  1456 ;;		On entry : 0/0
+  1457 ;;		On exit  : 0/0
+  1458 ;;		Unchanged: 0/0
+  1459 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  1460 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1461 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1462 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1463 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1464 ;;Total ram usage:        1 bytes
+  1465 ;; Hardware stack levels used:    1
+  1466 ;; Hardware stack levels required when called:    3
+  1467 ;; This function calls:
+  1468 ;;		_displayCharOnLCD
+  1469 ;;		_displayLineOnLCD
+  1470 ;; This function is called by:
+  1471 ;;		_pressedKey
+  1472 ;; This function uses a non-reentrant model
+  1473 ;;
+  1474                           
+  1475                           	psect	text13
+  1476  000414                     __ptext13:
+  1477                           	opt stack 0
+  1478  000414                     _pressedKeyAction:
+  1479                           	opt stack 20
+  1480                           
+  1481                           ;incstack = 0
+  1482                           ;pressedKeyAction@keyCode stored from wreg
+  1483  000414  6E0E               	movwf	pressedKeyAction@keyCode,c
+  1484                           
+  1485                           ;SysRiego.c: 438: switch(keyCode){
+  1486  000416  D016               	goto	i2l1319
+  1487  000418                     i2l1313:
+  1488  000418  0E2C               	movlw	low _GREETING
+  1489  00041A  6E03               	movwf	displayLineOnLCD@array,c
+  1490  00041C  0E00               	movlw	high _GREETING
+  1491  00041E  6E04               	movwf	displayLineOnLCD@array+1,c
+  1492  000420  0E0C               	movlw	12
+  1493  000422  6E05               	movwf	displayLineOnLCD@sizeOfArray,c
+  1494  000424  EC9D  F001         	call	_displayLineOnLCD	;wreg free
+  1495  000428  0012               	return	
+  1496  00042A                     i2l1315:
+  1497  00042A  0E20               	movlw	low _CASTELLO
+  1498  00042C  6E03               	movwf	displayLineOnLCD@array,c
+  1499  00042E  0E00               	movlw	high _CASTELLO
+  1500  000430  6E04               	movwf	displayLineOnLCD@array+1,c
+  1501  000432  0E0C               	movlw	12
+  1502  000434  6E05               	movwf	displayLineOnLCD@sizeOfArray,c
+  1503  000436  EC9D  F001         	call	_displayLineOnLCD	;wreg free
+  1504  00043A  0012               	return	
+  1505  00043C                     i2l1317:
+  1506  00043C  500E               	movf	pressedKeyAction@keyCode,w,c
+  1507  00043E  ECBD  F002         	call	_displayCharOnLCD
+  1508                           
+  1509                           ;SysRiego.c: 444: }
+  1510  000442  0012               	return	
+  1511  000444                     i2l1319:
+  1512  000444  500E               	movf	pressedKeyAction@keyCode,w,c
+  1513                           
+  1514                           ; Switch size 1, requested type "space"
+  1515                           ; Number of cases is 2, Range of values is 35 to 42
+  1516                           ; switch strategies available:
+  1517                           ; Name         Instructions Cycles
+  1518                           ; simple_byte            7     4 (average)
+  1519                           ;	Chosen strategy is simple_byte
+  1520  000446  0A23               	xorlw	35	; case 35
+  1521  000448  B4D8               	btfsc	status,2,c
+  1522  00044A  D7EF               	goto	i2l1315
+  1523  00044C  0A09               	xorlw	9	; case 42
+  1524  00044E  B4D8               	btfsc	status,2,c
+  1525  000450  D7E3               	goto	i2l1313
+  1526  000452  D7F4               	goto	i2l1317
+  1527  000454                     __end_of_pressedKeyAction:
+  1528                           	opt stack 0
+  1529                           pclatu	equ	0xFFB
+  1530                           pclath	equ	0xFFA
+  1531                           tblptru	equ	0xFF8
+  1532                           tblptrh	equ	0xFF7
+  1533                           tblptrl	equ	0xFF6
+  1534                           tablat	equ	0xFF5
+  1535                           prodh	equ	0xFF4
+  1536                           prodl	equ	0xFF3
+  1537                           intcon	equ	0xFF2
+  1538                           intcon2	equ	0xFF1
+  1539                           postinc0	equ	0xFEE
+  1540                           fsr0h	equ	0xFEA
+  1541                           fsr0l	equ	0xFE9
+  1542                           wreg	equ	0xFE8
+  1543                           postdec1	equ	0xFE5
+  1544                           fsr1h	equ	0xFE2
+  1545                           fsr1l	equ	0xFE1
+  1546                           bsr	equ	0xFE0
+  1547                           fsr2h	equ	0xFDA
+  1548                           fsr2l	equ	0xFD9
+  1549                           status	equ	0xFD8
+  1550                           
+  1551 ;; *************** function _displayLineOnLCD *****************
+  1552 ;; Defined at:
+  1553 ;;		line 471 in file "SysRiego.c"
+  1554 ;; Parameters:    Size  Location     Type
+  1555 ;;  array           2    2[COMRAM] PTR unsigned char 
+  1556 ;;		 -> CASTELLO(12), GREETING(12), 
+  1557 ;;  sizeOfArray     1    4[COMRAM] unsigned char 
+  1558 ;; Auto vars:     Size  Location     Type
+  1559 ;;  i               1   12[COMRAM] unsigned char 
+  1560 ;; Return value:  Size  Location     Type
+  1561 ;;                  1    wreg      void 
+  1562 ;; Registers used:
+  1563 ;;		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+  1564 ;; Tracked objects:
+  1565 ;;		On entry : 0/0
+  1566 ;;		On exit  : 0/0
+  1567 ;;		Unchanged: 0/0
+  1568 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  1569 ;;      Params:         3       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1570 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1571 ;;      Temps:          7       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1572 ;;      Totals:        11       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1573 ;;Total ram usage:       11 bytes
+  1574 ;; Hardware stack levels used:    1
+  1575 ;; Hardware stack levels required when called:    2
+  1576 ;; This function calls:
+  1577 ;;		_displayCharOnLCD
+  1578 ;; This function is called by:
+  1579 ;;		_pressedKeyAction
+  1580 ;; This function uses a non-reentrant model
+  1581 ;;
+  1582                           
+  1583                           	psect	text14
+  1584  00033A                     __ptext14:
+  1585                           	opt stack 0
+  1586  00033A                     _displayLineOnLCD:
+  1587                           	opt stack 20
+  1588                           
+  1589                           ;SysRiego.c: 472: unsigned char i;
+  1590                           ;SysRiego.c: 473: for(i=0; i<sizeOfArray-1; i++){
+  1591                           
+  1592                           ;incstack = 0
+  1593  00033A  0E00               	movlw	0
+  1594  00033C  6E0D               	movwf	displayLineOnLCD@i,c
+  1595  00033E  D00C               	goto	i2l1309
+  1596  000340                     i2l1305:
+  1597                           
+  1598                           ;SysRiego.c: 474: displayCharOnLCD(array[i]);
+  1599  000340  500D               	movf	displayLineOnLCD@i,w,c
+  1600  000342  0D01               	mullw	1
+  1601  000344  50F3               	movf	prodl,w,c
+  1602  000346  2403               	addwf	displayLineOnLCD@array,w,c
+  1603  000348  6ED9               	movwf	fsr2l,c
+  1604  00034A  50F4               	movf	prodh,w,c
+  1605  00034C  2004               	addwfc	displayLineOnLCD@array+1,w,c
+  1606  00034E  6EDA               	movwf	fsr2h,c
+  1607  000350  50DF               	movf	indf2,w,c
+  1608  000352  ECBD  F002         	call	_displayCharOnLCD
+  1609  000356  2A0D               	incf	displayLineOnLCD@i,f,c
+  1610  000358                     i2l1309:
+  1611  000358  0EFF               	movlw	255
+  1612  00035A  6E06               	movwf	??_displayLineOnLCD& (0+255),c
+  1613  00035C  0EFF               	movlw	255
+  1614  00035E  6E07               	movwf	(??_displayLineOnLCD+1)& (0+255),c
+  1615  000360  5005               	movf	displayLineOnLCD@sizeOfArray,w,c
+  1616  000362  6E08               	movwf	(??_displayLineOnLCD+2)& (0+255),c
+  1617  000364  6A09               	clrf	(??_displayLineOnLCD+3)& (0+255),c
+  1618  000366  5006               	movf	??_displayLineOnLCD,w,c
+  1619  000368  2608               	addwf	??_displayLineOnLCD+2,f,c
+  1620  00036A  5007               	movf	??_displayLineOnLCD+1,w,c
+  1621  00036C  2209               	addwfc	??_displayLineOnLCD+3,f,c
+  1622  00036E  500D               	movf	displayLineOnLCD@i,w,c
+  1623  000370  6E0A               	movwf	(??_displayLineOnLCD+4)& (0+255),c
+  1624  000372  6A0B               	clrf	(??_displayLineOnLCD+5)& (0+255),c
+  1625  000374  5008               	movf	??_displayLineOnLCD+2,w,c
+  1626  000376  5C0A               	subwf	??_displayLineOnLCD+4,w,c
+  1627  000378  500B               	movf	??_displayLineOnLCD+5,w,c
+  1628  00037A  0A80               	xorlw	128
+  1629  00037C  6E0C               	movwf	(??_displayLineOnLCD+6)& (0+255),c
+  1630  00037E  5009               	movf	??_displayLineOnLCD+3,w,c
+  1631  000380  0A80               	xorlw	128
+  1632  000382  580C               	subwfb	(??_displayLineOnLCD+6)& (0+255),w,c
+  1633  000384  B0D8               	btfsc	status,0,c
+  1634  000386  0012               	return	
+  1635  000388  D7DB               	goto	i2l1305
+  1636  00038A                     __end_of_displayLineOnLCD:
+  1637                           	opt stack 0
+  1638                           pclatu	equ	0xFFB
+  1639                           pclath	equ	0xFFA
+  1640                           tblptru	equ	0xFF8
+  1641                           tblptrh	equ	0xFF7
+  1642                           tblptrl	equ	0xFF6
+  1643                           tablat	equ	0xFF5
+  1644                           prodh	equ	0xFF4
+  1645                           prodl	equ	0xFF3
+  1646                           intcon	equ	0xFF2
+  1647                           intcon2	equ	0xFF1
+  1648                           postinc0	equ	0xFEE
+  1649                           fsr0h	equ	0xFEA
+  1650                           fsr0l	equ	0xFE9
+  1651                           wreg	equ	0xFE8
+  1652                           postdec1	equ	0xFE5
+  1653                           fsr1h	equ	0xFE2
+  1654                           fsr1l	equ	0xFE1
+  1655                           bsr	equ	0xFE0
+  1656                           indf2	equ	0xFDF
+  1657                           fsr2h	equ	0xFDA
+  1658                           fsr2l	equ	0xFD9
+  1659                           status	equ	0xFD8
+  1660                           
+  1661 ;; *************** function _displayCharOnLCD *****************
+  1662 ;; Defined at:
+  1663 ;;		line 236 in file "SysRiego.c"
+  1664 ;; Parameters:    Size  Location     Type
+  1665 ;;  character       1    wreg     unsigned char 
+  1666 ;; Auto vars:     Size  Location     Type
+  1667 ;;  character       1    1[COMRAM] unsigned char 
+  1668 ;; Return value:  Size  Location     Type
+  1669 ;;                  1    wreg      void 
+  1670 ;; Registers used:
+  1671 ;;		wreg, status,2, status,0, cstack
+  1672 ;; Tracked objects:
+  1673 ;;		On entry : 0/0
+  1674 ;;		On exit  : 0/0
+  1675 ;;		Unchanged: 0/0
+  1676 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  1677 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1678 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1679 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1680 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1681 ;;Total ram usage:        1 bytes
+  1682 ;; Hardware stack levels used:    1
+  1683 ;; Hardware stack levels required when called:    1
+  1684 ;; This function calls:
+  1685 ;;		i2_shortDelay
+  1686 ;; This function is called by:
+  1687 ;;		_pressedKeyAction
+  1688 ;;		_displayLineOnLCD
+  1689 ;; This function uses a non-reentrant model
+  1690 ;;
+  1691                           
+  1692                           	psect	text15
+  1693  00057A                     __ptext15:
+  1694                           	opt stack 0
+  1695  00057A                     _displayCharOnLCD:
+  1696                           	opt stack 20
+  1697                           
+  1698                           ;incstack = 0
+  1699                           ;displayCharOnLCD@character stored from wreg
+  1700  00057A  6E02               	movwf	displayCharOnLCD@character,c
+  1701                           
+  1702                           ;SysRiego.c: 237: PORTD = character;
+  1703  00057C  C002  FF83         	movff	displayCharOnLCD@character,3971	;volatile
+  1704                           
+  1705                           ;SysRiego.c: 238: PORTCbits.RC0 = 1;
+  1706  000580  8082               	bsf	3970,0,c	;volatile
+  1707                           
+  1708                           ;SysRiego.c: 239: PORTCbits.RC1 = 0;
+  1709  000582  9282               	bcf	3970,1,c	;volatile
+  1710                           
+  1711                           ;SysRiego.c: 240: PORTCbits.RC2 = 1;
+  1712  000584  8482               	bsf	3970,2,c	;volatile
+  1713                           
+  1714                           ;SysRiego.c: 241: shortDelay();
+  1715  000586  ECCE  F002         	call	i2_shortDelay	;wreg free
+  1716                           
+  1717                           ;SysRiego.c: 242: PORTCbits.RC2 = 0;
+  1718  00058A  9482               	bcf	3970,2,c	;volatile
+  1719  00058C  0012               	return		;funcret
+  1720  00058E                     __end_of_displayCharOnLCD:
+  1721                           	opt stack 0
+  1722                           pclatu	equ	0xFFB
+  1723                           pclath	equ	0xFFA
+  1724                           tblptru	equ	0xFF8
+  1725                           tblptrh	equ	0xFF7
+  1726                           tblptrl	equ	0xFF6
+  1727                           tablat	equ	0xFF5
+  1728                           prodh	equ	0xFF4
+  1729                           prodl	equ	0xFF3
+  1730                           intcon	equ	0xFF2
+  1731                           intcon2	equ	0xFF1
+  1732                           postinc0	equ	0xFEE
+  1733                           fsr0h	equ	0xFEA
+  1734                           fsr0l	equ	0xFE9
+  1735                           wreg	equ	0xFE8
+  1736                           postdec1	equ	0xFE5
+  1737                           fsr1h	equ	0xFE2
+  1738                           fsr1l	equ	0xFE1
+  1739                           bsr	equ	0xFE0
+  1740                           indf2	equ	0xFDF
+  1741                           fsr2h	equ	0xFDA
+  1742                           fsr2l	equ	0xFD9
+  1743                           status	equ	0xFD8
+  1744                           
+  1745 ;; *************** function i2_shortDelay *****************
+  1746 ;; Defined at:
+  1747 ;;		line 195 in file "SysRiego.c"
+  1748 ;; Parameters:    Size  Location     Type
+  1749 ;;		None
+  1750 ;; Auto vars:     Size  Location     Type
+  1751 ;;  shortDelay      1    0[COMRAM] unsigned char 
+  1752 ;; Return value:  Size  Location     Type
+  1753 ;;                  1    wreg      void 
+  1754 ;; Registers used:
+  1755 ;;		wreg, status,2, status,0
+  1756 ;; Tracked objects:
+  1757 ;;		On entry : 0/0
+  1758 ;;		On exit  : 0/0
+  1759 ;;		Unchanged: 0/0
+  1760 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  1761 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1762 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1763 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1764 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1765 ;;Total ram usage:        1 bytes
+  1766 ;; Hardware stack levels used:    1
+  1767 ;; This function calls:
+  1768 ;;		Nothing
+  1769 ;; This function is called by:
+  1770 ;;		_displayCharOnLCD
+  1771 ;; This function uses a non-reentrant model
+  1772 ;;
+  1773                           
+  1774                           	psect	text16
+  1775  00059C                     __ptext16:
+  1776                           	opt stack 0
+  1777  00059C                     i2_shortDelay:
+  1778                           	opt stack 20
+  1779                           
+  1780                           ;SysRiego.c: 196: unsigned char L1REG = 2;
+  1781                           
+  1782                           ;incstack = 0
+  1783  00059C  0E02               	movlw	2
+  1784  00059E  6E01               	movwf	i2shortDelay@L1REG,c
+  1785  0005A0                     i2l877:
+  1786  0005A0  0601               	decf	i2shortDelay@L1REG,f,c
+  1787  0005A2  2801               	incf	i2shortDelay@L1REG,w,c
+  1788  0005A4  B4D8               	btfsc	status,2,c
+  1789  0005A6  0012               	return	
+  1790  0005A8  D7FB               	goto	i2l877
+  1791  0005AA                     __end_ofi2_shortDelay:
+  1792                           	opt stack 0
+  1793                           pclatu	equ	0xFFB
+  1794                           pclath	equ	0xFFA
+  1795                           tblptru	equ	0xFF8
+  1796                           tblptrh	equ	0xFF7
+  1797                           tblptrl	equ	0xFF6
+  1798                           tablat	equ	0xFF5
+  1799                           prodh	equ	0xFF4
+  1800                           prodl	equ	0xFF3
+  1801                           intcon	equ	0xFF2
+  1802                           intcon2	equ	0xFF1
+  1803                           postinc0	equ	0xFEE
+  1804                           fsr0h	equ	0xFEA
+  1805                           fsr0l	equ	0xFE9
+  1806                           wreg	equ	0xFE8
+  1807                           postdec1	equ	0xFE5
+  1808                           fsr1h	equ	0xFE2
+  1809                           fsr1l	equ	0xFE1
+  1810                           bsr	equ	0xFE0
+  1811                           indf2	equ	0xFDF
+  1812                           fsr2h	equ	0xFDA
+  1813                           fsr2l	equ	0xFD9
+  1814                           status	equ	0xFD8
+  1815                           
+  1816 ;; *************** function _getKeyCode *****************
+  1817 ;; Defined at:
+  1818 ;;		line 382 in file "SysRiego.c"
+  1819 ;; Parameters:    Size  Location     Type
+  1820 ;;		None
+  1821 ;; Auto vars:     Size  Location     Type
+  1822 ;;		None
+  1823 ;; Return value:  Size  Location     Type
+  1824 ;;                  1    wreg      unsigned char 
+  1825 ;; Registers used:
+  1826 ;;		wreg, status,2, status,0
+  1827 ;; Tracked objects:
+  1828 ;;		On entry : 0/0
+  1829 ;;		On exit  : 0/0
+  1830 ;;		Unchanged: 0/0
+  1831 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  1832 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1833 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1834 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1835 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  1836 ;;Total ram usage:        0 bytes
+  1837 ;; Hardware stack levels used:    1
+  1838 ;; This function calls:
+  1839 ;;		Nothing
+  1840 ;; This function is called by:
+  1841 ;;		_pressedKey
+  1842 ;; This function uses a non-reentrant model
+  1843 ;;
+  1844                           
+  1845                           	psect	text17
+  1846  0001D4                     __ptext17:
+  1847                           	opt stack 0
+  1848  0001D4                     _getKeyCode:
+  1849                           	opt stack 23
+  1850                           
+  1851                           ;SysRiego.c: 383: if(rowSelected == 1){
+  1852                           
+  1853                           ;incstack = 0
+  1854  0001D4  043B               	decf	_rowSelected,w,c
+  1855  0001D6  B4D8               	btfsc	status,2,c
+  1856  0001D8  D009               	goto	i2l1075
+  1857  0001DA  D016               	goto	i2l1077
+  1858  0001DC                     i2l1057:
+  1859  0001DC  0E31               	movlw	49
+  1860  0001DE  0012               	return	
+  1861  0001E0                     i2l1061:
+  1862  0001E0  0E32               	movlw	50
+  1863  0001E2  0012               	return	
+  1864  0001E4                     i2l1065:
+  1865  0001E4  0E33               	movlw	51
+  1866  0001E6  0012               	return	
+  1867  0001E8                     i2l1069:
+  1868  0001E8  0E41               	movlw	65
+  1869  0001EA  0012               	return	
+  1870  0001EC                     i2l1075:
+  1871  0001EC  5038               	movf	_columnSelected,w,c
+  1872                           
+  1873                           ; Switch size 1, requested type "space"
+  1874                           ; Number of cases is 4, Range of values is 1 to 4
+  1875                           ; switch strategies available:
+  1876                           ; Name         Instructions Cycles
+  1877                           ; simple_byte           13     7 (average)
+  1878                           ;	Chosen strategy is simple_byte
+  1879  0001EE  0A01               	xorlw	1	; case 1
+  1880  0001F0  B4D8               	btfsc	status,2,c
+  1881  0001F2  D7F4               	goto	i2l1057
+  1882  0001F4  0A03               	xorlw	3	; case 2
+  1883  0001F6  B4D8               	btfsc	status,2,c
+  1884  0001F8  D7F3               	goto	i2l1061
+  1885  0001FA  0A01               	xorlw	1	; case 3
+  1886  0001FC  B4D8               	btfsc	status,2,c
+  1887  0001FE  D7F2               	goto	i2l1065
+  1888  000200  0A07               	xorlw	7	; case 4
+  1889  000202  B4D8               	btfsc	status,2,c
+  1890  000204  D7F1               	goto	i2l1069
+  1891                           
+  1892                           ;SysRiego.c: 390: }
+  1893  000206  D050               	goto	i2l1149
+  1894  000208                     i2l1077:
+  1895                           
+  1896                           ;SysRiego.c: 391: else if(rowSelected == 2){
+  1897  000208  0E02               	movlw	2
+  1898  00020A  183B               	xorwf	_rowSelected,w,c
+  1899  00020C  B4D8               	btfsc	status,2,c
+  1900  00020E  D009               	goto	i2l1099
+  1901  000210  D016               	goto	i2l1101
+  1902  000212                     i2l1081:
+  1903  000212  0E34               	movlw	52
+  1904  000214  0012               	return	
+  1905  000216                     i2l1085:
+  1906  000216  0E35               	movlw	53
+  1907  000218  0012               	return	
+  1908  00021A                     i2l1089:
+  1909  00021A  0E36               	movlw	54
+  1910  00021C  0012               	return	
+  1911  00021E                     i2l1093:
+  1912  00021E  0E42               	movlw	66
+  1913  000220  0012               	return	
+  1914  000222                     i2l1099:
+  1915  000222  5038               	movf	_columnSelected,w,c
+  1916                           
+  1917                           ; Switch size 1, requested type "space"
+  1918                           ; Number of cases is 4, Range of values is 1 to 4
+  1919                           ; switch strategies available:
+  1920                           ; Name         Instructions Cycles
+  1921                           ; simple_byte           13     7 (average)
+  1922                           ;	Chosen strategy is simple_byte
+  1923  000224  0A01               	xorlw	1	; case 1
+  1924  000226  B4D8               	btfsc	status,2,c
+  1925  000228  D7F4               	goto	i2l1081
+  1926  00022A  0A03               	xorlw	3	; case 2
+  1927  00022C  B4D8               	btfsc	status,2,c
+  1928  00022E  D7F3               	goto	i2l1085
+  1929  000230  0A01               	xorlw	1	; case 3
+  1930  000232  B4D8               	btfsc	status,2,c
+  1931  000234  D7F2               	goto	i2l1089
+  1932  000236  0A07               	xorlw	7	; case 4
+  1933  000238  B4D8               	btfsc	status,2,c
+  1934  00023A  D7F1               	goto	i2l1093
+  1935                           
+  1936                           ;SysRiego.c: 398: }
+  1937  00023C  D035               	goto	i2l1149
+  1938  00023E                     i2l1101:
+  1939                           
+  1940                           ;SysRiego.c: 399: else if(rowSelected == 3){
+  1941  00023E  0E03               	movlw	3
+  1942  000240  183B               	xorwf	_rowSelected,w,c
+  1943  000242  B4D8               	btfsc	status,2,c
+  1944  000244  D009               	goto	i2l1123
+  1945  000246  D016               	goto	i2l1125
+  1946  000248                     i2l1105:
+  1947  000248  0E37               	movlw	55
+  1948  00024A  0012               	return	
+  1949  00024C                     i2l1109:
+  1950  00024C  0E38               	movlw	56
+  1951  00024E  0012               	return	
+  1952  000250                     i2l1113:
+  1953  000250  0E39               	movlw	57
+  1954  000252  0012               	return	
+  1955  000254                     i2l1117:
+  1956  000254  0E43               	movlw	67
+  1957  000256  0012               	return	
+  1958  000258                     i2l1123:
+  1959  000258  5038               	movf	_columnSelected,w,c
+  1960                           
+  1961                           ; Switch size 1, requested type "space"
+  1962                           ; Number of cases is 4, Range of values is 1 to 4
+  1963                           ; switch strategies available:
+  1964                           ; Name         Instructions Cycles
+  1965                           ; simple_byte           13     7 (average)
+  1966                           ;	Chosen strategy is simple_byte
+  1967  00025A  0A01               	xorlw	1	; case 1
+  1968  00025C  B4D8               	btfsc	status,2,c
+  1969  00025E  D7F4               	goto	i2l1105
+  1970  000260  0A03               	xorlw	3	; case 2
+  1971  000262  B4D8               	btfsc	status,2,c
+  1972  000264  D7F3               	goto	i2l1109
+  1973  000266  0A01               	xorlw	1	; case 3
+  1974  000268  B4D8               	btfsc	status,2,c
+  1975  00026A  D7F2               	goto	i2l1113
+  1976  00026C  0A07               	xorlw	7	; case 4
+  1977  00026E  B4D8               	btfsc	status,2,c
+  1978  000270  D7F1               	goto	i2l1117
+  1979                           
+  1980                           ;SysRiego.c: 406: }
+  1981  000272  D01A               	goto	i2l1149
+  1982  000274                     i2l1125:
+  1983                           
+  1984                           ;SysRiego.c: 407: else if(rowSelected == 4){
+  1985  000274  0E04               	movlw	4
+  1986  000276  183B               	xorwf	_rowSelected,w,c
+  1987  000278  B4D8               	btfsc	status,2,c
+  1988  00027A  D009               	goto	i2l1147
+  1989  00027C  D015               	goto	i2l1149
+  1990  00027E                     i2l1129:
+  1991  00027E  0E2A               	movlw	42
+  1992  000280  0012               	return	
+  1993  000282                     i2l1133:
+  1994  000282  0E30               	movlw	48
+  1995  000284  0012               	return	
+  1996  000286                     i2l1137:
+  1997  000286  0E23               	movlw	35
+  1998  000288  0012               	return	
+  1999  00028A                     i2l1141:
+  2000  00028A  0E44               	movlw	68
+  2001  00028C  0012               	return	
+  2002  00028E                     i2l1147:
+  2003  00028E  5038               	movf	_columnSelected,w,c
+  2004                           
+  2005                           ; Switch size 1, requested type "space"
+  2006                           ; Number of cases is 4, Range of values is 1 to 4
+  2007                           ; switch strategies available:
+  2008                           ; Name         Instructions Cycles
+  2009                           ; simple_byte           13     7 (average)
+  2010                           ;	Chosen strategy is simple_byte
+  2011  000290  0A01               	xorlw	1	; case 1
+  2012  000292  B4D8               	btfsc	status,2,c
+  2013  000294  D7F4               	goto	i2l1129
+  2014  000296  0A03               	xorlw	3	; case 2
+  2015  000298  B4D8               	btfsc	status,2,c
+  2016  00029A  D7F3               	goto	i2l1133
+  2017  00029C  0A01               	xorlw	1	; case 3
+  2018  00029E  B4D8               	btfsc	status,2,c
+  2019  0002A0  D7F2               	goto	i2l1137
+  2020  0002A2  0A07               	xorlw	7	; case 4
+  2021  0002A4  B4D8               	btfsc	status,2,c
+  2022  0002A6  D7F1               	goto	i2l1141
+  2023  0002A8                     i2l1149:
+  2024                           
+  2025                           ;SysRiego.c: 414: }
+  2026                           ;SysRiego.c: 415: return -1;
+  2027  0002A8  0EFF               	movlw	255
+  2028  0002AA  0012               	return	
+  2029  0002AC                     __end_of_getKeyCode:
+  2030                           	opt stack 0
+  2031                           pclatu	equ	0xFFB
+  2032                           pclath	equ	0xFFA
+  2033                           tblptru	equ	0xFF8
+  2034                           tblptrh	equ	0xFF7
+  2035                           tblptrl	equ	0xFF6
+  2036                           tablat	equ	0xFF5
+  2037                           prodh	equ	0xFF4
+  2038                           prodl	equ	0xFF3
+  2039                           intcon	equ	0xFF2
+  2040                           intcon2	equ	0xFF1
+  2041                           postinc0	equ	0xFEE
+  2042                           fsr0h	equ	0xFEA
+  2043                           fsr0l	equ	0xFE9
+  2044                           wreg	equ	0xFE8
+  2045                           postdec1	equ	0xFE5
+  2046                           fsr1h	equ	0xFE2
+  2047                           fsr1l	equ	0xFE1
+  2048                           bsr	equ	0xFE0
+  2049                           indf2	equ	0xFDF
+  2050                           fsr2h	equ	0xFDA
+  2051                           fsr2l	equ	0xFD9
+  2052                           status	equ	0xFD8
+  2053                           
+  2054 ;; *************** function _determinePressedRow *****************
+  2055 ;; Defined at:
+  2056 ;;		line 293 in file "SysRiego.c"
+  2057 ;; Parameters:    Size  Location     Type
+  2058 ;;		None
+  2059 ;; Auto vars:     Size  Location     Type
+  2060 ;;  i               1    0[COMRAM] unsigned char 
+  2061 ;; Return value:  Size  Location     Type
+  2062 ;;                  1    wreg      void 
+  2063 ;; Registers used:
+  2064 ;;		wreg, status,2, status,0, cstack
+  2065 ;; Tracked objects:
+  2066 ;;		On entry : 0/0
+  2067 ;;		On exit  : 0/0
+  2068 ;;		Unchanged: 0/0
+  2069 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  2070 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  2071 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  2072 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  2073 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  2074 ;;Total ram usage:        1 bytes
+  2075 ;; Hardware stack levels used:    1
+  2076 ;; Hardware stack levels required when called:    1
+  2077 ;; This function calls:
+  2078 ;;		_turnOnAllRows
+  2079 ;; This function is called by:
+  2080 ;;		_pressedKey
+  2081 ;; This function uses a non-reentrant model
+  2082 ;;
+  2083                           
+  2084                           	psect	text18
+  2085  0000AA                     __ptext18:
+  2086                           	opt stack 0
+  2087  0000AA                     _determinePressedRow:
+  2088                           	opt stack 22
+  2089                           
+  2090                           ;SysRiego.c: 294: char i;
+  2091                           ;SysRiego.c: 295: for(i=0; i<4; i++){
+  2092                           
+  2093                           ;incstack = 0
+  2094  0000AA  0E00               	movlw	0
+  2095  0000AC  6E01               	movwf	determinePressedRow@i,c
+  2096  0000AE                     i2l911:
+  2097  0000AE  0E03               	movlw	3
+  2098  0000B0  6401               	cpfsgt	determinePressedRow@i,c
+  2099  0000B2  D001               	goto	i2l915
+  2100  0000B4  0012               	return	
+  2101  0000B6                     i2l915:
+  2102                           
+  2103                           ;SysRiego.c: 296: turnOnAllRows();
+  2104  0000B6  ECD5  F002         	call	_turnOnAllRows	;wreg free
+  2105                           
+  2106                           ;SysRiego.c: 297: switch(i){
+  2107  0000BA  D07D               	goto	i2l1047
+  2108  0000BC                     i2l143:
+  2109                           
+  2110                           ;SysRiego.c: 300: PORTBbits.RB0 = 0;
+  2111  0000BC  9081               	bcf	3969,0,c	;volatile
+  2112                           
+  2113                           ;SysRiego.c: 302: if( (columnSelected == 1) && (PORTBbits.RB4 == 0)){
+  2114  0000BE  0438               	decf	_columnSelected,w,c
+  2115  0000C0  B4D8               	btfsc	status,2,c
+  2116  0000C2  B881               	btfsc	3969,4,c	;volatile
+  2117  0000C4  D003               	goto	i2l925
+  2118                           
+  2119                           ;SysRiego.c: 303: rowSelected = 1;
+  2120  0000C6  0E01               	movlw	1
+  2121  0000C8  6E3B               	movwf	_rowSelected,c
+  2122                           
+  2123                           ;SysRiego.c: 304: return;
+  2124  0000CA  0012               	return	
+  2125  0000CC                     i2l925:
+  2126                           
+  2127                           ;SysRiego.c: 305: }
+  2128                           ;SysRiego.c: 306: if( (columnSelected == 2) && (PORTBbits.RB5 == 0)){
+  2129  0000CC  0E02               	movlw	2
+  2130  0000CE  1838               	xorwf	_columnSelected,w,c
+  2131  0000D0  B4D8               	btfsc	status,2,c
+  2132  0000D2  BA81               	btfsc	3969,5,c	;volatile
+  2133  0000D4  D003               	goto	i2l933
+  2134                           
+  2135                           ;SysRiego.c: 307: rowSelected = 1;
+  2136  0000D6  0E01               	movlw	1
+  2137  0000D8  6E3B               	movwf	_rowSelected,c
+  2138                           
+  2139                           ;SysRiego.c: 308: return;
+  2140  0000DA  0012               	return	
+  2141  0000DC                     i2l933:
+  2142                           
+  2143                           ;SysRiego.c: 309: }
+  2144                           ;SysRiego.c: 310: if( (columnSelected == 3) && (PORTBbits.RB6 == 0)){
+  2145  0000DC  0E03               	movlw	3
+  2146  0000DE  1838               	xorwf	_columnSelected,w,c
+  2147  0000E0  B4D8               	btfsc	status,2,c
+  2148  0000E2  BC81               	btfsc	3969,6,c	;volatile
+  2149  0000E4  D003               	goto	i2l941
+  2150                           
+  2151                           ;SysRiego.c: 311: rowSelected = 1;
+  2152  0000E6  0E01               	movlw	1
+  2153  0000E8  6E3B               	movwf	_rowSelected,c
+  2154                           
+  2155                           ;SysRiego.c: 312: return;
+  2156  0000EA  0012               	return	
+  2157  0000EC                     i2l941:
+  2158                           
+  2159                           ;SysRiego.c: 313: }
+  2160                           ;SysRiego.c: 314: if( (columnSelected == 4) && (PORTBbits.RB7 == 0)){
+  2161  0000EC  0E04               	movlw	4
+  2162  0000EE  1838               	xorwf	_columnSelected,w,c
+  2163  0000F0  B4D8               	btfsc	status,2,c
+  2164  0000F2  BE81               	btfsc	3969,7,c	;volatile
+  2165  0000F4  D06D               	goto	i2l1049
+  2166                           
+  2167                           ;SysRiego.c: 315: rowSelected = 1;
+  2168  0000F6  0E01               	movlw	1
+  2169  0000F8                     L5:
+  2170  0000F8  6E3B               	movwf	_rowSelected,c
+  2171                           
+  2172                           ;SysRiego.c: 316: return;
+  2173  0000FA  0012               	return	
+  2174  0000FC                     i2l150:
+  2175                           
+  2176                           ;SysRiego.c: 320: PORTBbits.RB1 = 0;
+  2177  0000FC  9281               	bcf	3969,1,c	;volatile
+  2178                           
+  2179                           ;SysRiego.c: 321: if( (columnSelected == 1) && (PORTBbits.RB4 == 0)){
+  2180  0000FE  0438               	decf	_columnSelected,w,c
+  2181  000100  B4D8               	btfsc	status,2,c
+  2182  000102  B881               	btfsc	3969,4,c	;volatile
+  2183  000104  D003               	goto	i2l957
+  2184                           
+  2185                           ;SysRiego.c: 322: rowSelected = 2;
+  2186  000106  0E02               	movlw	2
+  2187  000108  6E3B               	movwf	_rowSelected,c
+  2188                           
+  2189                           ;SysRiego.c: 323: return;
+  2190  00010A  0012               	return	
+  2191  00010C                     i2l957:
+  2192                           
+  2193                           ;SysRiego.c: 324: }
+  2194                           ;SysRiego.c: 325: if( (columnSelected == 2) && (PORTBbits.RB5 == 0)){
+  2195  00010C  0E02               	movlw	2
+  2196  00010E  1838               	xorwf	_columnSelected,w,c
+  2197  000110  B4D8               	btfsc	status,2,c
+  2198  000112  BA81               	btfsc	3969,5,c	;volatile
+  2199  000114  D003               	goto	i2l965
+  2200                           
+  2201                           ;SysRiego.c: 326: rowSelected = 2;
+  2202  000116  0E02               	movlw	2
+  2203  000118  6E3B               	movwf	_rowSelected,c
+  2204                           
+  2205                           ;SysRiego.c: 327: return;
+  2206  00011A  0012               	return	
+  2207  00011C                     i2l965:
+  2208                           
+  2209                           ;SysRiego.c: 328: }
+  2210                           ;SysRiego.c: 329: if( (columnSelected == 3) && (PORTBbits.RB6 == 0)){
+  2211  00011C  0E03               	movlw	3
+  2212  00011E  1838               	xorwf	_columnSelected,w,c
+  2213  000120  B4D8               	btfsc	status,2,c
+  2214  000122  BC81               	btfsc	3969,6,c	;volatile
+  2215  000124  D003               	goto	i2l973
+  2216                           
+  2217                           ;SysRiego.c: 330: rowSelected = 2;
+  2218  000126  0E02               	movlw	2
+  2219  000128  6E3B               	movwf	_rowSelected,c
+  2220                           
+  2221                           ;SysRiego.c: 331: return;
+  2222  00012A  0012               	return	
+  2223  00012C                     i2l973:
+  2224                           
+  2225                           ;SysRiego.c: 332: }
+  2226                           ;SysRiego.c: 333: if( (columnSelected == 4) && (PORTBbits.RB7 == 0)){
+  2227  00012C  0E04               	movlw	4
+  2228  00012E  1838               	xorwf	_columnSelected,w,c
+  2229  000130  B4D8               	btfsc	status,2,c
+  2230  000132  BE81               	btfsc	3969,7,c	;volatile
+  2231  000134  D04D               	goto	i2l1049
+  2232                           
+  2233                           ;SysRiego.c: 334: rowSelected = 2;
+  2234  000136  0E02               	movlw	2
+  2235  000138  D7DF               	goto	L5
+  2236  00013A                     i2l155:
+  2237                           
+  2238                           ;SysRiego.c: 339: PORTBbits.RB2 = 0;
+  2239  00013A  9481               	bcf	3969,2,c	;volatile
+  2240                           
+  2241                           ;SysRiego.c: 340: if( (columnSelected == 1) && (PORTBbits.RB4 == 0)){
+  2242  00013C  0438               	decf	_columnSelected,w,c
+  2243  00013E  B4D8               	btfsc	status,2,c
+  2244  000140  B881               	btfsc	3969,4,c	;volatile
+  2245  000142  D003               	goto	i2l989
+  2246                           
+  2247                           ;SysRiego.c: 341: rowSelected = 3;
+  2248  000144  0E03               	movlw	3
+  2249  000146  6E3B               	movwf	_rowSelected,c
+  2250                           
+  2251                           ;SysRiego.c: 342: return;
+  2252  000148  0012               	return	
+  2253  00014A                     i2l989:
+  2254                           
+  2255                           ;SysRiego.c: 343: }
+  2256                           ;SysRiego.c: 344: if( (columnSelected == 2) && (PORTBbits.RB5 == 0)){
+  2257  00014A  0E02               	movlw	2
+  2258  00014C  1838               	xorwf	_columnSelected,w,c
+  2259  00014E  B4D8               	btfsc	status,2,c
+  2260  000150  BA81               	btfsc	3969,5,c	;volatile
+  2261  000152  D003               	goto	i2l997
+  2262                           
+  2263                           ;SysRiego.c: 345: rowSelected = 3;
+  2264  000154  0E03               	movlw	3
+  2265  000156  6E3B               	movwf	_rowSelected,c
+  2266                           
+  2267                           ;SysRiego.c: 346: return;
+  2268  000158  0012               	return	
+  2269  00015A                     i2l997:
+  2270                           
+  2271                           ;SysRiego.c: 347: }
+  2272                           ;SysRiego.c: 348: if( (columnSelected == 3) && (PORTBbits.RB6 == 0)){
+  2273  00015A  0E03               	movlw	3
+  2274  00015C  1838               	xorwf	_columnSelected,w,c
+  2275  00015E  B4D8               	btfsc	status,2,c
+  2276  000160  BC81               	btfsc	3969,6,c	;volatile
+  2277  000162  D003               	goto	i2l1005
+  2278                           
+  2279                           ;SysRiego.c: 349: rowSelected = 3;
+  2280  000164  0E03               	movlw	3
+  2281  000166  6E3B               	movwf	_rowSelected,c
+  2282                           
+  2283                           ;SysRiego.c: 350: return;
+  2284  000168  0012               	return	
+  2285  00016A                     i2l1005:
+  2286                           
+  2287                           ;SysRiego.c: 351: }
+  2288                           ;SysRiego.c: 352: if( (columnSelected == 4) && (PORTBbits.RB7 == 0)){
+  2289  00016A  0E04               	movlw	4
+  2290  00016C  1838               	xorwf	_columnSelected,w,c
+  2291  00016E  B4D8               	btfsc	status,2,c
+  2292  000170  BE81               	btfsc	3969,7,c	;volatile
+  2293  000172  D02E               	goto	i2l1049
+  2294                           
+  2295                           ;SysRiego.c: 353: rowSelected = 3;
+  2296  000174  0E03               	movlw	3
+  2297  000176  D7C0               	goto	L5
+  2298  000178                     i2l160:
+  2299                           
+  2300                           ;SysRiego.c: 359: PORTBbits.RB3 = 0;
+  2301  000178  9681               	bcf	3969,3,c	;volatile
+  2302                           
+  2303                           ;SysRiego.c: 360: if( (columnSelected == 1) && (PORTBbits.RB4 == 0)){
+  2304  00017A  0438               	decf	_columnSelected,w,c
+  2305  00017C  B4D8               	btfsc	status,2,c
+  2306  00017E  B881               	btfsc	3969,4,c	;volatile
+  2307  000180  D003               	goto	i2l1021
+  2308                           
+  2309                           ;SysRiego.c: 361: rowSelected = 4;
+  2310  000182  0E04               	movlw	4
+  2311  000184  6E3B               	movwf	_rowSelected,c
+  2312                           
+  2313                           ;SysRiego.c: 362: return;
+  2314  000186  0012               	return	
+  2315  000188                     i2l1021:
+  2316                           
+  2317                           ;SysRiego.c: 363: }
+  2318                           ;SysRiego.c: 364: if( (columnSelected == 2) && (PORTBbits.RB5 == 0)){
+  2319  000188  0E02               	movlw	2
+  2320  00018A  1838               	xorwf	_columnSelected,w,c
+  2321  00018C  B4D8               	btfsc	status,2,c
+  2322  00018E  BA81               	btfsc	3969,5,c	;volatile
+  2323  000190  D003               	goto	i2l1029
+  2324                           
+  2325                           ;SysRiego.c: 365: rowSelected = 4;
+  2326  000192  0E04               	movlw	4
+  2327  000194  6E3B               	movwf	_rowSelected,c
+  2328                           
+  2329                           ;SysRiego.c: 366: return;
+  2330  000196  0012               	return	
+  2331  000198                     i2l1029:
+  2332                           
+  2333                           ;SysRiego.c: 367: }
+  2334                           ;SysRiego.c: 368: if( (columnSelected == 3) && (PORTBbits.RB6 == 0)){
+  2335  000198  0E03               	movlw	3
+  2336  00019A  1838               	xorwf	_columnSelected,w,c
+  2337  00019C  B4D8               	btfsc	status,2,c
+  2338  00019E  BC81               	btfsc	3969,6,c	;volatile
+  2339  0001A0  D003               	goto	i2l1037
+  2340                           
+  2341                           ;SysRiego.c: 369: rowSelected = 4;
+  2342  0001A2  0E04               	movlw	4
+  2343  0001A4  6E3B               	movwf	_rowSelected,c
+  2344                           
+  2345                           ;SysRiego.c: 370: return;
+  2346  0001A6  0012               	return	
+  2347  0001A8                     i2l1037:
+  2348                           
+  2349                           ;SysRiego.c: 371: }
+  2350                           ;SysRiego.c: 372: if( (columnSelected == 4) && (PORTBbits.RB7 == 0)){
+  2351  0001A8  0E04               	movlw	4
+  2352  0001AA  1838               	xorwf	_columnSelected,w,c
+  2353  0001AC  B4D8               	btfsc	status,2,c
+  2354  0001AE  BE81               	btfsc	3969,7,c	;volatile
+  2355  0001B0  D00F               	goto	i2l1049
+  2356                           
+  2357                           ;SysRiego.c: 373: rowSelected = 4;
+  2358  0001B2  0E04               	movlw	4
+  2359  0001B4  D7A1               	goto	L5
+  2360  0001B6                     i2l1047:
+  2361  0001B6  5001               	movf	determinePressedRow@i,w,c
+  2362                           
+  2363                           ; Switch size 1, requested type "space"
+  2364                           ; Number of cases is 4, Range of values is 0 to 3
+  2365                           ; switch strategies available:
+  2366                           ; Name         Instructions Cycles
+  2367                           ; simple_byte           13     7 (average)
+  2368                           ;	Chosen strategy is simple_byte
+  2369  0001B8  0A00               	xorlw	0	; case 0
+  2370  0001BA  B4D8               	btfsc	status,2,c
+  2371  0001BC  D77F               	goto	i2l143
+  2372  0001BE  0A01               	xorlw	1	; case 1
+  2373  0001C0  B4D8               	btfsc	status,2,c
+  2374  0001C2  D79C               	goto	i2l150
+  2375  0001C4  0A03               	xorlw	3	; case 2
+  2376  0001C6  B4D8               	btfsc	status,2,c
+  2377  0001C8  D7B8               	goto	i2l155
+  2378  0001CA  0A01               	xorlw	1	; case 3
+  2379  0001CC  B4D8               	btfsc	status,2,c
+  2380  0001CE  D7D4               	goto	i2l160
+  2381  0001D0                     i2l1049:
+  2382  0001D0  2A01               	incf	determinePressedRow@i,f,c
+  2383  0001D2  D76D               	goto	i2l911
+  2384  0001D4                     __end_of_determinePressedRow:
+  2385                           	opt stack 0
+  2386                           pclatu	equ	0xFFB
+  2387                           pclath	equ	0xFFA
+  2388                           tblptru	equ	0xFF8
+  2389                           tblptrh	equ	0xFF7
+  2390                           tblptrl	equ	0xFF6
+  2391                           tablat	equ	0xFF5
+  2392                           prodh	equ	0xFF4
+  2393                           prodl	equ	0xFF3
+  2394                           intcon	equ	0xFF2
+  2395                           intcon2	equ	0xFF1
+  2396                           postinc0	equ	0xFEE
+  2397                           fsr0h	equ	0xFEA
+  2398                           fsr0l	equ	0xFE9
+  2399                           wreg	equ	0xFE8
+  2400                           postdec1	equ	0xFE5
+  2401                           fsr1h	equ	0xFE2
+  2402                           fsr1l	equ	0xFE1
+  2403                           bsr	equ	0xFE0
+  2404                           indf2	equ	0xFDF
+  2405                           fsr2h	equ	0xFDA
+  2406                           fsr2l	equ	0xFD9
+  2407                           status	equ	0xFD8
+  2408                           
+  2409 ;; *************** function _turnOnAllRows *****************
+  2410 ;; Defined at:
+  2411 ;;		line 285 in file "SysRiego.c"
+  2412 ;; Parameters:    Size  Location     Type
+  2413 ;;		None
+  2414 ;; Auto vars:     Size  Location     Type
+  2415 ;;		None
+  2416 ;; Return value:  Size  Location     Type
+  2417 ;;                  1    wreg      void 
+  2418 ;; Registers used:
+  2419 ;;		None
+  2420 ;; Tracked objects:
+  2421 ;;		On entry : 0/0
+  2422 ;;		On exit  : 0/0
+  2423 ;;		Unchanged: 0/0
+  2424 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  2425 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  2426 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  2427 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  2428 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  2429 ;;Total ram usage:        0 bytes
+  2430 ;; Hardware stack levels used:    1
+  2431 ;; This function calls:
+  2432 ;;		Nothing
+  2433 ;; This function is called by:
+  2434 ;;		_determinePressedRow
+  2435 ;; This function uses a non-reentrant model
+  2436 ;;
+  2437                           
+  2438                           	psect	text19
+  2439  0005AA                     __ptext19:
+  2440                           	opt stack 0
+  2441  0005AA                     _turnOnAllRows:
+  2442                           	opt stack 22
+  2443                           
+  2444                           ;SysRiego.c: 286: PORTBbits.RB0 = 1;
+  2445                           
+  2446                           ;incstack = 0
+  2447  0005AA  8081               	bsf	3969,0,c	;volatile
+  2448                           
+  2449                           ;SysRiego.c: 287: PORTBbits.RB1 = 1;
+  2450  0005AC  8281               	bsf	3969,1,c	;volatile
+  2451                           
+  2452                           ;SysRiego.c: 288: PORTBbits.RB2 = 1;
+  2453  0005AE  8481               	bsf	3969,2,c	;volatile
+  2454                           
+  2455                           ;SysRiego.c: 289: PORTBbits.RB3 = 1;
+  2456  0005B0  8681               	bsf	3969,3,c	;volatile
+  2457  0005B2  0012               	return		;funcret
+  2458  0005B4                     __end_of_turnOnAllRows:
+  2459                           	opt stack 0
+  2460                           pclatu	equ	0xFFB
+  2461                           pclath	equ	0xFFA
+  2462                           tblptru	equ	0xFF8
+  2463                           tblptrh	equ	0xFF7
+  2464                           tblptrl	equ	0xFF6
+  2465                           tablat	equ	0xFF5
+  2466                           prodh	equ	0xFF4
+  2467                           prodl	equ	0xFF3
+  2468                           intcon	equ	0xFF2
+  2469                           intcon2	equ	0xFF1
+  2470                           postinc0	equ	0xFEE
+  2471                           fsr0h	equ	0xFEA
+  2472                           fsr0l	equ	0xFE9
+  2473                           wreg	equ	0xFE8
+  2474                           postdec1	equ	0xFE5
+  2475                           fsr1h	equ	0xFE2
+  2476                           fsr1l	equ	0xFE1
+  2477                           bsr	equ	0xFE0
+  2478                           indf2	equ	0xFDF
+  2479                           fsr2h	equ	0xFDA
+  2480                           fsr2l	equ	0xFD9
+  2481                           status	equ	0xFD8
+  2482                           
+  2483 ;; *************** function _delay *****************
+  2484 ;; Defined at:
+  2485 ;;		line 276 in file "SysRiego.c"
+  2486 ;; Parameters:    Size  Location     Type
+  2487 ;;		None
+  2488 ;; Auto vars:     Size  Location     Type
+  2489 ;;  L2REG           1    2[COMRAM] unsigned char 
+  2490 ;;  L1REG           1    1[COMRAM] unsigned char 
+  2491 ;; Return value:  Size  Location     Type
+  2492 ;;                  1    wreg      void 
+  2493 ;; Registers used:
+  2494 ;;		wreg, status,2, status,0
+  2495 ;; Tracked objects:
+  2496 ;;		On entry : 0/0
+  2497 ;;		On exit  : 0/0
+  2498 ;;		Unchanged: 0/0
+  2499 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  2500 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  2501 ;;      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  2502 ;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  2503 ;;      Totals:         3       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  2504 ;;Total ram usage:        3 bytes
+  2505 ;; Hardware stack levels used:    1
+  2506 ;; This function calls:
+  2507 ;;		Nothing
+  2508 ;; This function is called by:
+  2509 ;;		_oneShot
+  2510 ;;		_resetOneShot
+  2511 ;; This function uses a non-reentrant model
+  2512 ;;
+  2513                           
+  2514                           	psect	text20
+  2515  000532                     __ptext20:
+  2516                           	opt stack 0
+  2517  000532                     _delay:
+  2518                           	opt stack 24
+  2519                           
+  2520                           ;SysRiego.c: 277: unsigned char L1REG = 0;
+  2521                           
+  2522                           ;incstack = 0
+  2523  000532  0E00               	movlw	0
+  2524  000534  6E02               	movwf	delay@L1REG,c
+  2525                           
+  2526                           ;SysRiego.c: 278: unsigned char L2REG;
+  2527                           ;SysRiego.c: 279: while(L1REG++ < 13){
+  2528  000536  D004               	goto	i2l1205
+  2529  000538                     i2l1203:
+  2530                           
+  2531                           ;SysRiego.c: 280: L2REG = 0;
+  2532  000538  0E00               	movlw	0
+  2533  00053A  6E03               	movwf	delay@L2REG,c
+  2534  00053C                     i2l130:
+  2535  00053C  3E03               	incfsz	delay@L2REG,f,c
+  2536  00053E  D7FE               	goto	i2l130
+  2537  000540                     i2l1205:
+  2538  000540  2A02               	incf	delay@L1REG,f,c
+  2539  000542  0402               	decf	delay@L1REG,w,c
+  2540  000544  6E01               	movwf	??_delay& (0+255),c
+  2541  000546  0E0C               	movlw	12
+  2542  000548  6401               	cpfsgt	??_delay,c
+  2543  00054A  D7F6               	goto	i2l1203
+  2544  00054C  0012               	return	
+  2545  00054E                     __end_of_delay:
+  2546                           	opt stack 0
+  2547                           pclatu	equ	0xFFB
+  2548                           pclath	equ	0xFFA
+  2549                           tblptru	equ	0xFF8
+  2550                           tblptrh	equ	0xFF7
+  2551                           tblptrl	equ	0xFF6
+  2552                           tablat	equ	0xFF5
+  2553                           prodh	equ	0xFF4
+  2554                           prodl	equ	0xFF3
+  2555                           intcon	equ	0xFF2
+  2556                           intcon2	equ	0xFF1
+  2557                           postinc0	equ	0xFEE
+  2558                           fsr0h	equ	0xFEA
+  2559                           fsr0l	equ	0xFE9
+  2560                           wreg	equ	0xFE8
+  2561                           postdec1	equ	0xFE5
+  2562                           fsr1h	equ	0xFE2
+  2563                           fsr1l	equ	0xFE1
+  2564                           bsr	equ	0xFE0
+  2565                           indf2	equ	0xFDF
+  2566                           fsr2h	equ	0xFDA
+  2567                           fsr2l	equ	0xFD9
+  2568                           status	equ	0xFD8
+  2569                           
+  2570 ;; *************** function _groundAllRows *****************
+  2571 ;; Defined at:
+  2572 ;;		line 245 in file "SysRiego.c"
+  2573 ;; Parameters:    Size  Location     Type
+  2574 ;;		None
+  2575 ;; Auto vars:     Size  Location     Type
+  2576 ;;		None
+  2577 ;; Return value:  Size  Location     Type
+  2578 ;;                  1    wreg      void 
+  2579 ;; Registers used:
+  2580 ;;		None
+  2581 ;; Tracked objects:
+  2582 ;;		On entry : 0/0
+  2583 ;;		On exit  : 0/0
+  2584 ;;		Unchanged: 0/0
+  2585 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+  2586 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  2587 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  2588 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  2589 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+  2590 ;;Total ram usage:        0 bytes
+  2591 ;; Hardware stack levels used:    1
+  2592 ;; This function calls:
+  2593 ;;		Nothing
+  2594 ;; This function is called by:
+  2595 ;;		_ISRH
+  2596 ;; This function uses a non-reentrant model
+  2597 ;;
+  2598                           
+  2599                           	psect	text21
+  2600  0005B4                     __ptext21:
+  2601                           	opt stack 0
+  2602  0005B4                     _groundAllRows:
+  2603                           	opt stack 25
+  2604                           
+  2605                           ;SysRiego.c: 246: PORTBbits.RB0 = 0;
+  2606                           
+  2607                           ;incstack = 0
+  2608  0005B4  9081               	bcf	3969,0,c	;volatile
+  2609                           
+  2610                           ;SysRiego.c: 247: PORTBbits.RB1 = 0;
+  2611  0005B6  9281               	bcf	3969,1,c	;volatile
+  2612                           
+  2613                           ;SysRiego.c: 248: PORTBbits.RB2 = 0;
+  2614  0005B8  9481               	bcf	3969,2,c	;volatile
+  2615                           
+  2616                           ;SysRiego.c: 249: PORTBbits.RB3 = 0;
+  2617  0005BA  9681               	bcf	3969,3,c	;volatile
+  2618  0005BC  0012               	return		;funcret
+  2619  0005BE                     __end_of_groundAllRows:
+  2620                           	opt stack 0
+  2621  0000                     pclatu	equ	0xFFB
+  2622                           pclath	equ	0xFFA
+  2623                           tblptru	equ	0xFF8
+  2624                           tblptrh	equ	0xFF7
+  2625                           tblptrl	equ	0xFF6
+  2626                           tablat	equ	0xFF5
+  2627                           prodh	equ	0xFF4
+  2628                           prodl	equ	0xFF3
+  2629                           intcon	equ	0xFF2
+  2630                           intcon2	equ	0xFF1
+  2631                           postinc0	equ	0xFEE
+  2632                           fsr0h	equ	0xFEA
+  2633                           fsr0l	equ	0xFE9
+  2634                           wreg	equ	0xFE8
+  2635                           postdec1	equ	0xFE5
+  2636                           fsr1h	equ	0xFE2
+  2637                           fsr1l	equ	0xFE1
+  2638                           bsr	equ	0xFE0
+  2639                           indf2	equ	0xFDF
+  2640                           fsr2h	equ	0xFDA
+  2641                           fsr2l	equ	0xFD9
+  2642                           status	equ	0xFD8
+  2643                           pclatu	equ	0xFFB
+  2644                           pclath	equ	0xFFA
+  2645                           tblptru	equ	0xFF8
+  2646                           tblptrh	equ	0xFF7
+  2647                           tblptrl	equ	0xFF6
+  2648                           tablat	equ	0xFF5
+  2649                           prodh	equ	0xFF4
+  2650                           prodl	equ	0xFF3
+  2651                           intcon	equ	0xFF2
+  2652                           intcon2	equ	0xFF1
+  2653                           postinc0	equ	0xFEE
+  2654                           fsr0h	equ	0xFEA
+  2655                           fsr0l	equ	0xFE9
+  2656                           wreg	equ	0xFE8
+  2657                           postdec1	equ	0xFE5
+  2658                           fsr1h	equ	0xFE2
+  2659                           fsr1l	equ	0xFE1
+  2660                           bsr	equ	0xFE0
+  2661                           indf2	equ	0xFDF
+  2662                           fsr2h	equ	0xFDA
+  2663                           fsr2l	equ	0xFD9
+  2664                           status	equ	0xFD8
+  2665                           
+  2666                           	psect	rparam
+  2667  0000                     pclatu	equ	0xFFB
+  2668                           pclath	equ	0xFFA
+  2669                           tblptru	equ	0xFF8
+  2670                           tblptrh	equ	0xFF7
+  2671                           tblptrl	equ	0xFF6
+  2672                           tablat	equ	0xFF5
+  2673                           prodh	equ	0xFF4
+  2674                           prodl	equ	0xFF3
+  2675                           intcon	equ	0xFF2
+  2676                           intcon2	equ	0xFF1
+  2677                           postinc0	equ	0xFEE
+  2678                           fsr0h	equ	0xFEA
+  2679                           fsr0l	equ	0xFE9
+  2680                           wreg	equ	0xFE8
+  2681                           postdec1	equ	0xFE5
+  2682                           fsr1h	equ	0xFE2
+  2683                           fsr1l	equ	0xFE1
+  2684                           bsr	equ	0xFE0
+  2685                           indf2	equ	0xFDF
+  2686                           fsr2h	equ	0xFDA
+  2687                           fsr2l	equ	0xFD9
+  2688                           status	equ	0xFD8
+  2689                           
+  2690                           	psect	temp
+  2691  00003C                     btemp:
+  2692                           	opt stack 0
+  2693  00003C                     	ds	1
+  2694  0000                     int$flags	set	btemp
+  2695                           pclatu	equ	0xFFB
+  2696                           pclath	equ	0xFFA
+  2697                           tblptru	equ	0xFF8
+  2698                           tblptrh	equ	0xFF7
+  2699                           tblptrl	equ	0xFF6
+  2700                           tablat	equ	0xFF5
+  2701                           prodh	equ	0xFF4
+  2702                           prodl	equ	0xFF3
+  2703                           intcon	equ	0xFF2
+  2704                           intcon2	equ	0xFF1
+  2705                           postinc0	equ	0xFEE
+  2706                           fsr0h	equ	0xFEA
+  2707                           fsr0l	equ	0xFE9
+  2708                           wreg	equ	0xFE8
+  2709                           postdec1	equ	0xFE5
+  2710                           fsr1h	equ	0xFE2
+  2711                           fsr1l	equ	0xFE1
+  2712                           bsr	equ	0xFE0
+  2713                           indf2	equ	0xFDF
+  2714                           fsr2h	equ	0xFDA
+  2715                           fsr2l	equ	0xFD9
+  2716                           status	equ	0xFD8
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        24
+    BSS         4
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           94     31      59
+    BANK0           160     17      17
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+    BANK8           256      0       0
+    BANK9           256      0       0
+    BANK10          256      0       0
+    BANK11          256      0       0
+    BANK12          256      0       0
+
+Pointer List with Targets:
+
+    displayLineOnLCD@array	PTR unsigned char  size(2) Largest target is 12
+		 -> CASTELLO(COMRAM[12]), GREETING(COMRAM[12]), 
+
+
+Critical Paths under _main in COMRAM
+
+    _LCDSetup->_longDelay
+    _isReady->_shortDelay
+    _command->_shortDelay
+
+Critical Paths under _ISRL in COMRAM
+
+    None.
+
+Critical Paths under _ISRH in COMRAM
+
+    _resetOneShot->_delay
+    _pressedKey->_pressedKeyAction
+    _pressedKeyAction->_displayLineOnLCD
+    _displayLineOnLCD->_displayCharOnLCD
+    _displayCharOnLCD->i2_shortDelay
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _ISRL in BANK0
+
+    None.
+
+Critical Paths under _ISRH in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _ISRL in BANK1
+
+    None.
+
+Critical Paths under _ISRH in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _ISRL in BANK2
+
+    None.
+
+Critical Paths under _ISRH in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _ISRL in BANK3
+
+    None.
+
+Critical Paths under _ISRH in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _ISRL in BANK4
+
+    None.
+
+Critical Paths under _ISRH in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _ISRL in BANK5
+
+    None.
+
+Critical Paths under _ISRH in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _ISRL in BANK6
+
+    None.
+
+Critical Paths under _ISRH in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Critical Paths under _ISRL in BANK7
+
+    None.
+
+Critical Paths under _ISRH in BANK7
+
+    None.
+
+Critical Paths under _main in BANK8
+
+    None.
+
+Critical Paths under _ISRL in BANK8
+
+    None.
+
+Critical Paths under _ISRH in BANK8
+
+    None.
+
+Critical Paths under _main in BANK9
+
+    None.
+
+Critical Paths under _ISRL in BANK9
+
+    None.
+
+Critical Paths under _ISRH in BANK9
+
+    None.
+
+Critical Paths under _main in BANK10
+
+    None.
+
+Critical Paths under _ISRL in BANK10
+
+    None.
+
+Critical Paths under _ISRH in BANK10
+
+    None.
+
+Critical Paths under _main in BANK11
+
+    None.
+
+Critical Paths under _ISRL in BANK11
+
+    None.
+
+Critical Paths under _ISRH in BANK11
+
+    None.
+
+Critical Paths under _main in BANK12
+
+    None.
+
+Critical Paths under _ISRL in BANK12
+
+    None.
+
+Critical Paths under _ISRH in BANK12
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0      90
+                           _LCDSetup
+                      _portDAsOutput
+ ---------------------------------------------------------------------------------
+ (1) _LCDSetup                                             0     0      0      90
+                            _command
+                            _isReady
+                          _longDelay
+ ---------------------------------------------------------------------------------
+ (2) _longDelay                                            3     3      0      45
+                                             28 COMRAM     3     3      0
+ ---------------------------------------------------------------------------------
+ (2) _isReady                                              0     0      0      15
+                       _portDAsInput
+                      _portDAsOutput
+                         _shortDelay
+ ---------------------------------------------------------------------------------
+ (1) _portDAsOutput                                        0     0      0       0
+ ---------------------------------------------------------------------------------
+ (3) _portDAsInput                                         0     0      0       0
+ ---------------------------------------------------------------------------------
+ (2) _command                                              1     1      0      30
+                                             29 COMRAM     1     1      0
+                         _shortDelay
+ ---------------------------------------------------------------------------------
+ (3) _shortDelay                                           1     1      0      15
+                                             28 COMRAM     1     1      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 3
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (4) _ISRL                                                17    17      0       0
+                                              0 BANK0     17    17      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 4
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (5) _ISRH                                                14    14      0     555
+                                             14 COMRAM    14    14      0
+                      _groundAllRows
+                            _oneShot
+                       _resetOneShot
+ ---------------------------------------------------------------------------------
+ (6) _resetOneShot                                         0     0      0      30
+                              _delay
+ ---------------------------------------------------------------------------------
+ (6) _oneShot                                              0     0      0     525
+                              _delay
+                         _pressedKey
+ ---------------------------------------------------------------------------------
+ (7) _pressedKey                                           0     0      0     495
+                _determinePressedRow
+                         _getKeyCode
+                   _pressedKeyAction
+ ---------------------------------------------------------------------------------
+ (8) _pressedKeyAction                                     1     1      0     450
+                                             13 COMRAM     1     1      0
+                   _displayCharOnLCD
+                   _displayLineOnLCD
+ ---------------------------------------------------------------------------------
+ (9) _displayLineOnLCD                                    11     8      3     376
+                                              2 COMRAM    11     8      3
+                   _displayCharOnLCD
+ ---------------------------------------------------------------------------------
+ (10) _displayCharOnLCD                                    1     1      0      30
+                                              1 COMRAM     1     1      0
+                       i2_shortDelay
+ ---------------------------------------------------------------------------------
+ (11) i2_shortDelay                                        1     1      0      15
+                                              0 COMRAM     1     1      0
+ ---------------------------------------------------------------------------------
+ (8) _getKeyCode                                           0     0      0       0
+ ---------------------------------------------------------------------------------
+ (8) _determinePressedRow                                  1     1      0      45
+                                              0 COMRAM     1     1      0
+                      _turnOnAllRows
+ ---------------------------------------------------------------------------------
+ (9) _turnOnAllRows                                        0     0      0       0
+ ---------------------------------------------------------------------------------
+ (7) _delay                                                3     3      0      30
+                                              0 COMRAM     3     3      0
+ ---------------------------------------------------------------------------------
+ (6) _groundAllRows                                        0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 11
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _LCDSetup
+     _command
+       _shortDelay
+     _isReady
+       _portDAsInput
+       _portDAsOutput
+       _shortDelay
+     _longDelay
+   _portDAsOutput
+
+ _ISRL (ROOT)
+
+ _ISRH (ROOT)
+   _groundAllRows
+   _oneShot
+     _delay
+     _pressedKey
+       _determinePressedRow
+         _turnOnAllRows
+       _getKeyCode
+       _pressedKeyAction
+         _displayCharOnLCD
+           i2_shortDelay
+         _displayLineOnLCD
+           _displayCharOnLCD
+             i2_shortDelay
+   _resetOneShot
+     _delay
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             CFF      0       0      31        0.0%
+EEDATA             400      0       0       0        0.0%
+BITBANK12          100      0       0      29        0.0%
+BANK12             100      0       0      30        0.0%
+BITBANK11          100      0       0      27        0.0%
+BANK11             100      0       0      28        0.0%
+BITBANK10          100      0       0      25        0.0%
+BANK10             100      0       0      26        0.0%
+BITBANK9           100      0       0      23        0.0%
+BANK9              100      0       0      24        0.0%
+BITBANK8           100      0       0      21        0.0%
+BANK8              100      0       0      22        0.0%
+BITBANK7           100      0       0      18        0.0%
+BANK7              100      0       0      19        0.0%
+BITBANK6           100      0       0      16        0.0%
+BANK6              100      0       0      17        0.0%
+BITBANK5           100      0       0      14        0.0%
+BANK5              100      0       0      15        0.0%
+BITBANK4           100      0       0      12        0.0%
+BANK4              100      0       0      13        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0     11      11       5       10.6%
+BITCOMRAM           5E      0       0       0        0.0%
+COMRAM              5E     1F      3B       1       62.8%
+BITSFR_3             0      0       0      40        0.0%
+SFR_3                0      0       0      40        0.0%
+BITSFR_2             0      0       0      40        0.0%
+SFR_2                0      0       0      40        0.0%
+BITSFR_1             0      0       0      40        0.0%
+SFR_1                0      0       0      40        0.0%
+BITSFR               0      0       0      40        0.0%
+SFR                  0      0       0      40        0.0%
+STACK                0      0       0       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0      4C      20        0.0%
+DATA                 0      0      4C       3        0.0%
+CODE                 0      0       0       0        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V1.36 build -262312587 
+Symbol Table                                                                                   Sat Apr 30 16:13:53 2016
+
+             shortDelay@L1REG 001D                            l93 049C                            l69 0412  
+                          bsr 000FE0                           l106 04E8                           l907 0592  
+                         wreg 000FE8                  __CFG_LVP$OFF 000000                  __CFG_WDT$OFF 000000  
+                        l1171 04A6                          l1173 04AE                          l1167 0496  
+                        l1169 049E                          l1197 04F0                          _LATB 000F8A  
+                        _LATC 000F8B                          _ISRH 0008                          _ISRL 0018  
+        __end_ofi2_shortDelay 05AA                          _main 03D0                          fsr0h 000FEA  
+                        fsr1h 000FE2                          fsr0l 000FE9                          fsr2h 000FDA  
+                        fsr1l 000FE1                          indf2 000FDF                          fsr2l 000FD9  
+                        btemp 003C                          pclat 000FFA                          prodh 000FF4  
+                        prodl 000FF3                          start 00A6         displayLineOnLCD@array 0003  
+               __CFG_MCLRE$ON 000000                  ___param_bank 000010                _columnSelected 0038  
+                       ?_ISRH 0001                         ?_ISRL 0001              __end_of_LCDSetup 04DE  
+              longDelay@L1REG 001D                longDelay@L2REG 001E                longDelay@L3REG 001F  
+                       ?_main 0001                         _CMCON 000FB4                         i2l130 053C  
+                       i2l150 00FC                         i2l143 00BC                         i2l160 0178  
+                       i2l155 013A                         i2l261 02FE                         i2l911 00AE  
+                       i2l915 00B6                         i2l941 00EC                         i2l933 00DC  
+                       i2l925 00CC                         i2l973 012C                         i2l965 011C  
+                       i2l957 010C                         i2l877 05A0                         i2l997 015A  
+                       i2l989 014A                         _PORTB 000F81                         _PORTC 000F82  
+                       _PORTD 000F83                         _TRISB 000F93                         _TRISC 000F94  
+                       _TRISD 000F95               __end_of_command 057A               __end_of_isReady 04FA  
+                       _delay 0532               __end_of_oneShot 0532                         tablat 000FF5  
+                       status 000FD8   __end_of_determinePressedRow 01D4              _pressedKeyAction 0414  
+                __end_of_ISRH 033A                  __end_of_ISRL 00A6               __initialization 0454  
+                __end_of_main 0414                        ??_ISRH 000F                        ??_ISRL 0060  
+                      ??_main 0020                 __activetblptr 000002                        ?_delay 0001  
+                      _ADCON1 000FC1                        i2l1021 0188                        i2l1005 016A  
+                      i2l1101 023E                        i2l1113 0250                        i2l1105 0248  
+                      i2l1203 0538                        i2l1123 0258                        i2l1205 0540  
+                      i2l1037 01A8                        i2l1029 0198                        i2l1141 028A  
+                      i2l1133 0282                        i2l1117 0254                        i2l1109 024C  
+                      i2l1125 0274                        i2l1061 01E0                        i2l1047 01B6  
+                      i2l1049 01D0                        i2l1137 0286                        i2l1129 027E  
+                      i2l1081 0212                        i2l1065 01E4                        i2l1057 01DC  
+                      i2l1305 0340                        i2l1313 0418                        i2l1147 028E  
+                      i2l1075 01EC                        i2l1315 042A                        i2l1331 039C  
+                      i2l1323 038C                        i2l1093 021E                        i2l1085 0216  
+                      i2l1149 02A8                        i2l1069 01E8                        i2l1077 0208  
+                      i2l1309 0358                        i2l1317 043C                        i2l1325 0390  
+                      i2l1333 03A2                        i2l1319 0444                        i2l1327 0394  
+                      i2l1335 03BE                        i2l1089 021A                        i2l1329 0398  
+                      i2l1099 0222                        i2l1355 02E4                        i2l1365 02FA  
+                      _OSCCON 000FD3        __size_of_turnOnAllRows 000A                     ??_command 001E  
+                   ??_isReady 001E             ?_displayCharOnLCD 0001                  __pdataCOMRAM 0020  
+                   ??_oneShot 000F            ??_displayCharOnLCD 0002                        tblptrh 000FF7  
+                      tblptrl 000FF6                        tblptru 000FF8         __size_ofi2_shortDelay 000E  
+                  __accesstop 0060       __end_of__initialization 047C               __CFG_PBADEN$OFF 000000  
+                   ?_LCDSetup 0001                 ___rparam_used 000001             ?_displayLineOnLCD 0003  
+              __pcstackCOMRAM 0001                 __end_of_delay 054E            ??_displayLineOnLCD 0006  
+                i2_shortDelay 059C                 _turnOnAllRows 05AA         __end_of_portDAsOutput 05C4  
+                     ??_delay 0001                    ??_LCDSetup 0020        __size_of_groundAllRows 000A  
+          __size_of_longDelay 002E                    _getKeyCode 01D4                ?_turnOnAllRows 0001  
+    __end_of_pressedKeyAction 0454                 ?_resetOneShot 0001             displayLineOnLCD@i 000D  
+   displayCharOnLCD@character 0002                       __Hparam 0000                       __Lparam 0000  
+                  delay@L1REG 0002                    delay@L2REG 0003                 ?_portDAsInput 0001  
+                     __pcinit 0454                       __ramtop 0D00          determinePressedRow@i 0001  
+                     __ptext0 03D0                       __ptext1 04B8                       __ptext2 048A  
+                     __ptext3 04DE                       __ptext4 05BE                       __ptext5 05C4  
+                     __ptext6 0566                       __ptext7 058E                       _command 0566  
+                     _isReady 04DE                       _keyCode 0039                 _groundAllRows 05B4  
+                     _oneShot 0516             __end_of_longDelay 04B8                ??_resetOneShot 0004  
+              __pintcode_body 02AC          end_of_initialization 047C                 __Lmediumconst 0000  
+                     int_func 02AC                       postdec1 000FE5                       postinc0 000FEE  
+                 ?_getKeyCode 0001                ??_portDAsInput 001D               ??_turnOnAllRows 0001  
+__size_of_determinePressedRow 012A                    _shortDelay 058E                     _PORTBbits 000F81  
+                   _PORTCbits 000F82                     _PORTDbits 000F83                    _pressedKey 038A  
+              ?_groundAllRows 0001                     _TRISBbits 000F93     __size_of_displayCharOnLCD 0014  
+           __size_of_LCDSetup 0026                 __pidataCOMRAM 054E           start_initialization 0454  
+   __size_of_displayLineOnLCD 0050           __size_of_getKeyCode 00D8              __CFG_OSC$IRCIO67 000000  
+        __end_of_resetOneShot 0516               ??_groundAllRows 0001                   ?_shortDelay 0001  
+                 ?_pressedKey 0001                   __pbssCOMRAM 0038             ?_pressedKeyAction 0001  
+               __pcstackBANK0 0060            ??_pressedKeyAction 000E          __end_of_portDAsInput 05C8  
+      __size_of_portDAsOutput 0006                     __pintcode 0008                   __pintcodelo 0018  
+           i2shortDelay@L1REG 0001                      ?_command 0001                      ?_isReady 0001  
+                    ?_oneShot 0001                      _CASTELLO 0020                __size_of_delay 001C  
+         _determinePressedRow 00AA                     _longDelay 048A                      _GREETING 002C  
+            _displayCharOnLCD 057A                      _LCDSetup 04B8           __size_of_shortDelay 000E  
+         __size_of_pressedKey 0046                      _RCONbits 000FD0                  ??_getKeyCode 0001  
+        ?_determinePressedRow 0001              _displayLineOnLCD 033A                 _portDAsOutput 05BE  
+                 _INTCON2bits 000FF1                     copy_data0 0470                    ?_longDelay 0001  
+          __end_of_getKeyCode 02AC         __size_of_resetOneShot 001C                      __Hrparam 0000  
+                    __Lrparam 0000         ??_determinePressedRow 0001                 ?i2_shortDelay 0001  
+       __end_of_turnOnAllRows 05B4              __size_of_command 0014              __size_of_isReady 001C  
+              ?_portDAsOutput 0001         __size_of_portDAsInput 0004              __size_of_oneShot 001C  
+                    __ptext10 04FA                      __ptext11 0516                      __ptext20 0532  
+                    __ptext12 038A                      __ptext21 05B4                      __ptext13 0414  
+                    __ptext14 033A                      __ptext15 057A                      __ptext16 059C  
+                    __ptext17 01D4                      __ptext18 00AA                      __ptext19 05AA  
+                _resetOneShot 04FA                 __size_of_ISRH 0332                 __size_of_ISRL 008E  
+                 _oneShotFlag 003A                 __size_of_main 0044                    _CVRCONbits 000FB5  
+                    int$flags 003C                      command@x 001E                ??i2_shortDelay 0001  
+                _portDAsInput 05C4                  ??_shortDelay 001D                  ??_pressedKey 000F  
+                  _INTCONbits 000FF2   displayLineOnLCD@sizeOfArray 0005                   ??_longDelay 001D  
+                    intlevel1 0000                      intlevel2 0000            __end_of_shortDelay 059C  
+   __size_of_pressedKeyAction 0040            __end_of_pressedKey 03D0       pressedKeyAction@keyCode 000E  
+    __end_of_displayCharOnLCD 058E         __end_of_groundAllRows 05BE               ??_portDAsOutput 001D  
+                 _rowSelected 003B      __end_of_displayLineOnLCD 038A  
