@@ -1,6 +1,6 @@
 /* 
  * File:   SysRiego.c
- * Author: antoniohernandez
+ * Author: 
  *
  * Created on April 23, 2016, 4:31 PM
  */
@@ -12,7 +12,6 @@
  * 
  */
 
-
 #pragma config	OSC = IRCIO67       //CONFIG1H (0-3) = 0010: INTIO2 oscillator, Internal oscillator block, port function on RA6 and RA7.
 #pragma config	MCLRE = ON          // CONFIG3H.7 = 1: Pin de RESET habilitado y Entrada RE3 desactivado.
 #pragma config	PBADEN = OFF        // CONFIG3H.1 = 0: PORTB.0 -- PORTB.4 as Digital I/O.
@@ -22,8 +21,6 @@
 //=========================================
 // declaracion de los metodos
 #pragma config WDT = OFF        // CONFIG2H (0) = 0: Watchdog Timer Disabled.
-
-unsigned char oneShotFlag = 0;          //  One-shot flag.
 
 //rows of the keyboard matrix
 #define row1 PORTBbits.RB0
@@ -65,31 +62,104 @@ unsigned char oneShotFlag = 0;          //  One-shot flag.
 #define arrayLength(array) (unsigned char) (sizeof(array) / sizeof((array)[0]))
 
 //constants
+
+
+// System messages
 unsigned char GREETING[] = "Hello World";
-unsigned char CASTELLO[] = "Castello <3";
+unsigned char CASTELLO[] = "Castello <";
 
-unsigned char columnSelected;
+unsigned char automaticMessage[] = "Automatic mode";
+unsigned char timerMessage[] = "Timer mode";
+unsigned char manualMessage[] = "Manual mode";
+
+unsigned char configAutoMessage[] = "Humidity: ";
+
+unsigned char manualActiveMessage[] = "Active";
+unsigned char manualInactiveMessage[] = "Inactive";
+
+unsigned char columnSelected; 
 unsigned char rowSelected;
-unsigned char keyCode;
+unsigned char keyCode; 
+unsigned char *zoneSelected; //Zone selected by the user to be configured
+unsigned char modeSelected; // 0 = automatico, 1 = timer, 2 = manual
+
+unsigned char getValueStatus; // When the getValueStatus is equal to 1 is that the system has gotten the input value from the user
+unsigned char statusConfiguration; // When configuracionStatus is equal to 1 the system will enter to configuration mode
+unsigned char oneShotFlag;          //  One-shot flag.
+
+// Irrigation system variables
+//===================================================
+
+// Humidity zone values
+
+unsigned char humidityZn1Val[] = "01"; 
+unsigned char humidityZn2Val[] = "02";
+unsigned char humidityZn3Val[] = "03";
+
+// Timer zone values
+
+unsigned char hourConfiguration = 0;
+unsigned char dayName[] = "000";
+
+unsigned char counterSEC='0';//Overflow counter
+unsigned char counterMIN[]="00";
+unsigned char counterHOUR[]="00";
+unsigned char counterDAYS='0';
 
 
+
+unsigned char time1Zn1[] = "1000";
+unsigned char time2Zn1[] = "$021";
+unsigned char time3Zn1[] = "$031";
+
+unsigned char time1Zn2[] = "1200";
+unsigned char time2Zn2[] = "$022";
+unsigned char time3Zn2[] = "$032";
+
+unsigned char time1Zn3[] = "0400";
+unsigned char time2Zn3[] = "$023";
+unsigned char time3Zn3[] = "$033";
+
+
+unsigned char *zoneTimes[] = {
+        time1Zn1,
+        time2Zn1,
+        time3Zn1,
+        time1Zn2,
+        time2Zn2,
+        time3Zn2,
+        time1Zn3,
+        time2Zn3,
+        time3Zn3
+};
+
+// Manual zone values. When '1' is selected zone will be active, when '0' zone will be inactive.
+
+unsigned char manualZn1Val = '1';
+unsigned char manualZn2Val = '1';
+unsigned char manualZn3Val = '1';
+
+// Functions
+//===================================================================================
 void modeSelection();
 void inicioManual();
 void inicioAuto();
 void inicioTimer();
-void configTimer();
-void workingManual(int zona);
-void workingAuto(int zona);
-void workingTimer(int zona);
+
+
 void oneShot();
 void resetOneShot();
 void delay();
-void turnOffAllLeds();
+
 void groundAllRows();
 void determinePressedRow();
 unsigned char getKeyCode();
 void pressedKey();
 void pressedKeyAction(unsigned char x);
+
+// LCD Functions
+//===================================================================================
+
 void portDAsInput();
 void portDAsOutput();
 void LCDSetup();
@@ -99,11 +169,48 @@ void command (unsigned char x);
 void isReady();
 void displayCharOnLCD(unsigned char character);
 void displayLineOnLCD(unsigned char array[], unsigned char sizeOfArray);
+void clearDisplay();
+void moveCurR();
+void moveCurR();
+void moveCurL();
+
+//Interruption Functions
+//===================================================================================
+
 void interrupt low_priority ISRL();
 void interrupt ISRH();
+unsigned char getInput();
+void turnOnAllRows();
+void getValue();
+void getKey();
+
+void readInput();
+void readKey();
+void resetReadInput();
+
+void disableIntRBIE();
+
+void enableIntRBIE();
+
+// Functions that configure each of the modes and its respective zone
+//===================================================================================
+void automaticConfiguration();
+void timerConfiguration();
+void manualConfiguration();
 
 
- 
+// Functions that have the business logic from the selected mode.
+//===================================================================================
+
+void workingManual();
+void workingAutomatic();
+void workingTimer();
+
+
+
+void displayTime();
+void getDayName();
+
 void main() {
     //CLOCK FREQUENCY CONFIGURATION
     //============================
@@ -152,26 +259,91 @@ void main() {
     
     //Change State Interrupt Priority Bit. When set to 1 is High priority
     INTCON2bits.RBIP = 1;
+    
     //set the portD as output
     portDAsOutput();
     
     //initial LCD Setup
     LCDSetup();
     
+    //Default inition of the system
+    
+    //columnSelected = 0; 
+    //rowSelected = 0;
+    //keyCode = ' '; 
+    
+    //zoneSelected = 0; 
+    modeSelected = 1; // Automatic mode by default
+
+    getValueStatus = 0; // When the getValueStatus is equal to 1 is that the system has gotten the input value from the user
+    statusConfiguration = 0; // When configuracionStatus is equal to 1 the system will enter to configuration mode
+    oneShotFlag = 0;          //  One-shot flag.
+    
+    
+    //Timer#0 Interrupt as High Priority
+    INTCON2bits.TMR0IP = 1;
+    
+    //Enable Timer #0 Interrupt
+    INTCONbits.TMR0IE = 1;
+    
+    //Internal instruction cycle,
+    //Timer DesActivated,16 bits, Prescaler 256    
+    T0CON = 0x07;
+    
+    //Accumulator, starting from 18,660 since we want to count 12 seconds
+    //TMR0 = 0x48E4;
+    TMR0 = 0xFFF0;
+    //Enable Timer#0
+    T0CONbits.TMR0ON = 1;
+
+    
+    
     //infinite loop to constantly be waiting for user input on the keyboard matrix
     while(1){
-//      groundAllRows();  //ground all rows so we can detect if a button is pressed
-//  
-//      if(PORTB != 0xF0){    //if PORTB is different from 0xF0, a button is being pressed, we must implement oneShot
-//          oneShot();
-//      }
-//      if(oneShotFlag == 1){ //if the oneShotFlag == 1, reset the oneShotFlag
-//          resetOneShot();
-//      }
+        
+        if(statusConfiguration == 0) {
+            switch(modeSelected) {
+
+                case 0:
+                    workingAutomatic();
+                break;
+
+                case 1:
+                    workingTimer();
+                break;
+
+                case 2:
+                    workingManual();
+                break;
+
+            }
+        }
+        else {
+            
+            switch(modeSelected) {
+
+                case 0:
+                    automaticConfiguration();
+                break;
+
+                case 1:
+                    timerConfiguration();
+                break;
+
+                case 2:
+                    manualConfiguration();
+                break;
+
+            }
+            
+        }
+            
     }
 
- 
 }
+
+
+
 void portDAsInput(){
     TRISD = 0xFF;
 }
@@ -220,6 +392,7 @@ void command(unsigned char x){
     shortDelay();
     enableBit = 0;
 }
+
 void isReady(){
     portDAsInput();
     registerSelectBit = 0;
@@ -242,6 +415,363 @@ void displayCharOnLCD(unsigned char character){
     enableBit = 0;
 }
 
+void displayLineOnLCD(unsigned char array[], unsigned char sizeOfArray){
+    unsigned char i;
+    for(i=0; i<sizeOfArray-1; i++){
+        displayCharOnLCD(array[i]);
+    }
+}
+
+void clearDisplay() {
+    command(0x01);
+    shortDelay();
+    isReady();
+}
+
+void moveCurH() {
+    command(0xA8);
+    //shortDelay();
+    //isReady();
+}
+
+void moveCurR() {
+    command(0x1C);
+    shortDelay();
+    isReady();
+}
+
+void moveCurL() {
+    command(0x18);
+    shortDelay();
+    isReady();
+}
+
+//Program functions
+//========================================================================================
+
+
+
+
+
+
+// Functions that configure each of the modes and its respective zone
+//======================================================================================
+
+void automaticConfiguration() {
+    
+    
+    disableIntRBIE();
+    
+    unsigned char input = ' ';
+    unsigned char counter = 0;
+    
+    clearDisplay();
+    displayLineOnLCD(configAutoMessage, sizeof(configAutoMessage) / sizeof(configAutoMessage[0]));
+    displayCharOnLCD(zoneSelected[0]);
+    displayCharOnLCD(zoneSelected[1]);
+ 
+    
+    while(input != '#')  {  
+        
+        input = getInput();
+
+        if(input != '#') {
+            zoneSelected[counter%2] = input;
+            clearDisplay();
+            displayCharOnLCD(zoneSelected[0]);
+            displayCharOnLCD(zoneSelected[1]);
+            displayCharOnLCD('%');
+            counter++;
+        }
+        
+    }
+    
+    enableIntRBIE();
+    
+    statusConfiguration = 0;
+    
+}
+
+void timerConfiguration() {
+
+    disableIntRBIE();
+    
+    unsigned char input = ' ';
+    
+    clearDisplay();
+    
+    if (hourConfiguration == 0) {
+        
+        //configuration for timer
+        
+        
+    }
+    else {
+        
+        //configuration for hour
+        
+        input = getInput();
+        
+        
+        hourConfiguration = 0;
+    }
+        
+    enableIntRBIE();
+    
+    statusConfiguration = 0;    
+
+}
+
+
+void manualConfiguration() {
+    
+    disableIntRBIE();
+    
+    unsigned char input = ' ';
+    
+    clearDisplay();
+    
+    if(*zoneSelected == '1') {
+        displayLineOnLCD(manualActiveMessage, sizeof(manualActiveMessage) / sizeof(manualActiveMessage[0]));
+    }
+    
+    else {
+        displayLineOnLCD(manualInactiveMessage, sizeof(manualInactiveMessage) / sizeof(manualInactiveMessage[0]));
+    }
+ 
+    
+    while(input != '#')  {  
+        
+        input = getInput();
+
+        clearDisplay();
+        
+        if(input == '1') {
+            *zoneSelected = '1';
+            displayLineOnLCD(manualActiveMessage, sizeof(manualActiveMessage) / sizeof(manualActiveMessage[0]));
+        }
+        
+        else if (input == '0') {
+            *zoneSelected = '0';
+            displayLineOnLCD(manualInactiveMessage, sizeof(manualInactiveMessage) / sizeof(manualInactiveMessage[0]));
+        }
+        
+        else {
+            if (*zoneSelected == '1') {
+                displayLineOnLCD(manualActiveMessage, sizeof (manualActiveMessage) / sizeof (manualActiveMessage[0]));
+            }
+            else {
+                displayLineOnLCD(manualInactiveMessage, sizeof (manualInactiveMessage) / sizeof (manualInactiveMessage[0]));
+            }
+        }
+        
+    }
+    
+    enableIntRBIE();
+    
+    statusConfiguration = 0;
+    
+}
+
+// Functions that have the business logic from the selected mode.
+//======================================================================================
+void workingAutomatic() {
+    
+    
+    clearDisplay();
+    displayLineOnLCD(automaticMessage, sizeof(automaticMessage) / sizeof(automaticMessage[0]));
+    
+    while(modeSelected == 0 && statusConfiguration == 0) {
+        
+        
+        
+    }
+
+}
+
+void workingTimer() {
+
+    clearDisplay();
+    displayLineOnLCD(timerMessage, sizeof(timerMessage) / sizeof(timerMessage[0]));
+    
+    unsigned char *selectedTime;
+    
+    while(modeSelected == 1 && statusConfiguration == 0) {
+        
+        
+        for(unsigned char i = 0; i < 9; i++) {
+            
+            selectedTime = zoneTimes[i];
+            
+            if (selectedTime[0] != '$') {
+                
+                if (selectedTime[0] == counterHOUR[0]) {
+                    
+                    if (selectedTime[1] == counterHOUR[1]) {
+                        
+                        if (selectedTime[2] == counterMIN[0]) {
+                            
+                            if (selectedTime[3] == counterMIN[1]) {
+                                clearDisplay();
+                                displayLineOnLCD("Regando: ", 10);
+                                displayLineOnLCD(selectedTime, 5);
+                                
+                            }
+                            
+                        }
+                    
+                    }
+                    
+                }
+            
+            }
+            
+        }
+        
+//        longDelay();
+//        clearDisplay();
+//        displayTime();
+        
+    }
+    
+}
+
+void workingManual() {
+
+    clearDisplay();
+    displayLineOnLCD(manualMessage, sizeof(manualMessage) / sizeof(manualMessage[0]));
+    
+    while(modeSelected == 2 && statusConfiguration == 0) {
+        
+        
+        
+    }
+   
+}
+
+//Interruption functions
+//======================================================================================
+
+void interrupt low_priority ISRL()
+{
+
+}
+
+void interrupt  ISRH()
+{
+    if(INTCONbits.RBIF==1)
+    {
+        while(INTCONbits.RBIF == 1) {
+            
+            groundAllRows();  //ground all rows so we can detect if a button is pressed
+
+            if(PORTB != 0xF0){    //if PORTB is different from 0xF0, a button is being pressed, we must implement oneShot
+                oneShot();
+            }
+            if(oneShotFlag == 1){ //if the oneShotFlag == 1, reset the oneShotFlag
+                resetOneShot();
+            }
+            
+        }
+                
+        return;
+    }
+    
+    //Check if it is TMR0 Overflow ISR
+    if(TMR0IE && TMR0IF)
+    {
+        counterSEC++;
+        if(counterSEC=='5')
+        {
+            counterSEC='0';
+            counterMIN[1]++;
+            if(counterMIN[1]==':')
+            {
+                counterMIN[1]='0';
+                counterMIN[0]++;
+                if(counterMIN[0]=='6')
+                {
+                    
+                    if(counterHOUR[0] < '2') {
+                    
+                        counterMIN[0]='0';
+                        counterHOUR[1]++;
+                        
+                        if(counterHOUR[1] == ':') {
+                            counterHOUR[1] = '0';
+                            counterHOUR[0]++;
+                        }
+                    
+                    } 
+                    
+                    else if( counterHOUR[1] < '3')
+                    {                     
+                        counterMIN[0]='0';
+                        counterHOUR[1]++;                       
+                    }
+                    
+                    else {
+                        
+                        counterSEC = '0'; //Overflow counter
+                        counterMIN[0] = '0';
+                        counterMIN[1] = '0';
+                        counterHOUR[0] = '0';
+                        counterHOUR[1] = '0';
+                        counterDAYS++;
+                       
+                        if (counterDAYS == '7') {
+                            
+                            counterSEC = '0';//Overflow counter
+                            counterMIN[0] = '0';
+                            counterMIN[1] = '0';
+                            counterHOUR[0] = '0';
+                            counterHOUR[1] = '0';
+                            counterDAYS = '0';
+                        }                   
+                    }                 
+                }               
+            }
+        }
+        
+        INTCONbits.TMR0IF = 0;
+        TMR0 = 0xFFF0;
+        
+    }
+
+}
+
+// Await for input from the user Functions(Configuration)
+//=======================================================================================
+
+unsigned char getInput() {
+    
+    getValueStatus = 0; //Status that determines when the user has entered a value to the keypad
+    
+    oneShotFlag = 0;
+    
+    while(getValueStatus == 0) {
+        
+        groundAllRows();  //ground all rows so we can detect if a button is pressed
+
+        if (PORTB != 0xF0) { //if PORTB is different from 0xF0, a button is being pressed, we must implement oneShot
+            readInput();
+        }
+        
+        if (oneShotFlag == 1) { //if the oneShotFlag == 1, reset the oneShotFlag
+            resetReadInput();   
+        }
+        
+    }
+    
+    return keyCode;
+
+}
+
+
+
+// Keypad Logic and Functions for Interruptions
+//========================================================================================
+
 void groundAllRows(){    
     row1 = 0;
     row2 = 0;
@@ -259,19 +789,6 @@ void oneShot(){
     }
 }
 
-void resetOneShot(){
-    if (PORTB  == 0xF0)      //IF RB0 OFF THEN Eliminate Bouncing
-        delay();
-    else                    //ELSE EXIT
-        return;
-    if (PORTB  == 0XF0){      //IF RB0 OFF THEN reset one-shot flag
-        //turnOffAllLeds();
-        INTCONbits.RBIF=0;
-        oneShotFlag = 0;
-    }
-        
-}
-
 //10 ms delay
 void delay(){
     unsigned char L1REG = 0;
@@ -282,11 +799,29 @@ void delay(){
     }
 }
 
-void turnOnAllRows(){
-    row1 = 1;
-    row2 = 1;
-    row3 = 1;
-    row4 = 1;
+void resetOneShot(){
+    if (PORTB  == 0xF0)      //IF RB0 OFF THEN Eliminate Bouncing
+        delay();
+    else                    //ELSE EXIT
+        return;
+    if (PORTB  == 0XF0){      //IF RB0 OFF THEN reset one-shot flag and Interruption change flag
+        INTCONbits.RBIF=0;
+        oneShotFlag = 0;
+    }
+}
+
+void pressedKey(){
+    
+    switch(PORTB){      //obtain the selected column
+        case 0xE0: columnSelected = 1; break;
+        case 0xD0: columnSelected = 2; break;
+        case 0xB0: columnSelected = 3; break;
+        case 0x70: columnSelected = 4; break;
+        default: columnSelected = 100;
+    }
+        determinePressedRow();
+        keyCode = getKeyCode();
+        pressedKeyAction(keyCode);        
 }
 
 
@@ -416,121 +951,302 @@ unsigned char getKeyCode(){
 }
 
 void pressedKeyAction(unsigned char keyCode){
-    /*turnOffAllLeds();
+    
     switch(keyCode){
-        case '0': LED5 = 1;break;
-        case '1': LED1 = 1; break;
-        case '2': LED2 = 1; break;
-        case '3': LED2 = 1;LED1 = 1; break;
-        case '4': LED3 = 1; break;
-        case '5': LED1 = 1;LED3 = 1; break;
-        case '6': LED3 = 1;LED2 = 1; break;
-        case '7': LED3 = 1;LED2 = 1;LED1 = 1; break;
-        case '8': LED4 = 1; break;
-        case '9': LED4 = 1;LED1 = 1;break;
-        case 'A': LED4 = 1;LED2 = 1; break;
-        case 'B': LED4 = 1;LED1 = 1;LED2 = 1; break;
-        case 'C': LED4 = 1;LED3 = 1;break;
+        
+        case '0': 
+            
+            
+            
+        break;
+        
+        
+        case '1': 
+            
+            clearDisplay();
+            
+            displayLineOnLCD(zoneTimes[0], 5);
+            
+            /*
+            
+            if (modeSelected == 0) {
+                zoneSelected = humidityZn1Val;
+            }
+            
+            if (modeSelected == 1) {
+                //zoneSelected = humidityZn1Val;
+            }
+            
+            if (modeSelected == 2) {
+                zoneSelected = &manualZn1Val;
+            }
+            
+            statusConfiguration = 1;
+            
+            */
+            
+        break;
+        
+        case '2': 
+            
+            clearDisplay();
+            
+            displayLineOnLCD(zoneTimes[1], 5);
+            
+            /*
+            if (modeSelected == 0) {
+                zoneSelected = humidityZn2Val;
+            }
+            
+            if (modeSelected == 1) {
+                //zoneSelected = humidityZn1Val;
+            }
+            
+            if (modeSelected == 2) {
+                zoneSelected = &manualZn2Val;
+            }
+            
+            statusConfiguration = 1;
+            */
+        break;
+        
+        case '3': 
+            
+            clearDisplay();
+            
+            displayLineOnLCD(zoneTimes[2], 5);
+            /*
+            if (modeSelected == 0) {
+                zoneSelected = humidityZn3Val;
+            }
+            
+            if (modeSelected == 1) {
+                zoneSelected = humidityZn1Val;
+            }
+            
+            if (modeSelected == 2) {
+                zoneSelected = &manualZn3Val;
+            }
+            
+            statusConfiguration = 1;
+            */
+        break;
+        
+        case '4': LED3 = 1; 
+            
+        clearDisplay();
+            
+            displayLineOnLCD(zoneTimes[3], 5);
+        
+        break;
+        
+        case '5': 
+            
+            clearDisplay();
+            
+            displayLineOnLCD(zoneTimes[4], 5);
+            
+        break;
+        
+        case '6': 
+        
+            clearDisplay();
+            
+            displayLineOnLCD(zoneTimes[5], 5);
+            
+        break;
+        
+        case '7': 
+            
+            
+            clearDisplay();
+            
+            displayLineOnLCD(zoneTimes[6], 5);
+            
+        break;
+        
+        case '8': 
+            
+            clearDisplay();
+            
+            displayLineOnLCD(zoneTimes[7], 5);
+            
+            //moveCurH();
+            
+        break;
+        
+        case '9': 
+            
+            clearDisplay();
+            
+            displayLineOnLCD(zoneTimes[8], 5);
+            
+            //moveCurR();
+            
+        break;
+        
+        
+        case 'A': 
+            
+            modeSelected = 0; //Automatico
+            
+            
+        break;
+        
+        case 'B': 
+            
+            modeSelected = 1; //Timer
+            
+        break;
+        
+        case 'C': 
+        
+            modeSelected = 2; //Manual
+            
+        break;
+        
         case 'D': LED4 = 1;LED1 = 1;LED3 = 1; break;
-        case '*': LED4 = 1; LED2 = 1; LED3 = 1;break;
-        case '#': LED4 = 1; LED1 = 1;LED2 = 1; LED3 = 1;break;
-        default: turnOffAllLeds();*/
-       switch(keyCode){
+        case '*': 
+            displayCharOnLCD(keyCode);
+        break;
+        case '#': 
+            
+            if (modeSelected == 1) {
+                hourConfiguration = 1;
+                statusConfiguration = 1;
+            }
+            
+        break;
+        default: ;
+        
+       /*switch(keyCode){
         case '*': displayLineOnLCD(GREETING,sizeof(GREETING) / sizeof(GREETING[0])); break;
         case '#': displayLineOnLCD(CASTELLO,sizeof(CASTELLO) / sizeof(CASTELLO[0])); break;
         default: displayCharOnLCD(keyCode);
     
 
+        }*/
     }
 }
-void turnOffAllLeds(){
-    LED1 = 0;
-    LED2 = 0;
-    LED3 = 0;
-    LED4 = 0;
-    LED5 = 0;
-    LED6 = 0;
-    LED7 = 0;
-    LED8 = 0;
+
+void turnOnAllRows(){
+    row1 = 1;
+    row2 = 1;
+    row3 = 1;
+    row4 = 1;
 }
 
-void pressedKey(){
+// Keypad Logic and Functions for getting input from user
+//========================================================================================
+
+void readInput(){     
+    if (oneShotFlag == 1)    //IF One-Shot has been triggered THEN EXIT.
+        return;
+    delay();                 //Eliminate Bouncing.
+    if (PORTB  != 0xF0){     //IF a button is still pressed
+        readKey();       //a key was pressed, determine which key and act accordingly
+        oneShotFlag = 1;            //Turn-ON one-shot flag.
+    }
+}
+
+void readKey(){
+    
     switch(PORTB){      //obtain the selected column
-            case 0xE0: columnSelected = 1; break;
-            case 0xD0: columnSelected = 2; break;
-            case 0xB0: columnSelected = 3; break;
-            case 0x70: columnSelected = 4; break;
+        case 0xE0: columnSelected = 1; break;
+        case 0xD0: columnSelected = 2; break;
+        case 0xB0: columnSelected = 3; break;
+        case 0x70: columnSelected = 4; break;
         default: columnSelected = 100;
-        }
+    }
         determinePressedRow();
         keyCode = getKeyCode();
-        pressedKeyAction(keyCode);
-    //pressedKeyAction(columnSelected);
 }
 
-void displayLineOnLCD(unsigned char array[], unsigned char sizeOfArray){
-    unsigned char i;
-    for(i=0; i<sizeOfArray-1; i++){
-        displayCharOnLCD(array[i]);
+void resetReadInput(){
+    if (PORTB  == 0xF0)      //IF RB0 OFF THEN Eliminate Bouncing
+        delay();
+    else                    //ELSE EXIT
+        return;
+    if (PORTB  == 0XF0){      //IF RB0 OFF THEN reset one-shot flag and Interruption change flag
+        oneShotFlag = 0;
+        getValueStatus = 1;
     }
 }
 
-
-void modeSelection()
-{
+void disableIntRBIE() {
     
-
-}
-void inicioManual()
-{
-
-}
-void inicioAuto()
-{
-
-}
-void inicioTimer()
-{
-
-}
-void configTimer()
-{
-
-}
-void workingManual(int zona)
-{
-
-}
-void workingAuto(int zona)
-{
-
-}
-void workingTimer(int zona)
-{
-
+    LATB = 0X00; 
+    INTCONbits.RBIF = 0;
+    INTCONbits.RBIE = 0; //Deactivate the interruptions when the user is asked for an input
+    
 }
 
-void interrupt low_priority ISRL()
-{
-
+void enableIntRBIE() {
+    
+    LATB = 0X00; 
+    INTCONbits.RBIF = 0;
+    INTCONbits.RBIE = 1; //Deactivate the interruptions when the user is asked for an input
+    
 }
-void interrupt  ISRH()
-{
-    if(INTCONbits.RBIF==1)
-    {
-        while(INTCONbits.RBIF == 1) {
-            
-            groundAllRows();  //ground all rows so we can detect if a button is pressed
 
-            if(PORTB != 0xF0){    //if PORTB is different from 0xF0, a button is being pressed, we must implement oneShot
-                oneShot();
-            }
-            if(oneShotFlag == 1){ //if the oneShotFlag == 1, reset the oneShotFlag
-                resetOneShot();
-            }
-            
-        }
-        return;
+void displayTime() {
+
+    getDayName();
+    displayLineOnLCD(dayName, 4);
+    displayCharOnLCD(' ');
+    displayLineOnLCD(counterHOUR, 3);
+    displayCharOnLCD(':');
+    displayLineOnLCD(counterMIN, 3);
+    displayCharOnLCD(':');
+    displayCharOnLCD(counterSEC);
+    
+}
+
+void getDayName() {
+
+    switch(counterDAYS) {
+        case '0':
+            dayName[0] = 'M';
+            dayName[1] = 'o';
+            dayName[2] = 'n';
+        break;
+        
+        case '1':
+            dayName[0] = 'T';
+            dayName[1] = 'u';
+            dayName[2] = 'e';
+        break;
+        
+        case '2':
+            dayName[0] = 'W';
+            dayName[1] = 'e';
+            dayName[2] = 'n';
+        break;
+        
+        case '3':
+            dayName[0] = 'T';
+            dayName[1] = 'h';
+            dayName[2] = 'u';
+        break;
+        
+        case '4':
+            dayName[0] = 'F';
+            dayName[1] = 'r';
+            dayName[2] = 'i';
+        break;
+        
+        case '5':
+            dayName[0] = 'S';
+            dayName[1] = 'a';
+            dayName[2] = 't';
+        break;
+        
+        case '6':
+            dayName[0] = 'S';
+            dayName[1] = 'u';
+            dayName[2] = 'n';
+        break;
+    
     }
 
 }

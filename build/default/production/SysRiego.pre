@@ -18486,7 +18486,7 @@ extern char * ultoa(char * buf, unsigned long val, int base);
 extern char * ftoa(float f, int * status);
 
 
-# 16 "SysRiego.c"
+# 15 "SysRiego.c"
 #pragma config OSC = IRCIO67
 #pragma config MCLRE = ON
 #pragma config PBADEN = OFF
@@ -18497,34 +18497,98 @@ extern char * ftoa(float f, int * status);
 
 #pragma config WDT = OFF
 
-unsigned char oneShotFlag = 0;
-
 # 68
 unsigned char GREETING[] = "Hello World";
-unsigned char CASTELLO[] = "Castello <3";
+unsigned char CASTELLO[] = "Castello <";
+
+unsigned char automaticMessage[] = "Automatic mode";
+unsigned char timerMessage[] = "Timer mode";
+unsigned char manualMessage[] = "Manual mode";
+
+unsigned char configAutoMessage[] = "Humidity: ";
+
+unsigned char manualActiveMessage[] = "Active";
+unsigned char manualInactiveMessage[] = "Inactive";
 
 unsigned char columnSelected;
 unsigned char rowSelected;
 unsigned char keyCode;
+unsigned char *zoneSelected;
+unsigned char modeSelected;
+
+unsigned char getValueStatus;
+unsigned char statusConfiguration;
+unsigned char oneShotFlag;
+
+# 95
+unsigned char humidityZn1Val[] = "01";
+unsigned char humidityZn2Val[] = "02";
+unsigned char humidityZn3Val[] = "03";
+
+
+
+unsigned char hourConfiguration = 0;
+unsigned char dayName[] = "000";
+
+unsigned char counterSEC='0';
+unsigned char counterMIN[]="00";
+unsigned char counterHOUR[]="00";
+unsigned char counterDAYS='0';
+
+
+
+unsigned char time1Zn1[] = "1000";
+unsigned char time2Zn1[] = "$021";
+unsigned char time3Zn1[] = "$031";
+
+unsigned char time1Zn2[] = "1200";
+unsigned char time2Zn2[] = "$022";
+unsigned char time3Zn2[] = "$032";
+
+unsigned char time1Zn3[] = "0400";
+unsigned char time2Zn3[] = "$023";
+unsigned char time3Zn3[] = "$033";
+
+
+unsigned char *zoneTimes[] = {
+time1Zn1,
+time2Zn1,
+time3Zn1,
+time1Zn2,
+time2Zn2,
+time3Zn2,
+time1Zn3,
+time2Zn3,
+time3Zn3
+};
+
+
+
+unsigned char manualZn1Val = '1';
+unsigned char manualZn2Val = '1';
+unsigned char manualZn3Val = '1';
+
 
 
 void modeSelection();
 void inicioManual();
 void inicioAuto();
 void inicioTimer();
-void configTimer();
-void workingManual(int zona);
-void workingAuto(int zona);
-void workingTimer(int zona);
+
+
 void oneShot();
 void resetOneShot();
 void delay();
-void turnOffAllLeds();
+
 void groundAllRows();
 void determinePressedRow();
 unsigned char getKeyCode();
 void pressedKey();
 void pressedKeyAction(unsigned char x);
+
+
+
+
 void portDAsInput();
 void portDAsOutput();
 void LCDSetup();
@@ -18534,10 +18598,44 @@ void command (unsigned char x);
 void isReady();
 void displayCharOnLCD(unsigned char character);
 void displayLineOnLCD(unsigned char array[], unsigned char sizeOfArray);
+void clearDisplay();
+void moveCurR();
+void moveCurR();
+void moveCurL();
+
+
+
+
 void interrupt low_priority ISRL();
 void interrupt ISRH();
+unsigned char getInput();
+void turnOnAllRows();
+void getValue();
+void getKey();
+
+void readInput();
+void readKey();
+void resetReadInput();
+
+void disableIntRBIE();
+
+void enableIntRBIE();
 
 
+
+void automaticConfiguration();
+void timerConfiguration();
+void manualConfiguration();
+
+# 205
+void workingManual();
+void workingAutomatic();
+void workingTimer();
+
+
+
+void displayTime();
+void getDayName();
 
 void main() {
 
@@ -18588,19 +18686,84 @@ INTCONbits.RBIF = 0;
 
 INTCON2bits.RBIP = 1;
 
+
 portDAsOutput();
 
 
 LCDSetup();
 
+# 276
+modeSelected = 1;
+
+getValueStatus = 0;
+statusConfiguration = 0;
+oneShotFlag = 0;
+
+
+
+INTCON2bits.TMR0IP = 1;
+
+
+INTCONbits.TMR0IE = 1;
+
+
+
+T0CON = 0x07;
+
+
+
+TMR0 = 0xFFF0;
+
+T0CONbits.TMR0ON = 1;
+
+
+
 
 while(1){
 
-# 171
+if(statusConfiguration == 0) {
+switch(modeSelected) {
+
+case 0:
+workingAutomatic();
+break;
+
+case 1:
+workingTimer();
+break;
+
+case 2:
+workingManual();
+break;
+
+}
+}
+else {
+
+switch(modeSelected) {
+
+case 0:
+automaticConfiguration();
+break;
+
+case 1:
+timerConfiguration();
+break;
+
+case 2:
+manualConfiguration();
+break;
+
+}
+
+}
+
+}
+
 }
 
 
-}
+
 void portDAsInput(){
 TRISD = 0xFF;
 }
@@ -18649,6 +18812,7 @@ PORTCbits.RC2 = 1;
 shortDelay();
 PORTCbits.RC2 = 0;
 }
+
 void isReady(){
 portDAsInput();
 PORTCbits.RC0 = 0;
@@ -18671,6 +18835,346 @@ shortDelay();
 PORTCbits.RC2 = 0;
 }
 
+void displayLineOnLCD(unsigned char array[], unsigned char sizeOfArray){
+unsigned char i;
+for(i=0; i<sizeOfArray-1; i++){
+displayCharOnLCD(array[i]);
+}
+}
+
+void clearDisplay() {
+command(0x01);
+shortDelay();
+isReady();
+}
+
+void moveCurH() {
+command(0xA8);
+
+
+}
+
+void moveCurR() {
+command(0x1C);
+shortDelay();
+isReady();
+}
+
+void moveCurL() {
+command(0x18);
+shortDelay();
+isReady();
+}
+
+# 460
+void automaticConfiguration() {
+
+
+disableIntRBIE();
+
+unsigned char input = ' ';
+unsigned char counter = 0;
+
+clearDisplay();
+displayLineOnLCD(configAutoMessage, sizeof(configAutoMessage) / sizeof(configAutoMessage[0]));
+displayCharOnLCD(zoneSelected[0]);
+displayCharOnLCD(zoneSelected[1]);
+
+
+while(input != '#') {
+
+input = getInput();
+
+if(input != '#') {
+zoneSelected[counter%2] = input;
+clearDisplay();
+displayCharOnLCD(zoneSelected[0]);
+displayCharOnLCD(zoneSelected[1]);
+displayCharOnLCD('%');
+counter++;
+}
+
+}
+
+enableIntRBIE();
+
+statusConfiguration = 0;
+
+}
+
+void timerConfiguration() {
+
+disableIntRBIE();
+
+unsigned char input = ' ';
+
+clearDisplay();
+
+if (hourConfiguration == 0) {
+
+
+
+
+}
+else {
+
+
+
+input = getInput();
+
+
+hourConfiguration = 0;
+}
+
+enableIntRBIE();
+
+statusConfiguration = 0;
+
+}
+
+
+void manualConfiguration() {
+
+disableIntRBIE();
+
+unsigned char input = ' ';
+
+clearDisplay();
+
+if(*zoneSelected == '1') {
+displayLineOnLCD(manualActiveMessage, sizeof(manualActiveMessage) / sizeof(manualActiveMessage[0]));
+}
+
+else {
+displayLineOnLCD(manualInactiveMessage, sizeof(manualInactiveMessage) / sizeof(manualInactiveMessage[0]));
+}
+
+
+while(input != '#') {
+
+input = getInput();
+
+clearDisplay();
+
+if(input == '1') {
+*zoneSelected = '1';
+displayLineOnLCD(manualActiveMessage, sizeof(manualActiveMessage) / sizeof(manualActiveMessage[0]));
+}
+
+else if (input == '0') {
+*zoneSelected = '0';
+displayLineOnLCD(manualInactiveMessage, sizeof(manualInactiveMessage) / sizeof(manualInactiveMessage[0]));
+}
+
+else {
+if (*zoneSelected == '1') {
+displayLineOnLCD(manualActiveMessage, sizeof (manualActiveMessage) / sizeof (manualActiveMessage[0]));
+}
+else {
+displayLineOnLCD(manualInactiveMessage, sizeof (manualInactiveMessage) / sizeof (manualInactiveMessage[0]));
+}
+}
+
+}
+
+enableIntRBIE();
+
+statusConfiguration = 0;
+
+}
+
+
+
+void workingAutomatic() {
+
+
+clearDisplay();
+displayLineOnLCD(automaticMessage, sizeof(automaticMessage) / sizeof(automaticMessage[0]));
+
+while(modeSelected == 0 && statusConfiguration == 0) {
+
+
+
+}
+
+}
+
+void workingTimer() {
+
+clearDisplay();
+displayLineOnLCD(timerMessage, sizeof(timerMessage) / sizeof(timerMessage[0]));
+
+unsigned char *selectedTime;
+
+while(modeSelected == 1 && statusConfiguration == 0) {
+
+
+for(unsigned char i = 0; i < 9; i++) {
+
+selectedTime = zoneTimes[i];
+
+if (selectedTime[0] != '$') {
+
+if (selectedTime[0] == counterHOUR[0]) {
+
+if (selectedTime[1] == counterHOUR[1]) {
+
+if (selectedTime[2] == counterMIN[0]) {
+
+if (selectedTime[3] == counterMIN[1]) {
+clearDisplay();
+displayLineOnLCD("Regando: ", 10);
+displayLineOnLCD(selectedTime, 5);
+
+}
+
+}
+
+}
+
+}
+
+}
+
+}
+
+# 635
+}
+
+}
+
+void workingManual() {
+
+clearDisplay();
+displayLineOnLCD(manualMessage, sizeof(manualMessage) / sizeof(manualMessage[0]));
+
+while(modeSelected == 2 && statusConfiguration == 0) {
+
+
+
+}
+
+}
+
+
+
+
+void interrupt low_priority ISRL()
+{
+
+}
+
+void interrupt ISRH()
+{
+if(INTCONbits.RBIF==1)
+{
+while(INTCONbits.RBIF == 1) {
+
+groundAllRows();
+
+if(PORTB != 0xF0){
+oneShot();
+}
+if(oneShotFlag == 1){
+resetOneShot();
+}
+
+}
+
+return;
+}
+
+
+if(TMR0IE && TMR0IF)
+{
+counterSEC++;
+if(counterSEC=='5')
+{
+counterSEC='0';
+counterMIN[1]++;
+if(counterMIN[1]==':')
+{
+counterMIN[1]='0';
+counterMIN[0]++;
+if(counterMIN[0]=='6')
+{
+
+if(counterHOUR[0] < '2') {
+
+counterMIN[0]='0';
+counterHOUR[1]++;
+
+if(counterHOUR[1] == ':') {
+counterHOUR[1] = '0';
+counterHOUR[0]++;
+}
+
+}
+
+else if( counterHOUR[1] < '3')
+{
+counterMIN[0]='0';
+counterHOUR[1]++;
+}
+
+else {
+
+counterSEC = '0';
+counterMIN[0] = '0';
+counterMIN[1] = '0';
+counterHOUR[0] = '0';
+counterHOUR[1] = '0';
+counterDAYS++;
+
+if (counterDAYS == '7') {
+
+counterSEC = '0';
+counterMIN[0] = '0';
+counterMIN[1] = '0';
+counterHOUR[0] = '0';
+counterHOUR[1] = '0';
+counterDAYS = '0';
+}
+}
+}
+}
+}
+
+INTCONbits.TMR0IF = 0;
+TMR0 = 0xFFF0;
+
+}
+
+}
+
+
+
+
+unsigned char getInput() {
+
+getValueStatus = 0;
+
+oneShotFlag = 0;
+
+while(getValueStatus == 0) {
+
+groundAllRows();
+
+if (PORTB != 0xF0) {
+readInput();
+}
+
+if (oneShotFlag == 1) {
+resetReadInput();
+}
+
+}
+
+return keyCode;
+
+}
+
+# 775
 void groundAllRows(){
 PORTBbits.RB0 = 0;
 PORTBbits.RB1 = 0;
@@ -18688,19 +19192,6 @@ oneShotFlag = 1;
 }
 }
 
-void resetOneShot(){
-if (PORTB == 0xF0)
-delay();
-else
-return;
-if (PORTB == 0XF0){
-
-INTCONbits.RBIF=0;
-oneShotFlag = 0;
-}
-
-}
-
 
 void delay(){
 unsigned char L1REG = 0;
@@ -18711,11 +19202,29 @@ while(L2REG++ < 255);
 }
 }
 
-void turnOnAllRows(){
-PORTBbits.RB0 = 1;
-PORTBbits.RB1 = 1;
-PORTBbits.RB2 = 1;
-PORTBbits.RB3 = 1;
+void resetOneShot(){
+if (PORTB == 0xF0)
+delay();
+else
+return;
+if (PORTB == 0XF0){
+INTCONbits.RBIF=0;
+oneShotFlag = 0;
+}
+}
+
+void pressedKey(){
+
+switch(PORTB){
+case 0xE0: columnSelected = 1; break;
+case 0xD0: columnSelected = 2; break;
+case 0xB0: columnSelected = 3; break;
+case 0x70: columnSelected = 4; break;
+default: columnSelected = 100;
+}
+determinePressedRow();
+keyCode = getKeyCode();
+pressedKeyAction(keyCode);
 }
 
 
@@ -18846,27 +19355,155 @@ return -1;
 
 void pressedKeyAction(unsigned char keyCode){
 
-# 438
 switch(keyCode){
-case '*': displayLineOnLCD(GREETING,sizeof(GREETING) / sizeof(GREETING[0])); break;
-case '#': displayLineOnLCD(CASTELLO,sizeof(CASTELLO) / sizeof(CASTELLO[0])); break;
-default: displayCharOnLCD(keyCode);
+
+case '0':
 
 
-}
-}
-void turnOffAllLeds(){
-PORTCbits.RC0 = 0;
-PORTCbits.RC1 = 0;
-PORTCbits.RC2 = 0;
-PORTCbits.RC3 = 0;
-PORTCbits.RC4 = 0;
-PORTCbits.RC5 = 0;
-PORTCbits.RC6 = 0;
-PORTCbits.RC7 = 0;
+
+break;
+
+
+case '1':
+
+clearDisplay();
+
+displayLineOnLCD(zoneTimes[0], 5);
+
+# 988
+break;
+
+case '2':
+
+clearDisplay();
+
+displayLineOnLCD(zoneTimes[1], 5);
+
+# 1011
+break;
+
+case '3':
+
+clearDisplay();
+
+displayLineOnLCD(zoneTimes[2], 5);
+
+# 1033
+break;
+
+case '4': PORTCbits.RC2 = 1;
+
+clearDisplay();
+
+displayLineOnLCD(zoneTimes[3], 5);
+
+break;
+
+case '5':
+
+clearDisplay();
+
+displayLineOnLCD(zoneTimes[4], 5);
+
+break;
+
+case '6':
+
+clearDisplay();
+
+displayLineOnLCD(zoneTimes[5], 5);
+
+break;
+
+case '7':
+
+
+clearDisplay();
+
+displayLineOnLCD(zoneTimes[6], 5);
+
+break;
+
+case '8':
+
+clearDisplay();
+
+displayLineOnLCD(zoneTimes[7], 5);
+
+
+
+break;
+
+case '9':
+
+clearDisplay();
+
+displayLineOnLCD(zoneTimes[8], 5);
+
+
+
+break;
+
+
+case 'A':
+
+modeSelected = 0;
+
+
+break;
+
+case 'B':
+
+modeSelected = 1;
+
+break;
+
+case 'C':
+
+modeSelected = 2;
+
+break;
+
+case 'D': PORTCbits.RC3 = 1;PORTCbits.RC0 = 1;PORTCbits.RC2 = 1; break;
+case '*':
+displayCharOnLCD(keyCode);
+break;
+case '#':
+
+if (modeSelected == 1) {
+hourConfiguration = 1;
+statusConfiguration = 1;
 }
 
-void pressedKey(){
+break;
+default: ;
+
+# 1129
+}
+}
+
+void turnOnAllRows(){
+PORTBbits.RB0 = 1;
+PORTBbits.RB1 = 1;
+PORTBbits.RB2 = 1;
+PORTBbits.RB3 = 1;
+}
+
+
+
+
+void readInput(){
+if (oneShotFlag == 1)
+return;
+delay();
+if (PORTB != 0xF0){
+readKey();
+oneShotFlag = 1;
+}
+}
+
+void readKey(){
+
 switch(PORTB){
 case 0xE0: columnSelected = 1; break;
 case 0xD0: columnSelected = 2; break;
@@ -18876,73 +19513,93 @@ default: columnSelected = 100;
 }
 determinePressedRow();
 keyCode = getKeyCode();
-pressedKeyAction(keyCode);
-
 }
 
-void displayLineOnLCD(unsigned char array[], unsigned char sizeOfArray){
-unsigned char i;
-for(i=0; i<sizeOfArray-1; i++){
-displayCharOnLCD(array[i]);
-}
-}
-
-
-void modeSelection()
-{
-
-
-}
-void inicioManual()
-{
-
-}
-void inicioAuto()
-{
-
-}
-void inicioTimer()
-{
-
-}
-void configTimer()
-{
-
-}
-void workingManual(int zona)
-{
-
-}
-void workingAuto(int zona)
-{
-
-}
-void workingTimer(int zona)
-{
-
-}
-
-void interrupt low_priority ISRL()
-{
-
-}
-void interrupt ISRH()
-{
-if(INTCONbits.RBIF==1)
-{
-while(INTCONbits.RBIF == 1) {
-
-groundAllRows();
-
-if(PORTB != 0xF0){
-oneShot();
-}
-if(oneShotFlag == 1){
-resetOneShot();
-}
-
-}
+void resetReadInput(){
+if (PORTB == 0xF0)
+delay();
+else
 return;
+if (PORTB == 0XF0){
+oneShotFlag = 0;
+getValueStatus = 1;
+}
+}
+
+void disableIntRBIE() {
+
+LATB = 0X00;
+INTCONbits.RBIF = 0;
+INTCONbits.RBIE = 0;
+
+}
+
+void enableIntRBIE() {
+
+LATB = 0X00;
+INTCONbits.RBIF = 0;
+INTCONbits.RBIE = 1;
+
+}
+
+void displayTime() {
+
+getDayName();
+displayLineOnLCD(dayName, 4);
+displayCharOnLCD(' ');
+displayLineOnLCD(counterHOUR, 3);
+displayCharOnLCD(':');
+displayLineOnLCD(counterMIN, 3);
+displayCharOnLCD(':');
+displayCharOnLCD(counterSEC);
+
+}
+
+void getDayName() {
+
+switch(counterDAYS) {
+case '0':
+dayName[0] = 'M';
+dayName[1] = 'o';
+dayName[2] = 'n';
+break;
+
+case '1':
+dayName[0] = 'T';
+dayName[1] = 'u';
+dayName[2] = 'e';
+break;
+
+case '2':
+dayName[0] = 'W';
+dayName[1] = 'e';
+dayName[2] = 'n';
+break;
+
+case '3':
+dayName[0] = 'T';
+dayName[1] = 'h';
+dayName[2] = 'u';
+break;
+
+case '4':
+dayName[0] = 'F';
+dayName[1] = 'r';
+dayName[2] = 'i';
+break;
+
+case '5':
+dayName[0] = 'S';
+dayName[1] = 'a';
+dayName[2] = 't';
+break;
+
+case '6':
+dayName[0] = 'S';
+dayName[1] = 'u';
+dayName[2] = 'n';
+break;
+
 }
 
 }

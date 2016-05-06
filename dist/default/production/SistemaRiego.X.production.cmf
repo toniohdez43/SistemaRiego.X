@@ -11,52 +11,83 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/xcSRd0epx.obj
+$dist/default/production/SistemaRiego.X.production.obj
+intcodelo CODE 0 18 18 8E 1
+cinit CODE 0 18F8 18F8 64 1
+intcode_body CODE 0 E78 E78 152 1
+text0 CODE 0 169C 169C C6 1
+text1 CODE 0 1330 1330 F4 1
+text2 CODE 0 1A26 1A26 2E 1
+text3 CODE 0 1A54 1A54 2C 1
+text4 CODE 0 1A80 1A80 2C 1
+text5 CODE 0 1226 1226 10A 1
+text6 CODE 0 15D4 15D4 C8 1
+text7 CODE 0 1AAC 1AAC 2A 1
+text8 CODE 0 1B4C 1B4C 1E 1
+text9 CODE 0 1B6A 1B6A 1C 1
+text10 CODE 0 19E6 19E6 40 1
+text11 CODE 0 1424 1424 D8 1
+text12 CODE 0 FCA FCA 132 1
+text13 CODE 0 1CA8 1CA8 A 1
+text14 CODE 0 1AD6 1AD6 28 1
+text15 CODE 0 1CB2 1CB2 A 1
+text16 CODE 0 1CBC 1CBC A 1
+text17 CODE 0 1762 1762 9C 1
+text18 CODE 0 1C12 1C12 16 1
+text19 CODE 0 1CC6 1CC6 A 1
+text20 CODE 0 1C7A 1C7A 10 1
+text21 CODE 0 1B26 1B26 26 1
+text22 CODE 0 19A2 19A2 44 1
+text23 CODE 0 1B86 1B86 1C 1
+text24 CODE 0 1CE4 1CE4 6 1
+text25 CODE 0 1CF0 1CF0 4 1
+text26 CODE 0 1C28 1C28 16 1
+text27 CODE 0 1C3E 1C3E 14 1
+text30 CODE 0 1CD0 1CD0 A 1
+text31 CODE 0 1BA2 1BA2 1C 1
+text32 CODE 0 1BBE 1BBE 1C 1
+text33 CODE 0 1BDA 1BDA 1C 1
+text34 CODE 0 195C 195C 46 1
+text35 CODE 0 14FC 14FC D8 1
+text36 CODE 0 10FC 10FC 12A 1
+text37 CODE 0 1CDA 1CDA A 1
+text38 CODE 0 D0C D0C 16C 1
+text39 CODE 0 1886 1886 72 1
+text40 CODE 0 1C52 1C52 14 1
+text41 CODE 0 1C8A 1C8A 10 1
+text42 CODE 0 1BF6 1BF6 1C 1
+text43 CODE 0 1CEA 1CEA 6 1
+text44 CODE 0 1CF4 1CF4 4 1
+text45 CODE 0 1C66 1C66 14 1
+text46 CODE 0 1C9A 1C9A E 1
+idataCOMRAM CODE 0 1AFE 1AFE 27 1
+cstackCOMRAM COMRAM 1 28 28 1C 1
+cstackBANK0 BANK0 1 E8 E8 11 1
+cstackBANK1 BANK1 1 100 100 11 1
+temp COMRAM 1 4A 4A 1 1
+bssBANK0 BANK0 1 F9 F9 4 1
+intcode CODE 0 8 8 E 1
+smallconst SMALLCONST 0 D00 D00 C 1
+idataBANK0 CODE 0 17FE 17FE 88 1
+dataBANK0 BANK0 1 60 60 88 1
+dataCOMRAM COMRAM 1 1 1 27 1
+bssCOMRAM COMRAM 1 44 44 6 1
+$/tmp/xcNgAsvl8.obj
 idloc IDLOC 0 200000 200000 8 1
 reset_vec CODE 0 0 0 4 1
 end_init CODE 0 A6 A6 4 1
 config CONFIG 0 300000 300000 E 1
-$dist/default/production/SistemaRiego.X.production.obj
-intcodelo CODE 0 18 18 8E 1
-cinit CODE 0 454 454 36 1
-intcode_body CODE 0 2AC 2AC 8E 1
-text0 CODE 0 3D0 3D0 44 1
-text1 CODE 0 4B8 4B8 26 1
-text2 CODE 0 48A 48A 2E 1
-text3 CODE 0 4DE 4DE 1C 1
-text4 CODE 0 5BE 5BE 6 1
-text5 CODE 0 5C4 5C4 4 1
-text6 CODE 0 566 566 14 1
-text7 CODE 0 58E 58E E 1
-text10 CODE 0 4FA 4FA 1C 1
-text11 CODE 0 516 516 1C 1
-text12 CODE 0 38A 38A 46 1
-text13 CODE 0 414 414 40 1
-text14 CODE 0 33A 33A 50 1
-text15 CODE 0 57A 57A 14 1
-text16 CODE 0 59C 59C E 1
-text17 CODE 0 1D4 1D4 D8 1
-text18 CODE 0 AA AA 12A 1
-text19 CODE 0 5AA 5AA A 1
-text20 CODE 0 532 532 1C 1
-text21 CODE 0 5B4 5B4 A 1
-idataCOMRAM CODE 0 54E 54E 18 1
-cstackCOMRAM COMRAM 1 1 1 1F 1
-cstackBANK0 BANK0 1 60 60 11 1
-temp COMRAM 1 3C 3C 1 1
-intcode CODE 0 8 8 E 1
-dataCOMRAM COMRAM 1 20 20 18 1
-bssCOMRAM COMRAM 1 38 38 4 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 71-CFF 1
+RAM FD-FF 1
+RAM 111-CFF 1
 SFR D00-FFF 1
-BANK0 71-FF 1
-BANK1 100-1FF 1
+BANK0 FD-FF 1
+BANK1 111-1FF 1
 BANK2 200-2FF 1
 BANK3 300-3FF 1
 BANK4 400-4FF 1
@@ -67,20 +98,27 @@ BANK8 800-8FF 1
 BANK9 900-9FF 1
 CONST 4-7 1
 CONST 16-17 1
-CONST 5C8-BFFF 1
-STACK 71-CFF 1
-SMALLCONST D00-BFFF 1
+CONST AA-CFF 1
+CONST 1B25-1B25 1
+CONST 1CF8-BFFF 1
+STACK 111-CFF 1
+SMALLCONST 1B25-1B25 1
+SMALLCONST 1CF8-BFFF 1
 CODE 4-7 1
 CODE 16-17 1
-CODE 5C8-BFFF 1
+CODE AA-CFF 1
+CODE 1B25-1B25 1
+CODE 1CF8-BFFF 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
 BANK12 C00-CFF 1
-BIGRAM 3D-5F 1
-BIGRAM 71-CFF 1
-COMRAM 3D-5F 1
+BIGRAM 4B-5F 1
+BIGRAM FD-FF 1
+BIGRAM 111-CFF 1
+COMRAM 4B-5F 1
 EEDATA F00000-F003FF 1
-MEDIUMCONST D00-BFFF 1
+MEDIUMCONST 1B25-1B25 1
+MEDIUMCONST 1CF8-BFFF 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -95,275 +133,674 @@ MEDIUMCONST D00-BFFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production/SistemaRiego.X.production.obj
-18 intcodelo CODE >198:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-18 intcodelo CODE >513:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-5E intcodelo CODE >516:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-8 intcode CODE >516:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-8 intcode CODE >517:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-5B4 text21 CODE >245:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-5B4 text21 CODE >246:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-5B6 text21 CODE >247:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-5B8 text21 CODE >248:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-5BA text21 CODE >249:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-5BC text21 CODE >250:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-532 text20 CODE >276:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-532 text20 CODE >277:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-536 text20 CODE >279:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-538 text20 CODE >280:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-53C text20 CODE >281:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-540 text20 CODE >279:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-5AA text19 CODE >285:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-5AA text19 CODE >286:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-5AC text19 CODE >287:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-5AE text19 CODE >288:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-5B0 text19 CODE >289:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-5B2 text19 CODE >290:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-AA text18 CODE >293:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-AA text18 CODE >295:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-B6 text18 CODE >296:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-BA text18 CODE >297:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-BC text18 CODE >298:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-BC text18 CODE >300:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-BE text18 CODE >302:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-C6 text18 CODE >303:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-CA text18 CODE >304:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-CC text18 CODE >306:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-D6 text18 CODE >307:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-DA text18 CODE >308:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-DC text18 CODE >310:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-E6 text18 CODE >311:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-EA text18 CODE >312:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-EC text18 CODE >314:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-F6 text18 CODE >315:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-FA text18 CODE >316:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-FC text18 CODE >319:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-FC text18 CODE >320:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-FE text18 CODE >321:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-106 text18 CODE >322:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-10A text18 CODE >323:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-10C text18 CODE >325:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-116 text18 CODE >326:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-11A text18 CODE >327:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-11C text18 CODE >329:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-126 text18 CODE >330:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-12A text18 CODE >331:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-12C text18 CODE >333:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-136 text18 CODE >334:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-13A text18 CODE >338:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-13A text18 CODE >339:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-13C text18 CODE >340:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-144 text18 CODE >341:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-148 text18 CODE >342:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-14A text18 CODE >344:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-154 text18 CODE >345:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-158 text18 CODE >346:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-15A text18 CODE >348:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-164 text18 CODE >349:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-168 text18 CODE >350:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-16A text18 CODE >352:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-174 text18 CODE >353:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-178 text18 CODE >357:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-178 text18 CODE >359:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-17A text18 CODE >360:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-182 text18 CODE >361:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-186 text18 CODE >362:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-188 text18 CODE >364:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-192 text18 CODE >365:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-196 text18 CODE >366:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-198 text18 CODE >368:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-1A2 text18 CODE >369:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-1A6 text18 CODE >370:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-1A8 text18 CODE >372:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-1B2 text18 CODE >373:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-1B6 text18 CODE >297:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-1D0 text18 CODE >295:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-1D4 text17 CODE >382:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-1D4 text17 CODE >383:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-1DC text17 CODE >385:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-1E0 text17 CODE >386:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-1E4 text17 CODE >387:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-1E8 text17 CODE >388:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-1EC text17 CODE >384:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-206 text17 CODE >390:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-208 text17 CODE >391:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-212 text17 CODE >393:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-216 text17 CODE >394:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-21A text17 CODE >395:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-21E text17 CODE >396:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-222 text17 CODE >392:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-23C text17 CODE >398:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-23E text17 CODE >399:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-248 text17 CODE >401:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-24C text17 CODE >402:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-250 text17 CODE >403:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-254 text17 CODE >404:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-258 text17 CODE >400:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-272 text17 CODE >406:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-274 text17 CODE >407:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-27E text17 CODE >409:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-282 text17 CODE >410:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-286 text17 CODE >411:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-28A text17 CODE >412:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-28E text17 CODE >408:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-2A8 text17 CODE >415:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-59C text16 CODE >195:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-59C text16 CODE >196:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-5A0 text16 CODE >197:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-57A text15 CODE >236:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-57C text15 CODE >237:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-580 text15 CODE >238:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-582 text15 CODE >239:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-584 text15 CODE >240:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-586 text15 CODE >241:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-58A text15 CODE >242:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-58C text15 CODE >243:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-33A text14 CODE >471:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-33A text14 CODE >473:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-340 text14 CODE >474:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-356 text14 CODE >473:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-414 text13 CODE >418:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-416 text13 CODE >438:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-418 text13 CODE >439:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-42A text13 CODE >440:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-43C text13 CODE >441:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-442 text13 CODE >444:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-444 text13 CODE >438:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-38A text12 CODE >457:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-38A text12 CODE >458:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-38C text12 CODE >459:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-390 text12 CODE >460:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-394 text12 CODE >461:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-398 text12 CODE >462:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-39C text12 CODE >463:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3A0 text12 CODE >464:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3A2 text12 CODE >458:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3BE text12 CODE >465:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3C2 text12 CODE >466:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3C8 text12 CODE >467:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3CE text12 CODE >469:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-516 text11 CODE >252:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-516 text11 CODE >253:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-51C text11 CODE >255:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-520 text11 CODE >256:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-528 text11 CODE >257:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-52C text11 CODE >258:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4FA text10 CODE >262:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4FA text10 CODE >263:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-502 text10 CODE >264:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-506 text10 CODE >267:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-50E text10 CODE >269:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-510 text10 CODE >270:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-2AC intcode_body CODE >517:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-2DE intcode_body CODE >519:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-2E4 intcode_body CODE >523:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-2E8 intcode_body CODE >525:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-2EE intcode_body CODE >526:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-2F2 intcode_body CODE >528:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-2F6 intcode_body CODE >529:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-2FA intcode_body CODE >521:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-2FE intcode_body CODE >536:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-58E text7 CODE >195:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-58E text7 CODE >196:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-592 text7 CODE >197:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-566 text6 CODE >215:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-568 text6 CODE >216:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-56C text6 CODE >217:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-56E text6 CODE >218:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-570 text6 CODE >219:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-572 text6 CODE >220:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-576 text6 CODE >221:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-578 text6 CODE >222:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-5C4 text5 CODE >175:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-5C4 text5 CODE >176:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-5C6 text5 CODE >177:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-5BE text4 CODE >179:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-5BE text4 CODE >180:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-5C2 text4 CODE >181:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4DE text3 CODE >223:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4DE text3 CODE >224:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4E2 text3 CODE >225:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4E4 text3 CODE >226:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4E6 text3 CODE >228:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4E8 text3 CODE >229:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4EA text3 CODE >230:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4EE text3 CODE >231:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4F0 text3 CODE >228:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4F4 text3 CODE >233:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4F8 text3 CODE >234:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-48A text2 CODE >201:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-48A text2 CODE >202:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-48E text2 CODE >203:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-492 text2 CODE >204:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-494 text2 CODE >206:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-496 text2 CODE >207:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-49A text2 CODE >208:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-49C text2 CODE >209:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-49E text2 CODE >210:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4A6 text2 CODE >208:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4AE text2 CODE >206:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4B8 text1 CODE >183:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4B8 text1 CODE >184:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4BA text1 CODE >185:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4BE text1 CODE >186:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4C4 text1 CODE >187:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4C8 text1 CODE >188:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4CE text1 CODE >189:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4D2 text1 CODE >190:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4D8 text1 CODE >191:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-4DC text1 CODE >192:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3D0 text0 CODE >107:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3D0 text0 CODE >110:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3D4 text0 CODE >114:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3D8 text0 CODE >115:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3DA text0 CODE >116:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3DE text0 CODE >121:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3E2 text0 CODE >122:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3E6 text0 CODE >123:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3E8 text0 CODE >125:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3EC text0 CODE >126:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3F0 text0 CODE >127:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3F4 text0 CODE >130:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3F6 text0 CODE >131:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3F8 text0 CODE >132:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3FA text0 CODE >133:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3FC text0 CODE >136:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-3FE text0 CODE >139:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-400 text0 CODE >142:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-402 text0 CODE >145:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-404 text0 CODE >148:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-406 text0 CODE >151:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-408 text0 CODE >154:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-40A text0 CODE >156:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-40E text0 CODE >159:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-412 text0 CODE >162:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/SistemaRiego.X/SysRiego.c
-454 cinit CODE >1098:/tmp/xcrjovyCm
-454 cinit CODE >1100:/tmp/xcrjovyCm
-454 cinit CODE >1103:/tmp/xcrjovyCm
-454 cinit CODE >1138:/tmp/xcrjovyCm
-456 cinit CODE >1139:/tmp/xcrjovyCm
-458 cinit CODE >1140:/tmp/xcrjovyCm
-45A cinit CODE >1141:/tmp/xcrjovyCm
-45C cinit CODE >1146:/tmp/xcrjovyCm
-45E cinit CODE >1147:/tmp/xcrjovyCm
-460 cinit CODE >1148:/tmp/xcrjovyCm
-462 cinit CODE >1149:/tmp/xcrjovyCm
-464 cinit CODE >1150:/tmp/xcrjovyCm
-466 cinit CODE >1151:/tmp/xcrjovyCm
-468 cinit CODE >1152:/tmp/xcrjovyCm
-46C cinit CODE >1153:/tmp/xcrjovyCm
-470 cinit CODE >1154:/tmp/xcrjovyCm
-470 cinit CODE >1155:/tmp/xcrjovyCm
-472 cinit CODE >1156:/tmp/xcrjovyCm
-476 cinit CODE >1157:/tmp/xcrjovyCm
-478 cinit CODE >1158:/tmp/xcrjovyCm
-47A cinit CODE >1159:/tmp/xcrjovyCm
-47C cinit CODE >1165:/tmp/xcrjovyCm
-47C cinit CODE >1167:/tmp/xcrjovyCm
-47E cinit CODE >1168:/tmp/xcrjovyCm
-480 cinit CODE >1170:/tmp/xcrjovyCm
-482 cinit CODE >1171:/tmp/xcrjovyCm
-484 cinit CODE >1172:/tmp/xcrjovyCm
-486 cinit CODE >1173:/tmp/xcrjovyCm
+18 intcodelo CODE >370:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+18 intcodelo CODE >655:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+5E intcodelo CODE >658:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+8 intcode CODE >658:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+8 intcode CODE >660:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C9A text46 CODE >367:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C9A text46 CODE >368:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C9E text46 CODE >369:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C66 text45 CODE >387:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C68 text45 CODE >388:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C6C text45 CODE >389:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C6E text45 CODE >390:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C70 text45 CODE >391:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C72 text45 CODE >392:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C76 text45 CODE >393:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C78 text45 CODE >394:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CF4 text44 CODE >347:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CF4 text44 CODE >348:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CF6 text44 CODE >349:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CEA text43 CODE >351:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CEA text43 CODE >352:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CEE text43 CODE >353:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BF6 text42 CODE >396:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BF6 text42 CODE >397:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BFA text42 CODE >398:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BFC text42 CODE >399:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BFE text42 CODE >401:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C00 text42 CODE >402:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C02 text42 CODE >403:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C06 text42 CODE >404:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C08 text42 CODE >401:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C0C text42 CODE >406:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C10 text42 CODE >407:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C8A text41 CODE >425:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C8A text41 CODE >426:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C90 text41 CODE >427:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C94 text41 CODE >428:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C98 text41 CODE >429:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C52 text40 CODE >409:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C54 text40 CODE >410:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C58 text40 CODE >411:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C5A text40 CODE >412:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C5C text40 CODE >413:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C5E text40 CODE >414:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C62 text40 CODE >415:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C64 text40 CODE >416:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1886 text39 CODE >418:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1886 text39 CODE >420:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+188C text39 CODE >421:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+18C4 text39 CODE >420:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D0C text38 CODE >953:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D0E text38 CODE >955:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D10 text38 CODE >966:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D14 text38 CODE >968:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D24 text38 CODE >988:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D26 text38 CODE >992:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D2A text38 CODE >994:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D3A text38 CODE >1011:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D3C text38 CODE >1015:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D40 text38 CODE >1017:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D50 text38 CODE >1033:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D52 text38 CODE >1035:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D54 text38 CODE >1037:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D58 text38 CODE >1039:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D68 text38 CODE >1041:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D6A text38 CODE >1045:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D6E text38 CODE >1047:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D7E text38 CODE >1049:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D80 text38 CODE >1053:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D84 text38 CODE >1055:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D94 text38 CODE >1057:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D96 text38 CODE >1062:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+D9A text38 CODE >1064:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+DAA text38 CODE >1066:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+DAC text38 CODE >1070:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+DB0 text38 CODE >1072:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+DC0 text38 CODE >1076:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+DC2 text38 CODE >1080:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+DC6 text38 CODE >1082:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+DD6 text38 CODE >1086:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+DD8 text38 CODE >1091:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+DDE text38 CODE >1094:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+DE0 text38 CODE >1098:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+DE6 text38 CODE >1100:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+DE8 text38 CODE >1104:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+DEE text38 CODE >1106:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+DF0 text38 CODE >1108:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+DF8 text38 CODE >1110:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+DFE text38 CODE >1111:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+E00 text38 CODE >1114:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+E08 text38 CODE >1115:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+E0C text38 CODE >1116:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+E12 text38 CODE >1129:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+E14 text38 CODE >955:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CDA text37 CODE >1132:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CDA text37 CODE >1133:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CDC text37 CODE >1134:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CDE text37 CODE >1135:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CE0 text37 CODE >1136:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CE2 text37 CODE >1137:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+10FC text36 CODE >828:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+10FC text36 CODE >830:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1108 text36 CODE >831:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+110C text36 CODE >832:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+110E text36 CODE >833:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+110E text36 CODE >835:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1110 text36 CODE >837:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1118 text36 CODE >838:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+111C text36 CODE >839:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+111E text36 CODE >841:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1128 text36 CODE >842:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+112C text36 CODE >843:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+112E text36 CODE >845:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1138 text36 CODE >846:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+113C text36 CODE >847:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+113E text36 CODE >849:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1148 text36 CODE >850:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+114C text36 CODE >851:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+114E text36 CODE >854:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+114E text36 CODE >855:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1150 text36 CODE >856:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1158 text36 CODE >857:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+115C text36 CODE >858:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+115E text36 CODE >860:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1168 text36 CODE >861:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+116C text36 CODE >862:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+116E text36 CODE >864:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1178 text36 CODE >865:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+117C text36 CODE >866:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+117E text36 CODE >868:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1188 text36 CODE >869:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+118C text36 CODE >873:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+118C text36 CODE >874:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+118E text36 CODE >875:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1196 text36 CODE >876:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+119A text36 CODE >877:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+119C text36 CODE >879:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+11A6 text36 CODE >880:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+11AA text36 CODE >881:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+11AC text36 CODE >883:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+11B6 text36 CODE >884:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+11BA text36 CODE >885:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+11BC text36 CODE >887:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+11C6 text36 CODE >888:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+11CA text36 CODE >892:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+11CA text36 CODE >894:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+11CC text36 CODE >895:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+11D4 text36 CODE >896:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+11D8 text36 CODE >897:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+11DA text36 CODE >899:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+11E4 text36 CODE >900:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+11E8 text36 CODE >901:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+11EA text36 CODE >903:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+11F4 text36 CODE >904:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+11F8 text36 CODE >905:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+11FA text36 CODE >907:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1204 text36 CODE >908:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1208 text36 CODE >832:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1222 text36 CODE >830:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+14FC text35 CODE >917:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+14FC text35 CODE >918:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1504 text35 CODE >920:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1508 text35 CODE >921:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+150C text35 CODE >922:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1510 text35 CODE >923:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1514 text35 CODE >919:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+152E text35 CODE >925:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1530 text35 CODE >926:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+153A text35 CODE >928:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+153E text35 CODE >929:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1542 text35 CODE >930:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1546 text35 CODE >931:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+154A text35 CODE >927:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1564 text35 CODE >933:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1566 text35 CODE >934:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1570 text35 CODE >936:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1574 text35 CODE >937:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1578 text35 CODE >938:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+157C text35 CODE >939:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1580 text35 CODE >935:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+159A text35 CODE >941:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+159C text35 CODE >942:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+15A6 text35 CODE >944:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+15AA text35 CODE >945:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+15AE text35 CODE >946:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+15B2 text35 CODE >947:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+15B6 text35 CODE >943:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+15D0 text35 CODE >950:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+195C text34 CODE >813:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+195C text34 CODE >815:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+195E text34 CODE >816:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1962 text34 CODE >817:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1966 text34 CODE >818:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+196A text34 CODE >819:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+196E text34 CODE >820:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1972 text34 CODE >821:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1974 text34 CODE >815:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1990 text34 CODE >822:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1994 text34 CODE >823:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+199A text34 CODE >824:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19A0 text34 CODE >825:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BDA text33 CODE >793:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BDA text33 CODE >794:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BDE text33 CODE >796:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BE0 text33 CODE >797:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BE4 text33 CODE >798:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BE8 text33 CODE >796:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BBE text32 CODE >782:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BBE text32 CODE >783:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BC4 text32 CODE >785:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BC8 text32 CODE >786:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BD0 text32 CODE >787:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BD4 text32 CODE >788:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BA2 text31 CODE >802:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BA2 text31 CODE >803:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BAA text31 CODE >804:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BAE text31 CODE >807:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BB6 text31 CODE >808:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BB8 text31 CODE >809:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CD0 text30 CODE >775:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CD0 text30 CODE >776:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CD2 text30 CODE >777:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CD4 text30 CODE >778:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CD6 text30 CODE >779:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CD8 text30 CODE >780:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+E78 intcode_body CODE >660:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+EAA intcode_body CODE >662:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+EB0 intcode_body CODE >666:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+EB4 intcode_body CODE >668:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+EBA intcode_body CODE >669:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+EBE intcode_body CODE >671:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+EC2 intcode_body CODE >672:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+EC6 intcode_body CODE >664:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+ECC intcode_body CODE >678:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+ECC intcode_body CODE >681:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+ED2 intcode_body CODE >683:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+ED4 intcode_body CODE >684:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+EDC intcode_body CODE >686:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+EE0 intcode_body CODE >687:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+EE4 intcode_body CODE >688:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+EEE intcode_body CODE >690:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+EF4 intcode_body CODE >691:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+EF8 intcode_body CODE >692:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F02 intcode_body CODE >695:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F0A intcode_body CODE >697:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F10 intcode_body CODE >698:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F14 intcode_body CODE >700:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F1E intcode_body CODE >701:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F24 intcode_body CODE >702:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F28 intcode_body CODE >705:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F2A intcode_body CODE >707:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F32 intcode_body CODE >709:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F38 intcode_body CODE >710:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F3C intcode_body CODE >711:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F3E intcode_body CODE >715:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F42 intcode_body CODE >716:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F48 intcode_body CODE >717:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F4E intcode_body CODE >718:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F54 intcode_body CODE >719:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F5A intcode_body CODE >720:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F5C intcode_body CODE >722:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F64 intcode_body CODE >724:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F68 intcode_body CODE >725:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F6E intcode_body CODE >726:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F74 intcode_body CODE >727:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F7A intcode_body CODE >728:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F80 intcode_body CODE >729:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F84 intcode_body CODE >736:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F86 intcode_body CODE >737:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+F8E intcode_body CODE >741:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C3E text27 CODE >367:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C3E text27 CODE >368:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C44 text27 CODE >369:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C28 text26 CODE >387:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C2C text26 CODE >388:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C30 text26 CODE >389:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C32 text26 CODE >390:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C34 text26 CODE >391:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C36 text26 CODE >392:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C3A text26 CODE >393:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C3C text26 CODE >394:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CF0 text25 CODE >347:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CF0 text25 CODE >348:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CF2 text25 CODE >349:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CE4 text24 CODE >351:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CE4 text24 CODE >352:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CE8 text24 CODE >353:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B86 text23 CODE >396:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B86 text23 CODE >397:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B8A text23 CODE >398:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B8C text23 CODE >399:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B8E text23 CODE >401:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B90 text23 CODE >402:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B92 text23 CODE >403:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B96 text23 CODE >404:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B98 text23 CODE >401:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B9C text23 CODE >406:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1BA0 text23 CODE >407:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19A2 text22 CODE >373:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19A2 text22 CODE >374:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19A8 text22 CODE >375:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19AE text22 CODE >376:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19B2 text22 CODE >378:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19B4 text22 CODE >379:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19BA text22 CODE >380:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19BC text22 CODE >381:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19C0 text22 CODE >382:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19CC text22 CODE >380:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19D8 text22 CODE >378:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B26 text21 CODE >355:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B26 text21 CODE >356:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B28 text21 CODE >357:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B2C text21 CODE >358:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B32 text21 CODE >359:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B36 text21 CODE >360:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B3C text21 CODE >361:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B40 text21 CODE >362:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B46 text21 CODE >363:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B4A text21 CODE >364:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C7A text20 CODE >425:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C7A text20 CODE >426:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C80 text20 CODE >427:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C84 text20 CODE >428:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C88 text20 CODE >429:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CC6 text19 CODE >1176:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CC6 text19 CODE >1178:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CCA text19 CODE >1179:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CCC text19 CODE >1180:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CCE text19 CODE >1182:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C12 text18 CODE >409:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C16 text18 CODE >410:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C1A text18 CODE >411:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C1C text18 CODE >412:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C1E text18 CODE >413:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C20 text18 CODE >414:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C24 text18 CODE >415:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1C26 text18 CODE >416:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1762 text17 CODE >418:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1762 text17 CODE >420:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+176A text17 CODE >421:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+17A8 text17 CODE >420:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CBC text16 CODE >1184:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CBC text16 CODE >1186:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CC0 text16 CODE >1187:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CC2 text16 CODE >1188:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CC4 text16 CODE >1190:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CB2 text15 CODE >775:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CB2 text15 CODE >776:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CB4 text15 CODE >777:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CB6 text15 CODE >778:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CB8 text15 CODE >779:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CBA text15 CODE >780:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1AD6 text14 CODE >793:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1AD6 text14 CODE >794:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1ADC text14 CODE >796:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1ADE text14 CODE >797:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1AE4 text14 CODE >798:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1AEA text14 CODE >796:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CA8 text13 CODE >1132:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CA8 text13 CODE >1133:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CAA text13 CODE >1134:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CAC text13 CODE >1135:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CAE text13 CODE >1136:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1CB0 text13 CODE >1137:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+FCA text12 CODE >828:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+FCA text12 CODE >830:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+FDA text12 CODE >831:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+FDE text12 CODE >832:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+FE0 text12 CODE >833:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+FE0 text12 CODE >835:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+FE2 text12 CODE >837:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+FEA text12 CODE >838:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+FEE text12 CODE >839:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+FF0 text12 CODE >841:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+FFA text12 CODE >842:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+FFE text12 CODE >843:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1000 text12 CODE >845:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+100A text12 CODE >846:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+100E text12 CODE >847:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1010 text12 CODE >849:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+101A text12 CODE >850:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+101E text12 CODE >851:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1020 text12 CODE >854:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1020 text12 CODE >855:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1022 text12 CODE >856:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+102A text12 CODE >857:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+102E text12 CODE >858:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1030 text12 CODE >860:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+103A text12 CODE >861:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+103E text12 CODE >862:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1040 text12 CODE >864:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+104A text12 CODE >865:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+104E text12 CODE >866:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1050 text12 CODE >868:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+105A text12 CODE >869:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+105E text12 CODE >873:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+105E text12 CODE >874:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1060 text12 CODE >875:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1068 text12 CODE >876:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+106C text12 CODE >877:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+106E text12 CODE >879:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1078 text12 CODE >880:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+107C text12 CODE >881:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+107E text12 CODE >883:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1088 text12 CODE >884:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+108C text12 CODE >885:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+108E text12 CODE >887:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1098 text12 CODE >888:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+109C text12 CODE >892:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+109C text12 CODE >894:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+109E text12 CODE >895:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+10A6 text12 CODE >896:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+10AA text12 CODE >897:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+10AC text12 CODE >899:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+10B6 text12 CODE >900:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+10BA text12 CODE >901:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+10BC text12 CODE >903:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+10C6 text12 CODE >904:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+10CA text12 CODE >905:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+10CC text12 CODE >907:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+10D6 text12 CODE >908:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+10DA text12 CODE >832:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+10F6 text12 CODE >830:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1424 text11 CODE >917:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1424 text11 CODE >918:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+142C text11 CODE >920:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1430 text11 CODE >921:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1434 text11 CODE >922:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1438 text11 CODE >923:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+143C text11 CODE >919:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1456 text11 CODE >925:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1458 text11 CODE >926:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1462 text11 CODE >928:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1466 text11 CODE >929:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+146A text11 CODE >930:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+146E text11 CODE >931:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1472 text11 CODE >927:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+148C text11 CODE >933:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+148E text11 CODE >934:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1498 text11 CODE >936:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+149C text11 CODE >937:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+14A0 text11 CODE >938:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+14A4 text11 CODE >939:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+14A8 text11 CODE >935:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+14C2 text11 CODE >941:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+14C4 text11 CODE >942:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+14CE text11 CODE >944:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+14D2 text11 CODE >945:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+14D6 text11 CODE >946:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+14DA text11 CODE >947:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+14DE text11 CODE >943:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+14F8 text11 CODE >950:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19E6 text10 CODE >1152:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19E6 text10 CODE >1154:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19E8 text10 CODE >1155:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19EC text10 CODE >1156:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19F0 text10 CODE >1157:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19F4 text10 CODE >1158:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19F8 text10 CODE >1159:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19FC text10 CODE >1160:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+19FE text10 CODE >1154:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1A1A text10 CODE >1161:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1A1E text10 CODE >1162:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1A24 text10 CODE >1163:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B6A text9 CODE >1142:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B6A text9 CODE >1143:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B70 text9 CODE >1145:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B74 text9 CODE >1146:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B7C text9 CODE >1147:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B80 text9 CODE >1148:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B4C text8 CODE >1165:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B4C text8 CODE >1166:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B54 text8 CODE >1167:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B58 text8 CODE >1170:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B60 text8 CODE >1171:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1B64 text8 CODE >1172:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1AAC text7 CODE >746:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1AAC text7 CODE >748:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1AB0 text7 CODE >750:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1AB4 text7 CODE >752:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1AB6 text7 CODE >754:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1ABA text7 CODE >756:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1AC0 text7 CODE >757:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1AC4 text7 CODE >760:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1AC8 text7 CODE >761:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1ACC text7 CODE >752:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1AD2 text7 CODE >766:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+15D4 text6 CODE >460:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+15D4 text6 CODE >463:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+15D8 text6 CODE >465:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+15DE text6 CODE >466:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+15E4 text6 CODE >468:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+15E8 text6 CODE >469:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+15FE text6 CODE >470:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+160C text6 CODE >471:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1620 text6 CODE >474:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1622 text6 CODE >476:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+162A text6 CODE >478:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1634 text6 CODE >479:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1656 text6 CODE >480:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+165A text6 CODE >481:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1668 text6 CODE >482:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+167C text6 CODE >483:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1682 text6 CODE >484:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1686 text6 CODE >474:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1690 text6 CODE >489:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1694 text6 CODE >491:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+169A text6 CODE >493:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1226 text5 CODE >526:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1226 text5 CODE >528:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+122A text5 CODE >530:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1230 text5 CODE >532:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1234 text5 CODE >534:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1244 text5 CODE >535:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+125A text5 CODE >536:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+125C text5 CODE >539:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1272 text5 CODE >543:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1274 text5 CODE >545:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+127C text5 CODE >547:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1280 text5 CODE >549:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+128A text5 CODE >550:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1296 text5 CODE >551:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+12AC text5 CODE >552:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+12AE text5 CODE >554:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+12B8 text5 CODE >555:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+12C4 text5 CODE >556:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+12DA text5 CODE >557:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+12DC text5 CODE >560:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+12EC text5 CODE >561:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1302 text5 CODE >562:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1304 text5 CODE >564:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+131A text5 CODE >543:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1324 text5 CODE >570:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1328 text5 CODE >572:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+132E text5 CODE >574:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1A80 text4 CODE >495:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1A80 text4 CODE >497:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1A84 text4 CODE >499:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1A8A text4 CODE >501:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1A8E text4 CODE >503:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1A94 text4 CODE >513:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1A9C text4 CODE >516:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1AA0 text4 CODE >519:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1AA4 text4 CODE >521:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1AAA text4 CODE >523:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1A54 text3 CODE >578:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1A54 text3 CODE >581:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1A58 text3 CODE >582:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1A6E text3 CODE >584:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1A26 text2 CODE >639:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1A26 text2 CODE >641:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1A2A text2 CODE >642:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1A40 text2 CODE >644:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1330 text1 CODE >592:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1330 text1 CODE >594:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1334 text1 CODE >595:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+134A text1 CODE >599:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+134C text1 CODE >602:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+135C text1 CODE >604:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1376 text1 CODE >606:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1386 text1 CODE >608:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1398 text1 CODE >610:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+13B0 text1 CODE >612:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+13C8 text1 CODE >614:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+13E0 text1 CODE >615:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+13E4 text1 CODE >616:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+13FA text1 CODE >617:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+140C text1 CODE >602:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1412 text1 CODE >599:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+169C text0 CODE >214:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+169C text0 CODE >217:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16A0 text0 CODE >221:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16A4 text0 CODE >222:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16A6 text0 CODE >223:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16AA text0 CODE >228:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16AE text0 CODE >229:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16B2 text0 CODE >230:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16B4 text0 CODE >232:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16B8 text0 CODE >233:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16BC text0 CODE >234:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16C0 text0 CODE >237:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16C2 text0 CODE >238:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16C4 text0 CODE >239:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16C6 text0 CODE >240:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16C8 text0 CODE >243:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16CA text0 CODE >246:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16CC text0 CODE >249:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16CE text0 CODE >252:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16D0 text0 CODE >255:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16D2 text0 CODE >258:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16D4 text0 CODE >261:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16D6 text0 CODE >264:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16DA text0 CODE >267:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16DE text0 CODE >276:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16E4 text0 CODE >278:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16E8 text0 CODE >279:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16EE text0 CODE >280:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16F2 text0 CODE >284:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16F4 text0 CODE >287:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16F6 text0 CODE >291:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+16FA text0 CODE >295:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1702 text0 CODE >297:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1704 text0 CODE >304:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+170E text0 CODE >308:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1712 text0 CODE >309:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1714 text0 CODE >312:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1718 text0 CODE >313:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+171A text0 CODE >316:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+171E text0 CODE >319:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1720 text0 CODE >305:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1736 text0 CODE >320:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1738 text0 CODE >326:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+173C text0 CODE >327:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+173E text0 CODE >330:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1742 text0 CODE >331:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1744 text0 CODE >334:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1748 text0 CODE >337:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+174A text0 CODE >323:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+1760 text0 CODE >302:/Users/gabrielgrijalvaflores/Documents/Universidad/ITESM/Semestre IX/Microcontroladores/Proyecto Final/SistemaRiego.X/SysRiego.c
+18F8 cinit CODE >1441:/tmp/xcqI4If37
+18F8 cinit CODE >1443:/tmp/xcqI4If37
+18F8 cinit CODE >1446:/tmp/xcqI4If37
+18F8 cinit CODE >1671:/tmp/xcqI4If37
+18FA cinit CODE >1672:/tmp/xcqI4If37
+18FC cinit CODE >1673:/tmp/xcqI4If37
+18FE cinit CODE >1674:/tmp/xcqI4If37
+1900 cinit CODE >1675:/tmp/xcqI4If37
+1902 cinit CODE >1678:/tmp/xcqI4If37
+1904 cinit CODE >1679:/tmp/xcqI4If37
+1906 cinit CODE >1680:/tmp/xcqI4If37
+1908 cinit CODE >1681:/tmp/xcqI4If37
+190A cinit CODE >1682:/tmp/xcqI4If37
+190C cinit CODE >1683:/tmp/xcqI4If37
+190E cinit CODE >1688:/tmp/xcqI4If37
+1910 cinit CODE >1689:/tmp/xcqI4If37
+1912 cinit CODE >1690:/tmp/xcqI4If37
+1914 cinit CODE >1691:/tmp/xcqI4If37
+1916 cinit CODE >1692:/tmp/xcqI4If37
+1918 cinit CODE >1693:/tmp/xcqI4If37
+191A cinit CODE >1694:/tmp/xcqI4If37
+191E cinit CODE >1695:/tmp/xcqI4If37
+1922 cinit CODE >1696:/tmp/xcqI4If37
+1922 cinit CODE >1697:/tmp/xcqI4If37
+1924 cinit CODE >1698:/tmp/xcqI4If37
+1928 cinit CODE >1699:/tmp/xcqI4If37
+192A cinit CODE >1700:/tmp/xcqI4If37
+192C cinit CODE >1701:/tmp/xcqI4If37
+192E cinit CODE >1705:/tmp/xcqI4If37
+1930 cinit CODE >1706:/tmp/xcqI4If37
+1932 cinit CODE >1707:/tmp/xcqI4If37
+1934 cinit CODE >1708:/tmp/xcqI4If37
+1936 cinit CODE >1709:/tmp/xcqI4If37
+1938 cinit CODE >1710:/tmp/xcqI4If37
+193A cinit CODE >1711:/tmp/xcqI4If37
+193E cinit CODE >1712:/tmp/xcqI4If37
+1942 cinit CODE >1713:/tmp/xcqI4If37
+1942 cinit CODE >1714:/tmp/xcqI4If37
+1944 cinit CODE >1715:/tmp/xcqI4If37
+1948 cinit CODE >1716:/tmp/xcqI4If37
+194A cinit CODE >1717:/tmp/xcqI4If37
+194C cinit CODE >1718:/tmp/xcqI4If37
+194E cinit CODE >1724:/tmp/xcqI4If37
+194E cinit CODE >1726:/tmp/xcqI4If37
+1950 cinit CODE >1727:/tmp/xcqI4If37
+1952 cinit CODE >1729:/tmp/xcqI4If37
+1954 cinit CODE >1730:/tmp/xcqI4If37
+1956 cinit CODE >1731:/tmp/xcqI4If37
+1958 cinit CODE >1732:/tmp/xcqI4If37
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -376,89 +813,136 @@ FE text18 CODE >321:/Users/antoniohernandez/Documents/octavo_semestre/MICROS/Sis
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-_GREETING 2C 0 COMRAM 1 dataCOMRAM dist/default/production/SistemaRiego.X.production.obj
+__size_of_enableIntRBIE 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+_GREETING 72 0 BANK0 1 dataBANK0 dist/default/production/SistemaRiego.X.production.obj
 __size_of_resetOneShot 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-__end_of_displayCharOnLCD 58E 0 CODE 0 text15 dist/default/production/SistemaRiego.X.production.obj
+__end_of_displayCharOnLCD 1C28 0 CODE 0 text18 dist/default/production/SistemaRiego.X.production.obj
+__LdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production/SistemaRiego.X.production.obj
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production/SistemaRiego.X.production.obj
 __Hspace_0 30000E 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-__Hspace_1 71 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+__Hspace_1 111 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __Hspace_2 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __size_of_oneShot 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-displayLineOnLCD@i D 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
-determinePressedRow@i 1 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
+__HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production/SistemaRiego.X.production.obj
+__end_of_readKey 1A26 0 CODE 0 text10 dist/default/production/SistemaRiego.X.production.obj
+displayLineOnLCD@i 10C 0 BANK1 1 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
+determinePressedRow@i 100 0 BANK1 1 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production/SistemaRiego.X.production.obj
 __size_of_displayCharOnLCD 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/xcSRd0epx.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/xcNgAsvl8.obj
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production/SistemaRiego.X.production.obj
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-__end_of_pressedKey 3D0 0 CODE 0 text12 dist/default/production/SistemaRiego.X.production.obj
-__Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production/SistemaRiego.X.production.obj
+__end_ofi2_command 1C7A 0 CODE 0 text45 dist/default/production/SistemaRiego.X.production.obj
+__end_of_workingTimer 1424 0 CODE 0 text1 dist/default/production/SistemaRiego.X.production.obj
+__end_of_pressedKey 19A2 0 CODE 0 text34 dist/default/production/SistemaRiego.X.production.obj
+__size_ofi2_command 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+__Lsmallconst D00 0 SMALLCONST 0 smallconst dist/default/production/SistemaRiego.X.production.obj
+i2_portDAsOutput 1CEA 0 CODE 0 text43 dist/default/production/SistemaRiego.X.production.obj
 _ISRH 8 0 CODE 0 intcode dist/default/production/SistemaRiego.X.production.obj
 _ISRL 18 0 CODE 0 intcodelo dist/default/production/SistemaRiego.X.production.obj
 _LATB F8A 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 _LATC F8B 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/xcSRd0epx.obj
-_main 3D0 0 CODE 0 text0 dist/default/production/SistemaRiego.X.production.obj
-btemp 3C 0 COMRAM 1 temp dist/default/production/SistemaRiego.X.production.obj
+_TMR0 FD6 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+___sp 0 0 STACK 2 stack /tmp/xcNgAsvl8.obj
+_main 169C 0 CODE 0 text0 dist/default/production/SistemaRiego.X.production.obj
+btemp 4A 0 COMRAM 1 temp dist/default/production/SistemaRiego.X.production.obj
 __size_ofi2_shortDelay 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-start A6 0 CODE 0 init /tmp/xcSRd0epx.obj
-__end_of_resetOneShot 516 0 CODE 0 text10 dist/default/production/SistemaRiego.X.production.obj
+start A6 0 CODE 0 init /tmp/xcNgAsvl8.obj
+_modeSelected FB 0 BANK0 1 bssBANK0 dist/default/production/SistemaRiego.X.production.obj
+__end_of_resetReadInput 1B6A 0 CODE 0 text8 dist/default/production/SistemaRiego.X.production.obj
+__end_of_resetOneShot 1BBE 0 CODE 0 text31 dist/default/production/SistemaRiego.X.production.obj
 __size_of_ISRH 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __size_of_ISRL 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-_portDAsInput 5C4 0 CODE 0 text5 dist/default/production/SistemaRiego.X.production.obj
+_portDAsInput 1CF0 0 CODE 0 text25 dist/default/production/SistemaRiego.X.production.obj
+_manualZn1Val C 0 COMRAM 1 dataCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_manualZn2Val D 0 COMRAM 1 dataCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_manualZn3Val E 0 COMRAM 1 dataCOMRAM dist/default/production/SistemaRiego.X.production.obj
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production/SistemaRiego.X.production.obj
-_LCDSetup 4B8 0 CODE 0 text1 dist/default/production/SistemaRiego.X.production.obj
+__end_of_enableIntRBIE 1CC6 0 CODE 0 text16 dist/default/production/SistemaRiego.X.production.obj
+__LidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production/SistemaRiego.X.production.obj
+_LCDSetup 1B26 0 CODE 0 text21 dist/default/production/SistemaRiego.X.production.obj
+i2_command 1C66 0 CODE 0 text45 dist/default/production/SistemaRiego.X.production.obj
 __Hpowerup A6 0 CODE 0 powerup dist/default/production/SistemaRiego.X.production.obj
+i2_turnOnAllRows 1CDA 0 CODE 0 text37 dist/default/production/SistemaRiego.X.production.obj
+_T0CONbits FD5 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+__size_ofi2_groundAllRows 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production/SistemaRiego.X.production.obj
-__end_ofi2_shortDelay 5AA 0 CODE 0 text16 dist/default/production/SistemaRiego.X.production.obj
-__end_of_determinePressedRow 1D4 0 CODE 0 text18 dist/default/production/SistemaRiego.X.production.obj
-__end_of_LCDSetup 4DE 0 CODE 0 text1 dist/default/production/SistemaRiego.X.production.obj
-__accesstop 60 0 ABS 0 - /tmp/xcSRd0epx.obj
-intlevel0 0 0 CODE 0 text /tmp/xcSRd0epx.obj
-intlevel1 0 0 CODE 0 text /tmp/xcSRd0epx.obj
-intlevel2 0 0 CODE 0 text /tmp/xcSRd0epx.obj
-intlevel3 0 0 CODE 0 text /tmp/xcSRd0epx.obj
+__end_ofi2_shortDelay 1CA8 0 CODE 0 text46 dist/default/production/SistemaRiego.X.production.obj
+__end_of_determinePressedRow 10FC 0 CODE 0 text12 dist/default/production/SistemaRiego.X.production.obj
+__end_of_LCDSetup 1B4C 0 CODE 0 text21 dist/default/production/SistemaRiego.X.production.obj
+__accesstop 60 0 ABS 0 - /tmp/xcNgAsvl8.obj
+intlevel0 0 0 CODE 0 text /tmp/xcNgAsvl8.obj
+intlevel1 0 0 CODE 0 text /tmp/xcNgAsvl8.obj
+intlevel2 0 0 CODE 0 text /tmp/xcNgAsvl8.obj
+intlevel3 0 0 CODE 0 text /tmp/xcNgAsvl8.obj
+_getValueStatus 45 0 COMRAM 1 bssCOMRAM dist/default/production/SistemaRiego.X.production.obj
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_dayName DE 0 BANK0 1 dataBANK0 dist/default/production/SistemaRiego.X.production.obj
+_statusConfiguration FC 0 BANK0 1 bssBANK0 dist/default/production/SistemaRiego.X.production.obj
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production/SistemaRiego.X.production.obj
 __Hifardata 0 0 CODE 0 ifardata dist/default/production/SistemaRiego.X.production.obj
+i2_clearDisplay 1C8A 0 CODE 0 text41 dist/default/production/SistemaRiego.X.production.obj
 _CVRCONbits FB5 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production/SistemaRiego.X.production.obj
 __size_of_portDAsInput 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-__pidataCOMRAM 54E 0 CODE 0 idataCOMRAM dist/default/production/SistemaRiego.X.production.obj
+i2_getKeyCode 14FC 0 CODE 0 text35 dist/default/production/SistemaRiego.X.production.obj
+__pidataCOMRAM 1AFE 0 CODE 0 idataCOMRAM dist/default/production/SistemaRiego.X.production.obj
 _ADCON1 FC1 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-___inthi_sp 0 0 STACK 2 stack /tmp/xcSRd0epx.obj
-__end_of_oneShot 532 0 CODE 0 text11 dist/default/production/SistemaRiego.X.production.obj
-___intlo_sp 0 0 STACK 2 stack /tmp/xcSRd0epx.obj
+___inthi_sp 0 0 STACK 2 stack /tmp/xcNgAsvl8.obj
+__end_of_oneShot 1BDA 0 CODE 0 text32 dist/default/production/SistemaRiego.X.production.obj
+___intlo_sp 0 0 STACK 2 stack /tmp/xcNgAsvl8.obj
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production/SistemaRiego.X.production.obj
+__size_of_automaticConfiguration 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production/SistemaRiego.X.production.obj
-command@x 1E 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_workingManual 1A26 0 CODE 0 text2 dist/default/production/SistemaRiego.X.production.obj
+command@x 101 0 BANK1 1 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production/SistemaRiego.X.production.obj
-__end_of_portDAsInput 5C8 0 CODE 0 text5 dist/default/production/SistemaRiego.X.production.obj
+__end_of_portDAsInput 1CF4 0 CODE 0 text25 dist/default/production/SistemaRiego.X.production.obj
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production/SistemaRiego.X.production.obj
+__size_ofi2_portDAsOutput 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __Hintcodelo A6 0 CODE 0 intcodelo dist/default/production/SistemaRiego.X.production.obj
 __size_of_isReady 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-delay@L1REG 2 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
-delay@L2REG 3 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
-__end_of_longDelay 4B8 0 CODE 0 text2 dist/default/production/SistemaRiego.X.production.obj
+delay@L1REG 101 0 BANK1 1 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
+delay@L2REG 102 0 BANK1 1 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
+__end_of_longDelay 19E6 0 CODE 0 text22 dist/default/production/SistemaRiego.X.production.obj
+__size_ofi2_getKeyCode 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __size_of_longDelay 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-_keyCode 39 0 COMRAM 1 bssCOMRAM dist/default/production/SistemaRiego.X.production.obj
+__end_ofi2_clearDisplay 1C9A 0 CODE 0 text41 dist/default/production/SistemaRiego.X.production.obj
+_keyCode 47 0 COMRAM 1 bssCOMRAM dist/default/production/SistemaRiego.X.production.obj
 __size_of_delay 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_disableIntRBIE 1CC6 0 CODE 0 text19 dist/default/production/SistemaRiego.X.production.obj
+__size_ofi2_turnOnAllRows 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+__size_of_timerConfiguration 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 _INTCON2bits FF1 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __Lintcodelo 18 0 CODE 0 intcodelo dist/default/production/SistemaRiego.X.production.obj
-start_initialization 454 0 CODE 0 cinit dist/default/production/SistemaRiego.X.production.obj
+i2_delay 1BDA 0 CODE 0 text33 dist/default/production/SistemaRiego.X.production.obj
+start_initialization 18F8 0 CODE 0 cinit dist/default/production/SistemaRiego.X.production.obj
 _OSCCON FD3 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production/SistemaRiego.X.production.obj
-_longDelay 48A 0 CODE 0 text2 dist/default/production/SistemaRiego.X.production.obj
-_CASTELLO 20 0 COMRAM 1 dataCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_longDelay 19A2 0 CODE 0 text22 dist/default/production/SistemaRiego.X.production.obj
+__end_ofi2_displayLineOnLCD 18F8 0 CODE 0 text39 dist/default/production/SistemaRiego.X.production.obj
+_CASTELLO 7E 0 BANK0 1 dataBANK0 dist/default/production/SistemaRiego.X.production.obj
 _TRISBbits F93 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-_groundAllRows 5B4 0 CODE 0 text21 dist/default/production/SistemaRiego.X.production.obj
-_shortDelay 58E 0 CODE 0 text7 dist/default/production/SistemaRiego.X.production.obj
+__end_ofi2_getKeyCode 15D4 0 CODE 0 text35 dist/default/production/SistemaRiego.X.production.obj
+__size_ofi2_portDAsInput 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+_groundAllRows 1CB2 0 CODE 0 text15 dist/default/production/SistemaRiego.X.production.obj
+_shortDelay 1C3E 0 CODE 0 text27 dist/default/production/SistemaRiego.X.production.obj
 ___rparam_used 1 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-__pcstackBANK0 60 0 BANK0 1 cstackBANK0 dist/default/production/SistemaRiego.X.production.obj
+workingTimer@selectedTime 10F 0 BANK1 1 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
+manualConfiguration@input 10E 0 BANK1 1 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
+__size_of_manualConfiguration 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+__pcstackBANK0 E8 0 BANK0 1 cstackBANK0 dist/default/production/SistemaRiego.X.production.obj
+__pcstackBANK1 100 0 BANK1 1 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
+i2determinePressedRow@i 28 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
 __size_of_pressedKey 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-i2shortDelay@L1REG 1 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
+i2displayLineOnLCD@sizeOfArray 2C 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_TMR0IE 7F95 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+_TMR0IF 7F92 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+_readKey 19E6 0 CODE 0 text10 dist/default/production/SistemaRiego.X.production.obj
+__end_ofi2_determinePressedRow 1226 0 CODE 0 text36 dist/default/production/SistemaRiego.X.production.obj
+i2shortDelay@L1REG 28 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
 __Hbank0 0 0 ABS 0 bank0 dist/default/production/SistemaRiego.X.production.obj
 __Hbank1 0 0 ABS 0 bank1 dist/default/production/SistemaRiego.X.production.obj
 __Hbank2 0 0 ABS 0 bank2 dist/default/production/SistemaRiego.X.production.obj
@@ -485,17 +969,24 @@ __Htext4 0 0 ABS 0 text4 dist/default/production/SistemaRiego.X.production.obj
 __Htext5 0 0 ABS 0 text5 dist/default/production/SistemaRiego.X.production.obj
 __Htext6 0 0 ABS 0 text6 dist/default/production/SistemaRiego.X.production.obj
 __Htext7 0 0 ABS 0 text7 dist/default/production/SistemaRiego.X.production.obj
+__Htext8 0 0 ABS 0 text8 dist/default/production/SistemaRiego.X.production.obj
+__Htext9 0 0 ABS 0 text9 dist/default/production/SistemaRiego.X.production.obj
+i2_displayLineOnLCD 1886 0 CODE 0 text39 dist/default/production/SistemaRiego.X.production.obj
+__end_of_disableIntRBIE 1CD0 0 CODE 0 text19 dist/default/production/SistemaRiego.X.production.obj
 __Hbank10 0 0 ABS 0 bank10 dist/default/production/SistemaRiego.X.production.obj
 __Hbank11 0 0 ABS 0 bank11 dist/default/production/SistemaRiego.X.production.obj
 __Hbank12 0 0 ABS 0 bank12 dist/default/production/SistemaRiego.X.production.obj
 __size_of_command 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production/SistemaRiego.X.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production/SistemaRiego.X.production.obj
-__smallconst 0 0 SMALLCONST 0 smallconst /tmp/xcSRd0epx.obj
+__smallconst D00 0 SMALLCONST 0 smallconst /tmp/xcNgAsvl8.obj
+_counterDAYS A 0 COMRAM 1 dataCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_counterHOUR E2 0 BANK0 1 dataBANK0 dist/default/production/SistemaRiego.X.production.obj
+__size_of_workingManual 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __Hcomram 0 0 ABS 0 comram dist/default/production/SistemaRiego.X.production.obj
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production/SistemaRiego.X.production.obj
-displayCharOnLCD@character 2 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
-__end_of_isReady 4FA 0 CODE 0 text3 dist/default/production/SistemaRiego.X.production.obj
+displayCharOnLCD@character 101 0 BANK1 1 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
+__end_of_isReady 1BA2 0 CODE 0 text23 dist/default/production/SistemaRiego.X.production.obj
 __Lbank0 0 0 ABS 0 bank0 dist/default/production/SistemaRiego.X.production.obj
 __Lbank1 0 0 ABS 0 bank1 dist/default/production/SistemaRiego.X.production.obj
 __Lbank2 0 0 ABS 0 bank2 dist/default/production/SistemaRiego.X.production.obj
@@ -506,12 +997,14 @@ __Lbank6 0 0 ABS 0 bank6 dist/default/production/SistemaRiego.X.production.obj
 __Lbank7 0 0 ABS 0 bank7 dist/default/production/SistemaRiego.X.production.obj
 __Lbank8 0 0 ABS 0 bank8 dist/default/production/SistemaRiego.X.production.obj
 __Lbank9 0 0 ABS 0 bank9 dist/default/production/SistemaRiego.X.production.obj
-shortDelay@L1REG 1D 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
+shortDelay@L1REG 100 0 BANK1 1 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
 __Lcinit 0 0 ABS 0 cinit dist/default/production/SistemaRiego.X.production.obj
 __Lconst 0 0 CONST 0 const dist/default/production/SistemaRiego.X.production.obj
+_manualMessage 98 0 BANK0 1 dataBANK0 dist/default/production/SistemaRiego.X.production.obj
 __Lidata 0 0 CODE 0 idata dist/default/production/SistemaRiego.X.production.obj
 __Lidloc 200000 0 IDLOC 0 idloc dist/default/production/SistemaRiego.X.production.obj
 __Lnvbit 0 0 COMRAM 1 nvbit dist/default/production/SistemaRiego.X.production.obj
+_manualInactiveMessage BA 0 BANK0 1 dataBANK0 dist/default/production/SistemaRiego.X.production.obj
 __Lparam 0 0 COMRAM 1 rparam dist/default/production/SistemaRiego.X.production.obj
 __Lrdata 0 0 COMRAM 1 rdata dist/default/production/SistemaRiego.X.production.obj
 __Lstack 0 0 STACK 2 stack dist/default/production/SistemaRiego.X.production.obj
@@ -523,52 +1016,69 @@ __Ltext4 0 0 ABS 0 text4 dist/default/production/SistemaRiego.X.production.obj
 __Ltext5 0 0 ABS 0 text5 dist/default/production/SistemaRiego.X.production.obj
 __Ltext6 0 0 ABS 0 text6 dist/default/production/SistemaRiego.X.production.obj
 __Ltext7 0 0 ABS 0 text7 dist/default/production/SistemaRiego.X.production.obj
+__Ltext8 0 0 ABS 0 text8 dist/default/production/SistemaRiego.X.production.obj
+__Ltext9 0 0 ABS 0 text9 dist/default/production/SistemaRiego.X.production.obj
+_clearDisplay 1C7A 0 CODE 0 text20 dist/default/production/SistemaRiego.X.production.obj
+i2_determinePressedRow 10FC 0 CODE 0 text36 dist/default/production/SistemaRiego.X.production.obj
 __Hfarbss 0 0 FARRAM 0 farbss dist/default/production/SistemaRiego.X.production.obj
 __Lintcode_body 0 0 ABS 0 intcode_body dist/default/production/SistemaRiego.X.production.obj
+_manualConfiguration 1226 0 CODE 0 text5 dist/default/production/SistemaRiego.X.production.obj
 _PORTBbits F81 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 _PORTCbits F82 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 _PORTDbits F83 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 _INTCONbits FF2 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-_portDAsOutput 5BE 0 CODE 0 text4 dist/default/production/SistemaRiego.X.production.obj
+_portDAsOutput 1CE4 0 CODE 0 text24 dist/default/production/SistemaRiego.X.production.obj
 __Habs1 0 0 ABS 0 abs1 dist/default/production/SistemaRiego.X.production.obj
 __Hdata 0 0 ABS 0 data dist/default/production/SistemaRiego.X.production.obj
 __Hinit A6 0 CODE 0 init dist/default/production/SistemaRiego.X.production.obj
 __Hrbit 0 0 COMRAM 1 rbit dist/default/production/SistemaRiego.X.production.obj
 __Hrbss 0 0 COMRAM 1 rbss dist/default/production/SistemaRiego.X.production.obj
-__Htemp 3D 0 COMRAM 1 temp dist/default/production/SistemaRiego.X.production.obj
+__Htemp 4B 0 COMRAM 1 temp dist/default/production/SistemaRiego.X.production.obj
 __Htext 0 0 ABS 0 text dist/default/production/SistemaRiego.X.production.obj
 __Labs1 0 0 ABS 0 abs1 dist/default/production/SistemaRiego.X.production.obj
 __Ldata 0 0 ABS 0 data dist/default/production/SistemaRiego.X.production.obj
 __Linit A6 0 CODE 0 init dist/default/production/SistemaRiego.X.production.obj
 __Lrbit 0 0 COMRAM 1 rbit dist/default/production/SistemaRiego.X.production.obj
 __Lrbss 0 0 COMRAM 1 rbss dist/default/production/SistemaRiego.X.production.obj
-__Ltemp 3C 0 COMRAM 1 temp dist/default/production/SistemaRiego.X.production.obj
+__Ltemp 4A 0 COMRAM 1 temp dist/default/production/SistemaRiego.X.production.obj
 __Ltext 0 0 ABS 0 text dist/default/production/SistemaRiego.X.production.obj
-__end_of_shortDelay 59C 0 CODE 0 text7 dist/default/production/SistemaRiego.X.production.obj
+__end_of_shortDelay 1C52 0 CODE 0 text27 dist/default/production/SistemaRiego.X.production.obj
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production/SistemaRiego.X.production.obj
-int$flags 3C 0 COMRAM 1 temp dist/default/production/SistemaRiego.X.production.obj
+__LcstackBANK1 0 0 ABS 0 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
+_workingAutomatic 1A54 0 CODE 0 text3 dist/default/production/SistemaRiego.X.production.obj
+int$flags 4A 0 COMRAM 1 temp dist/default/production/SistemaRiego.X.production.obj
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
 __Hintret 0 0 ABS 0 intret dist/default/production/SistemaRiego.X.production.obj
 __Hirdata 0 0 CODE 0 irdata dist/default/production/SistemaRiego.X.production.obj
 __S0 30000E 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-__S1 71 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+__S1 111 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __S2 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __CFG_OSC$IRCIO67 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+__size_of_resetReadInput 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+__end_of_workingManual 1A54 0 CODE 0 text2 dist/default/production/SistemaRiego.X.production.obj
+__end_ofi2_displayCharOnLCD 1C66 0 CODE 0 text40 dist/default/production/SistemaRiego.X.production.obj
 __CFG_PBADEN$OFF 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-_turnOnAllRows 5AA 0 CODE 0 text19 dist/default/production/SistemaRiego.X.production.obj
+_turnOnAllRows 1CA8 0 CODE 0 text13 dist/default/production/SistemaRiego.X.production.obj
 __HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production/SistemaRiego.X.production.obj
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production/SistemaRiego.X.production.obj
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production/SistemaRiego.X.production.obj
 __size_of_groundAllRows 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-int_func 2AC 0 CODE 0 intcode_body dist/default/production/SistemaRiego.X.production.obj
-_getKeyCode 1D4 0 CODE 0 text17 dist/default/production/SistemaRiego.X.production.obj
+__size_of_clearDisplay 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+int_func E78 0 CODE 0 intcode_body dist/default/production/SistemaRiego.X.production.obj
+_getKeyCode 1424 0 CODE 0 text11 dist/default/production/SistemaRiego.X.production.obj
+__size_of_getInput 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __Lintentry 0 0 ABS 0 intentry dist/default/production/SistemaRiego.X.production.obj
+workingTimer@i 10E 0 BANK1 1 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
 __Hramtop D00 0 RAM 0 ramtop dist/default/production/SistemaRiego.X.production.obj
-_oneShot 516 0 CODE 0 text11 dist/default/production/SistemaRiego.X.production.obj
+_oneShot 1BBE 0 CODE 0 text32 dist/default/production/SistemaRiego.X.production.obj
 __Hrparam 0 0 COMRAM 1 rparam dist/default/production/SistemaRiego.X.production.obj
-_pressedKeyAction 414 0 CODE 0 text13 dist/default/production/SistemaRiego.X.production.obj
+_pressedKeyAction D0C 0 CODE 0 text38 dist/default/production/SistemaRiego.X.production.obj
+__pdataBANK0 60 0 BANK0 1 dataBANK0 dist/default/production/SistemaRiego.X.production.obj
 __activetblptr 2 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+i2displayLineOnLCD@i 34 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
 __Hstruct 0 0 COMRAM 1 struct dist/default/production/SistemaRiego.X.production.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production/SistemaRiego.X.production.obj
+timerConfiguration@input 103 0 BANK1 1 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
 __Htext10 0 0 ABS 0 text10 dist/default/production/SistemaRiego.X.production.obj
 __Htext11 0 0 ABS 0 text11 dist/default/production/SistemaRiego.X.production.obj
 __Htext12 0 0 ABS 0 text12 dist/default/production/SistemaRiego.X.production.obj
@@ -581,21 +1091,73 @@ __Htext18 0 0 ABS 0 text18 dist/default/production/SistemaRiego.X.production.obj
 __Htext19 0 0 ABS 0 text19 dist/default/production/SistemaRiego.X.production.obj
 __Htext20 0 0 ABS 0 text20 dist/default/production/SistemaRiego.X.production.obj
 __Htext21 0 0 ABS 0 text21 dist/default/production/SistemaRiego.X.production.obj
-__end_of_command 57A 0 CODE 0 text6 dist/default/production/SistemaRiego.X.production.obj
-__ptext10 4FA 0 CODE 0 text10 dist/default/production/SistemaRiego.X.production.obj
-__ptext11 516 0 CODE 0 text11 dist/default/production/SistemaRiego.X.production.obj
-__ptext12 38A 0 CODE 0 text12 dist/default/production/SistemaRiego.X.production.obj
-__ptext13 414 0 CODE 0 text13 dist/default/production/SistemaRiego.X.production.obj
-__ptext14 33A 0 CODE 0 text14 dist/default/production/SistemaRiego.X.production.obj
-__ptext15 57A 0 CODE 0 text15 dist/default/production/SistemaRiego.X.production.obj
-__ptext16 59C 0 CODE 0 text16 dist/default/production/SistemaRiego.X.production.obj
-__ptext17 1D4 0 CODE 0 text17 dist/default/production/SistemaRiego.X.production.obj
-__ptext18 AA 0 CODE 0 text18 dist/default/production/SistemaRiego.X.production.obj
-__ptext19 5AA 0 CODE 0 text19 dist/default/production/SistemaRiego.X.production.obj
-__ptext20 532 0 CODE 0 text20 dist/default/production/SistemaRiego.X.production.obj
-__ptext21 5B4 0 CODE 0 text21 dist/default/production/SistemaRiego.X.production.obj
-__end_of_groundAllRows 5BE 0 CODE 0 text21 dist/default/production/SistemaRiego.X.production.obj
-__pintcode_body 2AC 0 CODE 0 intcode_body dist/default/production/SistemaRiego.X.production.obj
+__Htext22 0 0 ABS 0 text22 dist/default/production/SistemaRiego.X.production.obj
+__Htext23 0 0 ABS 0 text23 dist/default/production/SistemaRiego.X.production.obj
+__Htext24 0 0 ABS 0 text24 dist/default/production/SistemaRiego.X.production.obj
+__Htext25 0 0 ABS 0 text25 dist/default/production/SistemaRiego.X.production.obj
+__Htext26 0 0 ABS 0 text26 dist/default/production/SistemaRiego.X.production.obj
+__Htext27 0 0 ABS 0 text27 dist/default/production/SistemaRiego.X.production.obj
+__Htext30 0 0 ABS 0 text30 dist/default/production/SistemaRiego.X.production.obj
+__Htext31 0 0 ABS 0 text31 dist/default/production/SistemaRiego.X.production.obj
+__Htext32 0 0 ABS 0 text32 dist/default/production/SistemaRiego.X.production.obj
+__Htext33 0 0 ABS 0 text33 dist/default/production/SistemaRiego.X.production.obj
+__Htext34 0 0 ABS 0 text34 dist/default/production/SistemaRiego.X.production.obj
+__Htext35 0 0 ABS 0 text35 dist/default/production/SistemaRiego.X.production.obj
+__Htext36 0 0 ABS 0 text36 dist/default/production/SistemaRiego.X.production.obj
+__Htext37 0 0 ABS 0 text37 dist/default/production/SistemaRiego.X.production.obj
+__Htext38 0 0 ABS 0 text38 dist/default/production/SistemaRiego.X.production.obj
+__Htext39 0 0 ABS 0 text39 dist/default/production/SistemaRiego.X.production.obj
+__Htext40 0 0 ABS 0 text40 dist/default/production/SistemaRiego.X.production.obj
+__Htext41 0 0 ABS 0 text41 dist/default/production/SistemaRiego.X.production.obj
+__Htext42 0 0 ABS 0 text42 dist/default/production/SistemaRiego.X.production.obj
+__Htext43 0 0 ABS 0 text43 dist/default/production/SistemaRiego.X.production.obj
+__Htext44 0 0 ABS 0 text44 dist/default/production/SistemaRiego.X.production.obj
+__Htext45 0 0 ABS 0 text45 dist/default/production/SistemaRiego.X.production.obj
+__Htext46 0 0 ABS 0 text46 dist/default/production/SistemaRiego.X.production.obj
+automaticConfiguration@input 10F 0 BANK1 1 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
+_automaticConfiguration 15D4 0 CODE 0 text6 dist/default/production/SistemaRiego.X.production.obj
+i2_displayCharOnLCD 1C52 0 CODE 0 text40 dist/default/production/SistemaRiego.X.production.obj
+__end_of_command 1C3E 0 CODE 0 text26 dist/default/production/SistemaRiego.X.production.obj
+__end_of_clearDisplay 1C8A 0 CODE 0 text20 dist/default/production/SistemaRiego.X.production.obj
+__ptext10 19E6 0 CODE 0 text10 dist/default/production/SistemaRiego.X.production.obj
+__ptext11 1424 0 CODE 0 text11 dist/default/production/SistemaRiego.X.production.obj
+__ptext12 FCA 0 CODE 0 text12 dist/default/production/SistemaRiego.X.production.obj
+__ptext13 1CA8 0 CODE 0 text13 dist/default/production/SistemaRiego.X.production.obj
+__ptext14 1AD6 0 CODE 0 text14 dist/default/production/SistemaRiego.X.production.obj
+__ptext15 1CB2 0 CODE 0 text15 dist/default/production/SistemaRiego.X.production.obj
+__ptext16 1CBC 0 CODE 0 text16 dist/default/production/SistemaRiego.X.production.obj
+__ptext17 1762 0 CODE 0 text17 dist/default/production/SistemaRiego.X.production.obj
+__ptext18 1C12 0 CODE 0 text18 dist/default/production/SistemaRiego.X.production.obj
+__ptext19 1CC6 0 CODE 0 text19 dist/default/production/SistemaRiego.X.production.obj
+__ptext20 1C7A 0 CODE 0 text20 dist/default/production/SistemaRiego.X.production.obj
+__ptext21 1B26 0 CODE 0 text21 dist/default/production/SistemaRiego.X.production.obj
+__ptext22 19A2 0 CODE 0 text22 dist/default/production/SistemaRiego.X.production.obj
+__ptext23 1B86 0 CODE 0 text23 dist/default/production/SistemaRiego.X.production.obj
+__ptext24 1CE4 0 CODE 0 text24 dist/default/production/SistemaRiego.X.production.obj
+__ptext25 1CF0 0 CODE 0 text25 dist/default/production/SistemaRiego.X.production.obj
+__ptext26 1C28 0 CODE 0 text26 dist/default/production/SistemaRiego.X.production.obj
+__ptext27 1C3E 0 CODE 0 text27 dist/default/production/SistemaRiego.X.production.obj
+__ptext30 1CD0 0 CODE 0 text30 dist/default/production/SistemaRiego.X.production.obj
+__ptext31 1BA2 0 CODE 0 text31 dist/default/production/SistemaRiego.X.production.obj
+__ptext32 1BBE 0 CODE 0 text32 dist/default/production/SistemaRiego.X.production.obj
+__ptext33 1BDA 0 CODE 0 text33 dist/default/production/SistemaRiego.X.production.obj
+__ptext34 195C 0 CODE 0 text34 dist/default/production/SistemaRiego.X.production.obj
+__ptext35 14FC 0 CODE 0 text35 dist/default/production/SistemaRiego.X.production.obj
+__ptext36 10FC 0 CODE 0 text36 dist/default/production/SistemaRiego.X.production.obj
+__ptext37 1CDA 0 CODE 0 text37 dist/default/production/SistemaRiego.X.production.obj
+__ptext38 D0C 0 CODE 0 text38 dist/default/production/SistemaRiego.X.production.obj
+__ptext39 1886 0 CODE 0 text39 dist/default/production/SistemaRiego.X.production.obj
+__ptext40 1C52 0 CODE 0 text40 dist/default/production/SistemaRiego.X.production.obj
+__ptext41 1C8A 0 CODE 0 text41 dist/default/production/SistemaRiego.X.production.obj
+__ptext42 1BF6 0 CODE 0 text42 dist/default/production/SistemaRiego.X.production.obj
+__ptext43 1CEA 0 CODE 0 text43 dist/default/production/SistemaRiego.X.production.obj
+__ptext44 1CF4 0 CODE 0 text44 dist/default/production/SistemaRiego.X.production.obj
+__ptext45 1C66 0 CODE 0 text45 dist/default/production/SistemaRiego.X.production.obj
+__ptext46 1C9A 0 CODE 0 text46 dist/default/production/SistemaRiego.X.production.obj
+__end_of_groundAllRows 1CBC 0 CODE 0 text15 dist/default/production/SistemaRiego.X.production.obj
+_counterMIN E5 0 BANK0 1 dataBANK0 dist/default/production/SistemaRiego.X.production.obj
+_counterSEC B 0 COMRAM 1 dataCOMRAM dist/default/production/SistemaRiego.X.production.obj
+__pintcode_body E78 0 CODE 0 intcode_body dist/default/production/SistemaRiego.X.production.obj
 __Lbank10 0 0 ABS 0 bank10 dist/default/production/SistemaRiego.X.production.obj
 __Lbank11 0 0 ABS 0 bank11 dist/default/production/SistemaRiego.X.production.obj
 __Lbank12 0 0 ABS 0 bank12 dist/default/production/SistemaRiego.X.production.obj
@@ -603,49 +1165,71 @@ __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production/SistemaRiego.X.production.
 __Lbigram 0 0 ABS 0 bigram dist/default/production/SistemaRiego.X.production.obj
 __Lcomram 0 0 ABS 0 comram dist/default/production/SistemaRiego.X.production.obj
 __Lconfig 300000 0 CONFIG 0 config dist/default/production/SistemaRiego.X.production.obj
-_displayLineOnLCD 33A 0 CODE 0 text14 dist/default/production/SistemaRiego.X.production.obj
-longDelay@L1REG 1D 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
-longDelay@L2REG 1E 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
-longDelay@L3REG 1F 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_displayLineOnLCD 1762 0 CODE 0 text17 dist/default/production/SistemaRiego.X.production.obj
+longDelay@L1REG 100 0 BANK1 1 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
+longDelay@L2REG 101 0 BANK1 1 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
+longDelay@L3REG 102 0 BANK1 1 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
+_manualActiveMessage C3 0 BANK0 1 dataBANK0 dist/default/production/SistemaRiego.X.production.obj
+__end_of_workingAutomatic 1A80 0 CODE 0 text3 dist/default/production/SistemaRiego.X.production.obj
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production/SistemaRiego.X.production.obj
+__end_of_manualConfiguration 1330 0 CODE 0 text5 dist/default/production/SistemaRiego.X.production.obj
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production/SistemaRiego.X.production.obj
 __size_of_portDAsOutput 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-stackhi CFF 0 ABS 0 - /tmp/xcSRd0epx.obj
-stacklo 71 0 ABS 0 - /tmp/xcSRd0epx.obj
+__size_of_workingAutomatic 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+_hourConfiguration 46 0 COMRAM 1 bssCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_getInput 1AAC 0 CODE 0 text7 dist/default/production/SistemaRiego.X.production.obj
+stackhi CFF 0 ABS 0 - /tmp/xcNgAsvl8.obj
+stacklo 111 0 ABS 0 - /tmp/xcNgAsvl8.obj
+_zoneTimes 60 0 BANK0 1 dataBANK0 dist/default/production/SistemaRiego.X.production.obj
 __Lintcode 8 0 CODE 0 intcode dist/default/production/SistemaRiego.X.production.obj
-__end_of_getKeyCode 2AC 0 CODE 0 text17 dist/default/production/SistemaRiego.X.production.obj
+__end_of_getKeyCode 14FC 0 CODE 0 text11 dist/default/production/SistemaRiego.X.production.obj
 __Lintret 0 0 ABS 0 intret dist/default/production/SistemaRiego.X.production.obj
 __Lirdata 0 0 CODE 0 irdata dist/default/production/SistemaRiego.X.production.obj
+i2command@x 29 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+automaticConfiguration@counter 10E 0 BANK1 1 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
 __Lspace_0 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __Lspace_1 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __Lspace_2 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-__pbssCOMRAM 38 0 COMRAM 1 bssCOMRAM dist/default/production/SistemaRiego.X.production.obj
+__pbssCOMRAM 44 0 COMRAM 1 bssCOMRAM dist/default/production/SistemaRiego.X.production.obj
+__end_of_getInput 1AD6 0 CODE 0 text7 dist/default/production/SistemaRiego.X.production.obj
+_zoneSelected F9 0 BANK0 1 bssBANK0 dist/default/production/SistemaRiego.X.production.obj
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production/SistemaRiego.X.production.obj
+__HcstackBANK1 0 0 ABS 0 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
+__size_ofi2_clearDisplay 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __Lend_init A6 0 CODE 0 end_init dist/default/production/SistemaRiego.X.production.obj
 __size_of_turnOnAllRows 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
-end_of_initialization 47C 0 CODE 0 cinit dist/default/production/SistemaRiego.X.production.obj
+_humidityZn1Val 1 0 COMRAM 1 dataCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_humidityZn2Val 4 0 COMRAM 1 dataCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_humidityZn3Val 7 0 COMRAM 1 dataCOMRAM dist/default/production/SistemaRiego.X.production.obj
+end_of_initialization 194E 0 CODE 0 cinit dist/default/production/SistemaRiego.X.production.obj
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production/SistemaRiego.X.production.obj
 __Hintentry 0 0 ABS 0 intentry dist/default/production/SistemaRiego.X.production.obj
 _RCONbits FD0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-__end_of_portDAsOutput 5C4 0 CODE 0 text4 dist/default/production/SistemaRiego.X.production.obj
-__end_of_pressedKeyAction 454 0 CODE 0 text13 dist/default/production/SistemaRiego.X.production.obj
+__end_of_portDAsOutput 1CEA 0 CODE 0 text24 dist/default/production/SistemaRiego.X.production.obj
+__end_of_pressedKeyAction E78 0 CODE 0 text38 dist/default/production/SistemaRiego.X.production.obj
+_timerMessage AF 0 BANK0 1 dataBANK0 dist/default/production/SistemaRiego.X.production.obj
 __Hreset_vec 4 0 CODE 0 reset_vec dist/default/production/SistemaRiego.X.production.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production/SistemaRiego.X.production.obj
+__size_ofi2_delay 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __Lramtop D00 0 RAM 0 ramtop dist/default/production/SistemaRiego.X.production.obj
 __size_of_pressedKeyAction 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production/SistemaRiego.X.production.obj
-__pcinit 454 0 CODE 0 cinit dist/default/production/SistemaRiego.X.production.obj
-__ptext0 3D0 0 CODE 0 text0 dist/default/production/SistemaRiego.X.production.obj
-__ptext1 4B8 0 CODE 0 text1 dist/default/production/SistemaRiego.X.production.obj
-__ptext2 48A 0 CODE 0 text2 dist/default/production/SistemaRiego.X.production.obj
-__ptext3 4DE 0 CODE 0 text3 dist/default/production/SistemaRiego.X.production.obj
-__ptext4 5BE 0 CODE 0 text4 dist/default/production/SistemaRiego.X.production.obj
-__ptext5 5C4 0 CODE 0 text5 dist/default/production/SistemaRiego.X.production.obj
-__ptext6 566 0 CODE 0 text6 dist/default/production/SistemaRiego.X.production.obj
-__ptext7 58E 0 CODE 0 text7 dist/default/production/SistemaRiego.X.production.obj
+__pcinit 18F8 0 CODE 0 cinit dist/default/production/SistemaRiego.X.production.obj
+__size_ofi2_displayLineOnLCD 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+__ptext0 169C 0 CODE 0 text0 dist/default/production/SistemaRiego.X.production.obj
+__ptext1 1330 0 CODE 0 text1 dist/default/production/SistemaRiego.X.production.obj
+__ptext2 1A26 0 CODE 0 text2 dist/default/production/SistemaRiego.X.production.obj
+__ptext3 1A54 0 CODE 0 text3 dist/default/production/SistemaRiego.X.production.obj
+__ptext4 1A80 0 CODE 0 text4 dist/default/production/SistemaRiego.X.production.obj
+__ptext5 1226 0 CODE 0 text5 dist/default/production/SistemaRiego.X.production.obj
+__ptext6 15D4 0 CODE 0 text6 dist/default/production/SistemaRiego.X.production.obj
+__ptext7 1AAC 0 CODE 0 text7 dist/default/production/SistemaRiego.X.production.obj
+__ptext8 1B4C 0 CODE 0 text8 dist/default/production/SistemaRiego.X.production.obj
+__ptext9 1B6A 0 CODE 0 text9 dist/default/production/SistemaRiego.X.production.obj
 __Lstruct 0 0 COMRAM 1 struct dist/default/production/SistemaRiego.X.production.obj
-_rowSelected 3B 0 COMRAM 1 bssCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_rowSelected 49 0 COMRAM 1 bssCOMRAM dist/default/production/SistemaRiego.X.production.obj
 __Ltext10 0 0 ABS 0 text10 dist/default/production/SistemaRiego.X.production.obj
 __Ltext11 0 0 ABS 0 text11 dist/default/production/SistemaRiego.X.production.obj
 __Ltext12 0 0 ABS 0 text12 dist/default/production/SistemaRiego.X.production.obj
@@ -658,41 +1242,95 @@ __Ltext18 0 0 ABS 0 text18 dist/default/production/SistemaRiego.X.production.obj
 __Ltext19 0 0 ABS 0 text19 dist/default/production/SistemaRiego.X.production.obj
 __Ltext20 0 0 ABS 0 text20 dist/default/production/SistemaRiego.X.production.obj
 __Ltext21 0 0 ABS 0 text21 dist/default/production/SistemaRiego.X.production.obj
+__Ltext22 0 0 ABS 0 text22 dist/default/production/SistemaRiego.X.production.obj
+__Ltext23 0 0 ABS 0 text23 dist/default/production/SistemaRiego.X.production.obj
+__Ltext24 0 0 ABS 0 text24 dist/default/production/SistemaRiego.X.production.obj
+__Ltext25 0 0 ABS 0 text25 dist/default/production/SistemaRiego.X.production.obj
+__Ltext26 0 0 ABS 0 text26 dist/default/production/SistemaRiego.X.production.obj
+__Ltext27 0 0 ABS 0 text27 dist/default/production/SistemaRiego.X.production.obj
+__Ltext30 0 0 ABS 0 text30 dist/default/production/SistemaRiego.X.production.obj
+__Ltext31 0 0 ABS 0 text31 dist/default/production/SistemaRiego.X.production.obj
+__Ltext32 0 0 ABS 0 text32 dist/default/production/SistemaRiego.X.production.obj
+__Ltext33 0 0 ABS 0 text33 dist/default/production/SistemaRiego.X.production.obj
+__Ltext34 0 0 ABS 0 text34 dist/default/production/SistemaRiego.X.production.obj
+__Ltext35 0 0 ABS 0 text35 dist/default/production/SistemaRiego.X.production.obj
+__Ltext36 0 0 ABS 0 text36 dist/default/production/SistemaRiego.X.production.obj
+__Ltext37 0 0 ABS 0 text37 dist/default/production/SistemaRiego.X.production.obj
+__Ltext38 0 0 ABS 0 text38 dist/default/production/SistemaRiego.X.production.obj
+__Ltext39 0 0 ABS 0 text39 dist/default/production/SistemaRiego.X.production.obj
+__Ltext40 0 0 ABS 0 text40 dist/default/production/SistemaRiego.X.production.obj
+__Ltext41 0 0 ABS 0 text41 dist/default/production/SistemaRiego.X.production.obj
+__Ltext42 0 0 ABS 0 text42 dist/default/production/SistemaRiego.X.production.obj
+__Ltext43 0 0 ABS 0 text43 dist/default/production/SistemaRiego.X.production.obj
+__Ltext44 0 0 ABS 0 text44 dist/default/production/SistemaRiego.X.production.obj
+__Ltext45 0 0 ABS 0 text45 dist/default/production/SistemaRiego.X.production.obj
+__Ltext46 0 0 ABS 0 text46 dist/default/production/SistemaRiego.X.production.obj
 __size_of_shortDelay 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-__ramtop D00 0 RAM 0 ramtop /tmp/xcSRd0epx.obj
-__end_of_turnOnAllRows 5B4 0 CODE 0 text19 dist/default/production/SistemaRiego.X.production.obj
+i2_portDAsInput 1CF4 0 CODE 0 text44 dist/default/production/SistemaRiego.X.production.obj
+__ramtop D00 0 RAM 0 ramtop /tmp/xcNgAsvl8.obj
+__end_of_turnOnAllRows 1CB2 0 CODE 0 text13 dist/default/production/SistemaRiego.X.production.obj
 __Lpowerup A6 0 CODE 0 powerup dist/default/production/SistemaRiego.X.production.obj
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production/SistemaRiego.X.production.obj
-_isReady 4DE 0 CODE 0 text3 dist/default/production/SistemaRiego.X.production.obj
-pressedKeyAction@keyCode E 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
-__end_of_displayLineOnLCD 38A 0 CODE 0 text14 dist/default/production/SistemaRiego.X.production.obj
+_isReady 1B86 0 CODE 0 text23 dist/default/production/SistemaRiego.X.production.obj
+_enableIntRBIE 1CBC 0 CODE 0 text16 dist/default/production/SistemaRiego.X.production.obj
+pressedKeyAction@keyCode 35 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
+__psmallconst D00 0 SMALLCONST 0 smallconst dist/default/production/SistemaRiego.X.production.obj
+__end_of_displayLineOnLCD 17FE 0 CODE 0 text17 dist/default/production/SistemaRiego.X.production.obj
+__end_ofi2_groundAllRows 1CDA 0 CODE 0 text30 dist/default/production/SistemaRiego.X.production.obj
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production/SistemaRiego.X.production.obj
 __size_of_determinePressedRow 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-_displayCharOnLCD 57A 0 CODE 0 text15 dist/default/production/SistemaRiego.X.production.obj
+_time1Zn1 F 0 COMRAM 1 dataCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_time1Zn2 14 0 COMRAM 1 dataCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_time1Zn3 CA 0 BANK0 1 dataBANK0 dist/default/production/SistemaRiego.X.production.obj
+_time2Zn1 19 0 COMRAM 1 dataCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_time2Zn2 1E 0 COMRAM 1 dataCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_time2Zn3 CF 0 BANK0 1 dataBANK0 dist/default/production/SistemaRiego.X.production.obj
+_time3Zn1 23 0 COMRAM 1 dataCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_time3Zn2 D4 0 BANK0 1 dataBANK0 dist/default/production/SistemaRiego.X.production.obj
+_time3Zn3 D9 0 BANK0 1 dataBANK0 dist/default/production/SistemaRiego.X.production.obj
+_displayCharOnLCD 1C12 0 CODE 0 text18 dist/default/production/SistemaRiego.X.production.obj
+__size_of_readKey 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+__end_of_readInput 1B86 0 CODE 0 text9 dist/default/production/SistemaRiego.X.production.obj
 ___param_bank 10 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __CFG_WDT$OFF 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __size_of_displayLineOnLCD 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production/SistemaRiego.X.production.obj
-__end_of__initialization 47C 0 CODE 0 cinit dist/default/production/SistemaRiego.X.production.obj
-displayLineOnLCD@array 3 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
+__end_of__initialization 194E 0 CODE 0 cinit dist/default/production/SistemaRiego.X.production.obj
+displayLineOnLCD@array 102 0 BANK1 1 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
+__size_of_readInput 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production/SistemaRiego.X.production.obj
+__size_of_disableIntRBIE 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+__pidataBANK0 17FE 0 CODE 0 idataBANK0 dist/default/production/SistemaRiego.X.production.obj
+__end_of_timerConfiguration 1AAC 0 CODE 0 text4 dist/default/production/SistemaRiego.X.production.obj
+i2displayLineOnLCD@array 2A 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_configAutoMessage A4 0 BANK0 1 dataBANK0 dist/default/production/SistemaRiego.X.production.obj
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production/SistemaRiego.X.production.obj
-displayLineOnLCD@sizeOfArray 5 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
-_columnSelected 38 0 COMRAM 1 bssCOMRAM dist/default/production/SistemaRiego.X.production.obj
+__size_ofi2_determinePressedRow 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+displayLineOnLCD@sizeOfArray 104 0 BANK1 1 cstackBANK1 dist/default/production/SistemaRiego.X.production.obj
+_columnSelected 44 0 COMRAM 1 bssCOMRAM dist/default/production/SistemaRiego.X.production.obj
 __pintcodelo 18 0 CODE 0 intcodelo dist/default/production/SistemaRiego.X.production.obj
-__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
+__end_ofi2_isReady 1C12 0 CODE 0 text42 dist/default/production/SistemaRiego.X.production.obj
+i2delay@L1REG 29 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
+i2delay@L2REG 2A 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
+__pcstackCOMRAM 28 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_workingTimer 1330 0 CODE 0 text1 dist/default/production/SistemaRiego.X.production.obj
+__size_ofi2_isReady 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+_readInput 1B6A 0 CODE 0 text9 dist/default/production/SistemaRiego.X.production.obj
 __Hend_init AA 0 CODE 0 end_init dist/default/production/SistemaRiego.X.production.obj
-_resetOneShot 4FA 0 CODE 0 text10 dist/default/production/SistemaRiego.X.production.obj
-__end_of_ISRH 33A 0 CODE 0 intcode_body dist/default/production/SistemaRiego.X.production.obj
+__end_of_automaticConfiguration 169C 0 CODE 0 text6 dist/default/production/SistemaRiego.X.production.obj
+__end_ofi2_portDAsInput 1CF8 0 CODE 0 text44 dist/default/production/SistemaRiego.X.production.obj
+_resetOneShot 1BA2 0 CODE 0 text31 dist/default/production/SistemaRiego.X.production.obj
+__end_of_ISRH FCA 0 CODE 0 intcode_body dist/default/production/SistemaRiego.X.production.obj
 __end_of_ISRL A6 0 CODE 0 intcodelo dist/default/production/SistemaRiego.X.production.obj
-__end_of_main 414 0 CODE 0 text0 dist/default/production/SistemaRiego.X.production.obj
+__end_of_main 1762 0 CODE 0 text0 dist/default/production/SistemaRiego.X.production.obj
 __pintcode 8 0 CODE 0 intcode dist/default/production/SistemaRiego.X.production.obj
 _CMCON FB4 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
-__end_of_delay 54E 0 CODE 0 text20 dist/default/production/SistemaRiego.X.production.obj
-_pressedKey 38A 0 CODE 0 text12 dist/default/production/SistemaRiego.X.production.obj
+__end_of_delay 1AFE 0 CODE 0 text14 dist/default/production/SistemaRiego.X.production.obj
+_pressedKey 195C 0 CODE 0 text34 dist/default/production/SistemaRiego.X.production.obj
 _PORTB F81 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 _PORTC F82 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 _PORTD F83 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+_T0CON FD5 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 _TRISB F93 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 _TRISC F94 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 _TRISD F95 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
@@ -704,19 +1342,32 @@ __LRAM 1 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __Lbss 0 0 RAM 1 bss dist/default/production/SistemaRiego.X.production.obj
 __Lram 0 0 ABS 0 ram dist/default/production/SistemaRiego.X.production.obj
 __Lsfr 0 0 ABS 0 sfr dist/default/production/SistemaRiego.X.production.obj
-_delay 532 0 CODE 0 text20 dist/default/production/SistemaRiego.X.production.obj
-_determinePressedRow AA 0 CODE 0 text18 dist/default/production/SistemaRiego.X.production.obj
-_oneShotFlag 3A 0 COMRAM 1 bssCOMRAM dist/default/production/SistemaRiego.X.production.obj
-__initialization 454 0 CODE 0 cinit dist/default/production/SistemaRiego.X.production.obj
-__pdataCOMRAM 20 0 COMRAM 1 dataCOMRAM dist/default/production/SistemaRiego.X.production.obj
-i2_shortDelay 59C 0 CODE 0 text16 dist/default/production/SistemaRiego.X.production.obj
-_command 566 0 CODE 0 text6 dist/default/production/SistemaRiego.X.production.obj
+_delay 1AD6 0 CODE 0 text14 dist/default/production/SistemaRiego.X.production.obj
+_determinePressedRow FCA 0 CODE 0 text12 dist/default/production/SistemaRiego.X.production.obj
+_automaticMessage 89 0 BANK0 1 dataBANK0 dist/default/production/SistemaRiego.X.production.obj
+i2_groundAllRows 1CD0 0 CODE 0 text30 dist/default/production/SistemaRiego.X.production.obj
+i2_isReady 1BF6 0 CODE 0 text42 dist/default/production/SistemaRiego.X.production.obj
+_timerConfiguration 1A80 0 CODE 0 text4 dist/default/production/SistemaRiego.X.production.obj
+__end_ofi2_portDAsOutput 1CF0 0 CODE 0 text43 dist/default/production/SistemaRiego.X.production.obj
+__HdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production/SistemaRiego.X.production.obj
+_oneShotFlag 48 0 COMRAM 1 bssCOMRAM dist/default/production/SistemaRiego.X.production.obj
+_resetReadInput 1B4C 0 CODE 0 text8 dist/default/production/SistemaRiego.X.production.obj
+__end_ofi2_delay 1BF6 0 CODE 0 text33 dist/default/production/SistemaRiego.X.production.obj
+__initialization 18F8 0 CODE 0 cinit dist/default/production/SistemaRiego.X.production.obj
+__pbssBANK0 F9 0 BANK0 1 bssBANK0 dist/default/production/SistemaRiego.X.production.obj
+__pdataCOMRAM 1 0 COMRAM 1 dataCOMRAM dist/default/production/SistemaRiego.X.production.obj
+__size_ofi2_displayCharOnLCD 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
+i2_shortDelay 1C9A 0 CODE 0 text46 dist/default/production/SistemaRiego.X.production.obj
+_command 1C28 0 CODE 0 text26 dist/default/production/SistemaRiego.X.production.obj
+i2displayCharOnLCD@character 29 0 COMRAM 1 cstackCOMRAM dist/default/production/SistemaRiego.X.production.obj
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production/SistemaRiego.X.production.obj
-__Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production/SistemaRiego.X.production.obj
+__Hsmallconst D0C 0 SMALLCONST 0 smallconst dist/default/production/SistemaRiego.X.production.obj
 __size_of_LCDSetup 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __Lifardata 0 0 CODE 0 ifardata dist/default/production/SistemaRiego.X.production.obj
+__size_of_workingTimer 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production/SistemaRiego.X.production.obj
 __Hintcode 16 0 CODE 0 intcode dist/default/production/SistemaRiego.X.production.obj
+__end_ofi2_turnOnAllRows 1CE4 0 CODE 0 text37 dist/default/production/SistemaRiego.X.production.obj
 __size_of_getKeyCode 0 0 ABS 0 - dist/default/production/SistemaRiego.X.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
@@ -742,10 +1393,14 @@ __size_of_getKeyCode 0 0 ABS 0 - dist/default/production/SistemaRiego.X.producti
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-intcodelo 0 18 18 5B0 1
+intcodelo 0 18 18 92 1
 idloc 0 200000 200000 8 1
-cstackCOMRAM 1 1 1 3C 1
-cstackBANK0 1 60 60 11 1
+text21 0 1B26 1B26 1D2 1
+text38 0 D0C D0C E19 1
+cstackBANK1 1 100 100 11 1
 reset_vec 0 0 0 4 1
 intcode 0 8 8 E 1
+smallconst 0 D00 D00 C 1
+dataBANK0 1 60 60 9D 1
+dataCOMRAM 1 1 1 4A 1
 config 0 300000 300000 E 1
