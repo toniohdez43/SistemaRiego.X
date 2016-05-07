@@ -92,9 +92,23 @@ unsigned char oneShotFlag;          //  One-shot flag.
 
 // Humidity zone values
 
-unsigned char humidityZn1Val[] = "01"; 
-unsigned char humidityZn2Val[] = "02";
-unsigned char humidityZn3Val[] = "03";
+float CONVERSIONRATE = 10.24;
+
+unsigned char humidityZn1Val[] = "50"; 
+unsigned char humidityZn2Val[] = "50";
+unsigned char humidityZn3Val[] = "50";
+
+unsigned char humidityZn1ValInt = 50;
+unsigned char humidityZn2ValInt = 50;
+unsigned char humidityZn3ValInt = 50;
+
+unsigned char *humidityZnValInt;
+
+unsigned char *humidityZnValuesInt[] = {
+    &humidityZn1ValInt,
+    &humidityZn2ValInt,
+    &humidityZn3ValInt
+};
 
 // Timer zone values
 
@@ -118,7 +132,6 @@ unsigned char time3Zn2[] = "$$$$";
 unsigned char time1Zn3[] = "0000";
 unsigned char time2Zn3[] = "$$$$";
 unsigned char time3Zn3[] = "$$$$";
-
 
 unsigned char *zoneTimes[] = {
         time1Zn1,
@@ -233,6 +246,13 @@ void stopIrrigateManual();
 void irrigateManual();
 void stopIrrigateManual();
 
+unsigned char convertCharsToInt(unsigned char *humidityValue);
+void enableACInterrupts();
+void disableACInterrupts();
+void startAC(unsigned char acChannel);
+void clearEndTimes();
+void stopAllIrrigation();
+
 void main() {
     //CLOCK FREQUENCY CONFIGURATION
     //============================
@@ -327,8 +347,15 @@ void main() {
     TMR0 = 0x3A98;
     //Enable Timer#0
     T0CONbits.TMR0ON = 1;
-
     
+    
+    // PORTS A,CONFIGURATION 
+    CMCON = 0xFF; // Comparators OFF, to use PORT_Ds LSN
+    
+    
+    ADCON1 = 0x0C; //RCA/AN0 as analog input, all others are digital ; Vref ra2 y ra3 
+    ADCON2 = 0x95;  //Right Justified, 4 TAD, and FOSC/16. 
+
     
     //infinite loop to constantly be waiting for user input on the keyboard matrix
     while(1){
@@ -505,10 +532,9 @@ void automaticConfiguration() {
     
     while(input != '#')  {  
         
-        
         input = getInput();
         
-        if(input != '#') {
+        if(input != '#' && input) {
             zoneSelected[counter%2] = input;
             clearDisplay();
             displayCharOnLCD(zoneSelected[0]);
@@ -518,6 +544,8 @@ void automaticConfiguration() {
         }
         
     }
+    
+    *humidityZnValInt = convertCharsToInt(zoneSelected);
     
     enableIntRBIE();
     
@@ -610,16 +638,31 @@ void manualConfiguration() {
 //======================================================================================
 void workingAutomatic() {
     
+    enableACInterrupts();
     
     clearDisplay();
     displayLineOnLCD(automaticMessage, sizeof(automaticMessage) / sizeof(automaticMessage[0]));
     
     while(modeSelected == 0 && statusConfiguration == 0) {
         
+        for(unsigned char i = 0; i < 3; i++) {
+            
+            startAC(i + 1);
+            if( ADRES < (*humidityZnValuesInt[i] * CONVERSIONRATE)){
+                startIrrigation(i + 1);
+            }
+            else {
+                stopIrrigation(i + 1);
+            }
         
+        }
         
     }
-
+    
+    stopAllIrrigation();
+    
+    disableACInterrupts();
+    
 }
 
 void workingTimer() {
@@ -700,6 +743,11 @@ void workingTimer() {
         
     }
     
+    //Limpiar los end times
+    clearEndTimes();
+    
+    stopAllIrrigation();
+    
 }
 
 void workingManual() {
@@ -712,6 +760,8 @@ void workingManual() {
         
         
     }
+    
+    stopIrrigateManual();
    
 }
 
@@ -801,9 +851,16 @@ void interrupt  ISRH()
         
         INTCONbits.TMR0IF = 0;
         TMR0 = 0x3A98;
-        
+        return;
     }
 
+    if(PIR1bits.ADIF == 1) {
+
+        PIR1bits.ADIF=0;    //Clears a/d interrupt request flag
+        return;
+        
+    }
+    
 }
 
 // Await for input from the user Functions(Configuration)
@@ -1029,6 +1086,7 @@ void pressedKeyAction(unsigned char keyCode){
             
             if (modeSelected == 0) {
                 zoneSelected = humidityZn1Val;
+                humidityZnValInt = &humidityZn1ValInt;
             }
             
             if (modeSelected == 1) {
@@ -1048,6 +1106,7 @@ void pressedKeyAction(unsigned char keyCode){
             
             if (modeSelected == 0) {
                 zoneSelected = humidityZn2Val;
+                humidityZnValInt = &humidityZn2ValInt;
             }
             
             if (modeSelected == 1) {
@@ -1067,6 +1126,7 @@ void pressedKeyAction(unsigned char keyCode){
             
             if (modeSelected == 0) {
                 zoneSelected = humidityZn3Val;
+                humidityZnValInt = &humidityZn3ValInt;
             }
             
             if (modeSelected == 1) {
@@ -1141,15 +1201,28 @@ void pressedKeyAction(unsigned char keyCode){
         
         case '*': 
             
+            clearDisplay();
+            
+            if(ADRES < 512) {
+                displayLineOnLCD("Riega", 6);
+            }
+            else if (ADRES > 512) {
+                displayLineOnLCD("Pelon", 6);
+                command(0xC0);
+                isReady();
+                displayLineOnLCD("Macana", 7);
+            }
+            
+            
         break;
         
         
         case '#': 
             
-            if(modeSelected == 1) {
-                hourConfiguration = 1;
-                statusConfiguration = 1;
-            }
+//            if(modeSelected == 1) {
+//                hourConfiguration = 1;
+//                statusConfiguration = 1;
+//            }
             
             if(modeSelected == 2) {
                 
@@ -1410,5 +1483,106 @@ void stopIrrigateManual(){
     stopIrrigation(3);
     
     irrigateManualStatus = 0;
+    
+}
+
+unsigned char convertCharsToInt(unsigned char *humidityValue) {
+
+    unsigned char units;
+    unsigned char dozens;
+    
+    units = humidityValue[1] - 48;
+    dozens = (humidityValue[0] - 48)*10;
+    
+    return (units + dozens);
+}
+
+void enableACInterrupts() {
+    
+    PORTA = 0X00;   //Clear PORTB
+    LATA = 0X00;    //Clear LATB
+    TRISA = 0X00;   //Set PORTB as input
+    
+    TRISAbits.RA0 = 1;
+    TRISAbits.RA1 = 1;
+    TRISAbits.RA2 = 1;
+    
+    //Disables a/d interrupts, for prec
+    PIE1bits.ADIE = 0;
+    
+    //sets a/d interrupt as high priority
+    IPR1bits.ADIP = 1;
+    
+    
+
+}
+
+void startAC(unsigned char acChannel) {
+    
+    //Clears a/d interrupt request flag.
+    PIR1bits.ADIF = 0;
+    
+    PIE1bits.ADIE = 1;
+    
+    switch(acChannel) {
+        
+        case 1:
+            ADCON0 = 0x01; // AN0 selected, idle, and ON
+        break;
+        
+        case 2:
+            ADCON0 = 0x05; // AN1 selected, idle, and ON
+        break;
+        
+        case 3:
+            ADCON0 = 0x09; // AN2 selected, idle, and ON
+        break;
+    
+    }
+    
+    ADCON0bits.GO_DONE = 1;
+    
+    while(ADCON0bits.GO_DONE == 1);
+    
+    //Disables a/d interrupts, for prec
+    PIE1bits.ADIE = 0;
+
+}
+
+void disableACInterrupts() {
+    
+    PORTA = 0X00;   //Clear PORTB
+    LATA = 0X00;    //Clear LATB
+    TRISA = 0X00;   //Set PORTB as input
+    
+    //Disables a/d interrupts, for prec
+    PIE1bits.ADIE = 0;
+    
+    //Clears a/d interrupt request flag.
+    PIR1bits.ADIF = 0;
+    
+    ADCON0bits.GO_DONE = 0;
+
+}
+
+void clearEndTimes() {
+    
+    for(unsigned char i = 0; i < 3; i++) {
+        
+        unsigned char *zoneEndTime = zoneEndTimes[i];
+        
+        for(unsigned char j = 0; j < 4; j++) {
+            zoneEndTime[j] = '$';
+        }
+        
+    }
+
+}
+
+void stopAllIrrigation() {
+
+    stopIrrigation(1);
+    stopIrrigation(2);
+    stopIrrigation(3);
     
 }
