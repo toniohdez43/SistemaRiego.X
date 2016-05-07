@@ -107,18 +107,17 @@ unsigned char counterHOUR[]="00";
 unsigned char counterDAYS='0';
 
 
+unsigned char time1Zn1[] = "0001";
+unsigned char time2Zn1[] = "0004";
+unsigned char time3Zn1[] = "0007";
 
-unsigned char time1Zn1[] = "1000";
-unsigned char time2Zn1[] = "$021";
-unsigned char time3Zn1[] = "$031";
+unsigned char time1Zn2[] = "0003";
+unsigned char time2Zn2[] = "$$$$";
+unsigned char time3Zn2[] = "$$$$";
 
-unsigned char time1Zn2[] = "1200";
-unsigned char time2Zn2[] = "$022";
-unsigned char time3Zn2[] = "$032";
-
-unsigned char time1Zn3[] = "0400";
-unsigned char time2Zn3[] = "$023";
-unsigned char time3Zn3[] = "$033";
+unsigned char time1Zn3[] = "0000";
+unsigned char time2Zn3[] = "$$$$";
+unsigned char time3Zn3[] = "$$$$";
 
 
 unsigned char *zoneTimes[] = {
@@ -133,11 +132,27 @@ unsigned char *zoneTimes[] = {
         time3Zn3
 };
 
+unsigned char endTimeZn1[] = "$$$$";
+unsigned char endTimeZn2[] = "$$$$";
+unsigned char endTimeZn3[] = "$$$$";
+
+unsigned char *zoneEndTimes[] = {
+        endTimeZn1,
+        endTimeZn2,
+        endTimeZn3
+};
+
+unsigned char irrigateTimeZn1[] = "02";
+unsigned char irrigateTimeZn2[] = "01";
+unsigned char irrigateTimeZn3[] = "01";
+
 // Manual zone values. When '1' is selected zone will be active, when '0' zone will be inactive.
 
 unsigned char manualZn1Val = '1';
 unsigned char manualZn2Val = '1';
 unsigned char manualZn3Val = '1';
+
+unsigned char irrigateManualStatus = 0;
 
 // Functions
 //===================================================================================
@@ -210,6 +225,13 @@ void workingTimer();
 
 void displayTime();
 void getDayName();
+void startIrrigation(unsigned char zone);
+void updateEndTime(unsigned char *endTimeZn, unsigned char *zoneTime, unsigned char *irrigateTimeZn);
+void stopIrrigation(unsigned char zone);
+void stopIrrigateManual();
+
+void irrigateManual();
+void stopIrrigateManual();
 
 void main() {
     //CLOCK FREQUENCY CONFIGURATION
@@ -221,9 +243,6 @@ void main() {
     CMCON = 0x07;              // Comparators OFF, to use PORT_Ds LSN
     CVRCONbits.CVREN = 0;      // Comparator Voltge Reference Module OFF
     ADCON1 = 0x0F;             // All ports as DIGITAL I/O
-
-
-
 
     PORTB = 0X00;   //Clear PORTB
     LATB = 0X00;    //Clear LATB
@@ -238,6 +257,19 @@ void main() {
     TRISBbits.RB1 = 0;
     TRISBbits.RB2 = 0;
     TRISBbits.RB3 = 0;
+    
+    PORTEbits.RE0 = 0; // Initialize PORTE
+    PORTEbits.RE1 = 0;
+    PORTEbits.RE2 = 0;
+    
+    LATEbits.LATE0 = 0; // Clear PORTE
+    LATEbits.LATE1 = 0;
+    LATEbits.LATE2 = 0;
+    
+    TRISEbits.RE0 = 0;
+    TRISEbits.RE1 = 0;
+    TRISEbits.RE2 = 0;
+
     
     //Interrupt Priority Enable Bit
     RCONbits.IPEN = 1;
@@ -273,7 +305,7 @@ void main() {
     //keyCode = ' '; 
     
     //zoneSelected = 0; 
-    modeSelected = 1; // Automatic mode by default
+    modeSelected = 0; // Automatic mode by default
 
     getValueStatus = 0; // When the getValueStatus is equal to 1 is that the system has gotten the input value from the user
     statusConfiguration = 0; // When configuracionStatus is equal to 1 the system will enter to configuration mode
@@ -292,7 +324,7 @@ void main() {
     
     //Accumulator, starting from 18,660 since we want to count 12 seconds
     //TMR0 = 0x48E4;
-    TMR0 = 0xFFF0;
+    TMR0 = 0x3A98;
     //Enable Timer#0
     T0CONbits.TMR0ON = 1;
 
@@ -473,8 +505,9 @@ void automaticConfiguration() {
     
     while(input != '#')  {  
         
+        
         input = getInput();
-
+        
         if(input != '#') {
             zoneSelected[counter%2] = input;
             clearDisplay();
@@ -594,28 +627,45 @@ void workingTimer() {
     clearDisplay();
     displayLineOnLCD(timerMessage, sizeof(timerMessage) / sizeof(timerMessage[0]));
     
-    unsigned char *selectedTime;
+    unsigned char *zoneTime;
     
     while(modeSelected == 1 && statusConfiguration == 0) {
-        
+        command(0xC0);
+        displayLineOnLCD(counterHOUR, 3);
+        displayLineOnLCD(counterMIN, 3);
         
         for(unsigned char i = 0; i < 9; i++) {
             
-            selectedTime = zoneTimes[i];
+            zoneTime = zoneTimes[i];
             
-            if (selectedTime[0] != '$') {
+            if (zoneTime[0] != '$') {
                 
-                if (selectedTime[0] == counterHOUR[0]) {
+                if (zoneTime[0] == counterHOUR[0]) {
                     
-                    if (selectedTime[1] == counterHOUR[1]) {
+                    if (zoneTime[1] == counterHOUR[1]) {
                         
-                        if (selectedTime[2] == counterMIN[0]) {
+                        if (zoneTime[2] == counterMIN[0]) {
                             
-                            if (selectedTime[3] == counterMIN[1]) {
+                            if (zoneTime[3] == counterMIN[1]) {
+                                
+                                if (i < 3) {
+                                    updateEndTime(endTimeZn1, zoneTime, irrigateTimeZn1);
+                                    startIrrigation(1);
+                                }
+                                else if (i < 6) {
+                                    updateEndTime(endTimeZn2, zoneTime, irrigateTimeZn2);
+                                    startIrrigation(2);
+                                }
+                                else if (i < 9) {
+                                    updateEndTime(endTimeZn3, zoneTime, irrigateTimeZn3);
+                                    startIrrigation(3);
+                                }
+                                
+                                /*
                                 clearDisplay();
                                 displayLineOnLCD("Regando: ", 10);
                                 displayLineOnLCD(selectedTime, 5);
-                                
+                                */
                             }
                             
                         }
@@ -628,9 +678,25 @@ void workingTimer() {
             
         }
         
-//        longDelay();
-//        clearDisplay();
-//        displayTime();
+        for(unsigned char i = 0; i < 3; i++) {
+            
+            unsigned char *endTimeZn = zoneEndTimes[i];
+            
+            if(endTimeZn[0] != '$') {
+                if(endTimeZn[0] == counterHOUR[0]) {
+                    if(endTimeZn[1] == counterHOUR[1]) {
+                        if(endTimeZn[2] == counterMIN[0]) {
+                            if(endTimeZn[3] == counterMIN[1]) {
+                                stopIrrigation(i + 1);
+                                for(unsigned char j = 0; j < 4; j ++)
+                                    endTimeZn[j] = '$';
+                            }
+                        }
+                    }
+                }
+            }
+        
+        }
         
     }
     
@@ -734,7 +800,7 @@ void interrupt  ISRH()
         }
         
         INTCONbits.TMR0IF = 0;
-        TMR0 = 0xFFF0;
+        TMR0 = 0x3A98;
         
     }
 
@@ -956,18 +1022,10 @@ void pressedKeyAction(unsigned char keyCode){
         
         case '0': 
             
-            
-            
         break;
         
         
         case '1': 
-            
-            clearDisplay();
-            
-            displayLineOnLCD(zoneTimes[0], 5);
-            
-            /*
             
             if (modeSelected == 0) {
                 zoneSelected = humidityZn1Val;
@@ -983,17 +1041,11 @@ void pressedKeyAction(unsigned char keyCode){
             
             statusConfiguration = 1;
             
-            */
-            
         break;
+        
         
         case '2': 
             
-            clearDisplay();
-            
-            displayLineOnLCD(zoneTimes[1], 5);
-            
-            /*
             if (modeSelected == 0) {
                 zoneSelected = humidityZn2Val;
             }
@@ -1007,15 +1059,12 @@ void pressedKeyAction(unsigned char keyCode){
             }
             
             statusConfiguration = 1;
-            */
+            
         break;
+        
         
         case '3': 
             
-            clearDisplay();
-            
-            displayLineOnLCD(zoneTimes[2], 5);
-            /*
             if (modeSelected == 0) {
                 zoneSelected = humidityZn3Val;
             }
@@ -1029,59 +1078,37 @@ void pressedKeyAction(unsigned char keyCode){
             }
             
             statusConfiguration = 1;
-            */
+            
         break;
         
-        case '4': LED3 = 1; 
-            
-        clearDisplay();
-            
-            displayLineOnLCD(zoneTimes[3], 5);
         
+        case '4': 
+         
         break;
+        
         
         case '5': 
             
-            clearDisplay();
-            
-            displayLineOnLCD(zoneTimes[4], 5);
             
         break;
+        
         
         case '6': 
-        
-            clearDisplay();
-            
-            displayLineOnLCD(zoneTimes[5], 5);
             
         break;
+        
         
         case '7': 
             
-            
-            clearDisplay();
-            
-            displayLineOnLCD(zoneTimes[6], 5);
-            
         break;
+        
         
         case '8': 
             
-            clearDisplay();
-            
-            displayLineOnLCD(zoneTimes[7], 5);
-            
-            //moveCurH();
-            
         break;
         
+        
         case '9': 
-            
-            clearDisplay();
-            
-            displayLineOnLCD(zoneTimes[8], 5);
-            
-            //moveCurR();
             
         break;
         
@@ -1090,8 +1117,8 @@ void pressedKeyAction(unsigned char keyCode){
             
             modeSelected = 0; //Automatico
             
-            
         break;
+        
         
         case 'B': 
             
@@ -1099,24 +1126,46 @@ void pressedKeyAction(unsigned char keyCode){
             
         break;
         
+        
         case 'C': 
         
             modeSelected = 2; //Manual
             
         break;
         
-        case 'D': LED4 = 1;LED1 = 1;LED3 = 1; break;
-        case '*': 
-            displayCharOnLCD(keyCode);
+        
+        case 'D': 
+        
         break;
+        
+        
+        case '*': 
+            
+        break;
+        
+        
         case '#': 
             
-            if (modeSelected == 1) {
+            if(modeSelected == 1) {
                 hourConfiguration = 1;
                 statusConfiguration = 1;
             }
             
+            if(modeSelected == 2) {
+                
+                if(irrigateManualStatus == 0) {
+                    irrigateManual();
+                }
+                
+                else {
+                    stopIrrigateManual();
+                }
+                
+            }
+            
         break;
+        
+        
         default: ;
         
        /*switch(keyCode){
@@ -1249,4 +1298,117 @@ void getDayName() {
     
     }
 
+}
+
+void updateEndTime(unsigned char *endTimeZn, unsigned char *zoneTime, unsigned char *irrigateTimeZn) {
+    
+    endTimeZn[0] = zoneTime[0];
+    endTimeZn[1] = zoneTime[1];
+    endTimeZn[2] = zoneTime[2];
+    endTimeZn[3] = zoneTime[3];
+    
+    endTimeZn[3] = endTimeZn[3] + (irrigateTimeZn[1] - 48);
+    
+    if(endTimeZn[3] > 57) {
+        endTimeZn[3] = endTimeZn[3]%58 + 48;
+        endTimeZn[2]++;
+    }
+    
+    endTimeZn[2] = endTimeZn[2] + (irrigateTimeZn[0] - 48);
+    
+    if(endTimeZn[2] > 53) {
+        endTimeZn[2] = endTimeZn[2]%54 + 48;
+        endTimeZn[1]++;
+    }
+    
+    if(endTimeZn[0] < '2') {
+        
+        if(endTimeZn[1] > 57) {
+            endTimeZn[1] = endTimeZn[1]%58 + 48;
+            endTimeZn[0]++;
+        }
+    
+    }
+    
+    else {
+        
+        if(endTimeZn[1] > 51) {
+            endTimeZn[1] = endTimeZn[1]%52 + 48;
+            endTimeZn[0]++;
+        }
+        
+        if (endTimeZn[0] > 50) {
+            endTimeZn[0] = endTimeZn[0]%51 + 48;
+        }
+    
+    }
+
+}
+
+void startIrrigation(unsigned char zone) {
+    
+    switch(zone) {
+        
+        case 1:
+            PORTEbits.RE0 = 1;
+        break;
+        
+        case 2:
+            PORTEbits.RE1 = 1;
+        break;
+        
+        case 3:
+            PORTEbits.RE2 = 1;
+        break;
+    
+    }
+
+}
+
+void stopIrrigation(unsigned char zone) {
+    
+    switch(zone) {
+        
+        case 1:
+            PORTEbits.RE0 = 0;
+        break;
+        
+        case 2:
+            PORTEbits.RE1 = 0;
+        break;
+        
+        case 3:
+            PORTEbits.RE2 = 0;
+        break;
+    
+    }
+
+}
+
+void irrigateManual() {
+    
+    if(manualZn1Val == '1') {
+        startIrrigation(1);
+    }
+    
+    if(manualZn2Val == '1') {
+        startIrrigation(2);
+    }
+    
+    if(manualZn3Val == '1') {
+        startIrrigation(3);
+    }
+    
+    irrigateManualStatus = 1;
+    
+}
+
+void stopIrrigateManual(){
+    
+    stopIrrigation(1);
+    stopIrrigation(2);
+    stopIrrigation(3);
+    
+    irrigateManualStatus = 0;
+    
 }
