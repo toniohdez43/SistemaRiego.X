@@ -160,9 +160,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S2088 . . . . ]
 "34734
 [v _INTCON2bits `VS2088 ~T0 @X0 0 e@4081 ]
-"192 SysRiego.c
+"196 SysRiego.c
 [v _portDAsOutput `(v ~T0 @X0 0 ef ]
-"193
+"197
 [v _LCDSetup `(v ~T0 @X0 0 ef ]
 "34289 /Applications/microchip/xc8/v1.36/include/pic18f4585.h
 [v _T0CON `Vuc ~T0 @X0 0 e@4053 ]
@@ -181,17 +181,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _T0CONbits `VS2076 ~T0 @X0 0 e@4053 ]
 "32737
 [v _ADCON2 `Vuc ~T0 @X0 0 e@4032 ]
-"234 SysRiego.c
+"240 SysRiego.c
 [v _workingAutomatic `(v ~T0 @X0 0 ef ]
-"235
+"241
 [v _workingTimer `(v ~T0 @X0 0 ef ]
-"233
+"239
 [v _workingManual `(v ~T0 @X0 0 ef ]
-"225
+"231
 [v _automaticConfiguration `(v ~T0 @X0 0 ef ]
-"226
+"232
 [v _timerConfiguration `(v ~T0 @X0 0 ef ]
-"227
+"233
 [v _manualConfiguration `(v ~T0 @X0 0 ef ]
 "30091 /Applications/microchip/xc8/v1.36/include/pic18f4585.h
 [v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
@@ -218,11 +218,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1766 . . . . . . . ]
 "28424
 [v _PORTCbits `VS1766 ~T0 @X0 0 e@3970 ]
-"195 SysRiego.c
+"199 SysRiego.c
 [v _longDelay `(v ~T0 @X0 0 ef ]
-"196
+"200
 [v _command `(v ~T0 @X0 0 ef1`uc ]
-"197
+"201
 [v _isReady `(v ~T0 @X0 0 ef ]
 "28548 /Applications/microchip/xc8/v1.36/include/pic18f4585.h
 [v _PORTD `Vuc ~T0 @X0 0 e@3971 ]
@@ -246,39 +246,41 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1773 . . . . . . ]
 "28593
 [v _PORTDbits `VS1773 ~T0 @X0 0 e@3971 ]
-"219 SysRiego.c
+"225 SysRiego.c
 [v _disableIntRBIE `(v ~T0 @X0 0 ef ]
-"210
+"216
 [v _getInput `(uc ~T0 @X0 0 ef ]
-"249
+"255
 [v _convertCharsToInt `(uc ~T0 @X0 0 ef1`*uc ]
-"221
+"227
 [v _enableIntRBIE `(v ~T0 @X0 0 ef ]
-"250
+"261
+[v _clearUnConfigTimes `(v ~T0 @X0 0 ef1`uc ]
+"256
 [v _enableACInterrupts `(v ~T0 @X0 0 ef ]
-"252
+"258
 [v _startAC `(v ~T0 @X0 0 ef1`uc ]
 "33015 /Applications/microchip/xc8/v1.36/include/pic18f4585.h
 [v _ADRES `Vus ~T0 @X0 0 e@4035 ]
-"241 SysRiego.c
+"247 SysRiego.c
 [v _startIrrigation `(v ~T0 @X0 0 ef1`uc ]
-"243
+"249
 [v _stopIrrigation `(v ~T0 @X0 0 ef1`uc ]
-"254
+"260
 [v _stopAllIrrigation `(v ~T0 @X0 0 ef ]
-"251
+"257
 [v _disableACInterrupts `(v ~T0 @X0 0 ef ]
-"242
+"248
 [v _updateEndTime `(v ~T0 @X0 0 ef3`*uc`*uc`*uc ]
-"253
+"259
 [v _clearEndTimes `(v ~T0 @X0 0 ef ]
-"244
+"250
 [v _stopIrrigateManual `(v ~T0 @X0 0 ef ]
-"182
+"186
 [v _groundAllRows `(v ~T0 @X0 0 ef ]
-"178
+"182
 [v _oneShot `(v ~T0 @X0 0 ef ]
-"179
+"183
 [v _resetOneShot `(v ~T0 @X0 0 ef ]
 "39495 /Applications/microchip/xc8/v1.36/include/pic18f4585.h
 [v _TMR0IE `Vb ~T0 @X0 0 e@32661 ]
@@ -298,9 +300,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1872 . . . . ]
 "30638
 [v _PIR1bits `VS1872 ~T0 @X0 0 e@3998 ]
-"215 SysRiego.c
+"221 SysRiego.c
 [v _readInput `(v ~T0 @X0 0 ef ]
-"217
+"223
 [v _resetReadInput `(v ~T0 @X0 0 ef ]
 "28209 /Applications/microchip/xc8/v1.36/include/pic18f4585.h
 [s S1761 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -322,23 +324,23 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1760 . . . . . . ]
 "28247
 [v _PORTBbits `VS1760 ~T0 @X0 0 e@3969 ]
-"180 SysRiego.c
+"184 SysRiego.c
 [v _delay `(v ~T0 @X0 0 ef ]
-"185
+"189
 [v _pressedKey `(v ~T0 @X0 0 ef ]
-"183
+"187
 [v _determinePressedRow `(v ~T0 @X0 0 ef ]
-"184
+"188
 [v _getKeyCode `(uc ~T0 @X0 0 ef ]
-"186
+"190
 [v _pressedKeyAction `(v ~T0 @X0 0 ef1`uc ]
-"211
+"217
 [v _turnOnAllRows `(v ~T0 @X0 0 ef ]
-"246
+"252
 [v _irrigateManual `(v ~T0 @X0 0 ef ]
-"216
+"222
 [v _readKey `(v ~T0 @X0 0 ef ]
-"240
+"246
 [v _getDayName `(v ~T0 @X0 0 ef ]
 "27999 /Applications/microchip/xc8/v1.36/include/pic18f4585.h
 [v _PORTA `Vuc ~T0 @X0 0 e@3968 ]
@@ -15300,50 +15302,50 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _time1Zn1 `uc ~T0 @X0 -> 0 `x e ]
 [i _time1Zn1
 :U ..
--> 48 `c
--> 48 `c
--> 48 `c
--> 49 `c
+-> 36 `c
+-> 36 `c
+-> 36 `c
+-> 36 `c
 -> 0 `c
 ..
 ]
-[; ;SysRiego.c: 124: unsigned char time1Zn1[] = "0001";
+[; ;SysRiego.c: 124: unsigned char time1Zn1[] = "$$$$";
 "125
 [v _time2Zn1 `uc ~T0 @X0 -> 0 `x e ]
 [i _time2Zn1
 :U ..
--> 48 `c
--> 48 `c
--> 48 `c
--> 52 `c
+-> 36 `c
+-> 36 `c
+-> 36 `c
+-> 36 `c
 -> 0 `c
 ..
 ]
-[; ;SysRiego.c: 125: unsigned char time2Zn1[] = "0004";
+[; ;SysRiego.c: 125: unsigned char time2Zn1[] = "$$$$";
 "126
 [v _time3Zn1 `uc ~T0 @X0 -> 0 `x e ]
 [i _time3Zn1
 :U ..
--> 48 `c
--> 48 `c
--> 48 `c
--> 55 `c
+-> 36 `c
+-> 36 `c
+-> 36 `c
+-> 36 `c
 -> 0 `c
 ..
 ]
-[; ;SysRiego.c: 126: unsigned char time3Zn1[] = "0007";
+[; ;SysRiego.c: 126: unsigned char time3Zn1[] = "$$$$";
 "128
 [v _time1Zn2 `uc ~T0 @X0 -> 0 `x e ]
 [i _time1Zn2
 :U ..
--> 48 `c
--> 48 `c
--> 48 `c
--> 51 `c
+-> 36 `c
+-> 36 `c
+-> 36 `c
+-> 36 `c
 -> 0 `c
 ..
 ]
-[; ;SysRiego.c: 128: unsigned char time1Zn2[] = "0003";
+[; ;SysRiego.c: 128: unsigned char time1Zn2[] = "$$$$";
 "129
 [v _time2Zn2 `uc ~T0 @X0 -> 0 `x e ]
 [i _time2Zn2
@@ -15372,14 +15374,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _time1Zn3 `uc ~T0 @X0 -> 0 `x e ]
 [i _time1Zn3
 :U ..
--> 48 `c
--> 48 `c
--> 48 `c
--> 48 `c
+-> 36 `c
+-> 36 `c
+-> 36 `c
+-> 36 `c
 -> 0 `c
 ..
 ]
-[; ;SysRiego.c: 132: unsigned char time1Zn3[] = "0000";
+[; ;SysRiego.c: 132: unsigned char time1Zn3[] = "$$$$";
 "133
 [v _time2Zn3 `uc ~T0 @X0 -> 0 `x e ]
 [i _time2Zn3
@@ -15440,6 +15442,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;SysRiego.c: 145: time3Zn3
 [; ;SysRiego.c: 146: };
 "148
+[v _offSetZoneTimes `uc ~T0 @X0 1 e ]
+[; ;SysRiego.c: 148: unsigned char offSetZoneTimes;
+"150
 [v _endTimeZn1 `uc ~T0 @X0 -> 0 `x e ]
 [i _endTimeZn1
 :U ..
@@ -15450,8 +15455,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;SysRiego.c: 148: unsigned char endTimeZn1[] = "$$$$";
-"149
+[; ;SysRiego.c: 150: unsigned char endTimeZn1[] = "$$$$";
+"151
 [v _endTimeZn2 `uc ~T0 @X0 -> 0 `x e ]
 [i _endTimeZn2
 :U ..
@@ -15462,8 +15467,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;SysRiego.c: 149: unsigned char endTimeZn2[] = "$$$$";
-"150
+[; ;SysRiego.c: 151: unsigned char endTimeZn2[] = "$$$$";
+"152
 [v _endTimeZn3 `uc ~T0 @X0 -> 0 `x e ]
 [i _endTimeZn3
 :U ..
@@ -15474,461 +15479,467 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;SysRiego.c: 150: unsigned char endTimeZn3[] = "$$$$";
-"152
+[; ;SysRiego.c: 152: unsigned char endTimeZn3[] = "$$$$";
+"154
 [v _zoneEndTimes `*uc ~T0 @X0 -> 0 `x e ]
 [i _zoneEndTimes
 :U ..
-"153
+"155
 &U _endTimeZn1
-"154
-&U _endTimeZn2
 "156
+&U _endTimeZn2
+"158
 &U _endTimeZn3
 ..
 ]
-[; ;SysRiego.c: 152: unsigned char *zoneEndTimes[] = {
-[; ;SysRiego.c: 153: endTimeZn1,
-[; ;SysRiego.c: 154: endTimeZn2,
-[; ;SysRiego.c: 155: endTimeZn3
-[; ;SysRiego.c: 156: };
-"158
+[; ;SysRiego.c: 154: unsigned char *zoneEndTimes[] = {
+[; ;SysRiego.c: 155: endTimeZn1,
+[; ;SysRiego.c: 156: endTimeZn2,
+[; ;SysRiego.c: 157: endTimeZn3
+[; ;SysRiego.c: 158: };
+"160
 [v _irrigateTimeZn1 `uc ~T0 @X0 -> 0 `x e ]
 [i _irrigateTimeZn1
 :U ..
 -> 48 `c
--> 50 `c
+-> 48 `c
 -> 0 `c
 ..
 ]
-[; ;SysRiego.c: 158: unsigned char irrigateTimeZn1[] = "02";
-"159
+[; ;SysRiego.c: 160: unsigned char irrigateTimeZn1[] = "00";
+"161
 [v _irrigateTimeZn2 `uc ~T0 @X0 -> 0 `x e ]
 [i _irrigateTimeZn2
 :U ..
 -> 48 `c
--> 49 `c
+-> 48 `c
 -> 0 `c
 ..
 ]
-[; ;SysRiego.c: 159: unsigned char irrigateTimeZn2[] = "01";
-"160
+[; ;SysRiego.c: 161: unsigned char irrigateTimeZn2[] = "00";
+"162
 [v _irrigateTimeZn3 `uc ~T0 @X0 -> 0 `x e ]
 [i _irrigateTimeZn3
 :U ..
 -> 48 `c
--> 49 `c
+-> 48 `c
 -> 0 `c
 ..
 ]
-[; ;SysRiego.c: 160: unsigned char irrigateTimeZn3[] = "01";
+[; ;SysRiego.c: 162: unsigned char irrigateTimeZn3[] = "00";
 "164
+[v _irrigateTime `*uc ~T0 @X0 1 e ]
+[; ;SysRiego.c: 164: unsigned char *irrigateTime;
+"168
 [v _manualZn1Val `uc ~T0 @X0 1 e ]
 [i _manualZn1Val
 -> -> 49 `ui `uc
 ]
-[; ;SysRiego.c: 164: unsigned char manualZn1Val = '1';
-"165
+[; ;SysRiego.c: 168: unsigned char manualZn1Val = '1';
+"169
 [v _manualZn2Val `uc ~T0 @X0 1 e ]
 [i _manualZn2Val
 -> -> 49 `ui `uc
 ]
-[; ;SysRiego.c: 165: unsigned char manualZn2Val = '1';
-"166
+[; ;SysRiego.c: 169: unsigned char manualZn2Val = '1';
+"170
 [v _manualZn3Val `uc ~T0 @X0 1 e ]
 [i _manualZn3Val
 -> -> 49 `ui `uc
 ]
-[; ;SysRiego.c: 166: unsigned char manualZn3Val = '1';
-"168
+[; ;SysRiego.c: 170: unsigned char manualZn3Val = '1';
+"172
 [v _irrigateManualStatus `uc ~T0 @X0 1 e ]
 [i _irrigateManualStatus
 -> -> 0 `i `uc
 ]
-[; ;SysRiego.c: 168: unsigned char irrigateManualStatus = 0;
-[; ;SysRiego.c: 172: void modeSelection();
-[; ;SysRiego.c: 173: void inicioManual();
-[; ;SysRiego.c: 174: void inicioAuto();
-[; ;SysRiego.c: 175: void inicioTimer();
-[; ;SysRiego.c: 178: void oneShot();
-[; ;SysRiego.c: 179: void resetOneShot();
-[; ;SysRiego.c: 180: void delay();
-[; ;SysRiego.c: 182: void groundAllRows();
-[; ;SysRiego.c: 183: void determinePressedRow();
-[; ;SysRiego.c: 184: unsigned char getKeyCode();
-[; ;SysRiego.c: 185: void pressedKey();
-[; ;SysRiego.c: 186: void pressedKeyAction(unsigned char x);
-[; ;SysRiego.c: 191: void portDAsInput();
-[; ;SysRiego.c: 192: void portDAsOutput();
-[; ;SysRiego.c: 193: void LCDSetup();
-[; ;SysRiego.c: 194: void shortDelay();
-[; ;SysRiego.c: 195: void longDelay();
-[; ;SysRiego.c: 196: void command (unsigned char x);
-[; ;SysRiego.c: 197: void isReady();
-[; ;SysRiego.c: 198: void displayCharOnLCD(unsigned char character);
-[; ;SysRiego.c: 199: void displayLineOnLCD(unsigned char array[], unsigned char sizeOfArray);
-[; ;SysRiego.c: 200: void clearDisplay();
-[; ;SysRiego.c: 201: void moveCurR();
-[; ;SysRiego.c: 202: void moveCurR();
-[; ;SysRiego.c: 203: void moveCurL();
-[; ;SysRiego.c: 208: void interrupt low_priority ISRL();
-[; ;SysRiego.c: 209: void interrupt ISRH();
-[; ;SysRiego.c: 210: unsigned char getInput();
-[; ;SysRiego.c: 211: void turnOnAllRows();
-[; ;SysRiego.c: 212: void getValue();
-[; ;SysRiego.c: 213: void getKey();
-[; ;SysRiego.c: 215: void readInput();
-[; ;SysRiego.c: 216: void readKey();
-[; ;SysRiego.c: 217: void resetReadInput();
-[; ;SysRiego.c: 219: void disableIntRBIE();
-[; ;SysRiego.c: 221: void enableIntRBIE();
-[; ;SysRiego.c: 225: void automaticConfiguration();
-[; ;SysRiego.c: 226: void timerConfiguration();
-[; ;SysRiego.c: 227: void manualConfiguration();
-[; ;SysRiego.c: 233: void workingManual();
-[; ;SysRiego.c: 234: void workingAutomatic();
-[; ;SysRiego.c: 235: void workingTimer();
-[; ;SysRiego.c: 239: void displayTime();
-[; ;SysRiego.c: 240: void getDayName();
-[; ;SysRiego.c: 241: void startIrrigation(unsigned char zone);
-[; ;SysRiego.c: 242: void updateEndTime(unsigned char *endTimeZn, unsigned char *zoneTime, unsigned char *irrigateTimeZn);
-[; ;SysRiego.c: 243: void stopIrrigation(unsigned char zone);
-[; ;SysRiego.c: 244: void stopIrrigateManual();
-[; ;SysRiego.c: 246: void irrigateManual();
-[; ;SysRiego.c: 247: void stopIrrigateManual();
-[; ;SysRiego.c: 249: unsigned char convertCharsToInt(unsigned char *humidityValue);
-[; ;SysRiego.c: 250: void enableACInterrupts();
-[; ;SysRiego.c: 251: void disableACInterrupts();
-[; ;SysRiego.c: 252: void startAC(unsigned char acChannel);
-[; ;SysRiego.c: 253: void clearEndTimes();
-[; ;SysRiego.c: 254: void stopAllIrrigation();
-"256
+[; ;SysRiego.c: 172: unsigned char irrigateManualStatus = 0;
+[; ;SysRiego.c: 176: void modeSelection();
+[; ;SysRiego.c: 177: void inicioManual();
+[; ;SysRiego.c: 178: void inicioAuto();
+[; ;SysRiego.c: 179: void inicioTimer();
+[; ;SysRiego.c: 182: void oneShot();
+[; ;SysRiego.c: 183: void resetOneShot();
+[; ;SysRiego.c: 184: void delay();
+[; ;SysRiego.c: 186: void groundAllRows();
+[; ;SysRiego.c: 187: void determinePressedRow();
+[; ;SysRiego.c: 188: unsigned char getKeyCode();
+[; ;SysRiego.c: 189: void pressedKey();
+[; ;SysRiego.c: 190: void pressedKeyAction(unsigned char x);
+[; ;SysRiego.c: 195: void portDAsInput();
+[; ;SysRiego.c: 196: void portDAsOutput();
+[; ;SysRiego.c: 197: void LCDSetup();
+[; ;SysRiego.c: 198: void shortDelay();
+[; ;SysRiego.c: 199: void longDelay();
+[; ;SysRiego.c: 200: void command (unsigned char x);
+[; ;SysRiego.c: 201: void isReady();
+[; ;SysRiego.c: 202: void displayCharOnLCD(unsigned char character);
+[; ;SysRiego.c: 203: void displayLineOnLCD(unsigned char array[], unsigned char sizeOfArray);
+[; ;SysRiego.c: 204: void clearDisplay();
+[; ;SysRiego.c: 205: void secondLine();
+[; ;SysRiego.c: 206: void moveCursor();
+[; ;SysRiego.c: 207: void moveCurR();
+[; ;SysRiego.c: 208: void moveCurR();
+[; ;SysRiego.c: 209: void moveCurL();
+[; ;SysRiego.c: 214: void interrupt low_priority ISRL();
+[; ;SysRiego.c: 215: void interrupt ISRH();
+[; ;SysRiego.c: 216: unsigned char getInput();
+[; ;SysRiego.c: 217: void turnOnAllRows();
+[; ;SysRiego.c: 218: void getValue();
+[; ;SysRiego.c: 219: void getKey();
+[; ;SysRiego.c: 221: void readInput();
+[; ;SysRiego.c: 222: void readKey();
+[; ;SysRiego.c: 223: void resetReadInput();
+[; ;SysRiego.c: 225: void disableIntRBIE();
+[; ;SysRiego.c: 227: void enableIntRBIE();
+[; ;SysRiego.c: 231: void automaticConfiguration();
+[; ;SysRiego.c: 232: void timerConfiguration();
+[; ;SysRiego.c: 233: void manualConfiguration();
+[; ;SysRiego.c: 239: void workingManual();
+[; ;SysRiego.c: 240: void workingAutomatic();
+[; ;SysRiego.c: 241: void workingTimer();
+[; ;SysRiego.c: 245: void displayTime();
+[; ;SysRiego.c: 246: void getDayName();
+[; ;SysRiego.c: 247: void startIrrigation(unsigned char zone);
+[; ;SysRiego.c: 248: void updateEndTime(unsigned char *endTimeZn, unsigned char *zoneTime, unsigned char *irrigateTimeZn);
+[; ;SysRiego.c: 249: void stopIrrigation(unsigned char zone);
+[; ;SysRiego.c: 250: void stopIrrigateManual();
+[; ;SysRiego.c: 252: void irrigateManual();
+[; ;SysRiego.c: 253: void stopIrrigateManual();
+[; ;SysRiego.c: 255: unsigned char convertCharsToInt(unsigned char *humidityValue);
+[; ;SysRiego.c: 256: void enableACInterrupts();
+[; ;SysRiego.c: 257: void disableACInterrupts();
+[; ;SysRiego.c: 258: void startAC(unsigned char acChannel);
+[; ;SysRiego.c: 259: void clearEndTimes();
+[; ;SysRiego.c: 260: void stopAllIrrigation();
+[; ;SysRiego.c: 261: void clearUnConfigTimes(unsigned char numberIrrigations);
+"263
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;SysRiego.c: 256: void main() {
+[; ;SysRiego.c: 263: void main() {
 [e :U _main ]
 [f ]
-[; ;SysRiego.c: 259: OSCCON = 0x60;
-"259
+[; ;SysRiego.c: 266: OSCCON = 0x60;
+"266
 [e = _OSCCON -> -> 96 `i `uc ]
-[; ;SysRiego.c: 263: CMCON = 0x07;
-"263
+[; ;SysRiego.c: 270: CMCON = 0x07;
+"270
 [e = _CMCON -> -> 7 `i `uc ]
-[; ;SysRiego.c: 264: CVRCONbits.CVREN = 0;
-"264
-[e = . . _CVRCONbits 0 4 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 265: ADCON1 = 0x0F;
-"265
-[e = _ADCON1 -> -> 15 `i `uc ]
-[; ;SysRiego.c: 267: PORTB = 0X00;
-"267
-[e = _PORTB -> -> 0 `i `uc ]
-[; ;SysRiego.c: 268: LATB = 0X00;
-"268
-[e = _LATB -> -> 0 `i `uc ]
-[; ;SysRiego.c: 269: TRISB = 0XFF;
-"269
-[e = _TRISB -> -> 255 `i `uc ]
-[; ;SysRiego.c: 271: PORTC = 0X00;
+[; ;SysRiego.c: 271: CVRCONbits.CVREN = 0;
 "271
-[e = _PORTC -> -> 0 `i `uc ]
-[; ;SysRiego.c: 272: LATC = 0X00;
+[e = . . _CVRCONbits 0 4 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 272: ADCON1 = 0x0F;
 "272
-[e = _LATC -> -> 0 `i `uc ]
-[; ;SysRiego.c: 273: TRISC = 0X00;
-"273
-[e = _TRISC -> -> 0 `i `uc ]
-[; ;SysRiego.c: 276: TRISBbits.RB0 = 0;
+[e = _ADCON1 -> -> 15 `i `uc ]
+[; ;SysRiego.c: 274: PORTB = 0X00;
+"274
+[e = _PORTB -> -> 0 `i `uc ]
+[; ;SysRiego.c: 275: LATB = 0X00;
+"275
+[e = _LATB -> -> 0 `i `uc ]
+[; ;SysRiego.c: 276: TRISB = 0XFF;
 "276
-[e = . . _TRISBbits 1 0 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 277: TRISBbits.RB1 = 0;
-"277
-[e = . . _TRISBbits 1 1 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 278: TRISBbits.RB2 = 0;
+[e = _TRISB -> -> 255 `i `uc ]
+[; ;SysRiego.c: 278: PORTC = 0X00;
 "278
-[e = . . _TRISBbits 1 2 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 279: TRISBbits.RB3 = 0;
+[e = _PORTC -> -> 0 `i `uc ]
+[; ;SysRiego.c: 279: LATC = 0X00;
 "279
-[e = . . _TRISBbits 1 3 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 281: PORTEbits.RE0 = 0;
-"281
-[e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 282: PORTEbits.RE1 = 0;
-"282
-[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 283: PORTEbits.RE2 = 0;
+[e = _LATC -> -> 0 `i `uc ]
+[; ;SysRiego.c: 280: TRISC = 0X00;
+"280
+[e = _TRISC -> -> 0 `i `uc ]
+[; ;SysRiego.c: 283: TRISBbits.RB0 = 0;
 "283
-[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 285: LATEbits.LATE0 = 0;
+[e = . . _TRISBbits 1 0 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 284: TRISBbits.RB1 = 0;
+"284
+[e = . . _TRISBbits 1 1 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 285: TRISBbits.RB2 = 0;
 "285
-[e = . . _LATEbits 0 0 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 286: LATEbits.LATE1 = 0;
+[e = . . _TRISBbits 1 2 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 286: TRISBbits.RB3 = 0;
 "286
-[e = . . _LATEbits 0 1 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 287: LATEbits.LATE2 = 0;
-"287
-[e = . . _LATEbits 0 2 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 289: TRISEbits.RE0 = 0;
+[e = . . _TRISBbits 1 3 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 288: PORTEbits.RE0 = 0;
+"288
+[e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 289: PORTEbits.RE1 = 0;
 "289
-[e = . . _TRISEbits 1 0 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 290: TRISEbits.RE1 = 0;
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 290: PORTEbits.RE2 = 0;
 "290
+[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 292: LATEbits.LATE0 = 0;
+"292
+[e = . . _LATEbits 0 0 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 293: LATEbits.LATE1 = 0;
+"293
+[e = . . _LATEbits 0 1 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 294: LATEbits.LATE2 = 0;
+"294
+[e = . . _LATEbits 0 2 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 296: TRISEbits.RE0 = 0;
+"296
+[e = . . _TRISEbits 1 0 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 297: TRISEbits.RE1 = 0;
+"297
 [e = . . _TRISEbits 1 1 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 291: TRISEbits.RE2 = 0;
-"291
-[e = . . _TRISEbits 1 2 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 295: RCONbits.IPEN = 1;
-"295
-[e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 298: INTCONbits.GIEH = 1;
+[; ;SysRiego.c: 298: TRISEbits.RE2 = 0;
 "298
+[e = . . _TRISEbits 1 2 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 302: RCONbits.IPEN = 1;
+"302
+[e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
+[; ;SysRiego.c: 305: INTCONbits.GIEH = 1;
+"305
 [e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 301: INTCONbits.GIEL = 1;
-"301
+[; ;SysRiego.c: 308: INTCONbits.GIEL = 1;
+"308
 [e = . . _INTCONbits 2 1 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 304: INTCON2bits.RBPU = 0;
-"304
+[; ;SysRiego.c: 311: INTCON2bits.RBPU = 0;
+"311
 [e = . . _INTCON2bits 2 3 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 307: INTCONbits.RBIE = 1;
-"307
+[; ;SysRiego.c: 314: INTCONbits.RBIE = 1;
+"314
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 310: INTCONbits.RBIF = 0;
-"310
+[; ;SysRiego.c: 317: INTCONbits.RBIF = 0;
+"317
 [e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 313: INTCON2bits.RBIP = 1;
-"313
+[; ;SysRiego.c: 320: INTCON2bits.RBIP = 1;
+"320
 [e = . . _INTCON2bits 1 0 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 316: portDAsOutput();
-"316
+[; ;SysRiego.c: 323: portDAsOutput();
+"323
 [e ( _portDAsOutput ..  ]
-[; ;SysRiego.c: 319: LCDSetup();
-"319
+[; ;SysRiego.c: 326: LCDSetup();
+"326
 [e ( _LCDSetup ..  ]
-[; ;SysRiego.c: 328: modeSelected = 0;
-"328
+[; ;SysRiego.c: 335: modeSelected = 0;
+"335
 [e = _modeSelected -> -> 0 `i `uc ]
-[; ;SysRiego.c: 330: getValueStatus = 0;
-"330
+[; ;SysRiego.c: 337: getValueStatus = 0;
+"337
 [e = _getValueStatus -> -> 0 `i `uc ]
-[; ;SysRiego.c: 331: statusConfiguration = 0;
-"331
+[; ;SysRiego.c: 338: statusConfiguration = 0;
+"338
 [e = _statusConfiguration -> -> 0 `i `uc ]
-[; ;SysRiego.c: 332: oneShotFlag = 0;
-"332
-[e = _oneShotFlag -> -> 0 `i `uc ]
-[; ;SysRiego.c: 336: INTCON2bits.TMR0IP = 1;
-"336
-[e = . . _INTCON2bits 1 2 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 339: INTCONbits.TMR0IE = 1;
+[; ;SysRiego.c: 339: oneShotFlag = 0;
 "339
-[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 343: T0CON = 0x07;
+[e = _oneShotFlag -> -> 0 `i `uc ]
+[; ;SysRiego.c: 343: INTCON2bits.TMR0IP = 1;
 "343
+[e = . . _INTCON2bits 1 2 -> -> 1 `i `uc ]
+[; ;SysRiego.c: 346: INTCONbits.TMR0IE = 1;
+"346
+[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
+[; ;SysRiego.c: 350: T0CON = 0x07;
+"350
 [e = _T0CON -> -> 7 `i `uc ]
-[; ;SysRiego.c: 347: TMR0 = 0x3A98;
-"347
+[; ;SysRiego.c: 354: TMR0 = 0x3A98;
+"354
 [e = _TMR0 -> -> 15000 `i `us ]
-[; ;SysRiego.c: 349: T0CONbits.TMR0ON = 1;
-"349
-[e = . . _T0CONbits 0 5 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 353: CMCON = 0xFF;
-"353
-[e = _CMCON -> -> 255 `i `uc ]
-[; ;SysRiego.c: 356: ADCON1 = 0x0C;
+[; ;SysRiego.c: 356: T0CONbits.TMR0ON = 1;
 "356
+[e = . . _T0CONbits 0 5 -> -> 1 `i `uc ]
+[; ;SysRiego.c: 360: CMCON = 0xFF;
+"360
+[e = _CMCON -> -> 255 `i `uc ]
+[; ;SysRiego.c: 363: ADCON1 = 0x0C;
+"363
 [e = _ADCON1 -> -> 12 `i `uc ]
-[; ;SysRiego.c: 357: ADCON2 = 0x95;
-"357
+[; ;SysRiego.c: 364: ADCON2 = 0x95;
+"364
 [e = _ADCON2 -> -> 149 `i `uc ]
-[; ;SysRiego.c: 361: while(1){
-"361
+[; ;SysRiego.c: 368: while(1){
+"368
 [e :U 2106 ]
 {
-[; ;SysRiego.c: 363: if(statusConfiguration == 0) {
-"363
+[; ;SysRiego.c: 370: if(statusConfiguration == 0) {
+"370
 [e $ ! == -> _statusConfiguration `i -> 0 `i 2108  ]
 {
-[; ;SysRiego.c: 364: switch(modeSelected) {
-"364
+[; ;SysRiego.c: 371: switch(modeSelected) {
+"371
 [e $U 2110  ]
 {
-[; ;SysRiego.c: 366: case 0:
-"366
+[; ;SysRiego.c: 373: case 0:
+"373
 [e :U 2111 ]
-[; ;SysRiego.c: 367: workingAutomatic();
-"367
-[e ( _workingAutomatic ..  ]
-[; ;SysRiego.c: 368: break;
-"368
-[e $U 2109  ]
-[; ;SysRiego.c: 370: case 1:
-"370
-[e :U 2112 ]
-[; ;SysRiego.c: 371: workingTimer();
-"371
-[e ( _workingTimer ..  ]
-[; ;SysRiego.c: 372: break;
-"372
-[e $U 2109  ]
-[; ;SysRiego.c: 374: case 2:
+[; ;SysRiego.c: 374: workingAutomatic();
 "374
-[e :U 2113 ]
-[; ;SysRiego.c: 375: workingManual();
+[e ( _workingAutomatic ..  ]
+[; ;SysRiego.c: 375: break;
 "375
-[e ( _workingManual ..  ]
-[; ;SysRiego.c: 376: break;
-"376
 [e $U 2109  ]
+[; ;SysRiego.c: 377: case 1:
+"377
+[e :U 2112 ]
+[; ;SysRiego.c: 378: workingTimer();
 "378
-}
-[; ;SysRiego.c: 378: }
+[e ( _workingTimer ..  ]
+[; ;SysRiego.c: 379: break;
+"379
 [e $U 2109  ]
-"364
+[; ;SysRiego.c: 381: case 2:
+"381
+[e :U 2113 ]
+[; ;SysRiego.c: 382: workingManual();
+"382
+[e ( _workingManual ..  ]
+[; ;SysRiego.c: 383: break;
+"383
+[e $U 2109  ]
+"385
+}
+[; ;SysRiego.c: 385: }
+[e $U 2109  ]
+"371
 [e :U 2110 ]
 [e [\ _modeSelected , $ -> -> 0 `i `uc 2111
  , $ -> -> 1 `i `uc 2112
  , $ -> -> 2 `i `uc 2113
  2109 ]
-"378
+"385
 [e :U 2109 ]
-"379
+"386
 }
-[; ;SysRiego.c: 379: }
+[; ;SysRiego.c: 386: }
 [e $U 2114  ]
-"380
+"387
 [e :U 2108 ]
-[; ;SysRiego.c: 380: else {
+[; ;SysRiego.c: 387: else {
 {
-[; ;SysRiego.c: 382: switch(modeSelected) {
-"382
+[; ;SysRiego.c: 389: switch(modeSelected) {
+"389
 [e $U 2116  ]
 {
-[; ;SysRiego.c: 384: case 0:
-"384
+[; ;SysRiego.c: 391: case 0:
+"391
 [e :U 2117 ]
-[; ;SysRiego.c: 385: automaticConfiguration();
-"385
-[e ( _automaticConfiguration ..  ]
-[; ;SysRiego.c: 386: break;
-"386
-[e $U 2115  ]
-[; ;SysRiego.c: 388: case 1:
-"388
-[e :U 2118 ]
-[; ;SysRiego.c: 389: timerConfiguration();
-"389
-[e ( _timerConfiguration ..  ]
-[; ;SysRiego.c: 390: break;
-"390
-[e $U 2115  ]
-[; ;SysRiego.c: 392: case 2:
+[; ;SysRiego.c: 392: automaticConfiguration();
 "392
-[e :U 2119 ]
-[; ;SysRiego.c: 393: manualConfiguration();
+[e ( _automaticConfiguration ..  ]
+[; ;SysRiego.c: 393: break;
 "393
-[e ( _manualConfiguration ..  ]
-[; ;SysRiego.c: 394: break;
-"394
 [e $U 2115  ]
+[; ;SysRiego.c: 395: case 1:
+"395
+[e :U 2118 ]
+[; ;SysRiego.c: 396: timerConfiguration();
 "396
-}
-[; ;SysRiego.c: 396: }
+[e ( _timerConfiguration ..  ]
+[; ;SysRiego.c: 397: break;
+"397
 [e $U 2115  ]
-"382
+[; ;SysRiego.c: 399: case 2:
+"399
+[e :U 2119 ]
+[; ;SysRiego.c: 400: manualConfiguration();
+"400
+[e ( _manualConfiguration ..  ]
+[; ;SysRiego.c: 401: break;
+"401
+[e $U 2115  ]
+"403
+}
+[; ;SysRiego.c: 403: }
+[e $U 2115  ]
+"389
 [e :U 2116 ]
 [e [\ _modeSelected , $ -> -> 0 `i `uc 2117
  , $ -> -> 1 `i `uc 2118
  , $ -> -> 2 `i `uc 2119
  2115 ]
-"396
+"403
 [e :U 2115 ]
-"398
+"405
 }
 [e :U 2114 ]
-"400
+"407
 }
 [e :U 2105 ]
-"361
+"368
 [e $U 2106  ]
 [e :U 2107 ]
-[; ;SysRiego.c: 398: }
-[; ;SysRiego.c: 400: }
-[; ;SysRiego.c: 402: }
-"402
+[; ;SysRiego.c: 405: }
+[; ;SysRiego.c: 407: }
+[; ;SysRiego.c: 409: }
+"409
 [e :UE 2104 ]
 }
-"406
+"413
 [v _portDAsInput `(v ~T0 @X0 1 ef ]
 {
-[; ;SysRiego.c: 406: void portDAsInput(){
+[; ;SysRiego.c: 413: void portDAsInput(){
 [e :U _portDAsInput ]
 [f ]
-[; ;SysRiego.c: 407: TRISD = 0xFF;
-"407
+[; ;SysRiego.c: 414: TRISD = 0xFF;
+"414
 [e = _TRISD -> -> 255 `i `uc ]
-[; ;SysRiego.c: 408: }
-"408
+[; ;SysRiego.c: 415: }
+"415
 [e :UE 2120 ]
 }
-"410
+"417
 [v _portDAsOutput `(v ~T0 @X0 1 ef ]
 {
-[; ;SysRiego.c: 410: void portDAsOutput(){
+[; ;SysRiego.c: 417: void portDAsOutput(){
 [e :U _portDAsOutput ]
 [f ]
-[; ;SysRiego.c: 411: TRISD = 0x00;
-"411
+[; ;SysRiego.c: 418: TRISD = 0x00;
+"418
 [e = _TRISD -> -> 0 `i `uc ]
-[; ;SysRiego.c: 412: }
-"412
+[; ;SysRiego.c: 419: }
+"419
 [e :UE 2121 ]
 }
-"414
+"421
 [v _LCDSetup `(v ~T0 @X0 1 ef ]
 {
-[; ;SysRiego.c: 414: void LCDSetup(){
+[; ;SysRiego.c: 421: void LCDSetup(){
 [e :U _LCDSetup ]
 [f ]
-[; ;SysRiego.c: 415: PORTCbits.RC2 = 0;
-"415
-[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 416: longDelay();
-"416
-[e ( _longDelay ..  ]
-[; ;SysRiego.c: 417: command(0x38);
-"417
-[e ( _command (1 -> -> 56 `i `uc ]
-[; ;SysRiego.c: 418: longDelay();
-"418
-[e ( _longDelay ..  ]
-[; ;SysRiego.c: 419: command(0x0F);
-"419
-[e ( _command (1 -> -> 15 `i `uc ]
-[; ;SysRiego.c: 420: isReady();
-"420
-[e ( _isReady ..  ]
-[; ;SysRiego.c: 421: command(0x01);
-"421
-[e ( _command (1 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 422: isReady();
+[; ;SysRiego.c: 422: PORTCbits.RC2 = 0;
 "422
-[e ( _isReady ..  ]
-[; ;SysRiego.c: 423: }
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 423: longDelay();
 "423
+[e ( _longDelay ..  ]
+[; ;SysRiego.c: 424: command(0x38);
+"424
+[e ( _command (1 -> -> 56 `i `uc ]
+[; ;SysRiego.c: 425: longDelay();
+"425
+[e ( _longDelay ..  ]
+[; ;SysRiego.c: 426: command(0x0F);
+"426
+[e ( _command (1 -> -> 15 `i `uc ]
+[; ;SysRiego.c: 427: isReady();
+"427
+[e ( _isReady ..  ]
+[; ;SysRiego.c: 428: command(0x01);
+"428
+[e ( _command (1 -> -> 1 `i `uc ]
+[; ;SysRiego.c: 429: isReady();
+"429
+[e ( _isReady ..  ]
+[; ;SysRiego.c: 430: }
+"430
 [e :UE 2122 ]
 }
-"426
+"433
 [v _shortDelay `(v ~T0 @X0 1 ef ]
 {
-[; ;SysRiego.c: 426: void shortDelay(){
+[; ;SysRiego.c: 433: void shortDelay(){
 [e :U _shortDelay ]
 [f ]
-"427
+"434
 [v _L1REG `uc ~T0 @X0 1 a ]
-[; ;SysRiego.c: 427: unsigned char L1REG = 2;
+[; ;SysRiego.c: 434: unsigned char L1REG = 2;
 [e = _L1REG -> -> 2 `i `uc ]
-[; ;SysRiego.c: 428: while(L1REG-- > 0){}
-"428
+[; ;SysRiego.c: 435: while(L1REG-- > 0){}
+"435
 [e $U 2124  ]
 [e :U 2125 ]
 {
@@ -15936,46 +15947,46 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 2124 ]
 [e $ > -> -- _L1REG -> -> 1 `i `uc `i -> 0 `i 2125  ]
 [e :U 2126 ]
-[; ;SysRiego.c: 429: }
-"429
+[; ;SysRiego.c: 436: }
+"436
 [e :UE 2123 ]
 }
-"432
+"439
 [v _longDelay `(v ~T0 @X0 1 ef ]
 {
-[; ;SysRiego.c: 432: void longDelay(){
+[; ;SysRiego.c: 439: void longDelay(){
 [e :U _longDelay ]
 [f ]
-"433
+"440
 [v _L1REG `uc ~T0 @X0 1 a ]
-[; ;SysRiego.c: 433: unsigned char L1REG = 2;
+[; ;SysRiego.c: 440: unsigned char L1REG = 2;
 [e = _L1REG -> -> 2 `i `uc ]
-"434
+"441
 [v _L2REG `uc ~T0 @X0 1 a ]
-[; ;SysRiego.c: 434: unsigned char L2REG = 162;
+[; ;SysRiego.c: 441: unsigned char L2REG = 162;
 [e = _L2REG -> -> 162 `i `uc ]
-"435
+"442
 [v _L3REG `uc ~T0 @X0 1 a ]
-[; ;SysRiego.c: 435: unsigned char L3REG = 255;
+[; ;SysRiego.c: 442: unsigned char L3REG = 255;
 [e = _L3REG -> -> 255 `i `uc ]
-[; ;SysRiego.c: 437: while(L1REG-- > 0){
-"437
+[; ;SysRiego.c: 444: while(L1REG-- > 0){
+"444
 [e $U 2128  ]
 [e :U 2129 ]
 {
-[; ;SysRiego.c: 438: L2REG = 162;
-"438
+[; ;SysRiego.c: 445: L2REG = 162;
+"445
 [e = _L2REG -> -> 162 `i `uc ]
-[; ;SysRiego.c: 439: while(L2REG-- > 0){
-"439
+[; ;SysRiego.c: 446: while(L2REG-- > 0){
+"446
 [e $U 2131  ]
 [e :U 2132 ]
 {
-[; ;SysRiego.c: 440: L3REG = 255;
-"440
+[; ;SysRiego.c: 447: L3REG = 255;
+"447
 [e = _L3REG -> -> 255 `i `uc ]
-[; ;SysRiego.c: 441: while(L3REG-- > 0){}
-"441
+[; ;SysRiego.c: 448: while(L3REG-- > 0){}
+"448
 [e $U 2134  ]
 [e :U 2135 ]
 {
@@ -15983,3060 +15994,3391 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 2134 ]
 [e $ > -> -- _L3REG -> -> 1 `i `uc `i -> 0 `i 2135  ]
 [e :U 2136 ]
-"442
+"449
 }
 [e :U 2131 ]
-"439
+"446
 [e $ > -> -- _L2REG -> -> 1 `i `uc `i -> 0 `i 2132  ]
 [e :U 2133 ]
-"443
+"450
 }
 [e :U 2128 ]
-"437
+"444
 [e $ > -> -- _L1REG -> -> 1 `i `uc `i -> 0 `i 2129  ]
 [e :U 2130 ]
-[; ;SysRiego.c: 442: }
-[; ;SysRiego.c: 443: }
-[; ;SysRiego.c: 444: }
-"444
+[; ;SysRiego.c: 449: }
+[; ;SysRiego.c: 450: }
+[; ;SysRiego.c: 451: }
+"451
 [e :UE 2127 ]
 }
-"446
+"453
 [v _command `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;SysRiego.c: 446: void command(unsigned char x){
+[; ;SysRiego.c: 453: void command(unsigned char x){
 [e :U _command ]
 [v _x `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;SysRiego.c: 447: PORTD = x;
-"447
+[; ;SysRiego.c: 454: PORTD = x;
+"454
 [e = _PORTD _x ]
-[; ;SysRiego.c: 448: PORTCbits.RC0 = 0;
-"448
+[; ;SysRiego.c: 455: PORTCbits.RC0 = 0;
+"455
 [e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 449: PORTCbits.RC1 = 0;
-"449
+[; ;SysRiego.c: 456: PORTCbits.RC1 = 0;
+"456
 [e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 450: PORTCbits.RC2 = 1;
-"450
+[; ;SysRiego.c: 457: PORTCbits.RC2 = 1;
+"457
 [e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 451: shortDelay();
-"451
+[; ;SysRiego.c: 458: shortDelay();
+"458
 [e ( _shortDelay ..  ]
-[; ;SysRiego.c: 452: PORTCbits.RC2 = 0;
-"452
+[; ;SysRiego.c: 459: PORTCbits.RC2 = 0;
+"459
 [e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 453: }
-"453
+[; ;SysRiego.c: 460: }
+"460
 [e :UE 2137 ]
 }
-"455
+"462
 [v _isReady `(v ~T0 @X0 1 ef ]
 {
-[; ;SysRiego.c: 455: void isReady(){
+[; ;SysRiego.c: 462: void isReady(){
 [e :U _isReady ]
 [f ]
-[; ;SysRiego.c: 456: portDAsInput();
-"456
+[; ;SysRiego.c: 463: portDAsInput();
+"463
 [e ( _portDAsInput ..  ]
-[; ;SysRiego.c: 457: PORTCbits.RC0 = 0;
-"457
+[; ;SysRiego.c: 464: PORTCbits.RC0 = 0;
+"464
 [e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 458: PORTCbits.RC1 = 1;
-"458
+[; ;SysRiego.c: 465: PORTCbits.RC1 = 1;
+"465
 [e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 460: while(PORTDbits.RD7 == 1){
-"460
+[; ;SysRiego.c: 467: while(PORTDbits.RD7 == 1){
+"467
 [e $U 2139  ]
 [e :U 2140 ]
 {
-[; ;SysRiego.c: 461: PORTCbits.RC2 = 1;
-"461
+[; ;SysRiego.c: 468: PORTCbits.RC2 = 1;
+"468
 [e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 462: shortDelay();
-"462
+[; ;SysRiego.c: 469: shortDelay();
+"469
 [e ( _shortDelay ..  ]
-[; ;SysRiego.c: 463: PORTCbits.RC2 = 0;
-"463
+[; ;SysRiego.c: 470: PORTCbits.RC2 = 0;
+"470
 [e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"464
+"471
 }
 [e :U 2139 ]
-"460
+"467
 [e $ == -> . . _PORTDbits 0 7 `i -> 1 `i 2140  ]
 [e :U 2141 ]
-[; ;SysRiego.c: 464: }
-[; ;SysRiego.c: 465: portDAsOutput();
-"465
+[; ;SysRiego.c: 471: }
+[; ;SysRiego.c: 472: portDAsOutput();
+"472
 [e ( _portDAsOutput ..  ]
-[; ;SysRiego.c: 466: }
-"466
+[; ;SysRiego.c: 473: }
+"473
 [e :UE 2138 ]
 }
-"468
+"475
 [v _displayCharOnLCD `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;SysRiego.c: 468: void displayCharOnLCD(unsigned char character){
+[; ;SysRiego.c: 475: void displayCharOnLCD(unsigned char character){
 [e :U _displayCharOnLCD ]
 [v _character `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;SysRiego.c: 469: PORTD = character;
-"469
+[; ;SysRiego.c: 476: PORTD = character;
+"476
 [e = _PORTD _character ]
-[; ;SysRiego.c: 470: PORTCbits.RC0 = 1;
-"470
+[; ;SysRiego.c: 477: PORTCbits.RC0 = 1;
+"477
 [e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 471: PORTCbits.RC1 = 0;
-"471
+[; ;SysRiego.c: 478: PORTCbits.RC1 = 0;
+"478
 [e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 472: PORTCbits.RC2 = 1;
-"472
+[; ;SysRiego.c: 479: PORTCbits.RC2 = 1;
+"479
 [e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 473: shortDelay();
-"473
+[; ;SysRiego.c: 480: shortDelay();
+"480
 [e ( _shortDelay ..  ]
-[; ;SysRiego.c: 474: PORTCbits.RC2 = 0;
-"474
+[; ;SysRiego.c: 481: PORTCbits.RC2 = 0;
+"481
 [e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 475: }
-"475
+[; ;SysRiego.c: 482: }
+"482
 [e :UE 2142 ]
 }
-"477
+"484
 [v _displayLineOnLCD `(v ~T0 @X0 1 ef2`*uc`uc ]
 {
-[; ;SysRiego.c: 477: void displayLineOnLCD(unsigned char array[], unsigned char sizeOfArray){
+[; ;SysRiego.c: 484: void displayLineOnLCD(unsigned char array[], unsigned char sizeOfArray){
 [e :U _displayLineOnLCD ]
 [v _array `*uc ~T0 @X0 1 r1 ]
 [v _sizeOfArray `uc ~T0 @X0 1 r2 ]
 [f ]
-"478
+"485
 [v _i `uc ~T0 @X0 1 a ]
-[; ;SysRiego.c: 478: unsigned char i;
-[; ;SysRiego.c: 479: for(i=0; i<sizeOfArray-1; i++){
-"479
+[; ;SysRiego.c: 485: unsigned char i;
+[; ;SysRiego.c: 486: for(i=0; i<sizeOfArray-1; i++){
+"486
 {
 [e = _i -> -> 0 `i `uc ]
 [e $U 2147  ]
 [e :U 2144 ]
 {
-[; ;SysRiego.c: 480: displayCharOnLCD(array[i]);
-"480
+[; ;SysRiego.c: 487: displayCharOnLCD(array[i]);
+"487
 [e ( _displayCharOnLCD (1 *U + _array * -> _i `ux -> -> # *U _array `ui `ux ]
-"481
+"488
 }
-"479
+"486
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 2147 ]
 [e $ < -> _i `i - -> _sizeOfArray `i -> 1 `i 2144  ]
 [e :U 2145 ]
-"481
+"488
 }
-[; ;SysRiego.c: 481: }
-[; ;SysRiego.c: 482: }
-"482
+[; ;SysRiego.c: 488: }
+[; ;SysRiego.c: 489: }
+"489
 [e :UE 2143 ]
 }
-"484
+"491
 [v _clearDisplay `(v ~T0 @X0 1 ef ]
 {
-[; ;SysRiego.c: 484: void clearDisplay() {
+[; ;SysRiego.c: 491: void clearDisplay() {
 [e :U _clearDisplay ]
 [f ]
-[; ;SysRiego.c: 485: command(0x01);
-"485
+[; ;SysRiego.c: 492: command(0x01);
+"492
 [e ( _command (1 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 486: shortDelay();
-"486
+[; ;SysRiego.c: 493: shortDelay();
+"493
 [e ( _shortDelay ..  ]
-[; ;SysRiego.c: 487: isReady();
-"487
+[; ;SysRiego.c: 494: isReady();
+"494
 [e ( _isReady ..  ]
-[; ;SysRiego.c: 488: }
-"488
+[; ;SysRiego.c: 495: }
+"495
 [e :UE 2148 ]
 }
-"490
-[v _moveCurH `(v ~T0 @X0 1 ef ]
+"497
+[v _secondLine `(v ~T0 @X0 1 ef ]
 {
-[; ;SysRiego.c: 490: void moveCurH() {
-[e :U _moveCurH ]
+[; ;SysRiego.c: 497: void secondLine() {
+[e :U _secondLine ]
 [f ]
-[; ;SysRiego.c: 491: command(0xA8);
-"491
-[e ( _command (1 -> -> 168 `i `uc ]
-[; ;SysRiego.c: 494: }
-"494
+[; ;SysRiego.c: 498: command(0xC0);
+"498
+[e ( _command (1 -> -> 192 `i `uc ]
+[; ;SysRiego.c: 499: shortDelay();
+"499
+[e ( _shortDelay ..  ]
+[; ;SysRiego.c: 500: isReady();
+"500
+[e ( _isReady ..  ]
+[; ;SysRiego.c: 501: }
+"501
 [e :UE 2149 ]
 }
-"496
-[v _moveCurR `(v ~T0 @X0 1 ef ]
+"503
+[v _moveCurH `(v ~T0 @X0 1 ef ]
 {
-[; ;SysRiego.c: 496: void moveCurR() {
-[e :U _moveCurR ]
+[; ;SysRiego.c: 503: void moveCurH() {
+[e :U _moveCurH ]
 [f ]
-[; ;SysRiego.c: 497: command(0x1C);
-"497
-[e ( _command (1 -> -> 28 `i `uc ]
-[; ;SysRiego.c: 498: shortDelay();
-"498
-[e ( _shortDelay ..  ]
-[; ;SysRiego.c: 499: isReady();
-"499
-[e ( _isReady ..  ]
-[; ;SysRiego.c: 500: }
-"500
+[; ;SysRiego.c: 504: command(0xA8);
+"504
+[e ( _command (1 -> -> 168 `i `uc ]
+[; ;SysRiego.c: 507: }
+"507
 [e :UE 2150 ]
 }
-"502
-[v _moveCurL `(v ~T0 @X0 1 ef ]
+"509
+[v _moveCurR `(v ~T0 @X0 1 ef ]
 {
-[; ;SysRiego.c: 502: void moveCurL() {
-[e :U _moveCurL ]
+[; ;SysRiego.c: 509: void moveCurR() {
+[e :U _moveCurR ]
 [f ]
-[; ;SysRiego.c: 503: command(0x18);
-"503
-[e ( _command (1 -> -> 24 `i `uc ]
-[; ;SysRiego.c: 504: shortDelay();
-"504
+[; ;SysRiego.c: 510: command(0x1C);
+"510
+[e ( _command (1 -> -> 28 `i `uc ]
+[; ;SysRiego.c: 511: shortDelay();
+"511
 [e ( _shortDelay ..  ]
-[; ;SysRiego.c: 505: isReady();
-"505
+[; ;SysRiego.c: 512: isReady();
+"512
 [e ( _isReady ..  ]
-[; ;SysRiego.c: 506: }
-"506
+[; ;SysRiego.c: 513: }
+"513
 [e :UE 2151 ]
 }
-"519
-[v _automaticConfiguration `(v ~T0 @X0 1 ef ]
+"515
+[v _moveCurL `(v ~T0 @X0 1 ef ]
 {
-[; ;SysRiego.c: 519: void automaticConfiguration() {
-[e :U _automaticConfiguration ]
+[; ;SysRiego.c: 515: void moveCurL() {
+[e :U _moveCurL ]
 [f ]
-[; ;SysRiego.c: 522: disableIntRBIE();
-"522
-[e ( _disableIntRBIE ..  ]
-"524
-[v _input `uc ~T0 @X0 1 a ]
-[; ;SysRiego.c: 524: unsigned char input = ' ';
-[e = _input -> -> 32 `ui `uc ]
-"525
-[v _counter `uc ~T0 @X0 1 a ]
-[; ;SysRiego.c: 525: unsigned char counter = 0;
-[e = _counter -> -> 0 `i `uc ]
-[; ;SysRiego.c: 527: clearDisplay();
-"527
-[e ( _clearDisplay ..  ]
-[; ;SysRiego.c: 528: displayLineOnLCD(configAutoMessage, sizeof(configAutoMessage) / sizeof(configAutoMessage[0]));
-"528
-[e ( _displayLineOnLCD (2 , &U _configAutoMessage -> / -> # _configAutoMessage `ui -> # *U + &U _configAutoMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _configAutoMessage `ui `ux `ui `uc ]
-[; ;SysRiego.c: 529: displayCharOnLCD(zoneSelected[0]);
-"529
-[e ( _displayCharOnLCD (1 *U + _zoneSelected * -> -> 0 `i `x -> -> # *U _zoneSelected `i `x ]
-[; ;SysRiego.c: 530: displayCharOnLCD(zoneSelected[1]);
-"530
-[e ( _displayCharOnLCD (1 *U + _zoneSelected * -> -> 1 `i `x -> -> # *U _zoneSelected `i `x ]
-[; ;SysRiego.c: 533: while(input != '#') {
-"533
-[e $U 2153  ]
-[e :U 2154 ]
-{
-[; ;SysRiego.c: 535: input = getInput();
-"535
-[e = _input ( _getInput ..  ]
-[; ;SysRiego.c: 537: if(input != '#' && input) {
-"537
-[e $ ! && != -> _input `ui -> 35 `ui != -> _input `i -> -> -> 0 `i `uc `i 2156  ]
-{
-[; ;SysRiego.c: 538: zoneSelected[counter%2] = input;
-"538
-[e = *U + _zoneSelected * -> % -> _counter `i -> 2 `i `x -> -> # *U _zoneSelected `i `x _input ]
-[; ;SysRiego.c: 539: clearDisplay();
-"539
-[e ( _clearDisplay ..  ]
-[; ;SysRiego.c: 540: displayCharOnLCD(zoneSelected[0]);
-"540
-[e ( _displayCharOnLCD (1 *U + _zoneSelected * -> -> 0 `i `x -> -> # *U _zoneSelected `i `x ]
-[; ;SysRiego.c: 541: displayCharOnLCD(zoneSelected[1]);
-"541
-[e ( _displayCharOnLCD (1 *U + _zoneSelected * -> -> 1 `i `x -> -> # *U _zoneSelected `i `x ]
-[; ;SysRiego.c: 542: displayCharOnLCD('%');
-"542
-[e ( _displayCharOnLCD (1 -> -> 37 `ui `uc ]
-[; ;SysRiego.c: 543: counter++;
-"543
-[e ++ _counter -> -> 1 `i `uc ]
-"544
-}
-[e :U 2156 ]
-"546
-}
-[e :U 2153 ]
-"533
-[e $ != -> _input `ui -> 35 `ui 2154  ]
-[e :U 2155 ]
-[; ;SysRiego.c: 544: }
-[; ;SysRiego.c: 546: }
-[; ;SysRiego.c: 548: *humidityZnValInt = convertCharsToInt(zoneSelected);
-"548
-[e = *U _humidityZnValInt ( _convertCharsToInt (1 _zoneSelected ]
-[; ;SysRiego.c: 550: enableIntRBIE();
-"550
-[e ( _enableIntRBIE ..  ]
-[; ;SysRiego.c: 552: statusConfiguration = 0;
-"552
-[e = _statusConfiguration -> -> 0 `i `uc ]
-[; ;SysRiego.c: 554: }
-"554
+[; ;SysRiego.c: 516: command(0x18);
+"516
+[e ( _command (1 -> -> 24 `i `uc ]
+[; ;SysRiego.c: 517: shortDelay();
+"517
+[e ( _shortDelay ..  ]
+[; ;SysRiego.c: 518: isReady();
+"518
+[e ( _isReady ..  ]
+[; ;SysRiego.c: 519: }
+"519
 [e :UE 2152 ]
 }
+"532
+[v _automaticConfiguration `(v ~T0 @X0 1 ef ]
+{
+[; ;SysRiego.c: 532: void automaticConfiguration() {
+[e :U _automaticConfiguration ]
+[f ]
+[; ;SysRiego.c: 535: disableIntRBIE();
+"535
+[e ( _disableIntRBIE ..  ]
+"537
+[v _input `uc ~T0 @X0 1 a ]
+[; ;SysRiego.c: 537: unsigned char input = ' ';
+[e = _input -> -> 32 `ui `uc ]
+"538
+[v _counter `uc ~T0 @X0 1 a ]
+[; ;SysRiego.c: 538: unsigned char counter = 0;
+[e = _counter -> -> 0 `i `uc ]
+[; ;SysRiego.c: 540: clearDisplay();
+"540
+[e ( _clearDisplay ..  ]
+[; ;SysRiego.c: 541: displayLineOnLCD(configAutoMessage, sizeof(configAutoMessage) / sizeof(configAutoMessage[0]));
+"541
+[e ( _displayLineOnLCD (2 , &U _configAutoMessage -> / -> # _configAutoMessage `ui -> # *U + &U _configAutoMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _configAutoMessage `ui `ux `ui `uc ]
+[; ;SysRiego.c: 542: displayCharOnLCD(zoneSelected[0]);
+"542
+[e ( _displayCharOnLCD (1 *U + _zoneSelected * -> -> 0 `i `x -> -> # *U _zoneSelected `i `x ]
+[; ;SysRiego.c: 543: displayCharOnLCD(zoneSelected[1]);
+"543
+[e ( _displayCharOnLCD (1 *U + _zoneSelected * -> -> 1 `i `x -> -> # *U _zoneSelected `i `x ]
+[; ;SysRiego.c: 546: while(input != '#') {
+"546
+[e $U 2154  ]
+[e :U 2155 ]
+{
+[; ;SysRiego.c: 548: input = getInput();
+"548
+[e = _input ( _getInput ..  ]
+[; ;SysRiego.c: 550: if(input != '#') {
+"550
+[e $ ! != -> _input `ui -> 35 `ui 2157  ]
+{
+[; ;SysRiego.c: 551: zoneSelected[counter%2] = input;
+"551
+[e = *U + _zoneSelected * -> % -> _counter `i -> 2 `i `x -> -> # *U _zoneSelected `i `x _input ]
+[; ;SysRiego.c: 552: clearDisplay();
+"552
+[e ( _clearDisplay ..  ]
+[; ;SysRiego.c: 553: displayCharOnLCD(zoneSelected[0]);
+"553
+[e ( _displayCharOnLCD (1 *U + _zoneSelected * -> -> 0 `i `x -> -> # *U _zoneSelected `i `x ]
+[; ;SysRiego.c: 554: displayCharOnLCD(zoneSelected[1]);
+"554
+[e ( _displayCharOnLCD (1 *U + _zoneSelected * -> -> 1 `i `x -> -> # *U _zoneSelected `i `x ]
+[; ;SysRiego.c: 555: displayCharOnLCD('%');
+"555
+[e ( _displayCharOnLCD (1 -> -> 37 `ui `uc ]
+[; ;SysRiego.c: 556: counter++;
 "556
+[e ++ _counter -> -> 1 `i `uc ]
+"557
+}
+[e :U 2157 ]
+"559
+}
+[e :U 2154 ]
+"546
+[e $ != -> _input `ui -> 35 `ui 2155  ]
+[e :U 2156 ]
+[; ;SysRiego.c: 557: }
+[; ;SysRiego.c: 559: }
+[; ;SysRiego.c: 561: *humidityZnValInt = convertCharsToInt(zoneSelected);
+"561
+[e = *U _humidityZnValInt ( _convertCharsToInt (1 _zoneSelected ]
+[; ;SysRiego.c: 563: enableIntRBIE();
+"563
+[e ( _enableIntRBIE ..  ]
+[; ;SysRiego.c: 565: statusConfiguration = 0;
+"565
+[e = _statusConfiguration -> -> 0 `i `uc ]
+[; ;SysRiego.c: 567: }
+"567
+[e :UE 2153 ]
+}
+"569
 [v _timerConfiguration `(v ~T0 @X0 1 ef ]
 {
-[; ;SysRiego.c: 556: void timerConfiguration() {
+[; ;SysRiego.c: 569: void timerConfiguration() {
 [e :U _timerConfiguration ]
 [f ]
-[; ;SysRiego.c: 558: disableIntRBIE();
-"558
+[; ;SysRiego.c: 571: disableIntRBIE();
+"571
 [e ( _disableIntRBIE ..  ]
-"560
+"573
 [v _input `uc ~T0 @X0 1 a ]
-[; ;SysRiego.c: 560: unsigned char input = ' ';
+[; ;SysRiego.c: 573: unsigned char input = ' ';
 [e = _input -> -> 32 `ui `uc ]
-[; ;SysRiego.c: 562: clearDisplay();
-"562
+[; ;SysRiego.c: 575: clearDisplay();
+"575
 [e ( _clearDisplay ..  ]
-[; ;SysRiego.c: 564: if (hourConfiguration == 0) {
-"564
-[e $ ! == -> _hourConfiguration `i -> 0 `i 2158  ]
-{
-"569
-}
-[; ;SysRiego.c: 569: }
-[e $U 2159  ]
-"570
-[e :U 2158 ]
-[; ;SysRiego.c: 570: else {
-{
-[; ;SysRiego.c: 574: input = getInput();
-"574
-[e = _input ( _getInput ..  ]
-[; ;SysRiego.c: 577: hourConfiguration = 0;
+[; ;SysRiego.c: 577: if (hourConfiguration == 0) {
 "577
-[e = _hourConfiguration -> -> 0 `i `uc ]
-"578
-}
-[e :U 2159 ]
-[; ;SysRiego.c: 578: }
-[; ;SysRiego.c: 580: enableIntRBIE();
+[e $ ! == -> _hourConfiguration `i -> 0 `i 2159  ]
+{
+[; ;SysRiego.c: 580: displayLineOnLCD("Times per day:", 15);
 "580
-[e ( _enableIntRBIE ..  ]
-[; ;SysRiego.c: 582: statusConfiguration = 0;
+[e ( _displayLineOnLCD (2 , -> :s 1C `*uc -> -> 15 `i `uc ]
+[; ;SysRiego.c: 581: secondLine();
+"581
+[e ( _secondLine ..  ]
+[; ;SysRiego.c: 582: displayCharOnLCD('0');
 "582
-[e = _statusConfiguration -> -> 0 `i `uc ]
-[; ;SysRiego.c: 584: }
+[e ( _displayCharOnLCD (1 -> -> 48 `ui `uc ]
 "584
-[e :UE 2157 ]
-}
-"587
-[v _manualConfiguration `(v ~T0 @X0 1 ef ]
+[v _numberIrrigations `uc ~T0 @X0 1 a ]
+[; ;SysRiego.c: 584: unsigned char numberIrrigations;
+[; ;SysRiego.c: 586: while (input != '#') {
+"586
+[e $U 2160  ]
+[e :U 2161 ]
 {
-[; ;SysRiego.c: 587: void manualConfiguration() {
-[e :U _manualConfiguration ]
-[f ]
-[; ;SysRiego.c: 589: disableIntRBIE();
-"589
-[e ( _disableIntRBIE ..  ]
+[; ;SysRiego.c: 588: input = getInput();
+"588
+[e = _input ( _getInput ..  ]
+[; ;SysRiego.c: 590: secondLine();
+"590
+[e ( _secondLine ..  ]
+[; ;SysRiego.c: 591: displayCharOnLCD(input);
 "591
-[v _input `uc ~T0 @X0 1 a ]
-[; ;SysRiego.c: 591: unsigned char input = ' ';
-[e = _input -> -> 32 `ui `uc ]
-[; ;SysRiego.c: 593: clearDisplay();
+[e ( _displayCharOnLCD (1 _input ]
+[; ;SysRiego.c: 593: if (input != '#') {
 "593
-[e ( _clearDisplay ..  ]
-[; ;SysRiego.c: 595: if(*zoneSelected == '1') {
-"595
-[e $ ! == -> *U _zoneSelected `ui -> 49 `ui 2161  ]
+[e $ ! != -> _input `ui -> 35 `ui 2163  ]
 {
-[; ;SysRiego.c: 596: displayLineOnLCD(manualActiveMessage, sizeof(manualActiveMessage) / sizeof(manualActiveMessage[0]));
-"596
-[e ( _displayLineOnLCD (2 , &U _manualActiveMessage -> / -> # _manualActiveMessage `ui -> # *U + &U _manualActiveMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _manualActiveMessage `ui `ux `ui `uc ]
+[; ;SysRiego.c: 594: numberIrrigations = input - 48;
+"594
+[e = _numberIrrigations -> - -> _input `i -> 48 `i `uc ]
+"595
+}
+[e :U 2163 ]
 "597
 }
-[; ;SysRiego.c: 597: }
-[e $U 2162  ]
-"599
-[e :U 2161 ]
-[; ;SysRiego.c: 599: else {
-{
-[; ;SysRiego.c: 600: displayLineOnLCD(manualInactiveMessage, sizeof(manualInactiveMessage) / sizeof(manualInactiveMessage[0]));
-"600
-[e ( _displayLineOnLCD (2 , &U _manualInactiveMessage -> / -> # _manualInactiveMessage `ui -> # *U + &U _manualInactiveMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _manualInactiveMessage `ui `ux `ui `uc ]
-"601
-}
+[e :U 2160 ]
+"586
+[e $ != -> _input `ui -> 35 `ui 2161  ]
 [e :U 2162 ]
-[; ;SysRiego.c: 601: }
-[; ;SysRiego.c: 604: while(input != '#') {
-"604
-[e $U 2163  ]
+[; ;SysRiego.c: 595: }
+[; ;SysRiego.c: 597: }
+[; ;SysRiego.c: 602: for(unsigned char i = 0; i < numberIrrigations; i++) {
+"602
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $U 2167  ]
 [e :U 2164 ]
 {
-[; ;SysRiego.c: 606: input = getInput();
+"604
+[v _zoneTime `*uc ~T0 @X0 1 a ]
+[; ;SysRiego.c: 604: unsigned char *zoneTime = zoneTimes[offSetZoneTimes + i];
+[e = _zoneTime *U + &U _zoneTimes * -> -> + -> _offSetZoneTimes `i -> _i `i `ui `ux -> -> # *U &U _zoneTimes `ui `ux ]
 "606
-[e = _input ( _getInput ..  ]
-[; ;SysRiego.c: 608: clearDisplay();
+[v _counter `uc ~T0 @X0 1 a ]
+[; ;SysRiego.c: 606: unsigned char counter = 0;
+[e = _counter -> -> 0 `i `uc ]
+[; ;SysRiego.c: 608: input = ' ';
 "608
-[e ( _clearDisplay ..  ]
-[; ;SysRiego.c: 610: if(input == '1') {
+[e = _input -> -> 32 `ui `uc ]
+[; ;SysRiego.c: 610: clearDisplay();
 "610
-[e $ ! == -> _input `ui -> 49 `ui 2166  ]
-{
-[; ;SysRiego.c: 611: *zoneSelected = '1';
-"611
-[e = *U _zoneSelected -> -> 49 `ui `uc ]
-[; ;SysRiego.c: 612: displayLineOnLCD(manualActiveMessage, sizeof(manualActiveMessage) / sizeof(manualActiveMessage[0]));
+[e ( _clearDisplay ..  ]
+[; ;SysRiego.c: 612: displayLineOnLCD("Time ", 6);
 "612
-[e ( _displayLineOnLCD (2 , &U _manualActiveMessage -> / -> # _manualActiveMessage `ui -> # *U + &U _manualActiveMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _manualActiveMessage `ui `ux `ui `uc ]
+[e ( _displayLineOnLCD (2 , -> :s 2C `*uc -> -> 6 `i `uc ]
+[; ;SysRiego.c: 613: displayCharOnLCD(i + 49);
 "613
-}
-[; ;SysRiego.c: 613: }
-[e $U 2167  ]
+[e ( _displayCharOnLCD (1 -> + -> _i `i -> 49 `i `uc ]
+[; ;SysRiego.c: 614: secondLine();
+"614
+[e ( _secondLine ..  ]
+[; ;SysRiego.c: 615: displayLineOnLCD(zoneTime, 5);
 "615
-[e :U 2166 ]
-[; ;SysRiego.c: 615: else if (input == '0') {
-[e $ ! == -> _input `ui -> 48 `ui 2168  ]
-{
-[; ;SysRiego.c: 616: *zoneSelected = '0';
-"616
-[e = *U _zoneSelected -> -> 48 `ui `uc ]
-[; ;SysRiego.c: 617: displayLineOnLCD(manualInactiveMessage, sizeof(manualInactiveMessage) / sizeof(manualInactiveMessage[0]));
+[e ( _displayLineOnLCD (2 , _zoneTime -> -> 5 `i `uc ]
+[; ;SysRiego.c: 617: while (input != '#') {
 "617
-[e ( _displayLineOnLCD (2 , &U _manualInactiveMessage -> / -> # _manualInactiveMessage `ui -> # *U + &U _manualInactiveMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _manualInactiveMessage `ui `ux `ui `uc ]
-"618
-}
-[; ;SysRiego.c: 618: }
-[e $U 2169  ]
-"620
-[e :U 2168 ]
-[; ;SysRiego.c: 620: else {
+[e $U 2168  ]
+[e :U 2169 ]
 {
-[; ;SysRiego.c: 621: if (*zoneSelected == '1') {
+[; ;SysRiego.c: 619: input = getInput();
+"619
+[e = _input ( _getInput ..  ]
+[; ;SysRiego.c: 621: if (input != '#') {
 "621
-[e $ ! == -> *U _zoneSelected `ui -> 49 `ui 2170  ]
+[e $ ! != -> _input `ui -> 35 `ui 2171  ]
 {
-[; ;SysRiego.c: 622: displayLineOnLCD(manualActiveMessage, sizeof (manualActiveMessage) / sizeof (manualActiveMessage[0]));
+[; ;SysRiego.c: 622: zoneTime[counter % 4] = input;
 "622
-[e ( _displayLineOnLCD (2 , &U _manualActiveMessage -> / -> # _manualActiveMessage `ui -> # *U + &U _manualActiveMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _manualActiveMessage `ui `ux `ui `uc ]
+[e = *U + _zoneTime * -> % -> _counter `i -> 4 `i `x -> -> # *U _zoneTime `i `x _input ]
+[; ;SysRiego.c: 623: secondLine();
 "623
-}
-[; ;SysRiego.c: 623: }
-[e $U 2171  ]
+[e ( _secondLine ..  ]
+[; ;SysRiego.c: 624: displayLineOnLCD(zoneTime, 5);
 "624
-[e :U 2170 ]
-[; ;SysRiego.c: 624: else {
-{
-[; ;SysRiego.c: 625: displayLineOnLCD(manualInactiveMessage, sizeof (manualInactiveMessage) / sizeof (manualInactiveMessage[0]));
+[e ( _displayLineOnLCD (2 , _zoneTime -> -> 5 `i `uc ]
+[; ;SysRiego.c: 625: counter++;
 "625
-[e ( _displayLineOnLCD (2 , &U _manualInactiveMessage -> / -> # _manualInactiveMessage `ui -> # *U + &U _manualInactiveMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _manualInactiveMessage `ui `ux `ui `uc ]
+[e ++ _counter -> -> 1 `i `uc ]
 "626
 }
 [e :U 2171 ]
-"627
+"628
 }
-[e :U 2169 ]
+[e :U 2168 ]
+"617
+[e $ != -> _input `ui -> 35 `ui 2169  ]
+[e :U 2170 ]
+"630
+}
+"602
+[e ++ _i -> -> 1 `i `uc ]
 [e :U 2167 ]
-"629
-}
-[e :U 2163 ]
-"604
-[e $ != -> _input `ui -> 35 `ui 2164  ]
+[e $ < -> _i `i -> _numberIrrigations `i 2164  ]
 [e :U 2165 ]
-[; ;SysRiego.c: 626: }
-[; ;SysRiego.c: 627: }
-[; ;SysRiego.c: 629: }
-[; ;SysRiego.c: 631: enableIntRBIE();
-"631
-[e ( _enableIntRBIE ..  ]
-[; ;SysRiego.c: 633: statusConfiguration = 0;
-"633
-[e = _statusConfiguration -> -> 0 `i `uc ]
-[; ;SysRiego.c: 635: }
-"635
-[e :UE 2160 ]
+"630
 }
-"639
-[v _workingAutomatic `(v ~T0 @X0 1 ef ]
-{
-[; ;SysRiego.c: 639: void workingAutomatic() {
-[e :U _workingAutomatic ]
-[f ]
-[; ;SysRiego.c: 641: enableACInterrupts();
-"641
-[e ( _enableACInterrupts ..  ]
-[; ;SysRiego.c: 643: clearDisplay();
-"643
+[; ;SysRiego.c: 626: }
+[; ;SysRiego.c: 628: }
+[; ;SysRiego.c: 630: }
+[; ;SysRiego.c: 632: clearUnConfigTimes(numberIrrigations);
+"632
+[e ( _clearUnConfigTimes (1 _numberIrrigations ]
+[; ;SysRiego.c: 634: clearDisplay();
+"634
 [e ( _clearDisplay ..  ]
-[; ;SysRiego.c: 644: displayLineOnLCD(automaticMessage, sizeof(automaticMessage) / sizeof(automaticMessage[0]));
+[; ;SysRiego.c: 636: displayLineOnLCD("Period of time:", 16);
+"636
+[e ( _displayLineOnLCD (2 , -> :s 3C `*uc -> -> 16 `i `uc ]
+[; ;SysRiego.c: 637: secondLine();
+"637
+[e ( _secondLine ..  ]
+[; ;SysRiego.c: 638: displayLineOnLCD(irrigateTime, 3);
+"638
+[e ( _displayLineOnLCD (2 , _irrigateTime -> -> 3 `i `uc ]
+[; ;SysRiego.c: 640: input = ' ';
+"640
+[e = _input -> -> 32 `ui `uc ]
+"642
+[v _counter `uc ~T0 @X0 1 a ]
+[; ;SysRiego.c: 642: unsigned char counter = 0;
+[e = _counter -> -> 0 `i `uc ]
+[; ;SysRiego.c: 644: while (input != '#') {
 "644
-[e ( _displayLineOnLCD (2 , &U _automaticMessage -> / -> # _automaticMessage `ui -> # *U + &U _automaticMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _automaticMessage `ui `ux `ui `uc ]
-[; ;SysRiego.c: 646: while(modeSelected == 0 && statusConfiguration == 0) {
+[e $U 2172  ]
+[e :U 2173 ]
+{
+[; ;SysRiego.c: 646: input = getInput();
 "646
-[e $U 2173  ]
-[e :U 2174 ]
-{
-[; ;SysRiego.c: 648: for(unsigned char i = 0; i < 3; i++) {
+[e = _input ( _getInput ..  ]
+[; ;SysRiego.c: 648: if (input != '#') {
 "648
+[e $ ! != -> _input `ui -> 35 `ui 2175  ]
 {
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 3 `i 2176  ]
-[e $U 2177  ]
-[e :U 2176 ]
-{
-[; ;SysRiego.c: 650: startAC(i + 1);
+[; ;SysRiego.c: 649: irrigateTime[counter % 3] = input;
+"649
+[e = *U + _irrigateTime * -> % -> _counter `i -> 3 `i `x -> -> # *U _irrigateTime `i `x _input ]
+[; ;SysRiego.c: 650: secondLine();
 "650
-[e ( _startAC (1 -> + -> _i `i -> 1 `i `uc ]
-[; ;SysRiego.c: 651: if( ADRES < (*humidityZnValuesInt[i] * CONVERSIONRATE)){
+[e ( _secondLine ..  ]
+[; ;SysRiego.c: 651: displayLineOnLCD(irrigateTime, 3);
 "651
-[e $ ! < -> _ADRES `f * -> *U *U + &U _humidityZnValuesInt * -> _i `ux -> -> # *U &U _humidityZnValuesInt `ui `ux `f _CONVERSIONRATE 2179  ]
-{
-[; ;SysRiego.c: 652: startIrrigation(i + 1);
+[e ( _displayLineOnLCD (2 , _irrigateTime -> -> 3 `i `uc ]
+[; ;SysRiego.c: 652: counter++;
 "652
-[e ( _startIrrigation (1 -> + -> _i `i -> 1 `i `uc ]
+[e ++ _counter -> -> 1 `i `uc ]
 "653
 }
-[; ;SysRiego.c: 653: }
-[e $U 2180  ]
-"654
-[e :U 2179 ]
-[; ;SysRiego.c: 654: else {
-{
-[; ;SysRiego.c: 655: stopIrrigation(i + 1);
+[e :U 2175 ]
 "655
-[e ( _stopIrrigation (1 -> + -> _i `i -> 1 `i `uc ]
-"656
+}
+[e :U 2172 ]
+"644
+[e $ != -> _input `ui -> 35 `ui 2173  ]
+[e :U 2174 ]
+"657
+}
+[; ;SysRiego.c: 653: }
+[; ;SysRiego.c: 655: }
+[; ;SysRiego.c: 657: }
+[e $U 2176  ]
+"659
+[e :U 2159 ]
+[; ;SysRiego.c: 659: else {
+{
+"661
+[v _counter `uc ~T0 @X0 1 a ]
+[; ;SysRiego.c: 661: unsigned char counter = 0;
+[e = _counter -> -> 0 `i `uc ]
+[v F16264 `uc ~T0 @X0 -> 0 `x s ]
+[i F16264
+:U ..
+-> 48 `c
+-> 48 `c
+-> 48 `c
+-> 48 `c
+-> 0 `c
+..
+]
+"663
+[v _newHour `uc ~T0 @X0 5  a ]
+[; ;SysRiego.c: 663: unsigned char newHour[] = "0000";
+[e = _newHour F16264 ]
+[; ;SysRiego.c: 665: displayLineOnLCD("Config Hour", 12);
+"665
+[e ( _displayLineOnLCD (2 , -> :s 4C `*uc -> -> 12 `i `uc ]
+[; ;SysRiego.c: 666: secondLine();
+"666
+[e ( _secondLine ..  ]
+[; ;SysRiego.c: 667: displayCharOnLCD(counterHOUR[0]);
+"667
+[e ( _displayCharOnLCD (1 *U + &U _counterHOUR * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux ]
+[; ;SysRiego.c: 668: displayCharOnLCD(counterHOUR[1]);
+"668
+[e ( _displayCharOnLCD (1 *U + &U _counterHOUR * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux ]
+[; ;SysRiego.c: 669: displayCharOnLCD(':');
+"669
+[e ( _displayCharOnLCD (1 -> -> 58 `ui `uc ]
+[; ;SysRiego.c: 670: displayCharOnLCD(counterMIN[0]);
+"670
+[e ( _displayCharOnLCD (1 *U + &U _counterMIN * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux ]
+[; ;SysRiego.c: 671: displayCharOnLCD(counterMIN[1]);
+"671
+[e ( _displayCharOnLCD (1 *U + &U _counterMIN * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux ]
+[; ;SysRiego.c: 674: while (input != '#') {
+"674
+[e $U 2177  ]
+[e :U 2178 ]
+{
+[; ;SysRiego.c: 676: input = getInput();
+"676
+[e = _input ( _getInput ..  ]
+[; ;SysRiego.c: 678: displayLineOnLCD("     ", 6);
+"678
+[e ( _displayLineOnLCD (2 , -> :s 5C `*uc -> -> 6 `i `uc ]
+[; ;SysRiego.c: 680: if (input != '#') {
+"680
+[e $ ! != -> _input `ui -> 35 `ui 2180  ]
+{
+[; ;SysRiego.c: 681: newHour[counter % 4] = input;
+"681
+[e = *U + &U _newHour * -> -> % -> _counter `i -> 4 `i `ui `ux -> -> # *U &U _newHour `ui `ux _input ]
+[; ;SysRiego.c: 682: secondLine();
+"682
+[e ( _secondLine ..  ]
+[; ;SysRiego.c: 683: displayLineOnLCD(newHour, 5);
+"683
+[e ( _displayLineOnLCD (2 , &U _newHour -> -> 5 `i `uc ]
+[; ;SysRiego.c: 684: counter++;
+"684
+[e ++ _counter -> -> 1 `i `uc ]
+"685
 }
 [e :U 2180 ]
-"658
+"687
 }
-"648
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 3 `i 2176  ]
 [e :U 2177 ]
-"658
-}
-"660
-}
-[e :U 2173 ]
-"646
-[e $ && == -> _modeSelected `i -> 0 `i == -> _statusConfiguration `i -> 0 `i 2174  ]
-[e :U 2175 ]
-[; ;SysRiego.c: 656: }
-[; ;SysRiego.c: 658: }
-[; ;SysRiego.c: 660: }
-[; ;SysRiego.c: 662: stopAllIrrigation();
-"662
-[e ( _stopAllIrrigation ..  ]
-[; ;SysRiego.c: 664: disableACInterrupts();
-"664
-[e ( _disableACInterrupts ..  ]
-[; ;SysRiego.c: 666: }
-"666
-[e :UE 2172 ]
-}
-"668
-[v _workingTimer `(v ~T0 @X0 1 ef ]
-{
-[; ;SysRiego.c: 668: void workingTimer() {
-[e :U _workingTimer ]
-[f ]
-[; ;SysRiego.c: 670: clearDisplay();
-"670
-[e ( _clearDisplay ..  ]
-[; ;SysRiego.c: 671: displayLineOnLCD(timerMessage, sizeof(timerMessage) / sizeof(timerMessage[0]));
-"671
-[e ( _displayLineOnLCD (2 , &U _timerMessage -> / -> # _timerMessage `ui -> # *U + &U _timerMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _timerMessage `ui `ux `ui `uc ]
-"673
-[v _zoneTime `*uc ~T0 @X0 1 a ]
-[; ;SysRiego.c: 673: unsigned char *zoneTime;
-[; ;SysRiego.c: 675: while(modeSelected == 1 && statusConfiguration == 0) {
-"675
-[e $U 2182  ]
-[e :U 2183 ]
-{
-[; ;SysRiego.c: 676: command(0xC0);
-"676
-[e ( _command (1 -> -> 192 `i `uc ]
-[; ;SysRiego.c: 677: displayLineOnLCD(counterHOUR, 3);
-"677
-[e ( _displayLineOnLCD (2 , &U _counterHOUR -> -> 3 `i `uc ]
-[; ;SysRiego.c: 678: displayLineOnLCD(counterMIN, 3);
-"678
-[e ( _displayLineOnLCD (2 , &U _counterMIN -> -> 3 `i `uc ]
-[; ;SysRiego.c: 680: for(unsigned char i = 0; i < 9; i++) {
-"680
-{
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 9 `i 2185  ]
-[e $U 2186  ]
-[e :U 2185 ]
-{
-[; ;SysRiego.c: 682: zoneTime = zoneTimes[i];
-"682
-[e = _zoneTime *U + &U _zoneTimes * -> _i `ux -> -> # *U &U _zoneTimes `ui `ux ]
-[; ;SysRiego.c: 684: if (zoneTime[0] != '$') {
-"684
-[e $ ! != -> *U + _zoneTime * -> -> 0 `i `x -> -> # *U _zoneTime `i `x `ui -> 36 `ui 2188  ]
-{
-[; ;SysRiego.c: 686: if (zoneTime[0] == counterHOUR[0]) {
-"686
-[e $ ! == -> *U + _zoneTime * -> -> 0 `i `x -> -> # *U _zoneTime `i `x `i -> *U + &U _counterHOUR * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux `i 2189  ]
-{
-[; ;SysRiego.c: 688: if (zoneTime[1] == counterHOUR[1]) {
-"688
-[e $ ! == -> *U + _zoneTime * -> -> 1 `i `x -> -> # *U _zoneTime `i `x `i -> *U + &U _counterHOUR * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux `i 2190  ]
-{
-[; ;SysRiego.c: 690: if (zoneTime[2] == counterMIN[0]) {
+"674
+[e $ != -> _input `ui -> 35 `ui 2178  ]
+[e :U 2179 ]
+[; ;SysRiego.c: 685: }
+[; ;SysRiego.c: 687: }
+[; ;SysRiego.c: 689: counterHOUR[0] = newHour[0];
+"689
+[e = *U + &U _counterHOUR * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux *U + &U _newHour * -> -> -> 0 `i `ui `ux -> -> # *U &U _newHour `ui `ux ]
+[; ;SysRiego.c: 690: counterHOUR[1] = newHour[1];
 "690
-[e $ ! == -> *U + _zoneTime * -> -> 2 `i `x -> -> # *U _zoneTime `i `x `i -> *U + &U _counterMIN * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux `i 2191  ]
-{
-[; ;SysRiego.c: 692: if (zoneTime[3] == counterMIN[1]) {
+[e = *U + &U _counterHOUR * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux *U + &U _newHour * -> -> -> 1 `i `ui `ux -> -> # *U &U _newHour `ui `ux ]
+[; ;SysRiego.c: 691: counterMIN[0] = newHour[2];
+"691
+[e = *U + &U _counterMIN * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux *U + &U _newHour * -> -> -> 2 `i `ui `ux -> -> # *U &U _newHour `ui `ux ]
+[; ;SysRiego.c: 692: counterMIN[1] = newHour[3];
 "692
-[e $ ! == -> *U + _zoneTime * -> -> 3 `i `x -> -> # *U _zoneTime `i `x `i -> *U + &U _counterMIN * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux `i 2192  ]
-{
-[; ;SysRiego.c: 694: if (i < 3) {
-"694
-[e $ ! < -> _i `i -> 3 `i 2193  ]
-{
-[; ;SysRiego.c: 695: updateEndTime(endTimeZn1, zoneTime, irrigateTimeZn1);
-"695
-[e ( _updateEndTime (3 , , &U _endTimeZn1 _zoneTime &U _irrigateTimeZn1 ]
-[; ;SysRiego.c: 696: startIrrigation(1);
+[e = *U + &U _counterMIN * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux *U + &U _newHour * -> -> -> 3 `i `ui `ux -> -> # *U &U _newHour `ui `ux ]
+"693
+}
+[e :U 2176 ]
+[; ;SysRiego.c: 693: }
+[; ;SysRiego.c: 696: enableIntRBIE();
 "696
-[e ( _startIrrigation (1 -> -> 1 `i `uc ]
-"697
-}
-[; ;SysRiego.c: 697: }
-[e $U 2194  ]
+[e ( _enableIntRBIE ..  ]
+[; ;SysRiego.c: 698: hourConfiguration = 0;
 "698
-[e :U 2193 ]
-[; ;SysRiego.c: 698: else if (i < 6) {
-[e $ ! < -> _i `i -> 6 `i 2195  ]
-{
-[; ;SysRiego.c: 699: updateEndTime(endTimeZn2, zoneTime, irrigateTimeZn2);
+[e = _hourConfiguration -> -> 0 `i `uc ]
+[; ;SysRiego.c: 699: statusConfiguration = 0;
 "699
-[e ( _updateEndTime (3 , , &U _endTimeZn2 _zoneTime &U _irrigateTimeZn2 ]
-[; ;SysRiego.c: 700: startIrrigation(2);
-"700
-[e ( _startIrrigation (1 -> -> 2 `i `uc ]
-"701
-}
+[e = _statusConfiguration -> -> 0 `i `uc ]
 [; ;SysRiego.c: 701: }
-[e $U 2196  ]
-"702
-[e :U 2195 ]
-[; ;SysRiego.c: 702: else if (i < 9) {
-[e $ ! < -> _i `i -> 9 `i 2197  ]
-{
-[; ;SysRiego.c: 703: updateEndTime(endTimeZn3, zoneTime, irrigateTimeZn3);
-"703
-[e ( _updateEndTime (3 , , &U _endTimeZn3 _zoneTime &U _irrigateTimeZn3 ]
-[; ;SysRiego.c: 704: startIrrigation(3);
+"701
+[e :UE 2158 ]
+}
 "704
-[e ( _startIrrigation (1 -> -> 3 `i `uc ]
-"705
-}
-[e :U 2197 ]
+[v _manualConfiguration `(v ~T0 @X0 1 ef ]
+{
+[; ;SysRiego.c: 704: void manualConfiguration() {
+[e :U _manualConfiguration ]
+[f ]
+[; ;SysRiego.c: 706: disableIntRBIE();
+"706
+[e ( _disableIntRBIE ..  ]
+"708
+[v _input `uc ~T0 @X0 1 a ]
+[; ;SysRiego.c: 708: unsigned char input = ' ';
+[e = _input -> -> 32 `ui `uc ]
+[; ;SysRiego.c: 710: clearDisplay();
+"710
+[e ( _clearDisplay ..  ]
+[; ;SysRiego.c: 712: if(*zoneSelected == '1') {
 "712
-[e :U 2196 ]
-[e :U 2194 ]
-}
-[e :U 2192 ]
+[e $ ! == -> *U _zoneSelected `ui -> 49 `ui 2182  ]
+{
+[; ;SysRiego.c: 713: displayLineOnLCD(manualActiveMessage, sizeof(manualActiveMessage) / sizeof(manualActiveMessage[0]));
+"713
+[e ( _displayLineOnLCD (2 , &U _manualActiveMessage -> / -> # _manualActiveMessage `ui -> # *U + &U _manualActiveMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _manualActiveMessage `ui `ux `ui `uc ]
 "714
 }
-[e :U 2191 ]
+[; ;SysRiego.c: 714: }
+[e $U 2183  ]
 "716
-}
-[e :U 2190 ]
+[e :U 2182 ]
+[; ;SysRiego.c: 716: else {
+{
+[; ;SysRiego.c: 717: displayLineOnLCD(manualInactiveMessage, sizeof(manualInactiveMessage) / sizeof(manualInactiveMessage[0]));
+"717
+[e ( _displayLineOnLCD (2 , &U _manualInactiveMessage -> / -> # _manualInactiveMessage `ui -> # *U + &U _manualInactiveMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _manualInactiveMessage `ui `ux `ui `uc ]
 "718
 }
-[e :U 2189 ]
-"720
-}
-[e :U 2188 ]
-"722
-}
-"680
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 9 `i 2185  ]
-[e :U 2186 ]
-"722
-}
-[; ;SysRiego.c: 705: }
-[; ;SysRiego.c: 712: }
-[; ;SysRiego.c: 714: }
-[; ;SysRiego.c: 716: }
+[e :U 2183 ]
 [; ;SysRiego.c: 718: }
-[; ;SysRiego.c: 720: }
-[; ;SysRiego.c: 722: }
-[; ;SysRiego.c: 724: for(unsigned char i = 0; i < 3; i++) {
-"724
+[; ;SysRiego.c: 721: while(input != '#') {
+"721
+[e $U 2184  ]
+[e :U 2185 ]
+{
+[; ;SysRiego.c: 723: input = getInput();
+"723
+[e = _input ( _getInput ..  ]
+[; ;SysRiego.c: 725: clearDisplay();
+"725
+[e ( _clearDisplay ..  ]
+[; ;SysRiego.c: 727: if(input == '1') {
+"727
+[e $ ! == -> _input `ui -> 49 `ui 2187  ]
+{
+[; ;SysRiego.c: 728: *zoneSelected = '1';
+"728
+[e = *U _zoneSelected -> -> 49 `ui `uc ]
+[; ;SysRiego.c: 729: displayLineOnLCD(manualActiveMessage, sizeof(manualActiveMessage) / sizeof(manualActiveMessage[0]));
+"729
+[e ( _displayLineOnLCD (2 , &U _manualActiveMessage -> / -> # _manualActiveMessage `ui -> # *U + &U _manualActiveMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _manualActiveMessage `ui `ux `ui `uc ]
+"730
+}
+[; ;SysRiego.c: 730: }
+[e $U 2188  ]
+"732
+[e :U 2187 ]
+[; ;SysRiego.c: 732: else if (input == '0') {
+[e $ ! == -> _input `ui -> 48 `ui 2189  ]
+{
+[; ;SysRiego.c: 733: *zoneSelected = '0';
+"733
+[e = *U _zoneSelected -> -> 48 `ui `uc ]
+[; ;SysRiego.c: 734: displayLineOnLCD(manualInactiveMessage, sizeof(manualInactiveMessage) / sizeof(manualInactiveMessage[0]));
+"734
+[e ( _displayLineOnLCD (2 , &U _manualInactiveMessage -> / -> # _manualInactiveMessage `ui -> # *U + &U _manualInactiveMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _manualInactiveMessage `ui `ux `ui `uc ]
+"735
+}
+[; ;SysRiego.c: 735: }
+[e $U 2190  ]
+"737
+[e :U 2189 ]
+[; ;SysRiego.c: 737: else {
+{
+[; ;SysRiego.c: 738: if (*zoneSelected == '1') {
+"738
+[e $ ! == -> *U _zoneSelected `ui -> 49 `ui 2191  ]
+{
+[; ;SysRiego.c: 739: displayLineOnLCD(manualActiveMessage, sizeof (manualActiveMessage) / sizeof (manualActiveMessage[0]));
+"739
+[e ( _displayLineOnLCD (2 , &U _manualActiveMessage -> / -> # _manualActiveMessage `ui -> # *U + &U _manualActiveMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _manualActiveMessage `ui `ux `ui `uc ]
+"740
+}
+[; ;SysRiego.c: 740: }
+[e $U 2192  ]
+"741
+[e :U 2191 ]
+[; ;SysRiego.c: 741: else {
+{
+[; ;SysRiego.c: 742: displayLineOnLCD(manualInactiveMessage, sizeof (manualInactiveMessage) / sizeof (manualInactiveMessage[0]));
+"742
+[e ( _displayLineOnLCD (2 , &U _manualInactiveMessage -> / -> # _manualInactiveMessage `ui -> # *U + &U _manualInactiveMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _manualInactiveMessage `ui `ux `ui `uc ]
+"743
+}
+[e :U 2192 ]
+"744
+}
+[e :U 2190 ]
+[e :U 2188 ]
+"746
+}
+[e :U 2184 ]
+"721
+[e $ != -> _input `ui -> 35 `ui 2185  ]
+[e :U 2186 ]
+[; ;SysRiego.c: 743: }
+[; ;SysRiego.c: 744: }
+[; ;SysRiego.c: 746: }
+[; ;SysRiego.c: 748: enableIntRBIE();
+"748
+[e ( _enableIntRBIE ..  ]
+[; ;SysRiego.c: 750: statusConfiguration = 0;
+"750
+[e = _statusConfiguration -> -> 0 `i `uc ]
+[; ;SysRiego.c: 752: }
+"752
+[e :UE 2181 ]
+}
+"756
+[v _workingAutomatic `(v ~T0 @X0 1 ef ]
+{
+[; ;SysRiego.c: 756: void workingAutomatic() {
+[e :U _workingAutomatic ]
+[f ]
+[; ;SysRiego.c: 758: enableACInterrupts();
+"758
+[e ( _enableACInterrupts ..  ]
+[; ;SysRiego.c: 760: clearDisplay();
+"760
+[e ( _clearDisplay ..  ]
+[; ;SysRiego.c: 761: displayLineOnLCD(automaticMessage, sizeof(automaticMessage) / sizeof(automaticMessage[0]));
+"761
+[e ( _displayLineOnLCD (2 , &U _automaticMessage -> / -> # _automaticMessage `ui -> # *U + &U _automaticMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _automaticMessage `ui `ux `ui `uc ]
+[; ;SysRiego.c: 763: while(modeSelected == 0 && statusConfiguration == 0) {
+"763
+[e $U 2194  ]
+[e :U 2195 ]
+{
+[; ;SysRiego.c: 765: for(unsigned char i = 0; i < 3; i++) {
+"765
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 3 `i 2198  ]
-[e $U 2199  ]
-[e :U 2198 ]
+[e $ < -> _i `i -> 3 `i 2197  ]
+[e $U 2198  ]
+[e :U 2197 ]
 {
-"726
-[v _endTimeZn `*uc ~T0 @X0 1 a ]
-[; ;SysRiego.c: 726: unsigned char *endTimeZn = zoneEndTimes[i];
-[e = _endTimeZn *U + &U _zoneEndTimes * -> _i `ux -> -> # *U &U _zoneEndTimes `ui `ux ]
-[; ;SysRiego.c: 728: if(endTimeZn[0] != '$') {
-"728
-[e $ ! != -> *U + _endTimeZn * -> -> 0 `i `x -> -> # *U _endTimeZn `i `x `ui -> 36 `ui 2201  ]
+[; ;SysRiego.c: 767: startAC(i + 1);
+"767
+[e ( _startAC (1 -> + -> _i `i -> 1 `i `uc ]
+[; ;SysRiego.c: 768: if( ADRES < (*humidityZnValuesInt[i] * CONVERSIONRATE)){
+"768
+[e $ ! < -> _ADRES `f * -> *U *U + &U _humidityZnValuesInt * -> _i `ux -> -> # *U &U _humidityZnValuesInt `ui `ux `f _CONVERSIONRATE 2200  ]
 {
-[; ;SysRiego.c: 729: if(endTimeZn[0] == counterHOUR[0]) {
-"729
-[e $ ! == -> *U + _endTimeZn * -> -> 0 `i `x -> -> # *U _endTimeZn `i `x `i -> *U + &U _counterHOUR * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux `i 2202  ]
+[; ;SysRiego.c: 769: startIrrigation(i + 1);
+"769
+[e ( _startIrrigation (1 -> + -> _i `i -> 1 `i `uc ]
+"770
+}
+[; ;SysRiego.c: 770: }
+[e $U 2201  ]
+"771
+[e :U 2200 ]
+[; ;SysRiego.c: 771: else {
 {
-[; ;SysRiego.c: 730: if(endTimeZn[1] == counterHOUR[1]) {
-"730
-[e $ ! == -> *U + _endTimeZn * -> -> 1 `i `x -> -> # *U _endTimeZn `i `x `i -> *U + &U _counterHOUR * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux `i 2203  ]
-{
-[; ;SysRiego.c: 731: if(endTimeZn[2] == counterMIN[0]) {
-"731
-[e $ ! == -> *U + _endTimeZn * -> -> 2 `i `x -> -> # *U _endTimeZn `i `x `i -> *U + &U _counterMIN * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux `i 2204  ]
-{
-[; ;SysRiego.c: 732: if(endTimeZn[3] == counterMIN[1]) {
-"732
-[e $ ! == -> *U + _endTimeZn * -> -> 3 `i `x -> -> # *U _endTimeZn `i `x `i -> *U + &U _counterMIN * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux `i 2205  ]
-{
-[; ;SysRiego.c: 733: stopIrrigation(i + 1);
-"733
+[; ;SysRiego.c: 772: stopIrrigation(i + 1);
+"772
 [e ( _stopIrrigation (1 -> + -> _i `i -> 1 `i `uc ]
-[; ;SysRiego.c: 734: for(unsigned char j = 0; j < 4; j ++)
-"734
+"773
+}
+[e :U 2201 ]
+"775
+}
+"765
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 3 `i 2197  ]
+[e :U 2198 ]
+"775
+}
+"777
+}
+[e :U 2194 ]
+"763
+[e $ && == -> _modeSelected `i -> 0 `i == -> _statusConfiguration `i -> 0 `i 2195  ]
+[e :U 2196 ]
+[; ;SysRiego.c: 773: }
+[; ;SysRiego.c: 775: }
+[; ;SysRiego.c: 777: }
+[; ;SysRiego.c: 779: stopAllIrrigation();
+"779
+[e ( _stopAllIrrigation ..  ]
+[; ;SysRiego.c: 781: disableACInterrupts();
+"781
+[e ( _disableACInterrupts ..  ]
+[; ;SysRiego.c: 783: }
+"783
+[e :UE 2193 ]
+}
+"785
+[v _workingTimer `(v ~T0 @X0 1 ef ]
+{
+[; ;SysRiego.c: 785: void workingTimer() {
+[e :U _workingTimer ]
+[f ]
+[; ;SysRiego.c: 787: clearDisplay();
+"787
+[e ( _clearDisplay ..  ]
+[; ;SysRiego.c: 788: displayLineOnLCD(timerMessage, sizeof(timerMessage) / sizeof(timerMessage[0]));
+"788
+[e ( _displayLineOnLCD (2 , &U _timerMessage -> / -> # _timerMessage `ui -> # *U + &U _timerMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _timerMessage `ui `ux `ui `uc ]
+"790
+[v _zoneTime `*uc ~T0 @X0 1 a ]
+[; ;SysRiego.c: 790: unsigned char *zoneTime;
+[; ;SysRiego.c: 792: while(modeSelected == 1 && statusConfiguration == 0) {
+"792
+[e $U 2203  ]
+[e :U 2204 ]
+{
+[; ;SysRiego.c: 793: command(0xC0);
+"793
+[e ( _command (1 -> -> 192 `i `uc ]
+[; ;SysRiego.c: 794: displayLineOnLCD(counterHOUR, 3);
+"794
+[e ( _displayLineOnLCD (2 , &U _counterHOUR -> -> 3 `i `uc ]
+[; ;SysRiego.c: 795: displayLineOnLCD(counterMIN, 3);
+"795
+[e ( _displayLineOnLCD (2 , &U _counterMIN -> -> 3 `i `uc ]
+[; ;SysRiego.c: 797: for(unsigned char i = 0; i < 9; i++) {
+"797
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 9 `i 2206  ]
+[e $U 2207  ]
+[e :U 2206 ]
+{
+[; ;SysRiego.c: 799: zoneTime = zoneTimes[i];
+"799
+[e = _zoneTime *U + &U _zoneTimes * -> _i `ux -> -> # *U &U _zoneTimes `ui `ux ]
+[; ;SysRiego.c: 801: if (zoneTime[0] != '$') {
+"801
+[e $ ! != -> *U + _zoneTime * -> -> 0 `i `x -> -> # *U _zoneTime `i `x `ui -> 36 `ui 2209  ]
+{
+[; ;SysRiego.c: 803: if (zoneTime[0] == counterHOUR[0]) {
+"803
+[e $ ! == -> *U + _zoneTime * -> -> 0 `i `x -> -> # *U _zoneTime `i `x `i -> *U + &U _counterHOUR * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux `i 2210  ]
+{
+[; ;SysRiego.c: 805: if (zoneTime[1] == counterHOUR[1]) {
+"805
+[e $ ! == -> *U + _zoneTime * -> -> 1 `i `x -> -> # *U _zoneTime `i `x `i -> *U + &U _counterHOUR * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux `i 2211  ]
+{
+[; ;SysRiego.c: 807: if (zoneTime[2] == counterMIN[0]) {
+"807
+[e $ ! == -> *U + _zoneTime * -> -> 2 `i `x -> -> # *U _zoneTime `i `x `i -> *U + &U _counterMIN * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux `i 2212  ]
+{
+[; ;SysRiego.c: 809: if (zoneTime[3] == counterMIN[1]) {
+"809
+[e $ ! == -> *U + _zoneTime * -> -> 3 `i `x -> -> # *U _zoneTime `i `x `i -> *U + &U _counterMIN * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux `i 2213  ]
+{
+[; ;SysRiego.c: 811: if (i < 3) {
+"811
+[e $ ! < -> _i `i -> 3 `i 2214  ]
+{
+[; ;SysRiego.c: 812: updateEndTime(endTimeZn1, zoneTime, irrigateTimeZn1);
+"812
+[e ( _updateEndTime (3 , , &U _endTimeZn1 _zoneTime &U _irrigateTimeZn1 ]
+[; ;SysRiego.c: 813: startIrrigation(1);
+"813
+[e ( _startIrrigation (1 -> -> 1 `i `uc ]
+"814
+}
+[; ;SysRiego.c: 814: }
+[e $U 2215  ]
+"815
+[e :U 2214 ]
+[; ;SysRiego.c: 815: else if (i < 6) {
+[e $ ! < -> _i `i -> 6 `i 2216  ]
+{
+[; ;SysRiego.c: 816: updateEndTime(endTimeZn2, zoneTime, irrigateTimeZn2);
+"816
+[e ( _updateEndTime (3 , , &U _endTimeZn2 _zoneTime &U _irrigateTimeZn2 ]
+[; ;SysRiego.c: 817: startIrrigation(2);
+"817
+[e ( _startIrrigation (1 -> -> 2 `i `uc ]
+"818
+}
+[; ;SysRiego.c: 818: }
+[e $U 2217  ]
+"819
+[e :U 2216 ]
+[; ;SysRiego.c: 819: else if (i < 9) {
+[e $ ! < -> _i `i -> 9 `i 2218  ]
+{
+[; ;SysRiego.c: 820: updateEndTime(endTimeZn3, zoneTime, irrigateTimeZn3);
+"820
+[e ( _updateEndTime (3 , , &U _endTimeZn3 _zoneTime &U _irrigateTimeZn3 ]
+[; ;SysRiego.c: 821: startIrrigation(3);
+"821
+[e ( _startIrrigation (1 -> -> 3 `i `uc ]
+"822
+}
+[e :U 2218 ]
+"829
+[e :U 2217 ]
+[e :U 2215 ]
+}
+[e :U 2213 ]
+"831
+}
+[e :U 2212 ]
+"833
+}
+[e :U 2211 ]
+"835
+}
+[e :U 2210 ]
+"837
+}
+[e :U 2209 ]
+"839
+}
+"797
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 9 `i 2206  ]
+[e :U 2207 ]
+"839
+}
+[; ;SysRiego.c: 822: }
+[; ;SysRiego.c: 829: }
+[; ;SysRiego.c: 831: }
+[; ;SysRiego.c: 833: }
+[; ;SysRiego.c: 835: }
+[; ;SysRiego.c: 837: }
+[; ;SysRiego.c: 839: }
+[; ;SysRiego.c: 841: for(unsigned char i = 0; i < 3; i++) {
+"841
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 3 `i 2219  ]
+[e $U 2220  ]
+[e :U 2219 ]
+{
+"843
+[v _endTimeZn `*uc ~T0 @X0 1 a ]
+[; ;SysRiego.c: 843: unsigned char *endTimeZn = zoneEndTimes[i];
+[e = _endTimeZn *U + &U _zoneEndTimes * -> _i `ux -> -> # *U &U _zoneEndTimes `ui `ux ]
+[; ;SysRiego.c: 845: if(endTimeZn[0] != '$') {
+"845
+[e $ ! != -> *U + _endTimeZn * -> -> 0 `i `x -> -> # *U _endTimeZn `i `x `ui -> 36 `ui 2222  ]
+{
+[; ;SysRiego.c: 846: if(endTimeZn[0] == counterHOUR[0]) {
+"846
+[e $ ! == -> *U + _endTimeZn * -> -> 0 `i `x -> -> # *U _endTimeZn `i `x `i -> *U + &U _counterHOUR * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux `i 2223  ]
+{
+[; ;SysRiego.c: 847: if(endTimeZn[1] == counterHOUR[1]) {
+"847
+[e $ ! == -> *U + _endTimeZn * -> -> 1 `i `x -> -> # *U _endTimeZn `i `x `i -> *U + &U _counterHOUR * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux `i 2224  ]
+{
+[; ;SysRiego.c: 848: if(endTimeZn[2] == counterMIN[0]) {
+"848
+[e $ ! == -> *U + _endTimeZn * -> -> 2 `i `x -> -> # *U _endTimeZn `i `x `i -> *U + &U _counterMIN * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux `i 2225  ]
+{
+[; ;SysRiego.c: 849: if(endTimeZn[3] == counterMIN[1]) {
+"849
+[e $ ! == -> *U + _endTimeZn * -> -> 3 `i `x -> -> # *U _endTimeZn `i `x `i -> *U + &U _counterMIN * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux `i 2226  ]
+{
+[; ;SysRiego.c: 850: stopIrrigation(i + 1);
+"850
+[e ( _stopIrrigation (1 -> + -> _i `i -> 1 `i `uc ]
+[; ;SysRiego.c: 851: for(unsigned char j = 0; j < 4; j ++)
+"851
 {
 [v _j `uc ~T0 @X0 1 a ]
 [e = _j -> -> 0 `i `uc ]
-[e $ < -> _j `i -> 4 `i 2206  ]
-[e $U 2207  ]
-"735
-[e :U 2206 ]
-[; ;SysRiego.c: 735: endTimeZn[j] = '$';
+[e $ < -> _j `i -> 4 `i 2227  ]
+[e $U 2228  ]
+"852
+[e :U 2227 ]
+[; ;SysRiego.c: 852: endTimeZn[j] = '$';
 [e = *U + _endTimeZn * -> _j `ux -> -> # *U _endTimeZn `ui `ux -> -> 36 `ui `uc ]
-"734
+"851
 [e ++ _j -> -> 1 `i `uc ]
-[e $ < -> _j `i -> 4 `i 2206  ]
-[e :U 2207 ]
-"735
+[e $ < -> _j `i -> 4 `i 2227  ]
+[e :U 2228 ]
+"852
 }
-"736
-}
-[e :U 2205 ]
-"737
-}
-[e :U 2204 ]
-"738
-}
-[e :U 2203 ]
-"739
-}
-[e :U 2202 ]
-"740
-}
-[e :U 2201 ]
-"742
-}
-"724
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 3 `i 2198  ]
-[e :U 2199 ]
-"742
-}
-"744
-}
-[e :U 2182 ]
-"675
-[e $ && == -> _modeSelected `i -> 1 `i == -> _statusConfiguration `i -> 0 `i 2183  ]
-[e :U 2184 ]
-[; ;SysRiego.c: 736: }
-[; ;SysRiego.c: 737: }
-[; ;SysRiego.c: 738: }
-[; ;SysRiego.c: 739: }
-[; ;SysRiego.c: 740: }
-[; ;SysRiego.c: 742: }
-[; ;SysRiego.c: 744: }
-[; ;SysRiego.c: 747: clearEndTimes();
-"747
-[e ( _clearEndTimes ..  ]
-[; ;SysRiego.c: 749: stopAllIrrigation();
-"749
-[e ( _stopAllIrrigation ..  ]
-[; ;SysRiego.c: 751: }
-"751
-[e :UE 2181 ]
-}
-"753
-[v _workingManual `(v ~T0 @X0 1 ef ]
-{
-[; ;SysRiego.c: 753: void workingManual() {
-[e :U _workingManual ]
-[f ]
-[; ;SysRiego.c: 755: clearDisplay();
-"755
-[e ( _clearDisplay ..  ]
-[; ;SysRiego.c: 756: displayLineOnLCD(manualMessage, sizeof(manualMessage) / sizeof(manualMessage[0]));
-"756
-[e ( _displayLineOnLCD (2 , &U _manualMessage -> / -> # _manualMessage `ui -> # *U + &U _manualMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _manualMessage `ui `ux `ui `uc ]
-[; ;SysRiego.c: 758: while(modeSelected == 2 && statusConfiguration == 0) {
-"758
-[e $U 2210  ]
-[e :U 2211 ]
-{
-"762
-}
-[e :U 2210 ]
-"758
-[e $ && == -> _modeSelected `i -> 2 `i == -> _statusConfiguration `i -> 0 `i 2211  ]
-[e :U 2212 ]
-[; ;SysRiego.c: 762: }
-[; ;SysRiego.c: 764: stopIrrigateManual();
-"764
-[e ( _stopIrrigateManual ..  ]
-[; ;SysRiego.c: 766: }
-"766
-[e :UE 2209 ]
-}
-[v F16199 `(v ~T0 @X0 1 tf ]
-"771
-[v _ISRL `ILF16199 ~T0 @X0 1 e ]
-"772
-{
-[; ;SysRiego.c: 771: void interrupt low_priority ISRL()
-[; ;SysRiego.c: 772: {
-[e :U _ISRL ]
-[f ]
-[; ;SysRiego.c: 774: }
-"774
-[e :UE 2213 ]
-}
-[v F16201 `(v ~T0 @X0 1 tf ]
-"776
-[v _ISRH `IF16201 ~T0 @X0 1 e ]
-"777
-{
-[; ;SysRiego.c: 776: void interrupt ISRH()
-[; ;SysRiego.c: 777: {
-[e :U _ISRH ]
-[f ]
-[; ;SysRiego.c: 778: if(INTCONbits.RBIF==1)
-"778
-[e $ ! == -> . . _INTCONbits 0 0 `i -> 1 `i 2215  ]
-[; ;SysRiego.c: 779: {
-"779
-{
-[; ;SysRiego.c: 780: while(INTCONbits.RBIF == 1) {
-"780
-[e $U 2216  ]
-[e :U 2217 ]
-{
-[; ;SysRiego.c: 782: groundAllRows();
-"782
-[e ( _groundAllRows ..  ]
-[; ;SysRiego.c: 784: if(PORTB != 0xF0){
-"784
-[e $ ! != -> _PORTB `i -> 240 `i 2219  ]
-{
-[; ;SysRiego.c: 785: oneShot();
-"785
-[e ( _oneShot ..  ]
-"786
-}
-[e :U 2219 ]
-[; ;SysRiego.c: 786: }
-[; ;SysRiego.c: 787: if(oneShotFlag == 1){
-"787
-[e $ ! == -> _oneShotFlag `i -> 1 `i 2220  ]
-{
-[; ;SysRiego.c: 788: resetOneShot();
-"788
-[e ( _resetOneShot ..  ]
-"789
-}
-[e :U 2220 ]
-"791
-}
-[e :U 2216 ]
-"780
-[e $ == -> . . _INTCONbits 0 0 `i -> 1 `i 2217  ]
-[e :U 2218 ]
-[; ;SysRiego.c: 789: }
-[; ;SysRiego.c: 791: }
-[; ;SysRiego.c: 793: return;
-"793
-[e $UE 2214  ]
-"794
-}
-[e :U 2215 ]
-[; ;SysRiego.c: 794: }
-[; ;SysRiego.c: 797: if(TMR0IE && TMR0IF)
-"797
-[e $ ! && _TMR0IE _TMR0IF 2221  ]
-[; ;SysRiego.c: 798: {
-"798
-{
-[; ;SysRiego.c: 799: counterSEC++;
-"799
-[e ++ _counterSEC -> -> 1 `i `uc ]
-[; ;SysRiego.c: 800: if(counterSEC=='5')
-"800
-[e $ ! == -> _counterSEC `ui -> 53 `ui 2222  ]
-[; ;SysRiego.c: 801: {
-"801
-{
-[; ;SysRiego.c: 802: counterSEC='0';
-"802
-[e = _counterSEC -> -> 48 `ui `uc ]
-[; ;SysRiego.c: 803: counterMIN[1]++;
-"803
-[e ++ *U + &U _counterMIN * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux -> -> 1 `i `uc ]
-[; ;SysRiego.c: 804: if(counterMIN[1]==':')
-"804
-[e $ ! == -> *U + &U _counterMIN * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux `ui -> 58 `ui 2223  ]
-[; ;SysRiego.c: 805: {
-"805
-{
-[; ;SysRiego.c: 806: counterMIN[1]='0';
-"806
-[e = *U + &U _counterMIN * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux -> -> 48 `ui `uc ]
-[; ;SysRiego.c: 807: counterMIN[0]++;
-"807
-[e ++ *U + &U _counterMIN * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux -> -> 1 `i `uc ]
-[; ;SysRiego.c: 808: if(counterMIN[0]=='6')
-"808
-[e $ ! == -> *U + &U _counterMIN * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux `ui -> 54 `ui 2224  ]
-[; ;SysRiego.c: 809: {
-"809
-{
-[; ;SysRiego.c: 811: if(counterHOUR[0] < '2') {
-"811
-[e $ ! < -> *U + &U _counterHOUR * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux `ui -> 50 `ui 2225  ]
-{
-[; ;SysRiego.c: 813: counterMIN[0]='0';
-"813
-[e = *U + &U _counterMIN * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux -> -> 48 `ui `uc ]
-[; ;SysRiego.c: 814: counterHOUR[1]++;
-"814
-[e ++ *U + &U _counterHOUR * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux -> -> 1 `i `uc ]
-[; ;SysRiego.c: 816: if(counterHOUR[1] == ':') {
-"816
-[e $ ! == -> *U + &U _counterHOUR * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux `ui -> 58 `ui 2226  ]
-{
-[; ;SysRiego.c: 817: counterHOUR[1] = '0';
-"817
-[e = *U + &U _counterHOUR * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux -> -> 48 `ui `uc ]
-[; ;SysRiego.c: 818: counterHOUR[0]++;
-"818
-[e ++ *U + &U _counterHOUR * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux -> -> 1 `i `uc ]
-"819
+"853
 }
 [e :U 2226 ]
-"821
-}
-[; ;SysRiego.c: 819: }
-[; ;SysRiego.c: 821: }
-[e $U 2227  ]
-"823
-[e :U 2225 ]
-[; ;SysRiego.c: 823: else if( counterHOUR[1] < '3')
-[e $ ! < -> *U + &U _counterHOUR * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux `ui -> 51 `ui 2228  ]
-[; ;SysRiego.c: 824: {
-"824
-{
-[; ;SysRiego.c: 825: counterMIN[0]='0';
-"825
-[e = *U + &U _counterMIN * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux -> -> 48 `ui `uc ]
-[; ;SysRiego.c: 826: counterHOUR[1]++;
-"826
-[e ++ *U + &U _counterHOUR * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux -> -> 1 `i `uc ]
-"827
-}
-[; ;SysRiego.c: 827: }
-[e $U 2229  ]
-"829
-[e :U 2228 ]
-[; ;SysRiego.c: 829: else {
-{
-[; ;SysRiego.c: 831: counterSEC = '0';
-"831
-[e = _counterSEC -> -> 48 `ui `uc ]
-[; ;SysRiego.c: 832: counterMIN[0] = '0';
-"832
-[e = *U + &U _counterMIN * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux -> -> 48 `ui `uc ]
-[; ;SysRiego.c: 833: counterMIN[1] = '0';
-"833
-[e = *U + &U _counterMIN * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux -> -> 48 `ui `uc ]
-[; ;SysRiego.c: 834: counterHOUR[0] = '0';
-"834
-[e = *U + &U _counterHOUR * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux -> -> 48 `ui `uc ]
-[; ;SysRiego.c: 835: counterHOUR[1] = '0';
-"835
-[e = *U + &U _counterHOUR * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux -> -> 48 `ui `uc ]
-[; ;SysRiego.c: 836: counterDAYS++;
-"836
-[e ++ _counterDAYS -> -> 1 `i `uc ]
-[; ;SysRiego.c: 838: if (counterDAYS == '7') {
-"838
-[e $ ! == -> _counterDAYS `ui -> 55 `ui 2230  ]
-{
-[; ;SysRiego.c: 840: counterSEC = '0';
-"840
-[e = _counterSEC -> -> 48 `ui `uc ]
-[; ;SysRiego.c: 841: counterMIN[0] = '0';
-"841
-[e = *U + &U _counterMIN * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux -> -> 48 `ui `uc ]
-[; ;SysRiego.c: 842: counterMIN[1] = '0';
-"842
-[e = *U + &U _counterMIN * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux -> -> 48 `ui `uc ]
-[; ;SysRiego.c: 843: counterHOUR[0] = '0';
-"843
-[e = *U + &U _counterHOUR * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux -> -> 48 `ui `uc ]
-[; ;SysRiego.c: 844: counterHOUR[1] = '0';
-"844
-[e = *U + &U _counterHOUR * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux -> -> 48 `ui `uc ]
-[; ;SysRiego.c: 845: counterDAYS = '0';
-"845
-[e = _counterDAYS -> -> 48 `ui `uc ]
-"846
-}
-[e :U 2230 ]
-"847
-}
-[e :U 2229 ]
-[e :U 2227 ]
-"848
-}
-[e :U 2224 ]
-"849
-}
-[e :U 2223 ]
-"850
-}
-[e :U 2222 ]
-[; ;SysRiego.c: 846: }
-[; ;SysRiego.c: 847: }
-[; ;SysRiego.c: 848: }
-[; ;SysRiego.c: 849: }
-[; ;SysRiego.c: 850: }
-[; ;SysRiego.c: 852: INTCONbits.TMR0IF = 0;
-"852
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 853: TMR0 = 0x3A98;
-"853
-[e = _TMR0 -> -> 15000 `i `us ]
-[; ;SysRiego.c: 854: return;
 "854
-[e $UE 2214  ]
+}
+[e :U 2225 ]
 "855
 }
-[e :U 2221 ]
-[; ;SysRiego.c: 855: }
-[; ;SysRiego.c: 857: if(PIR1bits.ADIF == 1) {
+[e :U 2224 ]
+"856
+}
+[e :U 2223 ]
 "857
-[e $ ! == -> . . _PIR1bits 0 6 `i -> 1 `i 2231  ]
-{
-[; ;SysRiego.c: 859: PIR1bits.ADIF=0;
+}
+[e :U 2222 ]
 "859
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 860: return;
-"860
-[e $UE 2214  ]
-"862
+}
+"841
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 3 `i 2219  ]
+[e :U 2220 ]
+"859
+}
+"861
+}
+[e :U 2203 ]
+"792
+[e $ && == -> _modeSelected `i -> 1 `i == -> _statusConfiguration `i -> 0 `i 2204  ]
+[e :U 2205 ]
+[; ;SysRiego.c: 853: }
+[; ;SysRiego.c: 854: }
+[; ;SysRiego.c: 855: }
+[; ;SysRiego.c: 856: }
+[; ;SysRiego.c: 857: }
+[; ;SysRiego.c: 859: }
+[; ;SysRiego.c: 861: }
+[; ;SysRiego.c: 864: clearEndTimes();
+"864
+[e ( _clearEndTimes ..  ]
+[; ;SysRiego.c: 866: stopAllIrrigation();
+"866
+[e ( _stopAllIrrigation ..  ]
+[; ;SysRiego.c: 868: }
+"868
+[e :UE 2202 ]
+}
+"870
+[v _workingManual `(v ~T0 @X0 1 ef ]
+{
+[; ;SysRiego.c: 870: void workingManual() {
+[e :U _workingManual ]
+[f ]
+[; ;SysRiego.c: 872: clearDisplay();
+"872
+[e ( _clearDisplay ..  ]
+[; ;SysRiego.c: 873: displayLineOnLCD(manualMessage, sizeof(manualMessage) / sizeof(manualMessage[0]));
+"873
+[e ( _displayLineOnLCD (2 , &U _manualMessage -> / -> # _manualMessage `ui -> # *U + &U _manualMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _manualMessage `ui `ux `ui `uc ]
+[; ;SysRiego.c: 875: while(modeSelected == 2 && statusConfiguration == 0) {
+"875
+[e $U 2231  ]
+[e :U 2232 ]
+{
+"879
 }
 [e :U 2231 ]
-[; ;SysRiego.c: 862: }
-[; ;SysRiego.c: 864: }
-"864
-[e :UE 2214 ]
-}
-"869
-[v _getInput `(uc ~T0 @X0 1 ef ]
-{
-[; ;SysRiego.c: 869: unsigned char getInput() {
-[e :U _getInput ]
-[f ]
-[; ;SysRiego.c: 871: getValueStatus = 0;
-"871
-[e = _getValueStatus -> -> 0 `i `uc ]
-[; ;SysRiego.c: 873: oneShotFlag = 0;
-"873
-[e = _oneShotFlag -> -> 0 `i `uc ]
-[; ;SysRiego.c: 875: while(getValueStatus == 0) {
 "875
-[e $U 2233  ]
-[e :U 2234 ]
-{
-[; ;SysRiego.c: 877: groundAllRows();
-"877
-[e ( _groundAllRows ..  ]
-[; ;SysRiego.c: 879: if (PORTB != 0xF0) {
-"879
-[e $ ! != -> _PORTB `i -> 240 `i 2236  ]
-{
-[; ;SysRiego.c: 880: readInput();
-"880
-[e ( _readInput ..  ]
-"881
-}
-[e :U 2236 ]
-[; ;SysRiego.c: 881: }
-[; ;SysRiego.c: 883: if (oneShotFlag == 1) {
-"883
-[e $ ! == -> _oneShotFlag `i -> 1 `i 2237  ]
-{
-[; ;SysRiego.c: 884: resetReadInput();
-"884
-[e ( _resetReadInput ..  ]
-"885
-}
-[e :U 2237 ]
-"887
-}
+[e $ && == -> _modeSelected `i -> 2 `i == -> _statusConfiguration `i -> 0 `i 2232  ]
 [e :U 2233 ]
-"875
-[e $ == -> _getValueStatus `i -> 0 `i 2234  ]
-[e :U 2235 ]
-[; ;SysRiego.c: 885: }
-[; ;SysRiego.c: 887: }
-[; ;SysRiego.c: 889: return keyCode;
+[; ;SysRiego.c: 879: }
+[; ;SysRiego.c: 881: stopIrrigateManual();
+"881
+[e ( _stopIrrigateManual ..  ]
+[; ;SysRiego.c: 883: }
+"883
+[e :UE 2230 ]
+}
+[v F16203 `(v ~T0 @X0 1 tf ]
+"888
+[v _ISRL `ILF16203 ~T0 @X0 1 e ]
 "889
-[e ) _keyCode ]
-[e $UE 2232  ]
+{
+[; ;SysRiego.c: 888: void interrupt low_priority ISRL()
+[; ;SysRiego.c: 889: {
+[e :U _ISRL ]
+[f ]
 [; ;SysRiego.c: 891: }
 "891
-[e :UE 2232 ]
+[e :UE 2234 ]
 }
-"898
-[v _groundAllRows `(v ~T0 @X0 1 ef ]
+[v F16205 `(v ~T0 @X0 1 tf ]
+"893
+[v _ISRH `IF16205 ~T0 @X0 1 e ]
+"894
 {
-[; ;SysRiego.c: 898: void groundAllRows(){
-[e :U _groundAllRows ]
+[; ;SysRiego.c: 893: void interrupt ISRH()
+[; ;SysRiego.c: 894: {
+[e :U _ISRH ]
 [f ]
-[; ;SysRiego.c: 899: PORTBbits.RB0 = 0;
+[; ;SysRiego.c: 895: if(INTCONbits.RBIF==1)
+"895
+[e $ ! == -> . . _INTCONbits 0 0 `i -> 1 `i 2236  ]
+[; ;SysRiego.c: 896: {
+"896
+{
+[; ;SysRiego.c: 897: while(INTCONbits.RBIF == 1) {
+"897
+[e $U 2237  ]
+[e :U 2238 ]
+{
+[; ;SysRiego.c: 899: groundAllRows();
 "899
-[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 900: PORTBbits.RB1 = 0;
-"900
-[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 901: PORTBbits.RB2 = 0;
+[e ( _groundAllRows ..  ]
+[; ;SysRiego.c: 901: if(PORTB != 0xF0){
 "901
-[e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 902: PORTBbits.RB3 = 0;
+[e $ ! != -> _PORTB `i -> 240 `i 2240  ]
+{
+[; ;SysRiego.c: 902: oneShot();
 "902
-[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 903: }
+[e ( _oneShot ..  ]
 "903
-[e :UE 2238 ]
 }
-"905
-[v _oneShot `(v ~T0 @X0 1 ef ]
-{
-[; ;SysRiego.c: 905: void oneShot(){
-[e :U _oneShot ]
-[f ]
-[; ;SysRiego.c: 906: if (oneShotFlag == 1)
-"906
-[e $ ! == -> _oneShotFlag `i -> 1 `i 2240  ]
-[; ;SysRiego.c: 907: return;
-"907
-[e $UE 2239  ]
 [e :U 2240 ]
-[; ;SysRiego.c: 908: delay();
-"908
-[e ( _delay ..  ]
-[; ;SysRiego.c: 909: if (PORTB != 0xF0){
-"909
-[e $ ! != -> _PORTB `i -> 240 `i 2241  ]
+[; ;SysRiego.c: 903: }
+[; ;SysRiego.c: 904: if(oneShotFlag == 1){
+"904
+[e $ ! == -> _oneShotFlag `i -> 1 `i 2241  ]
 {
-[; ;SysRiego.c: 910: pressedKey();
-"910
-[e ( _pressedKey ..  ]
-[; ;SysRiego.c: 911: oneShotFlag = 1;
-"911
-[e = _oneShotFlag -> -> 1 `i `uc ]
-"912
+[; ;SysRiego.c: 905: resetOneShot();
+"905
+[e ( _resetOneShot ..  ]
+"906
 }
 [e :U 2241 ]
-[; ;SysRiego.c: 912: }
-[; ;SysRiego.c: 913: }
-"913
-[e :UE 2239 ]
+"908
 }
+[e :U 2237 ]
+"897
+[e $ == -> . . _INTCONbits 0 0 `i -> 1 `i 2238  ]
+[e :U 2239 ]
+[; ;SysRiego.c: 906: }
+[; ;SysRiego.c: 908: }
+[; ;SysRiego.c: 910: return;
+"910
+[e $UE 2235  ]
+"911
+}
+[e :U 2236 ]
+[; ;SysRiego.c: 911: }
+[; ;SysRiego.c: 914: if(TMR0IE && TMR0IF)
+"914
+[e $ ! && _TMR0IE _TMR0IF 2242  ]
+[; ;SysRiego.c: 915: {
+"915
+{
+[; ;SysRiego.c: 916: counterSEC++;
 "916
-[v _delay `(v ~T0 @X0 1 ef ]
-{
-[; ;SysRiego.c: 916: void delay(){
-[e :U _delay ]
-[f ]
+[e ++ _counterSEC -> -> 1 `i `uc ]
+[; ;SysRiego.c: 917: if(counterSEC=='5')
 "917
-[v _L1REG `uc ~T0 @X0 1 a ]
-[; ;SysRiego.c: 917: unsigned char L1REG = 0;
-[e = _L1REG -> -> 0 `i `uc ]
+[e $ ! == -> _counterSEC `ui -> 53 `ui 2243  ]
+[; ;SysRiego.c: 918: {
 "918
-[v _L2REG `uc ~T0 @X0 1 a ]
-[; ;SysRiego.c: 918: unsigned char L2REG;
-[; ;SysRiego.c: 919: while(L1REG++ < 13){
-"919
-[e $U 2243  ]
-[e :U 2244 ]
 {
-[; ;SysRiego.c: 920: L2REG = 0;
+[; ;SysRiego.c: 919: counterSEC='0';
+"919
+[e = _counterSEC -> -> 48 `ui `uc ]
+[; ;SysRiego.c: 920: counterMIN[1]++;
 "920
-[e = _L2REG -> -> 0 `i `uc ]
-[; ;SysRiego.c: 921: while(L2REG++ < 255);
+[e ++ *U + &U _counterMIN * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux -> -> 1 `i `uc ]
+[; ;SysRiego.c: 921: if(counterMIN[1]==':')
 "921
-[e $U 2246  ]
-[e :U 2247 ]
-[e :U 2246 ]
-[e $ < -> ++ _L2REG -> -> 1 `i `uc `i -> 255 `i 2247  ]
-[e :U 2248 ]
+[e $ ! == -> *U + &U _counterMIN * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux `ui -> 58 `ui 2244  ]
+[; ;SysRiego.c: 922: {
 "922
-}
-[e :U 2243 ]
-"919
-[e $ < -> ++ _L1REG -> -> 1 `i `uc `i -> 13 `i 2244  ]
-[e :U 2245 ]
-[; ;SysRiego.c: 922: }
-[; ;SysRiego.c: 923: }
+{
+[; ;SysRiego.c: 923: counterMIN[1]='0';
 "923
-[e :UE 2242 ]
-}
+[e = *U + &U _counterMIN * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux -> -> 48 `ui `uc ]
+[; ;SysRiego.c: 924: counterMIN[0]++;
+"924
+[e ++ *U + &U _counterMIN * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux -> -> 1 `i `uc ]
+[; ;SysRiego.c: 925: if(counterMIN[0]=='6')
 "925
-[v _resetOneShot `(v ~T0 @X0 1 ef ]
-{
-[; ;SysRiego.c: 925: void resetOneShot(){
-[e :U _resetOneShot ]
-[f ]
-[; ;SysRiego.c: 926: if (PORTB == 0xF0)
+[e $ ! == -> *U + &U _counterMIN * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux `ui -> 54 `ui 2245  ]
+[; ;SysRiego.c: 926: {
 "926
-[e $ ! == -> _PORTB `i -> 240 `i 2250  ]
-[; ;SysRiego.c: 927: delay();
-"927
-[e ( _delay ..  ]
-[e $U 2251  ]
+{
+[; ;SysRiego.c: 928: if(counterHOUR[0] < '2') {
 "928
-[e :U 2250 ]
-[; ;SysRiego.c: 928: else
-[; ;SysRiego.c: 929: return;
-"929
-[e $UE 2249  ]
-[e :U 2251 ]
-[; ;SysRiego.c: 930: if (PORTB == 0XF0){
+[e $ ! < -> *U + &U _counterHOUR * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux `ui -> 50 `ui 2246  ]
+{
+[; ;SysRiego.c: 930: counterMIN[0]='0';
 "930
-[e $ ! == -> _PORTB `i -> 240 `i 2252  ]
-{
-[; ;SysRiego.c: 931: INTCONbits.RBIF=0;
+[e = *U + &U _counterMIN * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux -> -> 48 `ui `uc ]
+[; ;SysRiego.c: 931: counterHOUR[1]++;
 "931
-[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 932: oneShotFlag = 0;
-"932
-[e = _oneShotFlag -> -> 0 `i `uc ]
+[e ++ *U + &U _counterHOUR * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux -> -> 1 `i `uc ]
+[; ;SysRiego.c: 933: if(counterHOUR[1] == ':') {
 "933
-}
-[e :U 2252 ]
-[; ;SysRiego.c: 933: }
-[; ;SysRiego.c: 934: }
+[e $ ! == -> *U + &U _counterHOUR * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux `ui -> 58 `ui 2247  ]
+{
+[; ;SysRiego.c: 934: counterHOUR[1] = '0';
 "934
-[e :UE 2249 ]
-}
+[e = *U + &U _counterHOUR * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux -> -> 48 `ui `uc ]
+[; ;SysRiego.c: 935: counterHOUR[0]++;
+"935
+[e ++ *U + &U _counterHOUR * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux -> -> 1 `i `uc ]
 "936
-[v _pressedKey `(v ~T0 @X0 1 ef ]
-{
-[; ;SysRiego.c: 936: void pressedKey(){
-[e :U _pressedKey ]
-[f ]
-[; ;SysRiego.c: 938: switch(PORTB){
+}
+[e :U 2247 ]
 "938
-[e $U 2255  ]
-{
-[; ;SysRiego.c: 939: case 0xE0: columnSelected = 1; break;
-"939
-[e :U 2256 ]
-[e = _columnSelected -> -> 1 `i `uc ]
-[e $U 2254  ]
-[; ;SysRiego.c: 940: case 0xD0: columnSelected = 2; break;
+}
+[; ;SysRiego.c: 936: }
+[; ;SysRiego.c: 938: }
+[e $U 2248  ]
 "940
-[e :U 2257 ]
-[e = _columnSelected -> -> 2 `i `uc ]
-[e $U 2254  ]
-[; ;SysRiego.c: 941: case 0xB0: columnSelected = 3; break;
+[e :U 2246 ]
+[; ;SysRiego.c: 940: else if( counterHOUR[1] < '3')
+[e $ ! < -> *U + &U _counterHOUR * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux `ui -> 51 `ui 2249  ]
+[; ;SysRiego.c: 941: {
 "941
-[e :U 2258 ]
-[e = _columnSelected -> -> 3 `i `uc ]
-[e $U 2254  ]
-[; ;SysRiego.c: 942: case 0x70: columnSelected = 4; break;
+{
+[; ;SysRiego.c: 942: counterMIN[0]='0';
 "942
-[e :U 2259 ]
-[e = _columnSelected -> -> 4 `i `uc ]
-[e $U 2254  ]
-[; ;SysRiego.c: 943: default: columnSelected = 100;
+[e = *U + &U _counterMIN * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux -> -> 48 `ui `uc ]
+[; ;SysRiego.c: 943: counterHOUR[1]++;
 "943
-[e :U 2260 ]
-[e = _columnSelected -> -> 100 `i `uc ]
+[e ++ *U + &U _counterHOUR * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux -> -> 1 `i `uc ]
 "944
 }
 [; ;SysRiego.c: 944: }
-[e $U 2254  ]
-"938
-[e :U 2255 ]
-[e [\ _PORTB , $ -> -> 224 `i `uc 2256
- , $ -> -> 208 `i `uc 2257
- , $ -> -> 176 `i `uc 2258
- , $ -> -> 112 `i `uc 2259
- 2260 ]
-"944
-[e :U 2254 ]
-[; ;SysRiego.c: 945: determinePressedRow();
-"945
-[e ( _determinePressedRow ..  ]
-[; ;SysRiego.c: 946: keyCode = getKeyCode();
+[e $U 2250  ]
 "946
-[e = _keyCode ( _getKeyCode ..  ]
-[; ;SysRiego.c: 947: pressedKeyAction(keyCode);
-"947
-[e ( _pressedKeyAction (1 _keyCode ]
-[; ;SysRiego.c: 948: }
+[e :U 2249 ]
+[; ;SysRiego.c: 946: else {
+{
+[; ;SysRiego.c: 948: counterSEC = '0';
 "948
-[e :UE 2253 ]
-}
+[e = _counterSEC -> -> 48 `ui `uc ]
+[; ;SysRiego.c: 949: counterMIN[0] = '0';
+"949
+[e = *U + &U _counterMIN * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux -> -> 48 `ui `uc ]
+[; ;SysRiego.c: 950: counterMIN[1] = '0';
+"950
+[e = *U + &U _counterMIN * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux -> -> 48 `ui `uc ]
+[; ;SysRiego.c: 951: counterHOUR[0] = '0';
 "951
-[v _determinePressedRow `(v ~T0 @X0 1 ef ]
-{
-[; ;SysRiego.c: 951: void determinePressedRow(){
-[e :U _determinePressedRow ]
-[f ]
+[e = *U + &U _counterHOUR * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux -> -> 48 `ui `uc ]
+[; ;SysRiego.c: 952: counterHOUR[1] = '0';
 "952
-[v _i `uc ~T0 @X0 1 a ]
-[; ;SysRiego.c: 952: char i;
-[; ;SysRiego.c: 953: for(i=0; i<4; i++){
+[e = *U + &U _counterHOUR * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux -> -> 48 `ui `uc ]
+[; ;SysRiego.c: 953: counterDAYS++;
 "953
-{
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 4 `i 2262  ]
-[e $U 2263  ]
-[e :U 2262 ]
-{
-[; ;SysRiego.c: 954: turnOnAllRows();
-"954
-[e ( _turnOnAllRows ..  ]
-[; ;SysRiego.c: 955: switch(i){
+[e ++ _counterDAYS -> -> 1 `i `uc ]
+[; ;SysRiego.c: 955: if (counterDAYS == '7') {
 "955
-[e $U 2266  ]
+[e $ ! == -> _counterDAYS `ui -> 55 `ui 2251  ]
 {
-[; ;SysRiego.c: 956: case 0: {
-"956
-[e :U 2267 ]
-{
-[; ;SysRiego.c: 958: PORTBbits.RB0 = 0;
+[; ;SysRiego.c: 957: counterSEC = '0';
+"957
+[e = _counterSEC -> -> 48 `ui `uc ]
+[; ;SysRiego.c: 958: counterMIN[0] = '0';
 "958
-[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 960: if( (columnSelected == 1) && (PORTBbits.RB4 == 0)){
+[e = *U + &U _counterMIN * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux -> -> 48 `ui `uc ]
+[; ;SysRiego.c: 959: counterMIN[1] = '0';
+"959
+[e = *U + &U _counterMIN * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterMIN `ui `ux -> -> 48 `ui `uc ]
+[; ;SysRiego.c: 960: counterHOUR[0] = '0';
 "960
-[e $ ! && == -> _columnSelected `i -> 1 `i == -> . . _PORTBbits 0 4 `i -> 0 `i 2268  ]
-{
-[; ;SysRiego.c: 961: rowSelected = 1;
+[e = *U + &U _counterHOUR * -> -> -> 0 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux -> -> 48 `ui `uc ]
+[; ;SysRiego.c: 961: counterHOUR[1] = '0';
 "961
-[e = _rowSelected -> -> 1 `i `uc ]
-[; ;SysRiego.c: 962: return;
+[e = *U + &U _counterHOUR * -> -> -> 1 `i `ui `ux -> -> # *U &U _counterHOUR `ui `ux -> -> 48 `ui `uc ]
+[; ;SysRiego.c: 962: counterDAYS = '0';
 "962
-[e $UE 2261  ]
+[e = _counterDAYS -> -> 48 `ui `uc ]
 "963
 }
-[e :U 2268 ]
-[; ;SysRiego.c: 963: }
-[; ;SysRiego.c: 964: if( (columnSelected == 2) && (PORTBbits.RB5 == 0)){
+[e :U 2251 ]
 "964
-[e $ ! && == -> _columnSelected `i -> 2 `i == -> . . _PORTBbits 0 5 `i -> 0 `i 2269  ]
-{
-[; ;SysRiego.c: 965: rowSelected = 1;
+}
+[e :U 2250 ]
+[e :U 2248 ]
 "965
-[e = _rowSelected -> -> 1 `i `uc ]
-[; ;SysRiego.c: 966: return;
+}
+[e :U 2245 ]
 "966
-[e $UE 2261  ]
+}
+[e :U 2244 ]
 "967
 }
-[e :U 2269 ]
+[e :U 2243 ]
+[; ;SysRiego.c: 963: }
+[; ;SysRiego.c: 964: }
+[; ;SysRiego.c: 965: }
+[; ;SysRiego.c: 966: }
 [; ;SysRiego.c: 967: }
-[; ;SysRiego.c: 968: if( (columnSelected == 3) && (PORTBbits.RB6 == 0)){
-"968
-[e $ ! && == -> _columnSelected `i -> 3 `i == -> . . _PORTBbits 0 6 `i -> 0 `i 2270  ]
-{
-[; ;SysRiego.c: 969: rowSelected = 1;
+[; ;SysRiego.c: 969: INTCONbits.TMR0IF = 0;
 "969
-[e = _rowSelected -> -> 1 `i `uc ]
-[; ;SysRiego.c: 970: return;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 970: TMR0 = 0x3A98;
 "970
-[e $UE 2261  ]
+[e = _TMR0 -> -> 15000 `i `us ]
+[; ;SysRiego.c: 971: return;
 "971
-}
-[e :U 2270 ]
-[; ;SysRiego.c: 971: }
-[; ;SysRiego.c: 972: if( (columnSelected == 4) && (PORTBbits.RB7 == 0)){
+[e $UE 2235  ]
 "972
-[e $ ! && == -> _columnSelected `i -> 4 `i == -> . . _PORTBbits 0 7 `i -> 0 `i 2271  ]
-{
-[; ;SysRiego.c: 973: rowSelected = 1;
-"973
-[e = _rowSelected -> -> 1 `i `uc ]
-[; ;SysRiego.c: 974: return;
+}
+[e :U 2242 ]
+[; ;SysRiego.c: 972: }
+[; ;SysRiego.c: 974: if(PIR1bits.ADIF == 1) {
 "974
-[e $UE 2261  ]
-"975
-}
-[e :U 2271 ]
+[e $ ! == -> . . _PIR1bits 0 6 `i -> 1 `i 2252  ]
+{
+[; ;SysRiego.c: 976: PIR1bits.ADIF=0;
 "976
-}
-[; ;SysRiego.c: 975: }
-[; ;SysRiego.c: 976: }break;
-[e $U 2265  ]
-[; ;SysRiego.c: 977: case 1: {
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 977: return;
 "977
-[e :U 2272 ]
-{
-[; ;SysRiego.c: 978: PORTBbits.RB1 = 0;
-"978
-[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 979: if( (columnSelected == 1) && (PORTBbits.RB4 == 0)){
+[e $UE 2235  ]
 "979
-[e $ ! && == -> _columnSelected `i -> 1 `i == -> . . _PORTBbits 0 4 `i -> 0 `i 2273  ]
-{
-[; ;SysRiego.c: 980: rowSelected = 2;
-"980
-[e = _rowSelected -> -> 2 `i `uc ]
-[; ;SysRiego.c: 981: return;
+}
+[e :U 2252 ]
+[; ;SysRiego.c: 979: }
+[; ;SysRiego.c: 981: }
 "981
-[e $UE 2261  ]
-"982
+[e :UE 2235 ]
 }
-[e :U 2273 ]
-[; ;SysRiego.c: 982: }
-[; ;SysRiego.c: 983: if( (columnSelected == 2) && (PORTBbits.RB5 == 0)){
-"983
-[e $ ! && == -> _columnSelected `i -> 2 `i == -> . . _PORTBbits 0 5 `i -> 0 `i 2274  ]
-{
-[; ;SysRiego.c: 984: rowSelected = 2;
-"984
-[e = _rowSelected -> -> 2 `i `uc ]
-[; ;SysRiego.c: 985: return;
-"985
-[e $UE 2261  ]
 "986
-}
-[e :U 2274 ]
-[; ;SysRiego.c: 986: }
-[; ;SysRiego.c: 987: if( (columnSelected == 3) && (PORTBbits.RB6 == 0)){
-"987
-[e $ ! && == -> _columnSelected `i -> 3 `i == -> . . _PORTBbits 0 6 `i -> 0 `i 2275  ]
+[v _getInput `(uc ~T0 @X0 1 ef ]
 {
-[; ;SysRiego.c: 988: rowSelected = 2;
+[; ;SysRiego.c: 986: unsigned char getInput() {
+[e :U _getInput ]
+[f ]
+[; ;SysRiego.c: 988: getValueStatus = 0;
 "988
-[e = _rowSelected -> -> 2 `i `uc ]
-[; ;SysRiego.c: 989: return;
-"989
-[e $UE 2261  ]
+[e = _getValueStatus -> -> 0 `i `uc ]
+[; ;SysRiego.c: 990: oneShotFlag = 0;
 "990
-}
-[e :U 2275 ]
-[; ;SysRiego.c: 990: }
-[; ;SysRiego.c: 991: if( (columnSelected == 4) && (PORTBbits.RB7 == 0)){
-"991
-[e $ ! && == -> _columnSelected `i -> 4 `i == -> . . _PORTBbits 0 7 `i -> 0 `i 2276  ]
-{
-[; ;SysRiego.c: 992: rowSelected = 2;
+[e = _oneShotFlag -> -> 0 `i `uc ]
+[; ;SysRiego.c: 992: while(getValueStatus == 0) {
 "992
-[e = _rowSelected -> -> 2 `i `uc ]
-[; ;SysRiego.c: 993: return;
-"993
-[e $UE 2261  ]
+[e $U 2254  ]
+[e :U 2255 ]
+{
+[; ;SysRiego.c: 994: groundAllRows();
 "994
-}
-[e :U 2276 ]
-"995
-}
-[; ;SysRiego.c: 994: }
-[; ;SysRiego.c: 995: }break;
-[e $U 2265  ]
-[; ;SysRiego.c: 996: case 2: {
+[e ( _groundAllRows ..  ]
+[; ;SysRiego.c: 996: if (PORTB != 0xF0) {
 "996
-[e :U 2277 ]
+[e $ ! != -> _PORTB `i -> 240 `i 2257  ]
 {
-[; ;SysRiego.c: 997: PORTBbits.RB2 = 0;
+[; ;SysRiego.c: 997: readInput();
 "997
-[e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 998: if( (columnSelected == 1) && (PORTBbits.RB4 == 0)){
+[e ( _readInput ..  ]
 "998
-[e $ ! && == -> _columnSelected `i -> 1 `i == -> . . _PORTBbits 0 4 `i -> 0 `i 2278  ]
-{
-[; ;SysRiego.c: 999: rowSelected = 3;
-"999
-[e = _rowSelected -> -> 3 `i `uc ]
-[; ;SysRiego.c: 1000: return;
+}
+[e :U 2257 ]
+[; ;SysRiego.c: 998: }
+[; ;SysRiego.c: 1000: if (oneShotFlag == 1) {
 "1000
-[e $UE 2261  ]
+[e $ ! == -> _oneShotFlag `i -> 1 `i 2258  ]
+{
+[; ;SysRiego.c: 1001: resetReadInput();
 "1001
-}
-[e :U 2278 ]
-[; ;SysRiego.c: 1001: }
-[; ;SysRiego.c: 1002: if( (columnSelected == 2) && (PORTBbits.RB5 == 0)){
+[e ( _resetReadInput ..  ]
 "1002
-[e $ ! && == -> _columnSelected `i -> 2 `i == -> . . _PORTBbits 0 5 `i -> 0 `i 2279  ]
-{
-[; ;SysRiego.c: 1003: rowSelected = 3;
-"1003
-[e = _rowSelected -> -> 3 `i `uc ]
-[; ;SysRiego.c: 1004: return;
+}
+[e :U 2258 ]
 "1004
-[e $UE 2261  ]
-"1005
 }
-[e :U 2279 ]
-[; ;SysRiego.c: 1005: }
-[; ;SysRiego.c: 1006: if( (columnSelected == 3) && (PORTBbits.RB6 == 0)){
+[e :U 2254 ]
+"992
+[e $ == -> _getValueStatus `i -> 0 `i 2255  ]
+[e :U 2256 ]
+[; ;SysRiego.c: 1002: }
+[; ;SysRiego.c: 1004: }
+[; ;SysRiego.c: 1006: return keyCode;
 "1006
-[e $ ! && == -> _columnSelected `i -> 3 `i == -> . . _PORTBbits 0 6 `i -> 0 `i 2280  ]
-{
-[; ;SysRiego.c: 1007: rowSelected = 3;
-"1007
-[e = _rowSelected -> -> 3 `i `uc ]
-[; ;SysRiego.c: 1008: return;
+[e ) _keyCode ]
+[e $UE 2253  ]
+[; ;SysRiego.c: 1008: }
 "1008
-[e $UE 2261  ]
-"1009
+[e :UE 2253 ]
 }
-[e :U 2280 ]
-[; ;SysRiego.c: 1009: }
-[; ;SysRiego.c: 1010: if( (columnSelected == 4) && (PORTBbits.RB7 == 0)){
-"1010
-[e $ ! && == -> _columnSelected `i -> 4 `i == -> . . _PORTBbits 0 7 `i -> 0 `i 2281  ]
-{
-[; ;SysRiego.c: 1011: rowSelected = 3;
-"1011
-[e = _rowSelected -> -> 3 `i `uc ]
-[; ;SysRiego.c: 1012: return;
-"1012
-[e $UE 2261  ]
-"1013
-}
-[e :U 2281 ]
-"1014
-}
-[; ;SysRiego.c: 1013: }
-[; ;SysRiego.c: 1014: }break;
-[e $U 2265  ]
-[; ;SysRiego.c: 1015: case 3: {
 "1015
-[e :U 2282 ]
+[v _groundAllRows `(v ~T0 @X0 1 ef ]
 {
-[; ;SysRiego.c: 1017: PORTBbits.RB3 = 0;
+[; ;SysRiego.c: 1015: void groundAllRows(){
+[e :U _groundAllRows ]
+[f ]
+[; ;SysRiego.c: 1016: PORTBbits.RB0 = 0;
+"1016
+[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1017: PORTBbits.RB1 = 0;
 "1017
-[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1018: if( (columnSelected == 1) && (PORTBbits.RB4 == 0)){
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1018: PORTBbits.RB2 = 0;
 "1018
-[e $ ! && == -> _columnSelected `i -> 1 `i == -> . . _PORTBbits 0 4 `i -> 0 `i 2283  ]
-{
-[; ;SysRiego.c: 1019: rowSelected = 4;
+[e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1019: PORTBbits.RB3 = 0;
 "1019
-[e = _rowSelected -> -> 4 `i `uc ]
-[; ;SysRiego.c: 1020: return;
+[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1020: }
 "1020
-[e $UE 2261  ]
-"1021
+[e :UE 2259 ]
 }
-[e :U 2283 ]
-[; ;SysRiego.c: 1021: }
-[; ;SysRiego.c: 1022: if( (columnSelected == 2) && (PORTBbits.RB5 == 0)){
 "1022
-[e $ ! && == -> _columnSelected `i -> 2 `i == -> . . _PORTBbits 0 5 `i -> 0 `i 2284  ]
+[v _oneShot `(v ~T0 @X0 1 ef ]
 {
-[; ;SysRiego.c: 1023: rowSelected = 4;
+[; ;SysRiego.c: 1022: void oneShot(){
+[e :U _oneShot ]
+[f ]
+[; ;SysRiego.c: 1023: if (oneShotFlag == 1)
 "1023
-[e = _rowSelected -> -> 4 `i `uc ]
+[e $ ! == -> _oneShotFlag `i -> 1 `i 2261  ]
 [; ;SysRiego.c: 1024: return;
 "1024
-[e $UE 2261  ]
+[e $UE 2260  ]
+[e :U 2261 ]
+[; ;SysRiego.c: 1025: delay();
 "1025
-}
-[e :U 2284 ]
-[; ;SysRiego.c: 1025: }
-[; ;SysRiego.c: 1026: if( (columnSelected == 3) && (PORTBbits.RB6 == 0)){
+[e ( _delay ..  ]
+[; ;SysRiego.c: 1026: if (PORTB != 0xF0){
 "1026
-[e $ ! && == -> _columnSelected `i -> 3 `i == -> . . _PORTBbits 0 6 `i -> 0 `i 2285  ]
+[e $ ! != -> _PORTB `i -> 240 `i 2262  ]
 {
-[; ;SysRiego.c: 1027: rowSelected = 4;
+[; ;SysRiego.c: 1027: pressedKey();
 "1027
-[e = _rowSelected -> -> 4 `i `uc ]
-[; ;SysRiego.c: 1028: return;
+[e ( _pressedKey ..  ]
+[; ;SysRiego.c: 1028: oneShotFlag = 1;
 "1028
-[e $UE 2261  ]
+[e = _oneShotFlag -> -> 1 `i `uc ]
 "1029
 }
-[e :U 2285 ]
+[e :U 2262 ]
 [; ;SysRiego.c: 1029: }
-[; ;SysRiego.c: 1030: if( (columnSelected == 4) && (PORTBbits.RB7 == 0)){
+[; ;SysRiego.c: 1030: }
 "1030
-[e $ ! && == -> _columnSelected `i -> 4 `i == -> . . _PORTBbits 0 7 `i -> 0 `i 2286  ]
-{
-[; ;SysRiego.c: 1031: rowSelected = 4;
-"1031
-[e = _rowSelected -> -> 4 `i `uc ]
-[; ;SysRiego.c: 1032: return;
-"1032
-[e $UE 2261  ]
+[e :UE 2260 ]
+}
 "1033
-}
-[e :U 2286 ]
+[v _delay `(v ~T0 @X0 1 ef ]
+{
+[; ;SysRiego.c: 1033: void delay(){
+[e :U _delay ]
+[f ]
 "1034
-}
-[; ;SysRiego.c: 1033: }
-[; ;SysRiego.c: 1034: }break;
-[e $U 2265  ]
+[v _L1REG `uc ~T0 @X0 1 a ]
+[; ;SysRiego.c: 1034: unsigned char L1REG = 0;
+[e = _L1REG -> -> 0 `i `uc ]
 "1035
-}
-[; ;SysRiego.c: 1035: }
-[e $U 2265  ]
-"955
-[e :U 2266 ]
-[e [\ _i , $ -> -> 0 `i `uc 2267
- , $ -> -> 1 `i `uc 2272
- , $ -> -> 2 `i `uc 2277
- , $ -> -> 3 `i `uc 2282
- 2265 ]
-"1035
+[v _L2REG `uc ~T0 @X0 1 a ]
+[; ;SysRiego.c: 1035: unsigned char L2REG;
+[; ;SysRiego.c: 1036: while(L1REG++ < 13){
+"1036
+[e $U 2264  ]
 [e :U 2265 ]
+{
+[; ;SysRiego.c: 1037: L2REG = 0;
 "1037
-}
-"953
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 4 `i 2262  ]
-[e :U 2263 ]
-"1037
-}
-[; ;SysRiego.c: 1037: }
-[; ;SysRiego.c: 1038: }
+[e = _L2REG -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1038: while(L2REG++ < 255);
 "1038
-[e :UE 2261 ]
+[e $U 2267  ]
+[e :U 2268 ]
+[e :U 2267 ]
+[e $ < -> ++ _L2REG -> -> 1 `i `uc `i -> 255 `i 2268  ]
+[e :U 2269 ]
+"1039
 }
+[e :U 2264 ]
+"1036
+[e $ < -> ++ _L1REG -> -> 1 `i `uc `i -> 13 `i 2265  ]
+[e :U 2266 ]
+[; ;SysRiego.c: 1039: }
+[; ;SysRiego.c: 1040: }
 "1040
+[e :UE 2263 ]
+}
+"1042
+[v _resetOneShot `(v ~T0 @X0 1 ef ]
+{
+[; ;SysRiego.c: 1042: void resetOneShot(){
+[e :U _resetOneShot ]
+[f ]
+[; ;SysRiego.c: 1043: if (PORTB == 0xF0)
+"1043
+[e $ ! == -> _PORTB `i -> 240 `i 2271  ]
+[; ;SysRiego.c: 1044: delay();
+"1044
+[e ( _delay ..  ]
+[e $U 2272  ]
+"1045
+[e :U 2271 ]
+[; ;SysRiego.c: 1045: else
+[; ;SysRiego.c: 1046: return;
+"1046
+[e $UE 2270  ]
+[e :U 2272 ]
+[; ;SysRiego.c: 1047: if (PORTB == 0XF0){
+"1047
+[e $ ! == -> _PORTB `i -> 240 `i 2273  ]
+{
+[; ;SysRiego.c: 1048: INTCONbits.RBIF=0;
+"1048
+[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1049: oneShotFlag = 0;
+"1049
+[e = _oneShotFlag -> -> 0 `i `uc ]
+"1050
+}
+[e :U 2273 ]
+[; ;SysRiego.c: 1050: }
+[; ;SysRiego.c: 1051: }
+"1051
+[e :UE 2270 ]
+}
+"1053
+[v _pressedKey `(v ~T0 @X0 1 ef ]
+{
+[; ;SysRiego.c: 1053: void pressedKey(){
+[e :U _pressedKey ]
+[f ]
+[; ;SysRiego.c: 1055: switch(PORTB){
+"1055
+[e $U 2276  ]
+{
+[; ;SysRiego.c: 1056: case 0xE0: columnSelected = 1; break;
+"1056
+[e :U 2277 ]
+[e = _columnSelected -> -> 1 `i `uc ]
+[e $U 2275  ]
+[; ;SysRiego.c: 1057: case 0xD0: columnSelected = 2; break;
+"1057
+[e :U 2278 ]
+[e = _columnSelected -> -> 2 `i `uc ]
+[e $U 2275  ]
+[; ;SysRiego.c: 1058: case 0xB0: columnSelected = 3; break;
+"1058
+[e :U 2279 ]
+[e = _columnSelected -> -> 3 `i `uc ]
+[e $U 2275  ]
+[; ;SysRiego.c: 1059: case 0x70: columnSelected = 4; break;
+"1059
+[e :U 2280 ]
+[e = _columnSelected -> -> 4 `i `uc ]
+[e $U 2275  ]
+[; ;SysRiego.c: 1060: default: columnSelected = 100;
+"1060
+[e :U 2281 ]
+[e = _columnSelected -> -> 100 `i `uc ]
+"1061
+}
+[; ;SysRiego.c: 1061: }
+[e $U 2275  ]
+"1055
+[e :U 2276 ]
+[e [\ _PORTB , $ -> -> 224 `i `uc 2277
+ , $ -> -> 208 `i `uc 2278
+ , $ -> -> 176 `i `uc 2279
+ , $ -> -> 112 `i `uc 2280
+ 2281 ]
+"1061
+[e :U 2275 ]
+[; ;SysRiego.c: 1062: determinePressedRow();
+"1062
+[e ( _determinePressedRow ..  ]
+[; ;SysRiego.c: 1063: keyCode = getKeyCode();
+"1063
+[e = _keyCode ( _getKeyCode ..  ]
+[; ;SysRiego.c: 1064: pressedKeyAction(keyCode);
+"1064
+[e ( _pressedKeyAction (1 _keyCode ]
+[; ;SysRiego.c: 1065: }
+"1065
+[e :UE 2274 ]
+}
+"1068
+[v _determinePressedRow `(v ~T0 @X0 1 ef ]
+{
+[; ;SysRiego.c: 1068: void determinePressedRow(){
+[e :U _determinePressedRow ]
+[f ]
+"1069
+[v _i `uc ~T0 @X0 1 a ]
+[; ;SysRiego.c: 1069: char i;
+[; ;SysRiego.c: 1070: for(i=0; i<4; i++){
+"1070
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 4 `i 2283  ]
+[e $U 2284  ]
+[e :U 2283 ]
+{
+[; ;SysRiego.c: 1071: turnOnAllRows();
+"1071
+[e ( _turnOnAllRows ..  ]
+[; ;SysRiego.c: 1072: switch(i){
+"1072
+[e $U 2287  ]
+{
+[; ;SysRiego.c: 1073: case 0: {
+"1073
+[e :U 2288 ]
+{
+[; ;SysRiego.c: 1075: PORTBbits.RB0 = 0;
+"1075
+[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1077: if( (columnSelected == 1) && (PORTBbits.RB4 == 0)){
+"1077
+[e $ ! && == -> _columnSelected `i -> 1 `i == -> . . _PORTBbits 0 4 `i -> 0 `i 2289  ]
+{
+[; ;SysRiego.c: 1078: rowSelected = 1;
+"1078
+[e = _rowSelected -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1079: return;
+"1079
+[e $UE 2282  ]
+"1080
+}
+[e :U 2289 ]
+[; ;SysRiego.c: 1080: }
+[; ;SysRiego.c: 1081: if( (columnSelected == 2) && (PORTBbits.RB5 == 0)){
+"1081
+[e $ ! && == -> _columnSelected `i -> 2 `i == -> . . _PORTBbits 0 5 `i -> 0 `i 2290  ]
+{
+[; ;SysRiego.c: 1082: rowSelected = 1;
+"1082
+[e = _rowSelected -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1083: return;
+"1083
+[e $UE 2282  ]
+"1084
+}
+[e :U 2290 ]
+[; ;SysRiego.c: 1084: }
+[; ;SysRiego.c: 1085: if( (columnSelected == 3) && (PORTBbits.RB6 == 0)){
+"1085
+[e $ ! && == -> _columnSelected `i -> 3 `i == -> . . _PORTBbits 0 6 `i -> 0 `i 2291  ]
+{
+[; ;SysRiego.c: 1086: rowSelected = 1;
+"1086
+[e = _rowSelected -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1087: return;
+"1087
+[e $UE 2282  ]
+"1088
+}
+[e :U 2291 ]
+[; ;SysRiego.c: 1088: }
+[; ;SysRiego.c: 1089: if( (columnSelected == 4) && (PORTBbits.RB7 == 0)){
+"1089
+[e $ ! && == -> _columnSelected `i -> 4 `i == -> . . _PORTBbits 0 7 `i -> 0 `i 2292  ]
+{
+[; ;SysRiego.c: 1090: rowSelected = 1;
+"1090
+[e = _rowSelected -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1091: return;
+"1091
+[e $UE 2282  ]
+"1092
+}
+[e :U 2292 ]
+"1093
+}
+[; ;SysRiego.c: 1092: }
+[; ;SysRiego.c: 1093: }break;
+[e $U 2286  ]
+[; ;SysRiego.c: 1094: case 1: {
+"1094
+[e :U 2293 ]
+{
+[; ;SysRiego.c: 1095: PORTBbits.RB1 = 0;
+"1095
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1096: if( (columnSelected == 1) && (PORTBbits.RB4 == 0)){
+"1096
+[e $ ! && == -> _columnSelected `i -> 1 `i == -> . . _PORTBbits 0 4 `i -> 0 `i 2294  ]
+{
+[; ;SysRiego.c: 1097: rowSelected = 2;
+"1097
+[e = _rowSelected -> -> 2 `i `uc ]
+[; ;SysRiego.c: 1098: return;
+"1098
+[e $UE 2282  ]
+"1099
+}
+[e :U 2294 ]
+[; ;SysRiego.c: 1099: }
+[; ;SysRiego.c: 1100: if( (columnSelected == 2) && (PORTBbits.RB5 == 0)){
+"1100
+[e $ ! && == -> _columnSelected `i -> 2 `i == -> . . _PORTBbits 0 5 `i -> 0 `i 2295  ]
+{
+[; ;SysRiego.c: 1101: rowSelected = 2;
+"1101
+[e = _rowSelected -> -> 2 `i `uc ]
+[; ;SysRiego.c: 1102: return;
+"1102
+[e $UE 2282  ]
+"1103
+}
+[e :U 2295 ]
+[; ;SysRiego.c: 1103: }
+[; ;SysRiego.c: 1104: if( (columnSelected == 3) && (PORTBbits.RB6 == 0)){
+"1104
+[e $ ! && == -> _columnSelected `i -> 3 `i == -> . . _PORTBbits 0 6 `i -> 0 `i 2296  ]
+{
+[; ;SysRiego.c: 1105: rowSelected = 2;
+"1105
+[e = _rowSelected -> -> 2 `i `uc ]
+[; ;SysRiego.c: 1106: return;
+"1106
+[e $UE 2282  ]
+"1107
+}
+[e :U 2296 ]
+[; ;SysRiego.c: 1107: }
+[; ;SysRiego.c: 1108: if( (columnSelected == 4) && (PORTBbits.RB7 == 0)){
+"1108
+[e $ ! && == -> _columnSelected `i -> 4 `i == -> . . _PORTBbits 0 7 `i -> 0 `i 2297  ]
+{
+[; ;SysRiego.c: 1109: rowSelected = 2;
+"1109
+[e = _rowSelected -> -> 2 `i `uc ]
+[; ;SysRiego.c: 1110: return;
+"1110
+[e $UE 2282  ]
+"1111
+}
+[e :U 2297 ]
+"1112
+}
+[; ;SysRiego.c: 1111: }
+[; ;SysRiego.c: 1112: }break;
+[e $U 2286  ]
+[; ;SysRiego.c: 1113: case 2: {
+"1113
+[e :U 2298 ]
+{
+[; ;SysRiego.c: 1114: PORTBbits.RB2 = 0;
+"1114
+[e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1115: if( (columnSelected == 1) && (PORTBbits.RB4 == 0)){
+"1115
+[e $ ! && == -> _columnSelected `i -> 1 `i == -> . . _PORTBbits 0 4 `i -> 0 `i 2299  ]
+{
+[; ;SysRiego.c: 1116: rowSelected = 3;
+"1116
+[e = _rowSelected -> -> 3 `i `uc ]
+[; ;SysRiego.c: 1117: return;
+"1117
+[e $UE 2282  ]
+"1118
+}
+[e :U 2299 ]
+[; ;SysRiego.c: 1118: }
+[; ;SysRiego.c: 1119: if( (columnSelected == 2) && (PORTBbits.RB5 == 0)){
+"1119
+[e $ ! && == -> _columnSelected `i -> 2 `i == -> . . _PORTBbits 0 5 `i -> 0 `i 2300  ]
+{
+[; ;SysRiego.c: 1120: rowSelected = 3;
+"1120
+[e = _rowSelected -> -> 3 `i `uc ]
+[; ;SysRiego.c: 1121: return;
+"1121
+[e $UE 2282  ]
+"1122
+}
+[e :U 2300 ]
+[; ;SysRiego.c: 1122: }
+[; ;SysRiego.c: 1123: if( (columnSelected == 3) && (PORTBbits.RB6 == 0)){
+"1123
+[e $ ! && == -> _columnSelected `i -> 3 `i == -> . . _PORTBbits 0 6 `i -> 0 `i 2301  ]
+{
+[; ;SysRiego.c: 1124: rowSelected = 3;
+"1124
+[e = _rowSelected -> -> 3 `i `uc ]
+[; ;SysRiego.c: 1125: return;
+"1125
+[e $UE 2282  ]
+"1126
+}
+[e :U 2301 ]
+[; ;SysRiego.c: 1126: }
+[; ;SysRiego.c: 1127: if( (columnSelected == 4) && (PORTBbits.RB7 == 0)){
+"1127
+[e $ ! && == -> _columnSelected `i -> 4 `i == -> . . _PORTBbits 0 7 `i -> 0 `i 2302  ]
+{
+[; ;SysRiego.c: 1128: rowSelected = 3;
+"1128
+[e = _rowSelected -> -> 3 `i `uc ]
+[; ;SysRiego.c: 1129: return;
+"1129
+[e $UE 2282  ]
+"1130
+}
+[e :U 2302 ]
+"1131
+}
+[; ;SysRiego.c: 1130: }
+[; ;SysRiego.c: 1131: }break;
+[e $U 2286  ]
+[; ;SysRiego.c: 1132: case 3: {
+"1132
+[e :U 2303 ]
+{
+[; ;SysRiego.c: 1134: PORTBbits.RB3 = 0;
+"1134
+[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1135: if( (columnSelected == 1) && (PORTBbits.RB4 == 0)){
+"1135
+[e $ ! && == -> _columnSelected `i -> 1 `i == -> . . _PORTBbits 0 4 `i -> 0 `i 2304  ]
+{
+[; ;SysRiego.c: 1136: rowSelected = 4;
+"1136
+[e = _rowSelected -> -> 4 `i `uc ]
+[; ;SysRiego.c: 1137: return;
+"1137
+[e $UE 2282  ]
+"1138
+}
+[e :U 2304 ]
+[; ;SysRiego.c: 1138: }
+[; ;SysRiego.c: 1139: if( (columnSelected == 2) && (PORTBbits.RB5 == 0)){
+"1139
+[e $ ! && == -> _columnSelected `i -> 2 `i == -> . . _PORTBbits 0 5 `i -> 0 `i 2305  ]
+{
+[; ;SysRiego.c: 1140: rowSelected = 4;
+"1140
+[e = _rowSelected -> -> 4 `i `uc ]
+[; ;SysRiego.c: 1141: return;
+"1141
+[e $UE 2282  ]
+"1142
+}
+[e :U 2305 ]
+[; ;SysRiego.c: 1142: }
+[; ;SysRiego.c: 1143: if( (columnSelected == 3) && (PORTBbits.RB6 == 0)){
+"1143
+[e $ ! && == -> _columnSelected `i -> 3 `i == -> . . _PORTBbits 0 6 `i -> 0 `i 2306  ]
+{
+[; ;SysRiego.c: 1144: rowSelected = 4;
+"1144
+[e = _rowSelected -> -> 4 `i `uc ]
+[; ;SysRiego.c: 1145: return;
+"1145
+[e $UE 2282  ]
+"1146
+}
+[e :U 2306 ]
+[; ;SysRiego.c: 1146: }
+[; ;SysRiego.c: 1147: if( (columnSelected == 4) && (PORTBbits.RB7 == 0)){
+"1147
+[e $ ! && == -> _columnSelected `i -> 4 `i == -> . . _PORTBbits 0 7 `i -> 0 `i 2307  ]
+{
+[; ;SysRiego.c: 1148: rowSelected = 4;
+"1148
+[e = _rowSelected -> -> 4 `i `uc ]
+[; ;SysRiego.c: 1149: return;
+"1149
+[e $UE 2282  ]
+"1150
+}
+[e :U 2307 ]
+"1151
+}
+[; ;SysRiego.c: 1150: }
+[; ;SysRiego.c: 1151: }break;
+[e $U 2286  ]
+"1152
+}
+[; ;SysRiego.c: 1152: }
+[e $U 2286  ]
+"1072
+[e :U 2287 ]
+[e [\ _i , $ -> -> 0 `i `uc 2288
+ , $ -> -> 1 `i `uc 2293
+ , $ -> -> 2 `i `uc 2298
+ , $ -> -> 3 `i `uc 2303
+ 2286 ]
+"1152
+[e :U 2286 ]
+"1154
+}
+"1070
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 4 `i 2283  ]
+[e :U 2284 ]
+"1154
+}
+[; ;SysRiego.c: 1154: }
+[; ;SysRiego.c: 1155: }
+"1155
+[e :UE 2282 ]
+}
+"1157
 [v _getKeyCode `(uc ~T0 @X0 1 ef ]
 {
-[; ;SysRiego.c: 1040: unsigned char getKeyCode(){
+[; ;SysRiego.c: 1157: unsigned char getKeyCode(){
 [e :U _getKeyCode ]
 [f ]
-[; ;SysRiego.c: 1041: if(rowSelected == 1){
-"1041
-[e $ ! == -> _rowSelected `i -> 1 `i 2288  ]
+[; ;SysRiego.c: 1158: if(rowSelected == 1){
+"1158
+[e $ ! == -> _rowSelected `i -> 1 `i 2309  ]
 {
-[; ;SysRiego.c: 1042: switch(columnSelected){
-"1042
-[e $U 2290  ]
-{
-[; ;SysRiego.c: 1043: case 1: return '1';
-"1043
-[e :U 2291 ]
-[e ) -> -> 49 `ui `uc ]
-[e $UE 2287  ]
-[; ;SysRiego.c: 1044: case 2: return '2';
-"1044
-[e :U 2292 ]
-[e ) -> -> 50 `ui `uc ]
-[e $UE 2287  ]
-[; ;SysRiego.c: 1045: case 3: return '3';
-"1045
-[e :U 2293 ]
-[e ) -> -> 51 `ui `uc ]
-[e $UE 2287  ]
-[; ;SysRiego.c: 1046: case 4: return 'A';
-"1046
-[e :U 2294 ]
-[e ) -> -> 65 `ui `uc ]
-[e $UE 2287  ]
-"1047
-}
-[; ;SysRiego.c: 1047: }
-[e $U 2289  ]
-"1042
-[e :U 2290 ]
-[e [\ _columnSelected , $ -> -> 1 `i `uc 2291
- , $ -> -> 2 `i `uc 2292
- , $ -> -> 3 `i `uc 2293
- , $ -> -> 4 `i `uc 2294
- 2289 ]
-"1047
-[e :U 2289 ]
-"1048
-}
-[; ;SysRiego.c: 1048: }
-[e $U 2295  ]
-"1049
-[e :U 2288 ]
-[; ;SysRiego.c: 1049: else if(rowSelected == 2){
-[e $ ! == -> _rowSelected `i -> 2 `i 2296  ]
-{
-[; ;SysRiego.c: 1050: switch(columnSelected){
-"1050
-[e $U 2298  ]
-{
-[; ;SysRiego.c: 1051: case 1: return '4';
-"1051
-[e :U 2299 ]
-[e ) -> -> 52 `ui `uc ]
-[e $UE 2287  ]
-[; ;SysRiego.c: 1052: case 2: return '5';
-"1052
-[e :U 2300 ]
-[e ) -> -> 53 `ui `uc ]
-[e $UE 2287  ]
-[; ;SysRiego.c: 1053: case 3: return '6';
-"1053
-[e :U 2301 ]
-[e ) -> -> 54 `ui `uc ]
-[e $UE 2287  ]
-[; ;SysRiego.c: 1054: case 4: return 'B';
-"1054
-[e :U 2302 ]
-[e ) -> -> 66 `ui `uc ]
-[e $UE 2287  ]
-"1055
-}
-[; ;SysRiego.c: 1055: }
-[e $U 2297  ]
-"1050
-[e :U 2298 ]
-[e [\ _columnSelected , $ -> -> 1 `i `uc 2299
- , $ -> -> 2 `i `uc 2300
- , $ -> -> 3 `i `uc 2301
- , $ -> -> 4 `i `uc 2302
- 2297 ]
-"1055
-[e :U 2297 ]
-"1056
-}
-[; ;SysRiego.c: 1056: }
-[e $U 2303  ]
-"1057
-[e :U 2296 ]
-[; ;SysRiego.c: 1057: else if(rowSelected == 3){
-[e $ ! == -> _rowSelected `i -> 3 `i 2304  ]
-{
-[; ;SysRiego.c: 1058: switch(columnSelected){
-"1058
-[e $U 2306  ]
-{
-[; ;SysRiego.c: 1059: case 1: return '7';
-"1059
-[e :U 2307 ]
-[e ) -> -> 55 `ui `uc ]
-[e $UE 2287  ]
-[; ;SysRiego.c: 1060: case 2: return '8';
-"1060
-[e :U 2308 ]
-[e ) -> -> 56 `ui `uc ]
-[e $UE 2287  ]
-[; ;SysRiego.c: 1061: case 3: return '9';
-"1061
-[e :U 2309 ]
-[e ) -> -> 57 `ui `uc ]
-[e $UE 2287  ]
-[; ;SysRiego.c: 1062: case 4: return 'C';
-"1062
-[e :U 2310 ]
-[e ) -> -> 67 `ui `uc ]
-[e $UE 2287  ]
-"1063
-}
-[; ;SysRiego.c: 1063: }
-[e $U 2305  ]
-"1058
-[e :U 2306 ]
-[e [\ _columnSelected , $ -> -> 1 `i `uc 2307
- , $ -> -> 2 `i `uc 2308
- , $ -> -> 3 `i `uc 2309
- , $ -> -> 4 `i `uc 2310
- 2305 ]
-"1063
-[e :U 2305 ]
-"1064
-}
-[; ;SysRiego.c: 1064: }
+[; ;SysRiego.c: 1159: switch(columnSelected){
+"1159
 [e $U 2311  ]
-"1065
-[e :U 2304 ]
-[; ;SysRiego.c: 1065: else if(rowSelected == 4){
-[e $ ! == -> _rowSelected `i -> 4 `i 2312  ]
 {
-[; ;SysRiego.c: 1066: switch(columnSelected){
-"1066
-[e $U 2314  ]
-{
-[; ;SysRiego.c: 1067: case 1: return '*';
-"1067
-[e :U 2315 ]
-[e ) -> -> 42 `ui `uc ]
-[e $UE 2287  ]
-[; ;SysRiego.c: 1068: case 2: return '0';
-"1068
-[e :U 2316 ]
-[e ) -> -> 48 `ui `uc ]
-[e $UE 2287  ]
-[; ;SysRiego.c: 1069: case 3: return '#';
-"1069
-[e :U 2317 ]
-[e ) -> -> 35 `ui `uc ]
-[e $UE 2287  ]
-[; ;SysRiego.c: 1070: case 4: return 'D';
-"1070
-[e :U 2318 ]
-[e ) -> -> 68 `ui `uc ]
-[e $UE 2287  ]
-"1071
-}
-[; ;SysRiego.c: 1071: }
-[e $U 2313  ]
-"1066
-[e :U 2314 ]
-[e [\ _columnSelected , $ -> -> 1 `i `uc 2315
- , $ -> -> 2 `i `uc 2316
- , $ -> -> 3 `i `uc 2317
- , $ -> -> 4 `i `uc 2318
- 2313 ]
-"1071
-[e :U 2313 ]
-"1072
-}
+[; ;SysRiego.c: 1160: case 1: return '1';
+"1160
 [e :U 2312 ]
-"1073
-[e :U 2311 ]
-[e :U 2303 ]
-[e :U 2295 ]
-[; ;SysRiego.c: 1072: }
-[; ;SysRiego.c: 1073: return -1;
-[e ) -> -U -> 1 `i `uc ]
-[e $UE 2287  ]
-[; ;SysRiego.c: 1074: }
-"1074
-[e :UE 2287 ]
+[e ) -> -> 49 `ui `uc ]
+[e $UE 2308  ]
+[; ;SysRiego.c: 1161: case 2: return '2';
+"1161
+[e :U 2313 ]
+[e ) -> -> 50 `ui `uc ]
+[e $UE 2308  ]
+[; ;SysRiego.c: 1162: case 3: return '3';
+"1162
+[e :U 2314 ]
+[e ) -> -> 51 `ui `uc ]
+[e $UE 2308  ]
+[; ;SysRiego.c: 1163: case 4: return 'A';
+"1163
+[e :U 2315 ]
+[e ) -> -> 65 `ui `uc ]
+[e $UE 2308  ]
+"1164
 }
-"1076
+[; ;SysRiego.c: 1164: }
+[e $U 2310  ]
+"1159
+[e :U 2311 ]
+[e [\ _columnSelected , $ -> -> 1 `i `uc 2312
+ , $ -> -> 2 `i `uc 2313
+ , $ -> -> 3 `i `uc 2314
+ , $ -> -> 4 `i `uc 2315
+ 2310 ]
+"1164
+[e :U 2310 ]
+"1165
+}
+[; ;SysRiego.c: 1165: }
+[e $U 2316  ]
+"1166
+[e :U 2309 ]
+[; ;SysRiego.c: 1166: else if(rowSelected == 2){
+[e $ ! == -> _rowSelected `i -> 2 `i 2317  ]
+{
+[; ;SysRiego.c: 1167: switch(columnSelected){
+"1167
+[e $U 2319  ]
+{
+[; ;SysRiego.c: 1168: case 1: return '4';
+"1168
+[e :U 2320 ]
+[e ) -> -> 52 `ui `uc ]
+[e $UE 2308  ]
+[; ;SysRiego.c: 1169: case 2: return '5';
+"1169
+[e :U 2321 ]
+[e ) -> -> 53 `ui `uc ]
+[e $UE 2308  ]
+[; ;SysRiego.c: 1170: case 3: return '6';
+"1170
+[e :U 2322 ]
+[e ) -> -> 54 `ui `uc ]
+[e $UE 2308  ]
+[; ;SysRiego.c: 1171: case 4: return 'B';
+"1171
+[e :U 2323 ]
+[e ) -> -> 66 `ui `uc ]
+[e $UE 2308  ]
+"1172
+}
+[; ;SysRiego.c: 1172: }
+[e $U 2318  ]
+"1167
+[e :U 2319 ]
+[e [\ _columnSelected , $ -> -> 1 `i `uc 2320
+ , $ -> -> 2 `i `uc 2321
+ , $ -> -> 3 `i `uc 2322
+ , $ -> -> 4 `i `uc 2323
+ 2318 ]
+"1172
+[e :U 2318 ]
+"1173
+}
+[; ;SysRiego.c: 1173: }
+[e $U 2324  ]
+"1174
+[e :U 2317 ]
+[; ;SysRiego.c: 1174: else if(rowSelected == 3){
+[e $ ! == -> _rowSelected `i -> 3 `i 2325  ]
+{
+[; ;SysRiego.c: 1175: switch(columnSelected){
+"1175
+[e $U 2327  ]
+{
+[; ;SysRiego.c: 1176: case 1: return '7';
+"1176
+[e :U 2328 ]
+[e ) -> -> 55 `ui `uc ]
+[e $UE 2308  ]
+[; ;SysRiego.c: 1177: case 2: return '8';
+"1177
+[e :U 2329 ]
+[e ) -> -> 56 `ui `uc ]
+[e $UE 2308  ]
+[; ;SysRiego.c: 1178: case 3: return '9';
+"1178
+[e :U 2330 ]
+[e ) -> -> 57 `ui `uc ]
+[e $UE 2308  ]
+[; ;SysRiego.c: 1179: case 4: return 'C';
+"1179
+[e :U 2331 ]
+[e ) -> -> 67 `ui `uc ]
+[e $UE 2308  ]
+"1180
+}
+[; ;SysRiego.c: 1180: }
+[e $U 2326  ]
+"1175
+[e :U 2327 ]
+[e [\ _columnSelected , $ -> -> 1 `i `uc 2328
+ , $ -> -> 2 `i `uc 2329
+ , $ -> -> 3 `i `uc 2330
+ , $ -> -> 4 `i `uc 2331
+ 2326 ]
+"1180
+[e :U 2326 ]
+"1181
+}
+[; ;SysRiego.c: 1181: }
+[e $U 2332  ]
+"1182
+[e :U 2325 ]
+[; ;SysRiego.c: 1182: else if(rowSelected == 4){
+[e $ ! == -> _rowSelected `i -> 4 `i 2333  ]
+{
+[; ;SysRiego.c: 1183: switch(columnSelected){
+"1183
+[e $U 2335  ]
+{
+[; ;SysRiego.c: 1184: case 1: return '*';
+"1184
+[e :U 2336 ]
+[e ) -> -> 42 `ui `uc ]
+[e $UE 2308  ]
+[; ;SysRiego.c: 1185: case 2: return '0';
+"1185
+[e :U 2337 ]
+[e ) -> -> 48 `ui `uc ]
+[e $UE 2308  ]
+[; ;SysRiego.c: 1186: case 3: return '#';
+"1186
+[e :U 2338 ]
+[e ) -> -> 35 `ui `uc ]
+[e $UE 2308  ]
+[; ;SysRiego.c: 1187: case 4: return 'D';
+"1187
+[e :U 2339 ]
+[e ) -> -> 68 `ui `uc ]
+[e $UE 2308  ]
+"1188
+}
+[; ;SysRiego.c: 1188: }
+[e $U 2334  ]
+"1183
+[e :U 2335 ]
+[e [\ _columnSelected , $ -> -> 1 `i `uc 2336
+ , $ -> -> 2 `i `uc 2337
+ , $ -> -> 3 `i `uc 2338
+ , $ -> -> 4 `i `uc 2339
+ 2334 ]
+"1188
+[e :U 2334 ]
+"1189
+}
+[e :U 2333 ]
+"1190
+[e :U 2332 ]
+[e :U 2324 ]
+[e :U 2316 ]
+[; ;SysRiego.c: 1189: }
+[; ;SysRiego.c: 1190: return -1;
+[e ) -> -U -> 1 `i `uc ]
+[e $UE 2308  ]
+[; ;SysRiego.c: 1191: }
+"1191
+[e :UE 2308 ]
+}
+"1193
 [v _pressedKeyAction `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;SysRiego.c: 1076: void pressedKeyAction(unsigned char keyCode){
+[; ;SysRiego.c: 1193: void pressedKeyAction(unsigned char keyCode){
 [e :U _pressedKeyAction ]
 [v _keyCode `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;SysRiego.c: 1078: switch(keyCode){
-"1078
-[e $U 2321  ]
+[; ;SysRiego.c: 1195: switch(keyCode){
+"1195
+[e $U 2342  ]
 {
-[; ;SysRiego.c: 1080: case '0':
-"1080
-[e :U 2322 ]
-[; ;SysRiego.c: 1082: break;
-"1082
-[e $U 2320  ]
-[; ;SysRiego.c: 1085: case '1':
-"1085
-[e :U 2323 ]
-[; ;SysRiego.c: 1087: if (modeSelected == 0) {
-"1087
-[e $ ! == -> _modeSelected `i -> 0 `i 2324  ]
-{
-[; ;SysRiego.c: 1088: zoneSelected = humidityZn1Val;
-"1088
-[e = _zoneSelected &U _humidityZn1Val ]
-[; ;SysRiego.c: 1089: humidityZnValInt = &humidityZn1ValInt;
-"1089
-[e = _humidityZnValInt &U _humidityZn1ValInt ]
-"1090
-}
-[e :U 2324 ]
-[; ;SysRiego.c: 1090: }
-[; ;SysRiego.c: 1092: if (modeSelected == 1) {
-"1092
-[e $ ! == -> _modeSelected `i -> 1 `i 2325  ]
-{
-"1094
-}
-[e :U 2325 ]
-[; ;SysRiego.c: 1094: }
-[; ;SysRiego.c: 1096: if (modeSelected == 2) {
-"1096
-[e $ ! == -> _modeSelected `i -> 2 `i 2326  ]
-{
-[; ;SysRiego.c: 1097: zoneSelected = &manualZn1Val;
-"1097
-[e = _zoneSelected &U _manualZn1Val ]
-"1098
-}
-[e :U 2326 ]
-[; ;SysRiego.c: 1098: }
-[; ;SysRiego.c: 1100: statusConfiguration = 1;
-"1100
-[e = _statusConfiguration -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1102: break;
-"1102
-[e $U 2320  ]
-[; ;SysRiego.c: 1105: case '2':
-"1105
-[e :U 2327 ]
-[; ;SysRiego.c: 1107: if (modeSelected == 0) {
-"1107
-[e $ ! == -> _modeSelected `i -> 0 `i 2328  ]
-{
-[; ;SysRiego.c: 1108: zoneSelected = humidityZn2Val;
-"1108
-[e = _zoneSelected &U _humidityZn2Val ]
-[; ;SysRiego.c: 1109: humidityZnValInt = &humidityZn2ValInt;
-"1109
-[e = _humidityZnValInt &U _humidityZn2ValInt ]
-"1110
-}
-[e :U 2328 ]
-[; ;SysRiego.c: 1110: }
-[; ;SysRiego.c: 1112: if (modeSelected == 1) {
-"1112
-[e $ ! == -> _modeSelected `i -> 1 `i 2329  ]
-{
-"1114
-}
-[e :U 2329 ]
-[; ;SysRiego.c: 1114: }
-[; ;SysRiego.c: 1116: if (modeSelected == 2) {
-"1116
-[e $ ! == -> _modeSelected `i -> 2 `i 2330  ]
-{
-[; ;SysRiego.c: 1117: zoneSelected = &manualZn2Val;
-"1117
-[e = _zoneSelected &U _manualZn2Val ]
-"1118
-}
-[e :U 2330 ]
-[; ;SysRiego.c: 1118: }
-[; ;SysRiego.c: 1120: statusConfiguration = 1;
-"1120
-[e = _statusConfiguration -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1122: break;
-"1122
-[e $U 2320  ]
-[; ;SysRiego.c: 1125: case '3':
-"1125
-[e :U 2331 ]
-[; ;SysRiego.c: 1127: if (modeSelected == 0) {
-"1127
-[e $ ! == -> _modeSelected `i -> 0 `i 2332  ]
-{
-[; ;SysRiego.c: 1128: zoneSelected = humidityZn3Val;
-"1128
-[e = _zoneSelected &U _humidityZn3Val ]
-[; ;SysRiego.c: 1129: humidityZnValInt = &humidityZn3ValInt;
-"1129
-[e = _humidityZnValInt &U _humidityZn3ValInt ]
-"1130
-}
-[e :U 2332 ]
-[; ;SysRiego.c: 1130: }
-[; ;SysRiego.c: 1132: if (modeSelected == 1) {
-"1132
-[e $ ! == -> _modeSelected `i -> 1 `i 2333  ]
-{
-[; ;SysRiego.c: 1133: zoneSelected = humidityZn1Val;
-"1133
-[e = _zoneSelected &U _humidityZn1Val ]
-"1134
-}
-[e :U 2333 ]
-[; ;SysRiego.c: 1134: }
-[; ;SysRiego.c: 1136: if (modeSelected == 2) {
-"1136
-[e $ ! == -> _modeSelected `i -> 2 `i 2334  ]
-{
-[; ;SysRiego.c: 1137: zoneSelected = &manualZn3Val;
-"1137
-[e = _zoneSelected &U _manualZn3Val ]
-"1138
-}
-[e :U 2334 ]
-[; ;SysRiego.c: 1138: }
-[; ;SysRiego.c: 1140: statusConfiguration = 1;
-"1140
-[e = _statusConfiguration -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1142: break;
-"1142
-[e $U 2320  ]
-[; ;SysRiego.c: 1145: case '4':
-"1145
-[e :U 2335 ]
-[; ;SysRiego.c: 1147: break;
-"1147
-[e $U 2320  ]
-[; ;SysRiego.c: 1150: case '5':
-"1150
-[e :U 2336 ]
-[; ;SysRiego.c: 1153: break;
-"1153
-[e $U 2320  ]
-[; ;SysRiego.c: 1156: case '6':
-"1156
-[e :U 2337 ]
-[; ;SysRiego.c: 1158: break;
-"1158
-[e $U 2320  ]
-[; ;SysRiego.c: 1161: case '7':
-"1161
-[e :U 2338 ]
-[; ;SysRiego.c: 1163: break;
-"1163
-[e $U 2320  ]
-[; ;SysRiego.c: 1166: case '8':
-"1166
-[e :U 2339 ]
-[; ;SysRiego.c: 1168: break;
-"1168
-[e $U 2320  ]
-[; ;SysRiego.c: 1171: case '9':
-"1171
-[e :U 2340 ]
-[; ;SysRiego.c: 1173: break;
-"1173
-[e $U 2320  ]
-[; ;SysRiego.c: 1176: case 'A':
-"1176
-[e :U 2341 ]
-[; ;SysRiego.c: 1178: modeSelected = 0;
-"1178
-[e = _modeSelected -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1180: break;
-"1180
-[e $U 2320  ]
-[; ;SysRiego.c: 1183: case 'B':
-"1183
-[e :U 2342 ]
-[; ;SysRiego.c: 1185: modeSelected = 1;
-"1185
-[e = _modeSelected -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1187: break;
-"1187
-[e $U 2320  ]
-[; ;SysRiego.c: 1190: case 'C':
-"1190
-[e :U 2343 ]
-[; ;SysRiego.c: 1192: modeSelected = 2;
-"1192
-[e = _modeSelected -> -> 2 `i `uc ]
-[; ;SysRiego.c: 1194: break;
-"1194
-[e $U 2320  ]
-[; ;SysRiego.c: 1197: case 'D':
+[; ;SysRiego.c: 1197: case '0':
 "1197
-[e :U 2344 ]
+[e :U 2343 ]
 [; ;SysRiego.c: 1199: break;
 "1199
-[e $U 2320  ]
-[; ;SysRiego.c: 1202: case '*':
+[e $U 2341  ]
+[; ;SysRiego.c: 1202: case '1':
 "1202
-[e :U 2345 ]
-[; ;SysRiego.c: 1204: clearDisplay();
+[e :U 2344 ]
+[; ;SysRiego.c: 1204: if (modeSelected == 0) {
 "1204
-[e ( _clearDisplay ..  ]
-[; ;SysRiego.c: 1206: if(ADRES < 512) {
+[e $ ! == -> _modeSelected `i -> 0 `i 2345  ]
+{
+[; ;SysRiego.c: 1205: zoneSelected = humidityZn1Val;
+"1205
+[e = _zoneSelected &U _humidityZn1Val ]
+[; ;SysRiego.c: 1206: humidityZnValInt = &humidityZn1ValInt;
 "1206
-[e $ ! < -> _ADRES `ui -> -> 512 `i `ui 2346  ]
-{
-[; ;SysRiego.c: 1207: displayLineOnLCD("Riega", 6);
+[e = _humidityZnValInt &U _humidityZn1ValInt ]
 "1207
-[e ( _displayLineOnLCD (2 , -> :s 1C `*uc -> -> 6 `i `uc ]
-"1208
 }
-[; ;SysRiego.c: 1208: }
-[e $U 2347  ]
+[e :U 2345 ]
+[; ;SysRiego.c: 1207: }
+[; ;SysRiego.c: 1209: if (modeSelected == 1) {
 "1209
-[e :U 2346 ]
-[; ;SysRiego.c: 1209: else if (ADRES > 512) {
-[e $ ! > -> _ADRES `ui -> -> 512 `i `ui 2348  ]
+[e $ ! == -> _modeSelected `i -> 1 `i 2346  ]
 {
-[; ;SysRiego.c: 1210: displayLineOnLCD("Pelon", 6);
+[; ;SysRiego.c: 1210: offSetZoneTimes = 0;
 "1210
-[e ( _displayLineOnLCD (2 , -> :s 2C `*uc -> -> 6 `i `uc ]
-[; ;SysRiego.c: 1211: command(0xC0);
+[e = _offSetZoneTimes -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1211: irrigateTime = irrigateTimeZn1;
 "1211
-[e ( _command (1 -> -> 192 `i `uc ]
-[; ;SysRiego.c: 1212: isReady();
+[e = _irrigateTime &U _irrigateTimeZn1 ]
 "1212
-[e ( _isReady ..  ]
-[; ;SysRiego.c: 1213: displayLineOnLCD("Macana", 7);
-"1213
-[e ( _displayLineOnLCD (2 , -> :s 3C `*uc -> -> 7 `i `uc ]
+}
+[e :U 2346 ]
+[; ;SysRiego.c: 1212: }
+[; ;SysRiego.c: 1214: if (modeSelected == 2) {
 "1214
+[e $ ! == -> _modeSelected `i -> 2 `i 2347  ]
+{
+[; ;SysRiego.c: 1215: zoneSelected = &manualZn1Val;
+"1215
+[e = _zoneSelected &U _manualZn1Val ]
+"1216
 }
-[e :U 2348 ]
-"1217
 [e :U 2347 ]
-[; ;SysRiego.c: 1214: }
-[; ;SysRiego.c: 1217: break;
-[e $U 2320  ]
-[; ;SysRiego.c: 1220: case '#':
+[; ;SysRiego.c: 1216: }
+[; ;SysRiego.c: 1218: statusConfiguration = 1;
+"1218
+[e = _statusConfiguration -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1220: break;
 "1220
-[e :U 2349 ]
-[; ;SysRiego.c: 1227: if(modeSelected == 2) {
+[e $U 2341  ]
+[; ;SysRiego.c: 1223: case '2':
+"1223
+[e :U 2348 ]
+[; ;SysRiego.c: 1225: if (modeSelected == 0) {
+"1225
+[e $ ! == -> _modeSelected `i -> 0 `i 2349  ]
+{
+[; ;SysRiego.c: 1226: zoneSelected = humidityZn2Val;
+"1226
+[e = _zoneSelected &U _humidityZn2Val ]
+[; ;SysRiego.c: 1227: humidityZnValInt = &humidityZn2ValInt;
 "1227
-[e $ ! == -> _modeSelected `i -> 2 `i 2350  ]
-{
-[; ;SysRiego.c: 1229: if(irrigateManualStatus == 0) {
-"1229
-[e $ ! == -> _irrigateManualStatus `i -> 0 `i 2351  ]
-{
-[; ;SysRiego.c: 1230: irrigateManual();
+[e = _humidityZnValInt &U _humidityZn2ValInt ]
+"1228
+}
+[e :U 2349 ]
+[; ;SysRiego.c: 1228: }
+[; ;SysRiego.c: 1230: if (modeSelected == 1) {
 "1230
-[e ( _irrigateManual ..  ]
-"1231
-}
-[; ;SysRiego.c: 1231: }
-[e $U 2352  ]
-"1233
-[e :U 2351 ]
-[; ;SysRiego.c: 1233: else {
+[e $ ! == -> _modeSelected `i -> 1 `i 2350  ]
 {
-[; ;SysRiego.c: 1234: stopIrrigateManual();
-"1234
-[e ( _stopIrrigateManual ..  ]
-"1235
-}
-[e :U 2352 ]
-"1237
+[; ;SysRiego.c: 1231: offSetZoneTimes = 3;
+"1231
+[e = _offSetZoneTimes -> -> 3 `i `uc ]
+[; ;SysRiego.c: 1232: irrigateTime = irrigateTimeZn2;
+"1232
+[e = _irrigateTime &U _irrigateTimeZn2 ]
+"1233
 }
 [e :U 2350 ]
-[; ;SysRiego.c: 1235: }
+[; ;SysRiego.c: 1233: }
+[; ;SysRiego.c: 1235: if (modeSelected == 2) {
+"1235
+[e $ ! == -> _modeSelected `i -> 2 `i 2351  ]
+{
+[; ;SysRiego.c: 1236: zoneSelected = &manualZn2Val;
+"1236
+[e = _zoneSelected &U _manualZn2Val ]
+"1237
+}
+[e :U 2351 ]
 [; ;SysRiego.c: 1237: }
-[; ;SysRiego.c: 1239: break;
+[; ;SysRiego.c: 1239: statusConfiguration = 1;
 "1239
-[e $U 2320  ]
-[; ;SysRiego.c: 1242: default: ;
-"1242
+[e = _statusConfiguration -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1241: break;
+"1241
+[e $U 2341  ]
+[; ;SysRiego.c: 1244: case '3':
+"1244
+[e :U 2352 ]
+[; ;SysRiego.c: 1246: if (modeSelected == 0) {
+"1246
+[e $ ! == -> _modeSelected `i -> 0 `i 2353  ]
+{
+[; ;SysRiego.c: 1247: zoneSelected = humidityZn3Val;
+"1247
+[e = _zoneSelected &U _humidityZn3Val ]
+[; ;SysRiego.c: 1248: humidityZnValInt = &humidityZn3ValInt;
+"1248
+[e = _humidityZnValInt &U _humidityZn3ValInt ]
+"1249
+}
 [e :U 2353 ]
+[; ;SysRiego.c: 1249: }
+[; ;SysRiego.c: 1251: if (modeSelected == 1) {
 "1251
-}
-[; ;SysRiego.c: 1251: }
-[e $U 2320  ]
-"1078
-[e :U 2321 ]
-[e [\ _keyCode , $ -> -> 48 `ui `uc 2322
- , $ -> -> 49 `ui `uc 2323
- , $ -> -> 50 `ui `uc 2327
- , $ -> -> 51 `ui `uc 2331
- , $ -> -> 52 `ui `uc 2335
- , $ -> -> 53 `ui `uc 2336
- , $ -> -> 54 `ui `uc 2337
- , $ -> -> 55 `ui `uc 2338
- , $ -> -> 56 `ui `uc 2339
- , $ -> -> 57 `ui `uc 2340
- , $ -> -> 65 `ui `uc 2341
- , $ -> -> 66 `ui `uc 2342
- , $ -> -> 67 `ui `uc 2343
- , $ -> -> 68 `ui `uc 2344
- , $ -> -> 42 `ui `uc 2345
- , $ -> -> 35 `ui `uc 2349
- 2353 ]
-"1251
-[e :U 2320 ]
-[; ;SysRiego.c: 1252: }
+[e $ ! == -> _modeSelected `i -> 1 `i 2354  ]
+{
+[; ;SysRiego.c: 1252: offSetZoneTimes = 6;
 "1252
-[e :UE 2319 ]
-}
+[e = _offSetZoneTimes -> -> 6 `i `uc ]
+[; ;SysRiego.c: 1253: irrigateTime = irrigateTimeZn3;
+"1253
+[e = _irrigateTime &U _irrigateTimeZn3 ]
 "1254
-[v _turnOnAllRows `(v ~T0 @X0 1 ef ]
-{
-[; ;SysRiego.c: 1254: void turnOnAllRows(){
-[e :U _turnOnAllRows ]
-[f ]
-[; ;SysRiego.c: 1255: PORTBbits.RB0 = 1;
-"1255
-[e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1256: PORTBbits.RB1 = 1;
+}
+[e :U 2354 ]
+[; ;SysRiego.c: 1254: }
+[; ;SysRiego.c: 1256: if (modeSelected == 2) {
 "1256
-[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1257: PORTBbits.RB2 = 1;
+[e $ ! == -> _modeSelected `i -> 2 `i 2355  ]
+{
+[; ;SysRiego.c: 1257: zoneSelected = &manualZn3Val;
 "1257
-[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1258: PORTBbits.RB3 = 1;
+[e = _zoneSelected &U _manualZn3Val ]
 "1258
-[e = . . _PORTBbits 0 3 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1259: }
-"1259
-[e :UE 2354 ]
 }
-"1264
-[v _readInput `(v ~T0 @X0 1 ef ]
-{
-[; ;SysRiego.c: 1264: void readInput(){
-[e :U _readInput ]
-[f ]
-[; ;SysRiego.c: 1265: if (oneShotFlag == 1)
+[e :U 2355 ]
+[; ;SysRiego.c: 1258: }
+[; ;SysRiego.c: 1260: statusConfiguration = 1;
+"1260
+[e = _statusConfiguration -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1262: break;
+"1262
+[e $U 2341  ]
+[; ;SysRiego.c: 1265: case '4':
 "1265
-[e $ ! == -> _oneShotFlag `i -> 1 `i 2356  ]
-[; ;SysRiego.c: 1266: return;
-"1266
-[e $UE 2355  ]
 [e :U 2356 ]
-[; ;SysRiego.c: 1267: delay();
+[; ;SysRiego.c: 1267: break;
 "1267
-[e ( _delay ..  ]
-[; ;SysRiego.c: 1268: if (PORTB != 0xF0){
-"1268
-[e $ ! != -> _PORTB `i -> 240 `i 2357  ]
-{
-[; ;SysRiego.c: 1269: readKey();
-"1269
-[e ( _readKey ..  ]
-[; ;SysRiego.c: 1270: oneShotFlag = 1;
+[e $U 2341  ]
+[; ;SysRiego.c: 1270: case '5':
 "1270
-[e = _oneShotFlag -> -> 1 `i `uc ]
-"1271
-}
 [e :U 2357 ]
-[; ;SysRiego.c: 1271: }
-[; ;SysRiego.c: 1272: }
-"1272
-[e :UE 2355 ]
-}
-"1274
-[v _readKey `(v ~T0 @X0 1 ef ]
-{
-[; ;SysRiego.c: 1274: void readKey(){
-[e :U _readKey ]
-[f ]
-[; ;SysRiego.c: 1276: switch(PORTB){
+[; ;SysRiego.c: 1273: break;
+"1273
+[e $U 2341  ]
+[; ;SysRiego.c: 1276: case '6':
 "1276
-[e $U 2360  ]
-{
-[; ;SysRiego.c: 1277: case 0xE0: columnSelected = 1; break;
-"1277
-[e :U 2361 ]
-[e = _columnSelected -> -> 1 `i `uc ]
-[e $U 2359  ]
-[; ;SysRiego.c: 1278: case 0xD0: columnSelected = 2; break;
+[e :U 2358 ]
+[; ;SysRiego.c: 1278: break;
 "1278
-[e :U 2362 ]
-[e = _columnSelected -> -> 2 `i `uc ]
-[e $U 2359  ]
-[; ;SysRiego.c: 1279: case 0xB0: columnSelected = 3; break;
-"1279
-[e :U 2363 ]
-[e = _columnSelected -> -> 3 `i `uc ]
-[e $U 2359  ]
-[; ;SysRiego.c: 1280: case 0x70: columnSelected = 4; break;
-"1280
-[e :U 2364 ]
-[e = _columnSelected -> -> 4 `i `uc ]
-[e $U 2359  ]
-[; ;SysRiego.c: 1281: default: columnSelected = 100;
+[e $U 2341  ]
+[; ;SysRiego.c: 1281: case '7':
 "1281
-[e :U 2365 ]
-[e = _columnSelected -> -> 100 `i `uc ]
-"1282
-}
-[; ;SysRiego.c: 1282: }
-[e $U 2359  ]
-"1276
-[e :U 2360 ]
-[e [\ _PORTB , $ -> -> 224 `i `uc 2361
- , $ -> -> 208 `i `uc 2362
- , $ -> -> 176 `i `uc 2363
- , $ -> -> 112 `i `uc 2364
- 2365 ]
-"1282
 [e :U 2359 ]
-[; ;SysRiego.c: 1283: determinePressedRow();
+[; ;SysRiego.c: 1283: break;
 "1283
-[e ( _determinePressedRow ..  ]
-[; ;SysRiego.c: 1284: keyCode = getKeyCode();
-"1284
-[e = _keyCode ( _getKeyCode ..  ]
-[; ;SysRiego.c: 1285: }
-"1285
-[e :UE 2358 ]
-}
-"1287
-[v _resetReadInput `(v ~T0 @X0 1 ef ]
-{
-[; ;SysRiego.c: 1287: void resetReadInput(){
-[e :U _resetReadInput ]
-[f ]
-[; ;SysRiego.c: 1288: if (PORTB == 0xF0)
+[e $U 2341  ]
+[; ;SysRiego.c: 1286: case '8':
+"1286
+[e :U 2360 ]
+[; ;SysRiego.c: 1288: break;
 "1288
-[e $ ! == -> _PORTB `i -> 240 `i 2367  ]
-[; ;SysRiego.c: 1289: delay();
-"1289
-[e ( _delay ..  ]
-[e $U 2368  ]
-"1290
-[e :U 2367 ]
-[; ;SysRiego.c: 1290: else
-[; ;SysRiego.c: 1291: return;
+[e $U 2341  ]
+[; ;SysRiego.c: 1291: case '9':
 "1291
-[e $UE 2366  ]
-[e :U 2368 ]
-[; ;SysRiego.c: 1292: if (PORTB == 0XF0){
-"1292
-[e $ ! == -> _PORTB `i -> 240 `i 2369  ]
-{
-[; ;SysRiego.c: 1293: oneShotFlag = 0;
+[e :U 2361 ]
+[; ;SysRiego.c: 1293: break;
 "1293
-[e = _oneShotFlag -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1294: getValueStatus = 1;
-"1294
-[e = _getValueStatus -> -> 1 `i `uc ]
-"1295
+[e $U 2341  ]
+[; ;SysRiego.c: 1296: case 'A':
+"1296
+[e :U 2362 ]
+[; ;SysRiego.c: 1298: modeSelected = 0;
+"1298
+[e = _modeSelected -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1300: break;
+"1300
+[e $U 2341  ]
+[; ;SysRiego.c: 1303: case 'B':
+"1303
+[e :U 2363 ]
+[; ;SysRiego.c: 1305: modeSelected = 1;
+"1305
+[e = _modeSelected -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1307: break;
+"1307
+[e $U 2341  ]
+[; ;SysRiego.c: 1310: case 'C':
+"1310
+[e :U 2364 ]
+[; ;SysRiego.c: 1312: modeSelected = 2;
+"1312
+[e = _modeSelected -> -> 2 `i `uc ]
+[; ;SysRiego.c: 1314: break;
+"1314
+[e $U 2341  ]
+[; ;SysRiego.c: 1317: case 'D':
+"1317
+[e :U 2365 ]
+[; ;SysRiego.c: 1319: break;
+"1319
+[e $U 2341  ]
+[; ;SysRiego.c: 1322: case '*':
+"1322
+[e :U 2366 ]
+[; ;SysRiego.c: 1325: break;
+"1325
+[e $U 2341  ]
+[; ;SysRiego.c: 1328: case '#':
+"1328
+[e :U 2367 ]
+[; ;SysRiego.c: 1330: if(modeSelected == 1) {
+"1330
+[e $ ! == -> _modeSelected `i -> 1 `i 2368  ]
+{
+[; ;SysRiego.c: 1331: hourConfiguration = 1;
+"1331
+[e = _hourConfiguration -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1332: statusConfiguration = 1;
+"1332
+[e = _statusConfiguration -> -> 1 `i `uc ]
+"1333
+}
+[e :U 2368 ]
+[; ;SysRiego.c: 1333: }
+[; ;SysRiego.c: 1335: if(modeSelected == 2) {
+"1335
+[e $ ! == -> _modeSelected `i -> 2 `i 2369  ]
+{
+[; ;SysRiego.c: 1337: if(irrigateManualStatus == 0) {
+"1337
+[e $ ! == -> _irrigateManualStatus `i -> 0 `i 2370  ]
+{
+[; ;SysRiego.c: 1338: irrigateManual();
+"1338
+[e ( _irrigateManual ..  ]
+"1339
+}
+[; ;SysRiego.c: 1339: }
+[e $U 2371  ]
+"1341
+[e :U 2370 ]
+[; ;SysRiego.c: 1341: else {
+{
+[; ;SysRiego.c: 1342: stopIrrigateManual();
+"1342
+[e ( _stopIrrigateManual ..  ]
+"1343
+}
+[e :U 2371 ]
+"1345
 }
 [e :U 2369 ]
-[; ;SysRiego.c: 1295: }
-[; ;SysRiego.c: 1296: }
-"1296
-[e :UE 2366 ]
-}
-"1298
-[v _disableIntRBIE `(v ~T0 @X0 1 ef ]
-{
-[; ;SysRiego.c: 1298: void disableIntRBIE() {
-[e :U _disableIntRBIE ]
-[f ]
-[; ;SysRiego.c: 1300: LATB = 0X00;
-"1300
-[e = _LATB -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1301: INTCONbits.RBIF = 0;
-"1301
-[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1302: INTCONbits.RBIE = 0;
-"1302
-[e = . . _INTCONbits 0 3 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1304: }
-"1304
-[e :UE 2370 ]
-}
-"1306
-[v _enableIntRBIE `(v ~T0 @X0 1 ef ]
-{
-[; ;SysRiego.c: 1306: void enableIntRBIE() {
-[e :U _enableIntRBIE ]
-[f ]
-[; ;SysRiego.c: 1308: LATB = 0X00;
-"1308
-[e = _LATB -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1309: INTCONbits.RBIF = 0;
-"1309
-[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1310: INTCONbits.RBIE = 1;
-"1310
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1312: }
-"1312
-[e :UE 2371 ]
-}
-"1314
-[v _displayTime `(v ~T0 @X0 1 ef ]
-{
-[; ;SysRiego.c: 1314: void displayTime() {
-[e :U _displayTime ]
-[f ]
-[; ;SysRiego.c: 1316: getDayName();
-"1316
-[e ( _getDayName ..  ]
-[; ;SysRiego.c: 1317: displayLineOnLCD(dayName, 4);
-"1317
-[e ( _displayLineOnLCD (2 , &U _dayName -> -> 4 `i `uc ]
-[; ;SysRiego.c: 1318: displayCharOnLCD(' ');
-"1318
-[e ( _displayCharOnLCD (1 -> -> 32 `ui `uc ]
-[; ;SysRiego.c: 1319: displayLineOnLCD(counterHOUR, 3);
-"1319
-[e ( _displayLineOnLCD (2 , &U _counterHOUR -> -> 3 `i `uc ]
-[; ;SysRiego.c: 1320: displayCharOnLCD(':');
-"1320
-[e ( _displayCharOnLCD (1 -> -> 58 `ui `uc ]
-[; ;SysRiego.c: 1321: displayLineOnLCD(counterMIN, 3);
-"1321
-[e ( _displayLineOnLCD (2 , &U _counterMIN -> -> 3 `i `uc ]
-[; ;SysRiego.c: 1322: displayCharOnLCD(':');
-"1322
-[e ( _displayCharOnLCD (1 -> -> 58 `ui `uc ]
-[; ;SysRiego.c: 1323: displayCharOnLCD(counterSEC);
-"1323
-[e ( _displayCharOnLCD (1 _counterSEC ]
-[; ;SysRiego.c: 1325: }
-"1325
-[e :UE 2372 ]
-}
-"1327
-[v _getDayName `(v ~T0 @X0 1 ef ]
-{
-[; ;SysRiego.c: 1327: void getDayName() {
-[e :U _getDayName ]
-[f ]
-[; ;SysRiego.c: 1329: switch(counterDAYS) {
-"1329
-[e $U 2375  ]
-{
-[; ;SysRiego.c: 1330: case '0':
-"1330
-[e :U 2376 ]
-[; ;SysRiego.c: 1331: dayName[0] = 'M';
-"1331
-[e = *U + &U _dayName * -> -> -> 0 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 77 `ui `uc ]
-[; ;SysRiego.c: 1332: dayName[1] = 'o';
-"1332
-[e = *U + &U _dayName * -> -> -> 1 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 111 `ui `uc ]
-[; ;SysRiego.c: 1333: dayName[2] = 'n';
-"1333
-[e = *U + &U _dayName * -> -> -> 2 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 110 `ui `uc ]
-[; ;SysRiego.c: 1334: break;
-"1334
-[e $U 2374  ]
-[; ;SysRiego.c: 1336: case '1':
-"1336
-[e :U 2377 ]
-[; ;SysRiego.c: 1337: dayName[0] = 'T';
-"1337
-[e = *U + &U _dayName * -> -> -> 0 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 84 `ui `uc ]
-[; ;SysRiego.c: 1338: dayName[1] = 'u';
-"1338
-[e = *U + &U _dayName * -> -> -> 1 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 117 `ui `uc ]
-[; ;SysRiego.c: 1339: dayName[2] = 'e';
-"1339
-[e = *U + &U _dayName * -> -> -> 2 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 101 `ui `uc ]
-[; ;SysRiego.c: 1340: break;
-"1340
-[e $U 2374  ]
-[; ;SysRiego.c: 1342: case '2':
-"1342
-[e :U 2378 ]
-[; ;SysRiego.c: 1343: dayName[0] = 'W';
-"1343
-[e = *U + &U _dayName * -> -> -> 0 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 87 `ui `uc ]
-[; ;SysRiego.c: 1344: dayName[1] = 'e';
-"1344
-[e = *U + &U _dayName * -> -> -> 1 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 101 `ui `uc ]
-[; ;SysRiego.c: 1345: dayName[2] = 'n';
-"1345
-[e = *U + &U _dayName * -> -> -> 2 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 110 `ui `uc ]
-[; ;SysRiego.c: 1346: break;
-"1346
-[e $U 2374  ]
-[; ;SysRiego.c: 1348: case '3':
-"1348
-[e :U 2379 ]
-[; ;SysRiego.c: 1349: dayName[0] = 'T';
-"1349
-[e = *U + &U _dayName * -> -> -> 0 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 84 `ui `uc ]
-[; ;SysRiego.c: 1350: dayName[1] = 'h';
+[; ;SysRiego.c: 1343: }
+[; ;SysRiego.c: 1345: }
+[; ;SysRiego.c: 1347: break;
+"1347
+[e $U 2341  ]
+[; ;SysRiego.c: 1350: default: ;
 "1350
-[e = *U + &U _dayName * -> -> -> 1 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 104 `ui `uc ]
-[; ;SysRiego.c: 1351: dayName[2] = 'u';
-"1351
-[e = *U + &U _dayName * -> -> -> 2 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 117 `ui `uc ]
-[; ;SysRiego.c: 1352: break;
-"1352
-[e $U 2374  ]
-[; ;SysRiego.c: 1354: case '4':
-"1354
-[e :U 2380 ]
-[; ;SysRiego.c: 1355: dayName[0] = 'F';
-"1355
-[e = *U + &U _dayName * -> -> -> 0 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 70 `ui `uc ]
-[; ;SysRiego.c: 1356: dayName[1] = 'r';
-"1356
-[e = *U + &U _dayName * -> -> -> 1 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 114 `ui `uc ]
-[; ;SysRiego.c: 1357: dayName[2] = 'i';
-"1357
-[e = *U + &U _dayName * -> -> -> 2 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 105 `ui `uc ]
-[; ;SysRiego.c: 1358: break;
-"1358
-[e $U 2374  ]
-[; ;SysRiego.c: 1360: case '5':
-"1360
-[e :U 2381 ]
-[; ;SysRiego.c: 1361: dayName[0] = 'S';
-"1361
-[e = *U + &U _dayName * -> -> -> 0 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 83 `ui `uc ]
-[; ;SysRiego.c: 1362: dayName[1] = 'a';
-"1362
-[e = *U + &U _dayName * -> -> -> 1 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 97 `ui `uc ]
-[; ;SysRiego.c: 1363: dayName[2] = 't';
-"1363
-[e = *U + &U _dayName * -> -> -> 2 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 116 `ui `uc ]
-[; ;SysRiego.c: 1364: break;
-"1364
-[e $U 2374  ]
-[; ;SysRiego.c: 1366: case '6':
-"1366
-[e :U 2382 ]
-[; ;SysRiego.c: 1367: dayName[0] = 'S';
-"1367
-[e = *U + &U _dayName * -> -> -> 0 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 83 `ui `uc ]
-[; ;SysRiego.c: 1368: dayName[1] = 'u';
-"1368
-[e = *U + &U _dayName * -> -> -> 1 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 117 `ui `uc ]
-[; ;SysRiego.c: 1369: dayName[2] = 'n';
-"1369
-[e = *U + &U _dayName * -> -> -> 2 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 110 `ui `uc ]
-[; ;SysRiego.c: 1370: break;
-"1370
-[e $U 2374  ]
-"1372
+[e :U 2372 ]
+"1359
 }
-[; ;SysRiego.c: 1372: }
-[e $U 2374  ]
-"1329
-[e :U 2375 ]
-[e [\ _counterDAYS , $ -> -> 48 `ui `uc 2376
- , $ -> -> 49 `ui `uc 2377
- , $ -> -> 50 `ui `uc 2378
- , $ -> -> 51 `ui `uc 2379
- , $ -> -> 52 `ui `uc 2380
- , $ -> -> 53 `ui `uc 2381
- , $ -> -> 54 `ui `uc 2382
- 2374 ]
-"1372
-[e :U 2374 ]
-[; ;SysRiego.c: 1374: }
-"1374
+[; ;SysRiego.c: 1359: }
+[e $U 2341  ]
+"1195
+[e :U 2342 ]
+[e [\ _keyCode , $ -> -> 48 `ui `uc 2343
+ , $ -> -> 49 `ui `uc 2344
+ , $ -> -> 50 `ui `uc 2348
+ , $ -> -> 51 `ui `uc 2352
+ , $ -> -> 52 `ui `uc 2356
+ , $ -> -> 53 `ui `uc 2357
+ , $ -> -> 54 `ui `uc 2358
+ , $ -> -> 55 `ui `uc 2359
+ , $ -> -> 56 `ui `uc 2360
+ , $ -> -> 57 `ui `uc 2361
+ , $ -> -> 65 `ui `uc 2362
+ , $ -> -> 66 `ui `uc 2363
+ , $ -> -> 67 `ui `uc 2364
+ , $ -> -> 68 `ui `uc 2365
+ , $ -> -> 42 `ui `uc 2366
+ , $ -> -> 35 `ui `uc 2367
+ 2372 ]
+"1359
+[e :U 2341 ]
+[; ;SysRiego.c: 1360: }
+"1360
+[e :UE 2340 ]
+}
+"1362
+[v _turnOnAllRows `(v ~T0 @X0 1 ef ]
+{
+[; ;SysRiego.c: 1362: void turnOnAllRows(){
+[e :U _turnOnAllRows ]
+[f ]
+[; ;SysRiego.c: 1363: PORTBbits.RB0 = 1;
+"1363
+[e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1364: PORTBbits.RB1 = 1;
+"1364
+[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1365: PORTBbits.RB2 = 1;
+"1365
+[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1366: PORTBbits.RB3 = 1;
+"1366
+[e = . . _PORTBbits 0 3 -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1367: }
+"1367
 [e :UE 2373 ]
 }
+"1372
+[v _readInput `(v ~T0 @X0 1 ef ]
+{
+[; ;SysRiego.c: 1372: void readInput(){
+[e :U _readInput ]
+[f ]
+[; ;SysRiego.c: 1373: if (oneShotFlag == 1)
+"1373
+[e $ ! == -> _oneShotFlag `i -> 1 `i 2375  ]
+[; ;SysRiego.c: 1374: return;
+"1374
+[e $UE 2374  ]
+[e :U 2375 ]
+[; ;SysRiego.c: 1375: delay();
+"1375
+[e ( _delay ..  ]
+[; ;SysRiego.c: 1376: if (PORTB != 0xF0){
 "1376
+[e $ ! != -> _PORTB `i -> 240 `i 2376  ]
+{
+[; ;SysRiego.c: 1377: readKey();
+"1377
+[e ( _readKey ..  ]
+[; ;SysRiego.c: 1378: oneShotFlag = 1;
+"1378
+[e = _oneShotFlag -> -> 1 `i `uc ]
+"1379
+}
+[e :U 2376 ]
+[; ;SysRiego.c: 1379: }
+[; ;SysRiego.c: 1380: }
+"1380
+[e :UE 2374 ]
+}
+"1382
+[v _readKey `(v ~T0 @X0 1 ef ]
+{
+[; ;SysRiego.c: 1382: void readKey(){
+[e :U _readKey ]
+[f ]
+[; ;SysRiego.c: 1384: switch(PORTB){
+"1384
+[e $U 2379  ]
+{
+[; ;SysRiego.c: 1385: case 0xE0: columnSelected = 1; break;
+"1385
+[e :U 2380 ]
+[e = _columnSelected -> -> 1 `i `uc ]
+[e $U 2378  ]
+[; ;SysRiego.c: 1386: case 0xD0: columnSelected = 2; break;
+"1386
+[e :U 2381 ]
+[e = _columnSelected -> -> 2 `i `uc ]
+[e $U 2378  ]
+[; ;SysRiego.c: 1387: case 0xB0: columnSelected = 3; break;
+"1387
+[e :U 2382 ]
+[e = _columnSelected -> -> 3 `i `uc ]
+[e $U 2378  ]
+[; ;SysRiego.c: 1388: case 0x70: columnSelected = 4; break;
+"1388
+[e :U 2383 ]
+[e = _columnSelected -> -> 4 `i `uc ]
+[e $U 2378  ]
+[; ;SysRiego.c: 1389: default: columnSelected = 100;
+"1389
+[e :U 2384 ]
+[e = _columnSelected -> -> 100 `i `uc ]
+"1390
+}
+[; ;SysRiego.c: 1390: }
+[e $U 2378  ]
+"1384
+[e :U 2379 ]
+[e [\ _PORTB , $ -> -> 224 `i `uc 2380
+ , $ -> -> 208 `i `uc 2381
+ , $ -> -> 176 `i `uc 2382
+ , $ -> -> 112 `i `uc 2383
+ 2384 ]
+"1390
+[e :U 2378 ]
+[; ;SysRiego.c: 1391: determinePressedRow();
+"1391
+[e ( _determinePressedRow ..  ]
+[; ;SysRiego.c: 1392: keyCode = getKeyCode();
+"1392
+[e = _keyCode ( _getKeyCode ..  ]
+[; ;SysRiego.c: 1393: }
+"1393
+[e :UE 2377 ]
+}
+"1395
+[v _resetReadInput `(v ~T0 @X0 1 ef ]
+{
+[; ;SysRiego.c: 1395: void resetReadInput(){
+[e :U _resetReadInput ]
+[f ]
+[; ;SysRiego.c: 1396: if (PORTB == 0xF0)
+"1396
+[e $ ! == -> _PORTB `i -> 240 `i 2386  ]
+[; ;SysRiego.c: 1397: delay();
+"1397
+[e ( _delay ..  ]
+[e $U 2387  ]
+"1398
+[e :U 2386 ]
+[; ;SysRiego.c: 1398: else
+[; ;SysRiego.c: 1399: return;
+"1399
+[e $UE 2385  ]
+[e :U 2387 ]
+[; ;SysRiego.c: 1400: if (PORTB == 0XF0){
+"1400
+[e $ ! == -> _PORTB `i -> 240 `i 2388  ]
+{
+[; ;SysRiego.c: 1401: oneShotFlag = 0;
+"1401
+[e = _oneShotFlag -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1402: getValueStatus = 1;
+"1402
+[e = _getValueStatus -> -> 1 `i `uc ]
+"1403
+}
+[e :U 2388 ]
+[; ;SysRiego.c: 1403: }
+[; ;SysRiego.c: 1404: }
+"1404
+[e :UE 2385 ]
+}
+"1406
+[v _disableIntRBIE `(v ~T0 @X0 1 ef ]
+{
+[; ;SysRiego.c: 1406: void disableIntRBIE() {
+[e :U _disableIntRBIE ]
+[f ]
+[; ;SysRiego.c: 1408: LATB = 0X00;
+"1408
+[e = _LATB -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1409: INTCONbits.RBIF = 0;
+"1409
+[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1410: INTCONbits.RBIE = 0;
+"1410
+[e = . . _INTCONbits 0 3 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1412: }
+"1412
+[e :UE 2389 ]
+}
+"1414
+[v _enableIntRBIE `(v ~T0 @X0 1 ef ]
+{
+[; ;SysRiego.c: 1414: void enableIntRBIE() {
+[e :U _enableIntRBIE ]
+[f ]
+[; ;SysRiego.c: 1416: LATB = 0X00;
+"1416
+[e = _LATB -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1417: INTCONbits.RBIF = 0;
+"1417
+[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1418: INTCONbits.RBIE = 1;
+"1418
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1420: }
+"1420
+[e :UE 2390 ]
+}
+"1422
+[v _displayTime `(v ~T0 @X0 1 ef ]
+{
+[; ;SysRiego.c: 1422: void displayTime() {
+[e :U _displayTime ]
+[f ]
+[; ;SysRiego.c: 1424: getDayName();
+"1424
+[e ( _getDayName ..  ]
+[; ;SysRiego.c: 1425: displayLineOnLCD(dayName, 4);
+"1425
+[e ( _displayLineOnLCD (2 , &U _dayName -> -> 4 `i `uc ]
+[; ;SysRiego.c: 1426: displayCharOnLCD(' ');
+"1426
+[e ( _displayCharOnLCD (1 -> -> 32 `ui `uc ]
+[; ;SysRiego.c: 1427: displayLineOnLCD(counterHOUR, 3);
+"1427
+[e ( _displayLineOnLCD (2 , &U _counterHOUR -> -> 3 `i `uc ]
+[; ;SysRiego.c: 1428: displayCharOnLCD(':');
+"1428
+[e ( _displayCharOnLCD (1 -> -> 58 `ui `uc ]
+[; ;SysRiego.c: 1429: displayLineOnLCD(counterMIN, 3);
+"1429
+[e ( _displayLineOnLCD (2 , &U _counterMIN -> -> 3 `i `uc ]
+[; ;SysRiego.c: 1430: displayCharOnLCD(':');
+"1430
+[e ( _displayCharOnLCD (1 -> -> 58 `ui `uc ]
+[; ;SysRiego.c: 1431: displayCharOnLCD(counterSEC);
+"1431
+[e ( _displayCharOnLCD (1 _counterSEC ]
+[; ;SysRiego.c: 1433: }
+"1433
+[e :UE 2391 ]
+}
+"1435
+[v _getDayName `(v ~T0 @X0 1 ef ]
+{
+[; ;SysRiego.c: 1435: void getDayName() {
+[e :U _getDayName ]
+[f ]
+[; ;SysRiego.c: 1437: switch(counterDAYS) {
+"1437
+[e $U 2394  ]
+{
+[; ;SysRiego.c: 1438: case '0':
+"1438
+[e :U 2395 ]
+[; ;SysRiego.c: 1439: dayName[0] = 'M';
+"1439
+[e = *U + &U _dayName * -> -> -> 0 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 77 `ui `uc ]
+[; ;SysRiego.c: 1440: dayName[1] = 'o';
+"1440
+[e = *U + &U _dayName * -> -> -> 1 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 111 `ui `uc ]
+[; ;SysRiego.c: 1441: dayName[2] = 'n';
+"1441
+[e = *U + &U _dayName * -> -> -> 2 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 110 `ui `uc ]
+[; ;SysRiego.c: 1442: break;
+"1442
+[e $U 2393  ]
+[; ;SysRiego.c: 1444: case '1':
+"1444
+[e :U 2396 ]
+[; ;SysRiego.c: 1445: dayName[0] = 'T';
+"1445
+[e = *U + &U _dayName * -> -> -> 0 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 84 `ui `uc ]
+[; ;SysRiego.c: 1446: dayName[1] = 'u';
+"1446
+[e = *U + &U _dayName * -> -> -> 1 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 117 `ui `uc ]
+[; ;SysRiego.c: 1447: dayName[2] = 'e';
+"1447
+[e = *U + &U _dayName * -> -> -> 2 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 101 `ui `uc ]
+[; ;SysRiego.c: 1448: break;
+"1448
+[e $U 2393  ]
+[; ;SysRiego.c: 1450: case '2':
+"1450
+[e :U 2397 ]
+[; ;SysRiego.c: 1451: dayName[0] = 'W';
+"1451
+[e = *U + &U _dayName * -> -> -> 0 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 87 `ui `uc ]
+[; ;SysRiego.c: 1452: dayName[1] = 'e';
+"1452
+[e = *U + &U _dayName * -> -> -> 1 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 101 `ui `uc ]
+[; ;SysRiego.c: 1453: dayName[2] = 'n';
+"1453
+[e = *U + &U _dayName * -> -> -> 2 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 110 `ui `uc ]
+[; ;SysRiego.c: 1454: break;
+"1454
+[e $U 2393  ]
+[; ;SysRiego.c: 1456: case '3':
+"1456
+[e :U 2398 ]
+[; ;SysRiego.c: 1457: dayName[0] = 'T';
+"1457
+[e = *U + &U _dayName * -> -> -> 0 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 84 `ui `uc ]
+[; ;SysRiego.c: 1458: dayName[1] = 'h';
+"1458
+[e = *U + &U _dayName * -> -> -> 1 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 104 `ui `uc ]
+[; ;SysRiego.c: 1459: dayName[2] = 'u';
+"1459
+[e = *U + &U _dayName * -> -> -> 2 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 117 `ui `uc ]
+[; ;SysRiego.c: 1460: break;
+"1460
+[e $U 2393  ]
+[; ;SysRiego.c: 1462: case '4':
+"1462
+[e :U 2399 ]
+[; ;SysRiego.c: 1463: dayName[0] = 'F';
+"1463
+[e = *U + &U _dayName * -> -> -> 0 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 70 `ui `uc ]
+[; ;SysRiego.c: 1464: dayName[1] = 'r';
+"1464
+[e = *U + &U _dayName * -> -> -> 1 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 114 `ui `uc ]
+[; ;SysRiego.c: 1465: dayName[2] = 'i';
+"1465
+[e = *U + &U _dayName * -> -> -> 2 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 105 `ui `uc ]
+[; ;SysRiego.c: 1466: break;
+"1466
+[e $U 2393  ]
+[; ;SysRiego.c: 1468: case '5':
+"1468
+[e :U 2400 ]
+[; ;SysRiego.c: 1469: dayName[0] = 'S';
+"1469
+[e = *U + &U _dayName * -> -> -> 0 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 83 `ui `uc ]
+[; ;SysRiego.c: 1470: dayName[1] = 'a';
+"1470
+[e = *U + &U _dayName * -> -> -> 1 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 97 `ui `uc ]
+[; ;SysRiego.c: 1471: dayName[2] = 't';
+"1471
+[e = *U + &U _dayName * -> -> -> 2 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 116 `ui `uc ]
+[; ;SysRiego.c: 1472: break;
+"1472
+[e $U 2393  ]
+[; ;SysRiego.c: 1474: case '6':
+"1474
+[e :U 2401 ]
+[; ;SysRiego.c: 1475: dayName[0] = 'S';
+"1475
+[e = *U + &U _dayName * -> -> -> 0 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 83 `ui `uc ]
+[; ;SysRiego.c: 1476: dayName[1] = 'u';
+"1476
+[e = *U + &U _dayName * -> -> -> 1 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 117 `ui `uc ]
+[; ;SysRiego.c: 1477: dayName[2] = 'n';
+"1477
+[e = *U + &U _dayName * -> -> -> 2 `i `ui `ux -> -> # *U &U _dayName `ui `ux -> -> 110 `ui `uc ]
+[; ;SysRiego.c: 1478: break;
+"1478
+[e $U 2393  ]
+"1480
+}
+[; ;SysRiego.c: 1480: }
+[e $U 2393  ]
+"1437
+[e :U 2394 ]
+[e [\ _counterDAYS , $ -> -> 48 `ui `uc 2395
+ , $ -> -> 49 `ui `uc 2396
+ , $ -> -> 50 `ui `uc 2397
+ , $ -> -> 51 `ui `uc 2398
+ , $ -> -> 52 `ui `uc 2399
+ , $ -> -> 53 `ui `uc 2400
+ , $ -> -> 54 `ui `uc 2401
+ 2393 ]
+"1480
+[e :U 2393 ]
+[; ;SysRiego.c: 1482: }
+"1482
+[e :UE 2392 ]
+}
+"1484
 [v _updateEndTime `(v ~T0 @X0 1 ef3`*uc`*uc`*uc ]
 {
-[; ;SysRiego.c: 1376: void updateEndTime(unsigned char *endTimeZn, unsigned char *zoneTime, unsigned char *irrigateTimeZn) {
+[; ;SysRiego.c: 1484: void updateEndTime(unsigned char *endTimeZn, unsigned char *zoneTime, unsigned char *irrigateTimeZn) {
 [e :U _updateEndTime ]
 [v _endTimeZn `*uc ~T0 @X0 1 r1 ]
 [v _zoneTime `*uc ~T0 @X0 1 r2 ]
 [v _irrigateTimeZn `*uc ~T0 @X0 1 r3 ]
 [f ]
-[; ;SysRiego.c: 1378: endTimeZn[0] = zoneTime[0];
-"1378
+[; ;SysRiego.c: 1486: endTimeZn[0] = zoneTime[0];
+"1486
 [e = *U + _endTimeZn * -> -> 0 `i `x -> -> # *U _endTimeZn `i `x *U + _zoneTime * -> -> 0 `i `x -> -> # *U _zoneTime `i `x ]
-[; ;SysRiego.c: 1379: endTimeZn[1] = zoneTime[1];
-"1379
+[; ;SysRiego.c: 1487: endTimeZn[1] = zoneTime[1];
+"1487
 [e = *U + _endTimeZn * -> -> 1 `i `x -> -> # *U _endTimeZn `i `x *U + _zoneTime * -> -> 1 `i `x -> -> # *U _zoneTime `i `x ]
-[; ;SysRiego.c: 1380: endTimeZn[2] = zoneTime[2];
-"1380
+[; ;SysRiego.c: 1488: endTimeZn[2] = zoneTime[2];
+"1488
 [e = *U + _endTimeZn * -> -> 2 `i `x -> -> # *U _endTimeZn `i `x *U + _zoneTime * -> -> 2 `i `x -> -> # *U _zoneTime `i `x ]
-[; ;SysRiego.c: 1381: endTimeZn[3] = zoneTime[3];
-"1381
+[; ;SysRiego.c: 1489: endTimeZn[3] = zoneTime[3];
+"1489
 [e = *U + _endTimeZn * -> -> 3 `i `x -> -> # *U _endTimeZn `i `x *U + _zoneTime * -> -> 3 `i `x -> -> # *U _zoneTime `i `x ]
-[; ;SysRiego.c: 1383: endTimeZn[3] = endTimeZn[3] + (irrigateTimeZn[1] - 48);
-"1383
+[; ;SysRiego.c: 1491: endTimeZn[3] = endTimeZn[3] + (irrigateTimeZn[1] - 48);
+"1491
 [e = *U + _endTimeZn * -> -> 3 `i `x -> -> # *U _endTimeZn `i `x -> + -> *U + _endTimeZn * -> -> 3 `i `x -> -> # *U _endTimeZn `i `x `i - -> *U + _irrigateTimeZn * -> -> 1 `i `x -> -> # *U _irrigateTimeZn `i `x `i -> 48 `i `uc ]
-[; ;SysRiego.c: 1385: if(endTimeZn[3] > 57) {
-"1385
-[e $ ! > -> *U + _endTimeZn * -> -> 3 `i `x -> -> # *U _endTimeZn `i `x `i -> 57 `i 2384  ]
+[; ;SysRiego.c: 1493: if(endTimeZn[3] > 57) {
+"1493
+[e $ ! > -> *U + _endTimeZn * -> -> 3 `i `x -> -> # *U _endTimeZn `i `x `i -> 57 `i 2403  ]
 {
-[; ;SysRiego.c: 1386: endTimeZn[3] = endTimeZn[3]%58 + 48;
-"1386
+[; ;SysRiego.c: 1494: endTimeZn[3] = endTimeZn[3]%58 + 48;
+"1494
 [e = *U + _endTimeZn * -> -> 3 `i `x -> -> # *U _endTimeZn `i `x -> + % -> *U + _endTimeZn * -> -> 3 `i `x -> -> # *U _endTimeZn `i `x `i -> 58 `i -> 48 `i `uc ]
-[; ;SysRiego.c: 1387: endTimeZn[2]++;
-"1387
+[; ;SysRiego.c: 1495: endTimeZn[2]++;
+"1495
 [e ++ *U + _endTimeZn * -> -> 2 `i `x -> -> # *U _endTimeZn `i `x -> -> 1 `i `uc ]
-"1388
+"1496
 }
-[e :U 2384 ]
-[; ;SysRiego.c: 1388: }
-[; ;SysRiego.c: 1390: endTimeZn[2] = endTimeZn[2] + (irrigateTimeZn[0] - 48);
-"1390
+[e :U 2403 ]
+[; ;SysRiego.c: 1496: }
+[; ;SysRiego.c: 1498: endTimeZn[2] = endTimeZn[2] + (irrigateTimeZn[0] - 48);
+"1498
 [e = *U + _endTimeZn * -> -> 2 `i `x -> -> # *U _endTimeZn `i `x -> + -> *U + _endTimeZn * -> -> 2 `i `x -> -> # *U _endTimeZn `i `x `i - -> *U + _irrigateTimeZn * -> -> 0 `i `x -> -> # *U _irrigateTimeZn `i `x `i -> 48 `i `uc ]
-[; ;SysRiego.c: 1392: if(endTimeZn[2] > 53) {
-"1392
-[e $ ! > -> *U + _endTimeZn * -> -> 2 `i `x -> -> # *U _endTimeZn `i `x `i -> 53 `i 2385  ]
+[; ;SysRiego.c: 1500: if(endTimeZn[2] > 53) {
+"1500
+[e $ ! > -> *U + _endTimeZn * -> -> 2 `i `x -> -> # *U _endTimeZn `i `x `i -> 53 `i 2404  ]
 {
-[; ;SysRiego.c: 1393: endTimeZn[2] = endTimeZn[2]%54 + 48;
-"1393
+[; ;SysRiego.c: 1501: endTimeZn[2] = endTimeZn[2]%54 + 48;
+"1501
 [e = *U + _endTimeZn * -> -> 2 `i `x -> -> # *U _endTimeZn `i `x -> + % -> *U + _endTimeZn * -> -> 2 `i `x -> -> # *U _endTimeZn `i `x `i -> 54 `i -> 48 `i `uc ]
-[; ;SysRiego.c: 1394: endTimeZn[1]++;
-"1394
+[; ;SysRiego.c: 1502: endTimeZn[1]++;
+"1502
 [e ++ *U + _endTimeZn * -> -> 1 `i `x -> -> # *U _endTimeZn `i `x -> -> 1 `i `uc ]
-"1395
+"1503
 }
-[e :U 2385 ]
-[; ;SysRiego.c: 1395: }
-[; ;SysRiego.c: 1397: if(endTimeZn[0] < '2') {
-"1397
-[e $ ! < -> *U + _endTimeZn * -> -> 0 `i `x -> -> # *U _endTimeZn `i `x `ui -> 50 `ui 2386  ]
+[e :U 2404 ]
+[; ;SysRiego.c: 1503: }
+[; ;SysRiego.c: 1505: if(endTimeZn[0] < '2') {
+"1505
+[e $ ! < -> *U + _endTimeZn * -> -> 0 `i `x -> -> # *U _endTimeZn `i `x `ui -> 50 `ui 2405  ]
 {
-[; ;SysRiego.c: 1399: if(endTimeZn[1] > 57) {
-"1399
-[e $ ! > -> *U + _endTimeZn * -> -> 1 `i `x -> -> # *U _endTimeZn `i `x `i -> 57 `i 2387  ]
+[; ;SysRiego.c: 1507: if(endTimeZn[1] > 57) {
+"1507
+[e $ ! > -> *U + _endTimeZn * -> -> 1 `i `x -> -> # *U _endTimeZn `i `x `i -> 57 `i 2406  ]
 {
-[; ;SysRiego.c: 1400: endTimeZn[1] = endTimeZn[1]%58 + 48;
-"1400
+[; ;SysRiego.c: 1508: endTimeZn[1] = endTimeZn[1]%58 + 48;
+"1508
 [e = *U + _endTimeZn * -> -> 1 `i `x -> -> # *U _endTimeZn `i `x -> + % -> *U + _endTimeZn * -> -> 1 `i `x -> -> # *U _endTimeZn `i `x `i -> 58 `i -> 48 `i `uc ]
-[; ;SysRiego.c: 1401: endTimeZn[0]++;
-"1401
+[; ;SysRiego.c: 1509: endTimeZn[0]++;
+"1509
 [e ++ *U + _endTimeZn * -> -> 0 `i `x -> -> # *U _endTimeZn `i `x -> -> 1 `i `uc ]
-"1402
+"1510
 }
-[e :U 2387 ]
-"1404
+[e :U 2406 ]
+"1512
 }
-[; ;SysRiego.c: 1402: }
-[; ;SysRiego.c: 1404: }
-[e $U 2388  ]
-"1406
-[e :U 2386 ]
-[; ;SysRiego.c: 1406: else {
+[; ;SysRiego.c: 1510: }
+[; ;SysRiego.c: 1512: }
+[e $U 2407  ]
+"1514
+[e :U 2405 ]
+[; ;SysRiego.c: 1514: else {
 {
-[; ;SysRiego.c: 1408: if(endTimeZn[1] > 51) {
-"1408
-[e $ ! > -> *U + _endTimeZn * -> -> 1 `i `x -> -> # *U _endTimeZn `i `x `i -> 51 `i 2389  ]
+[; ;SysRiego.c: 1516: if(endTimeZn[1] > 51) {
+"1516
+[e $ ! > -> *U + _endTimeZn * -> -> 1 `i `x -> -> # *U _endTimeZn `i `x `i -> 51 `i 2408  ]
 {
-[; ;SysRiego.c: 1409: endTimeZn[1] = endTimeZn[1]%52 + 48;
-"1409
+[; ;SysRiego.c: 1517: endTimeZn[1] = endTimeZn[1]%52 + 48;
+"1517
 [e = *U + _endTimeZn * -> -> 1 `i `x -> -> # *U _endTimeZn `i `x -> + % -> *U + _endTimeZn * -> -> 1 `i `x -> -> # *U _endTimeZn `i `x `i -> 52 `i -> 48 `i `uc ]
-[; ;SysRiego.c: 1410: endTimeZn[0]++;
-"1410
+[; ;SysRiego.c: 1518: endTimeZn[0]++;
+"1518
 [e ++ *U + _endTimeZn * -> -> 0 `i `x -> -> # *U _endTimeZn `i `x -> -> 1 `i `uc ]
-"1411
+"1519
 }
-[e :U 2389 ]
-[; ;SysRiego.c: 1411: }
-[; ;SysRiego.c: 1413: if (endTimeZn[0] > 50) {
-"1413
-[e $ ! > -> *U + _endTimeZn * -> -> 0 `i `x -> -> # *U _endTimeZn `i `x `i -> 50 `i 2390  ]
+[e :U 2408 ]
+[; ;SysRiego.c: 1519: }
+[; ;SysRiego.c: 1521: if (endTimeZn[0] > 50) {
+"1521
+[e $ ! > -> *U + _endTimeZn * -> -> 0 `i `x -> -> # *U _endTimeZn `i `x `i -> 50 `i 2409  ]
 {
-[; ;SysRiego.c: 1414: endTimeZn[0] = endTimeZn[0]%51 + 48;
-"1414
+[; ;SysRiego.c: 1522: endTimeZn[0] = endTimeZn[0]%51 + 48;
+"1522
 [e = *U + _endTimeZn * -> -> 0 `i `x -> -> # *U _endTimeZn `i `x -> + % -> *U + _endTimeZn * -> -> 0 `i `x -> -> # *U _endTimeZn `i `x `i -> 51 `i -> 48 `i `uc ]
-"1415
+"1523
 }
-[e :U 2390 ]
-"1417
+[e :U 2409 ]
+"1525
 }
-[e :U 2388 ]
-[; ;SysRiego.c: 1415: }
-[; ;SysRiego.c: 1417: }
-[; ;SysRiego.c: 1419: }
-"1419
-[e :UE 2383 ]
+[e :U 2407 ]
+[; ;SysRiego.c: 1523: }
+[; ;SysRiego.c: 1525: }
+[; ;SysRiego.c: 1527: }
+"1527
+[e :UE 2402 ]
 }
-"1421
+"1529
 [v _startIrrigation `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;SysRiego.c: 1421: void startIrrigation(unsigned char zone) {
+[; ;SysRiego.c: 1529: void startIrrigation(unsigned char zone) {
 [e :U _startIrrigation ]
 [v _zone `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;SysRiego.c: 1423: switch(zone) {
-"1423
-[e $U 2393  ]
-{
-[; ;SysRiego.c: 1425: case 1:
-"1425
-[e :U 2394 ]
-[; ;SysRiego.c: 1426: PORTEbits.RE0 = 1;
-"1426
-[e = . . _PORTEbits 0 0 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1427: break;
-"1427
-[e $U 2392  ]
-[; ;SysRiego.c: 1429: case 2:
-"1429
-[e :U 2395 ]
-[; ;SysRiego.c: 1430: PORTEbits.RE1 = 1;
-"1430
-[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1431: break;
-"1431
-[e $U 2392  ]
-[; ;SysRiego.c: 1433: case 3:
-"1433
-[e :U 2396 ]
-[; ;SysRiego.c: 1434: PORTEbits.RE2 = 1;
-"1434
-[e = . . _PORTEbits 0 2 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1435: break;
-"1435
-[e $U 2392  ]
-"1437
-}
-[; ;SysRiego.c: 1437: }
-[e $U 2392  ]
-"1423
-[e :U 2393 ]
-[e [\ _zone , $ -> -> 1 `i `uc 2394
- , $ -> -> 2 `i `uc 2395
- , $ -> -> 3 `i `uc 2396
- 2392 ]
-"1437
-[e :U 2392 ]
-[; ;SysRiego.c: 1439: }
-"1439
-[e :UE 2391 ]
-}
-"1441
-[v _stopIrrigation `(v ~T0 @X0 1 ef1`uc ]
-{
-[; ;SysRiego.c: 1441: void stopIrrigation(unsigned char zone) {
-[e :U _stopIrrigation ]
-[v _zone `uc ~T0 @X0 1 r1 ]
-[f ]
-[; ;SysRiego.c: 1443: switch(zone) {
-"1443
-[e $U 2399  ]
-{
-[; ;SysRiego.c: 1445: case 1:
-"1445
-[e :U 2400 ]
-[; ;SysRiego.c: 1446: PORTEbits.RE0 = 0;
-"1446
-[e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1447: break;
-"1447
-[e $U 2398  ]
-[; ;SysRiego.c: 1449: case 2:
-"1449
-[e :U 2401 ]
-[; ;SysRiego.c: 1450: PORTEbits.RE1 = 0;
-"1450
-[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1451: break;
-"1451
-[e $U 2398  ]
-[; ;SysRiego.c: 1453: case 3:
-"1453
-[e :U 2402 ]
-[; ;SysRiego.c: 1454: PORTEbits.RE2 = 0;
-"1454
-[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1455: break;
-"1455
-[e $U 2398  ]
-"1457
-}
-[; ;SysRiego.c: 1457: }
-[e $U 2398  ]
-"1443
-[e :U 2399 ]
-[e [\ _zone , $ -> -> 1 `i `uc 2400
- , $ -> -> 2 `i `uc 2401
- , $ -> -> 3 `i `uc 2402
- 2398 ]
-"1457
-[e :U 2398 ]
-[; ;SysRiego.c: 1459: }
-"1459
-[e :UE 2397 ]
-}
-"1461
-[v _irrigateManual `(v ~T0 @X0 1 ef ]
-{
-[; ;SysRiego.c: 1461: void irrigateManual() {
-[e :U _irrigateManual ]
-[f ]
-[; ;SysRiego.c: 1463: if(manualZn1Val == '1') {
-"1463
-[e $ ! == -> _manualZn1Val `ui -> 49 `ui 2404  ]
-{
-[; ;SysRiego.c: 1464: startIrrigation(1);
-"1464
-[e ( _startIrrigation (1 -> -> 1 `i `uc ]
-"1465
-}
-[e :U 2404 ]
-[; ;SysRiego.c: 1465: }
-[; ;SysRiego.c: 1467: if(manualZn2Val == '1') {
-"1467
-[e $ ! == -> _manualZn2Val `ui -> 49 `ui 2405  ]
-{
-[; ;SysRiego.c: 1468: startIrrigation(2);
-"1468
-[e ( _startIrrigation (1 -> -> 2 `i `uc ]
-"1469
-}
-[e :U 2405 ]
-[; ;SysRiego.c: 1469: }
-[; ;SysRiego.c: 1471: if(manualZn3Val == '1') {
-"1471
-[e $ ! == -> _manualZn3Val `ui -> 49 `ui 2406  ]
-{
-[; ;SysRiego.c: 1472: startIrrigation(3);
-"1472
-[e ( _startIrrigation (1 -> -> 3 `i `uc ]
-"1473
-}
-[e :U 2406 ]
-[; ;SysRiego.c: 1473: }
-[; ;SysRiego.c: 1475: irrigateManualStatus = 1;
-"1475
-[e = _irrigateManualStatus -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1477: }
-"1477
-[e :UE 2403 ]
-}
-"1479
-[v _stopIrrigateManual `(v ~T0 @X0 1 ef ]
-{
-[; ;SysRiego.c: 1479: void stopIrrigateManual(){
-[e :U _stopIrrigateManual ]
-[f ]
-[; ;SysRiego.c: 1481: stopIrrigation(1);
-"1481
-[e ( _stopIrrigation (1 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1482: stopIrrigation(2);
-"1482
-[e ( _stopIrrigation (1 -> -> 2 `i `uc ]
-[; ;SysRiego.c: 1483: stopIrrigation(3);
-"1483
-[e ( _stopIrrigation (1 -> -> 3 `i `uc ]
-[; ;SysRiego.c: 1485: irrigateManualStatus = 0;
-"1485
-[e = _irrigateManualStatus -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1487: }
-"1487
-[e :UE 2407 ]
-}
-"1489
-[v _convertCharsToInt `(uc ~T0 @X0 1 ef1`*uc ]
-{
-[; ;SysRiego.c: 1489: unsigned char convertCharsToInt(unsigned char *humidityValue) {
-[e :U _convertCharsToInt ]
-[v _humidityValue `*uc ~T0 @X0 1 r1 ]
-[f ]
-"1491
-[v _units `uc ~T0 @X0 1 a ]
-"1492
-[v _dozens `uc ~T0 @X0 1 a ]
-[; ;SysRiego.c: 1491: unsigned char units;
-[; ;SysRiego.c: 1492: unsigned char dozens;
-[; ;SysRiego.c: 1494: units = humidityValue[1] - 48;
-"1494
-[e = _units -> - -> *U + _humidityValue * -> -> 1 `i `x -> -> # *U _humidityValue `i `x `i -> 48 `i `uc ]
-[; ;SysRiego.c: 1495: dozens = (humidityValue[0] - 48)*10;
-"1495
-[e = _dozens -> * - -> *U + _humidityValue * -> -> 0 `i `x -> -> # *U _humidityValue `i `x `i -> 48 `i -> 10 `i `uc ]
-[; ;SysRiego.c: 1497: return (units + dozens);
-"1497
-[e ) -> + -> _units `i -> _dozens `i `uc ]
-[e $UE 2408  ]
-[; ;SysRiego.c: 1498: }
-"1498
-[e :UE 2408 ]
-}
-"1500
-[v _enableACInterrupts `(v ~T0 @X0 1 ef ]
-{
-[; ;SysRiego.c: 1500: void enableACInterrupts() {
-[e :U _enableACInterrupts ]
-[f ]
-[; ;SysRiego.c: 1502: PORTA = 0X00;
-"1502
-[e = _PORTA -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1503: LATA = 0X00;
-"1503
-[e = _LATA -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1504: TRISA = 0X00;
-"1504
-[e = _TRISA -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1506: TRISAbits.RA0 = 1;
-"1506
-[e = . . _TRISAbits 1 0 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1507: TRISAbits.RA1 = 1;
-"1507
-[e = . . _TRISAbits 1 1 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1508: TRISAbits.RA2 = 1;
-"1508
-[e = . . _TRISAbits 1 2 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1511: PIE1bits.ADIE = 0;
-"1511
-[e = . . _PIE1bits 0 6 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1514: IPR1bits.ADIP = 1;
-"1514
-[e = . . _IPR1bits 0 6 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1518: }
-"1518
-[e :UE 2409 ]
-}
-"1520
-[v _startAC `(v ~T0 @X0 1 ef1`uc ]
-{
-[; ;SysRiego.c: 1520: void startAC(unsigned char acChannel) {
-[e :U _startAC ]
-[v _acChannel `uc ~T0 @X0 1 r1 ]
-[f ]
-[; ;SysRiego.c: 1523: PIR1bits.ADIF = 0;
-"1523
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1525: PIE1bits.ADIE = 1;
-"1525
-[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1527: switch(acChannel) {
-"1527
+[; ;SysRiego.c: 1531: switch(zone) {
+"1531
 [e $U 2412  ]
 {
-[; ;SysRiego.c: 1529: case 1:
-"1529
-[e :U 2413 ]
-[; ;SysRiego.c: 1530: ADCON0 = 0x01;
-"1530
-[e = _ADCON0 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1531: break;
-"1531
-[e $U 2411  ]
-[; ;SysRiego.c: 1533: case 2:
+[; ;SysRiego.c: 1533: case 1:
 "1533
-[e :U 2414 ]
-[; ;SysRiego.c: 1534: ADCON0 = 0x05;
+[e :U 2413 ]
+[; ;SysRiego.c: 1534: PORTEbits.RE0 = 1;
 "1534
-[e = _ADCON0 -> -> 5 `i `uc ]
+[e = . . _PORTEbits 0 0 -> -> 1 `i `uc ]
 [; ;SysRiego.c: 1535: break;
 "1535
 [e $U 2411  ]
-[; ;SysRiego.c: 1537: case 3:
+[; ;SysRiego.c: 1537: case 2:
 "1537
-[e :U 2415 ]
-[; ;SysRiego.c: 1538: ADCON0 = 0x09;
+[e :U 2414 ]
+[; ;SysRiego.c: 1538: PORTEbits.RE1 = 1;
 "1538
-[e = _ADCON0 -> -> 9 `i `uc ]
+[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
 [; ;SysRiego.c: 1539: break;
 "1539
 [e $U 2411  ]
+[; ;SysRiego.c: 1541: case 3:
 "1541
-}
-[; ;SysRiego.c: 1541: }
+[e :U 2415 ]
+[; ;SysRiego.c: 1542: PORTEbits.RE2 = 1;
+"1542
+[e = . . _PORTEbits 0 2 -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1543: break;
+"1543
 [e $U 2411  ]
-"1527
+"1545
+}
+[; ;SysRiego.c: 1545: }
+[e $U 2411  ]
+"1531
 [e :U 2412 ]
-[e [\ _acChannel , $ -> -> 1 `i `uc 2413
+[e [\ _zone , $ -> -> 1 `i `uc 2413
  , $ -> -> 2 `i `uc 2414
  , $ -> -> 3 `i `uc 2415
  2411 ]
-"1541
-[e :U 2411 ]
-[; ;SysRiego.c: 1543: ADCON0bits.GO_DONE = 1;
-"1543
-[e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1545: while(ADCON0bits.GO_DONE == 1);
 "1545
-[e $U 2416  ]
-[e :U 2417 ]
-[e :U 2416 ]
-[e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 2417  ]
-[e :U 2418 ]
-[; ;SysRiego.c: 1548: PIE1bits.ADIE = 0;
-"1548
-[e = . . _PIE1bits 0 6 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1550: }
-"1550
+[e :U 2411 ]
+[; ;SysRiego.c: 1547: }
+"1547
 [e :UE 2410 ]
 }
-"1552
+"1549
+[v _stopIrrigation `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;SysRiego.c: 1549: void stopIrrigation(unsigned char zone) {
+[e :U _stopIrrigation ]
+[v _zone `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;SysRiego.c: 1551: switch(zone) {
+"1551
+[e $U 2418  ]
+{
+[; ;SysRiego.c: 1553: case 1:
+"1553
+[e :U 2419 ]
+[; ;SysRiego.c: 1554: PORTEbits.RE0 = 0;
+"1554
+[e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1555: break;
+"1555
+[e $U 2417  ]
+[; ;SysRiego.c: 1557: case 2:
+"1557
+[e :U 2420 ]
+[; ;SysRiego.c: 1558: PORTEbits.RE1 = 0;
+"1558
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1559: break;
+"1559
+[e $U 2417  ]
+[; ;SysRiego.c: 1561: case 3:
+"1561
+[e :U 2421 ]
+[; ;SysRiego.c: 1562: PORTEbits.RE2 = 0;
+"1562
+[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1563: break;
+"1563
+[e $U 2417  ]
+"1565
+}
+[; ;SysRiego.c: 1565: }
+[e $U 2417  ]
+"1551
+[e :U 2418 ]
+[e [\ _zone , $ -> -> 1 `i `uc 2419
+ , $ -> -> 2 `i `uc 2420
+ , $ -> -> 3 `i `uc 2421
+ 2417 ]
+"1565
+[e :U 2417 ]
+[; ;SysRiego.c: 1567: }
+"1567
+[e :UE 2416 ]
+}
+"1569
+[v _irrigateManual `(v ~T0 @X0 1 ef ]
+{
+[; ;SysRiego.c: 1569: void irrigateManual() {
+[e :U _irrigateManual ]
+[f ]
+[; ;SysRiego.c: 1571: if(manualZn1Val == '1') {
+"1571
+[e $ ! == -> _manualZn1Val `ui -> 49 `ui 2423  ]
+{
+[; ;SysRiego.c: 1572: startIrrigation(1);
+"1572
+[e ( _startIrrigation (1 -> -> 1 `i `uc ]
+"1573
+}
+[e :U 2423 ]
+[; ;SysRiego.c: 1573: }
+[; ;SysRiego.c: 1575: if(manualZn2Val == '1') {
+"1575
+[e $ ! == -> _manualZn2Val `ui -> 49 `ui 2424  ]
+{
+[; ;SysRiego.c: 1576: startIrrigation(2);
+"1576
+[e ( _startIrrigation (1 -> -> 2 `i `uc ]
+"1577
+}
+[e :U 2424 ]
+[; ;SysRiego.c: 1577: }
+[; ;SysRiego.c: 1579: if(manualZn3Val == '1') {
+"1579
+[e $ ! == -> _manualZn3Val `ui -> 49 `ui 2425  ]
+{
+[; ;SysRiego.c: 1580: startIrrigation(3);
+"1580
+[e ( _startIrrigation (1 -> -> 3 `i `uc ]
+"1581
+}
+[e :U 2425 ]
+[; ;SysRiego.c: 1581: }
+[; ;SysRiego.c: 1583: irrigateManualStatus = 1;
+"1583
+[e = _irrigateManualStatus -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1585: }
+"1585
+[e :UE 2422 ]
+}
+"1587
+[v _stopIrrigateManual `(v ~T0 @X0 1 ef ]
+{
+[; ;SysRiego.c: 1587: void stopIrrigateManual(){
+[e :U _stopIrrigateManual ]
+[f ]
+[; ;SysRiego.c: 1589: stopIrrigation(1);
+"1589
+[e ( _stopIrrigation (1 -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1590: stopIrrigation(2);
+"1590
+[e ( _stopIrrigation (1 -> -> 2 `i `uc ]
+[; ;SysRiego.c: 1591: stopIrrigation(3);
+"1591
+[e ( _stopIrrigation (1 -> -> 3 `i `uc ]
+[; ;SysRiego.c: 1593: irrigateManualStatus = 0;
+"1593
+[e = _irrigateManualStatus -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1595: }
+"1595
+[e :UE 2426 ]
+}
+"1597
+[v _convertCharsToInt `(uc ~T0 @X0 1 ef1`*uc ]
+{
+[; ;SysRiego.c: 1597: unsigned char convertCharsToInt(unsigned char *humidityValue) {
+[e :U _convertCharsToInt ]
+[v _humidityValue `*uc ~T0 @X0 1 r1 ]
+[f ]
+"1599
+[v _units `uc ~T0 @X0 1 a ]
+"1600
+[v _dozens `uc ~T0 @X0 1 a ]
+[; ;SysRiego.c: 1599: unsigned char units;
+[; ;SysRiego.c: 1600: unsigned char dozens;
+[; ;SysRiego.c: 1602: units = humidityValue[1] - 48;
+"1602
+[e = _units -> - -> *U + _humidityValue * -> -> 1 `i `x -> -> # *U _humidityValue `i `x `i -> 48 `i `uc ]
+[; ;SysRiego.c: 1603: dozens = (humidityValue[0] - 48)*10;
+"1603
+[e = _dozens -> * - -> *U + _humidityValue * -> -> 0 `i `x -> -> # *U _humidityValue `i `x `i -> 48 `i -> 10 `i `uc ]
+[; ;SysRiego.c: 1605: return (units + dozens);
+"1605
+[e ) -> + -> _units `i -> _dozens `i `uc ]
+[e $UE 2427  ]
+[; ;SysRiego.c: 1606: }
+"1606
+[e :UE 2427 ]
+}
+"1608
+[v _enableACInterrupts `(v ~T0 @X0 1 ef ]
+{
+[; ;SysRiego.c: 1608: void enableACInterrupts() {
+[e :U _enableACInterrupts ]
+[f ]
+[; ;SysRiego.c: 1610: PORTA = 0X00;
+"1610
+[e = _PORTA -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1611: LATA = 0X00;
+"1611
+[e = _LATA -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1612: TRISA = 0X00;
+"1612
+[e = _TRISA -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1614: TRISAbits.RA0 = 1;
+"1614
+[e = . . _TRISAbits 1 0 -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1615: TRISAbits.RA1 = 1;
+"1615
+[e = . . _TRISAbits 1 1 -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1616: TRISAbits.RA2 = 1;
+"1616
+[e = . . _TRISAbits 1 2 -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1619: PIE1bits.ADIE = 0;
+"1619
+[e = . . _PIE1bits 0 6 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1622: IPR1bits.ADIP = 1;
+"1622
+[e = . . _IPR1bits 0 6 -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1626: }
+"1626
+[e :UE 2428 ]
+}
+"1628
+[v _startAC `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;SysRiego.c: 1628: void startAC(unsigned char acChannel) {
+[e :U _startAC ]
+[v _acChannel `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;SysRiego.c: 1631: PIR1bits.ADIF = 0;
+"1631
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1633: PIE1bits.ADIE = 1;
+"1633
+[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1635: switch(acChannel) {
+"1635
+[e $U 2431  ]
+{
+[; ;SysRiego.c: 1637: case 1:
+"1637
+[e :U 2432 ]
+[; ;SysRiego.c: 1638: ADCON0 = 0x01;
+"1638
+[e = _ADCON0 -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1639: break;
+"1639
+[e $U 2430  ]
+[; ;SysRiego.c: 1641: case 2:
+"1641
+[e :U 2433 ]
+[; ;SysRiego.c: 1642: ADCON0 = 0x05;
+"1642
+[e = _ADCON0 -> -> 5 `i `uc ]
+[; ;SysRiego.c: 1643: break;
+"1643
+[e $U 2430  ]
+[; ;SysRiego.c: 1645: case 3:
+"1645
+[e :U 2434 ]
+[; ;SysRiego.c: 1646: ADCON0 = 0x09;
+"1646
+[e = _ADCON0 -> -> 9 `i `uc ]
+[; ;SysRiego.c: 1647: break;
+"1647
+[e $U 2430  ]
+"1649
+}
+[; ;SysRiego.c: 1649: }
+[e $U 2430  ]
+"1635
+[e :U 2431 ]
+[e [\ _acChannel , $ -> -> 1 `i `uc 2432
+ , $ -> -> 2 `i `uc 2433
+ , $ -> -> 3 `i `uc 2434
+ 2430 ]
+"1649
+[e :U 2430 ]
+[; ;SysRiego.c: 1651: ADCON0bits.GO_DONE = 1;
+"1651
+[e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
+[; ;SysRiego.c: 1653: while(ADCON0bits.GO_DONE == 1);
+"1653
+[e $U 2435  ]
+[e :U 2436 ]
+[e :U 2435 ]
+[e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 2436  ]
+[e :U 2437 ]
+[; ;SysRiego.c: 1656: PIE1bits.ADIE = 0;
+"1656
+[e = . . _PIE1bits 0 6 -> -> 0 `i `uc ]
+[; ;SysRiego.c: 1658: }
+"1658
+[e :UE 2429 ]
+}
+"1660
 [v _disableACInterrupts `(v ~T0 @X0 1 ef ]
 {
-[; ;SysRiego.c: 1552: void disableACInterrupts() {
+[; ;SysRiego.c: 1660: void disableACInterrupts() {
 [e :U _disableACInterrupts ]
 [f ]
-[; ;SysRiego.c: 1554: PORTA = 0X00;
-"1554
+[; ;SysRiego.c: 1662: PORTA = 0X00;
+"1662
 [e = _PORTA -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1555: LATA = 0X00;
-"1555
+[; ;SysRiego.c: 1663: LATA = 0X00;
+"1663
 [e = _LATA -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1556: TRISA = 0X00;
-"1556
+[; ;SysRiego.c: 1664: TRISA = 0X00;
+"1664
 [e = _TRISA -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1559: PIE1bits.ADIE = 0;
-"1559
+[; ;SysRiego.c: 1667: PIE1bits.ADIE = 0;
+"1667
 [e = . . _PIE1bits 0 6 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1562: PIR1bits.ADIF = 0;
-"1562
+[; ;SysRiego.c: 1670: PIR1bits.ADIF = 0;
+"1670
 [e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1564: ADCON0bits.GO_DONE = 0;
-"1564
+[; ;SysRiego.c: 1672: ADCON0bits.GO_DONE = 0;
+"1672
 [e = . . _ADCON0bits 2 1 -> -> 0 `i `uc ]
-[; ;SysRiego.c: 1566: }
-"1566
-[e :UE 2419 ]
+[; ;SysRiego.c: 1674: }
+"1674
+[e :UE 2438 ]
 }
-"1568
+"1676
 [v _clearEndTimes `(v ~T0 @X0 1 ef ]
 {
-[; ;SysRiego.c: 1568: void clearEndTimes() {
+[; ;SysRiego.c: 1676: void clearEndTimes() {
 [e :U _clearEndTimes ]
 [f ]
-[; ;SysRiego.c: 1570: for(unsigned char i = 0; i < 3; i++) {
-"1570
+[; ;SysRiego.c: 1678: for(unsigned char i = 0; i < 3; i++) {
+"1678
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 3 `i 2421  ]
-[e $U 2422  ]
-[e :U 2421 ]
+[e $ < -> _i `i -> 3 `i 2440  ]
+[e $U 2441  ]
+[e :U 2440 ]
 {
-"1572
+"1680
 [v _zoneEndTime `*uc ~T0 @X0 1 a ]
-[; ;SysRiego.c: 1572: unsigned char *zoneEndTime = zoneEndTimes[i];
+[; ;SysRiego.c: 1680: unsigned char *zoneEndTime = zoneEndTimes[i];
 [e = _zoneEndTime *U + &U _zoneEndTimes * -> _i `ux -> -> # *U &U _zoneEndTimes `ui `ux ]
-[; ;SysRiego.c: 1574: for(unsigned char j = 0; j < 4; j++) {
-"1574
+[; ;SysRiego.c: 1682: for(unsigned char j = 0; j < 4; j++) {
+"1682
 {
 [v _j `uc ~T0 @X0 1 a ]
 [e = _j -> -> 0 `i `uc ]
-[e $ < -> _j `i -> 4 `i 2424  ]
-[e $U 2425  ]
-[e :U 2424 ]
+[e $ < -> _j `i -> 4 `i 2443  ]
+[e $U 2444  ]
+[e :U 2443 ]
 {
-[; ;SysRiego.c: 1575: zoneEndTime[j] = '$';
-"1575
+[; ;SysRiego.c: 1683: zoneEndTime[j] = '$';
+"1683
 [e = *U + _zoneEndTime * -> _j `ux -> -> # *U _zoneEndTime `ui `ux -> -> 36 `ui `uc ]
-"1576
+"1684
 }
-"1574
+"1682
 [e ++ _j -> -> 1 `i `uc ]
-[e $ < -> _j `i -> 4 `i 2424  ]
-[e :U 2425 ]
-"1576
+[e $ < -> _j `i -> 4 `i 2443  ]
+[e :U 2444 ]
+"1684
 }
-"1578
+"1686
 }
-"1570
+"1678
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 3 `i 2421  ]
-[e :U 2422 ]
-"1578
+[e $ < -> _i `i -> 3 `i 2440  ]
+[e :U 2441 ]
+"1686
 }
-[; ;SysRiego.c: 1576: }
-[; ;SysRiego.c: 1578: }
-[; ;SysRiego.c: 1580: }
-"1580
-[e :UE 2420 ]
+[; ;SysRiego.c: 1684: }
+[; ;SysRiego.c: 1686: }
+[; ;SysRiego.c: 1688: }
+"1688
+[e :UE 2439 ]
 }
-"1582
+"1690
 [v _stopAllIrrigation `(v ~T0 @X0 1 ef ]
 {
-[; ;SysRiego.c: 1582: void stopAllIrrigation() {
+[; ;SysRiego.c: 1690: void stopAllIrrigation() {
 [e :U _stopAllIrrigation ]
 [f ]
-[; ;SysRiego.c: 1584: stopIrrigation(1);
-"1584
+[; ;SysRiego.c: 1692: stopIrrigation(1);
+"1692
 [e ( _stopIrrigation (1 -> -> 1 `i `uc ]
-[; ;SysRiego.c: 1585: stopIrrigation(2);
-"1585
+[; ;SysRiego.c: 1693: stopIrrigation(2);
+"1693
 [e ( _stopIrrigation (1 -> -> 2 `i `uc ]
-[; ;SysRiego.c: 1586: stopIrrigation(3);
-"1586
+[; ;SysRiego.c: 1694: stopIrrigation(3);
+"1694
 [e ( _stopIrrigation (1 -> -> 3 `i `uc ]
-[; ;SysRiego.c: 1588: }
-"1588
-[e :UE 2427 ]
+[; ;SysRiego.c: 1696: }
+"1696
+[e :UE 2446 ]
 }
-[a 2C 80 101 108 111 110 0 ]
-[a 3C 77 97 99 97 110 97 0 ]
-[a 1C 82 105 101 103 97 0 ]
+"1698
+[v _clearUnConfigTimes `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;SysRiego.c: 1698: void clearUnConfigTimes(unsigned char numberIrrigations) {
+[e :U _clearUnConfigTimes ]
+[v _numberIrrigations `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;SysRiego.c: 1702: while(numberIrrigations < 3) {
+"1702
+[e $U 2448  ]
+[e :U 2449 ]
+{
+"1704
+[v _zone `*uc ~T0 @X0 1 a ]
+[; ;SysRiego.c: 1704: unsigned char *zone = zoneTimes[offSetZoneTimes + numberIrrigations];
+[e = _zone *U + &U _zoneTimes * -> -> + -> _offSetZoneTimes `i -> _numberIrrigations `i `ui `ux -> -> # *U &U _zoneTimes `ui `ux ]
+[; ;SysRiego.c: 1706: for(unsigned char i = 0; i < 4; i++) {
+"1706
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 4 `i 2451  ]
+[e $U 2452  ]
+[e :U 2451 ]
+{
+[; ;SysRiego.c: 1708: zone[i] = '$';
+"1708
+[e = *U + _zone * -> _i `ux -> -> # *U _zone `ui `ux -> -> 36 `ui `uc ]
+"1710
+}
+"1706
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 4 `i 2451  ]
+[e :U 2452 ]
+"1710
+}
+[; ;SysRiego.c: 1710: }
+[; ;SysRiego.c: 1712: numberIrrigations++;
+"1712
+[e ++ _numberIrrigations -> -> 1 `i `uc ]
+"1714
+}
+[e :U 2448 ]
+"1702
+[e $ < -> _numberIrrigations `i -> 3 `i 2449  ]
+[e :U 2450 ]
+[; ;SysRiego.c: 1714: }
+[; ;SysRiego.c: 1717: }
+"1717
+[e :UE 2447 ]
+}
+[a 4C 67 111 110 102 105 103 32 72 111 117 114 0 ]
+[a 1C 84 105 109 101 115 32 112 101 114 32 100 97 121 58 0 ]
+[a 3C 80 101 114 105 111 100 32 111 102 32 116 105 109 101 58 0 ]
+[a 2C 84 105 109 101 32 0 ]
+[a 5C 32 32 32 32 32 0 ]

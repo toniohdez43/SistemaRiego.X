@@ -121,15 +121,15 @@ unsigned char counterHOUR[]="00";
 unsigned char counterDAYS='0';
 
 
-unsigned char time1Zn1[] = "0001";
-unsigned char time2Zn1[] = "0004";
-unsigned char time3Zn1[] = "0007";
+unsigned char time1Zn1[] = "$$$$";
+unsigned char time2Zn1[] = "$$$$";
+unsigned char time3Zn1[] = "$$$$";
 
-unsigned char time1Zn2[] = "0003";
+unsigned char time1Zn2[] = "$$$$";
 unsigned char time2Zn2[] = "$$$$";
 unsigned char time3Zn2[] = "$$$$";
 
-unsigned char time1Zn3[] = "0000";
+unsigned char time1Zn3[] = "$$$$";
 unsigned char time2Zn3[] = "$$$$";
 unsigned char time3Zn3[] = "$$$$";
 
@@ -145,6 +145,8 @@ unsigned char *zoneTimes[] = {
         time3Zn3
 };
 
+unsigned char offSetZoneTimes;
+
 unsigned char endTimeZn1[] = "$$$$";
 unsigned char endTimeZn2[] = "$$$$";
 unsigned char endTimeZn3[] = "$$$$";
@@ -155,9 +157,11 @@ unsigned char *zoneEndTimes[] = {
         endTimeZn3
 };
 
-unsigned char irrigateTimeZn1[] = "02";
-unsigned char irrigateTimeZn2[] = "01";
-unsigned char irrigateTimeZn3[] = "01";
+unsigned char irrigateTimeZn1[] = "00";
+unsigned char irrigateTimeZn2[] = "00";
+unsigned char irrigateTimeZn3[] = "00";
+
+unsigned char *irrigateTime;
 
 // Manual zone values. When '1' is selected zone will be active, when '0' zone will be inactive.
 
@@ -198,6 +202,8 @@ void isReady();
 void displayCharOnLCD(unsigned char character);
 void displayLineOnLCD(unsigned char array[], unsigned char sizeOfArray);
 void clearDisplay();
+void secondLine();
+void moveCursor();
 void moveCurR();
 void moveCurR();
 void moveCurL();
@@ -252,6 +258,7 @@ void disableACInterrupts();
 void startAC(unsigned char acChannel);
 void clearEndTimes();
 void stopAllIrrigation();
+void clearUnConfigTimes(unsigned char numberIrrigations);
 
 void main() {
     //CLOCK FREQUENCY CONFIGURATION
@@ -487,6 +494,12 @@ void clearDisplay() {
     isReady();
 }
 
+void secondLine() {
+    command(0xC0);
+    shortDelay();
+    isReady();
+}
+
 void moveCurH() {
     command(0xA8);
     //shortDelay();
@@ -534,7 +547,7 @@ void automaticConfiguration() {
         
         input = getInput();
         
-        if(input != '#' && input) {
+        if(input != '#') {
             zoneSelected[counter%2] = input;
             clearDisplay();
             displayCharOnLCD(zoneSelected[0]);
@@ -564,21 +577,125 @@ void timerConfiguration() {
     if (hourConfiguration == 0) {
         
         //configuration for timer
+        displayLineOnLCD("Times per day:", 15);
+        secondLine();
+        displayCharOnLCD('0');
         
+        unsigned char numberIrrigations;
+        
+        while (input != '#') {
+
+            input = getInput();
+            
+            secondLine();
+            displayCharOnLCD(input);
+
+            if (input != '#') {
+                numberIrrigations = input - 48;
+            }
+
+        }
+        
+        
+        
+        
+        for(unsigned char i = 0; i < numberIrrigations; i++) {
+            
+            unsigned char *zoneTime = zoneTimes[offSetZoneTimes + i];
+            
+            unsigned char counter = 0;
+            
+            input = ' ';
+            
+            clearDisplay();
+            
+            displayLineOnLCD("Time ", 6);
+            displayCharOnLCD(i + 49);
+            secondLine();
+            displayLineOnLCD(zoneTime, 5);
+            
+            while (input != '#') {
+
+                input = getInput();
+
+                if (input != '#') {
+                    zoneTime[counter % 4] = input;
+                    secondLine();
+                    displayLineOnLCD(zoneTime, 5);
+                    counter++;
+                }
+
+            }
+            
+        }
+        
+        clearUnConfigTimes(numberIrrigations);
+        
+        clearDisplay();
+        
+        displayLineOnLCD("Period of time:", 16);
+        secondLine();
+        displayLineOnLCD(irrigateTime, 3);
+        
+        input = ' ';
+        
+        unsigned char counter = 0;
+        
+        while (input != '#') {
+
+            input = getInput();
+            
+            if (input != '#') {
+                irrigateTime[counter % 3] = input;
+                secondLine();
+                displayLineOnLCD(irrigateTime, 3);
+                counter++;
+            }
+
+        }
         
     }
+        
     else {
+
+        unsigned char counter = 0;
+
+        unsigned char newHour[] = "0000";
         
-        //configuration for hour
+        displayLineOnLCD("Config Hour", 12);
+        secondLine();
+        displayCharOnLCD(counterHOUR[0]);
+        displayCharOnLCD(counterHOUR[1]);
+        displayCharOnLCD(':');
+        displayCharOnLCD(counterMIN[0]);
+        displayCharOnLCD(counterMIN[1]);
         
-        input = getInput();
+
+        while (input != '#') {
+
+            input = getInput();
+            
+            displayLineOnLCD("     ", 6);
+
+            if (input != '#') {
+                newHour[counter % 4] = input;
+                secondLine();
+                displayLineOnLCD(newHour, 5);
+                counter++;
+            }
+
+        }
         
-        
-        hourConfiguration = 0;
+        counterHOUR[0] = newHour[0];
+        counterHOUR[1] = newHour[1];
+        counterMIN[0] = newHour[2];
+        counterMIN[1] = newHour[3];
     }
-        
+    
+    
     enableIntRBIE();
     
+    hourConfiguration = 0;
     statusConfiguration = 0;    
 
 }
@@ -1090,7 +1207,8 @@ void pressedKeyAction(unsigned char keyCode){
             }
             
             if (modeSelected == 1) {
-                //zoneSelected = humidityZn1Val;
+                offSetZoneTimes = 0;
+                irrigateTime = irrigateTimeZn1;
             }
             
             if (modeSelected == 2) {
@@ -1110,7 +1228,8 @@ void pressedKeyAction(unsigned char keyCode){
             }
             
             if (modeSelected == 1) {
-                //zoneSelected = humidityZn1Val;
+                offSetZoneTimes = 3;
+                irrigateTime = irrigateTimeZn2;
             }
             
             if (modeSelected == 2) {
@@ -1130,7 +1249,8 @@ void pressedKeyAction(unsigned char keyCode){
             }
             
             if (modeSelected == 1) {
-                zoneSelected = humidityZn1Val;
+                offSetZoneTimes = 6;
+                irrigateTime = irrigateTimeZn3;
             }
             
             if (modeSelected == 2) {
@@ -1201,28 +1321,16 @@ void pressedKeyAction(unsigned char keyCode){
         
         case '*': 
             
-            clearDisplay();
-            
-            if(ADRES < 512) {
-                displayLineOnLCD("Riega", 6);
-            }
-            else if (ADRES > 512) {
-                displayLineOnLCD("Pelon", 6);
-                command(0xC0);
-                isReady();
-                displayLineOnLCD("Macana", 7);
-            }
-            
             
         break;
         
         
         case '#': 
             
-//            if(modeSelected == 1) {
-//                hourConfiguration = 1;
-//                statusConfiguration = 1;
-//            }
+            if(modeSelected == 1) {
+                hourConfiguration = 1;
+                statusConfiguration = 1;
+            }
             
             if(modeSelected == 2) {
                 
@@ -1585,4 +1693,25 @@ void stopAllIrrigation() {
     stopIrrigation(2);
     stopIrrigation(3);
     
+}
+
+void clearUnConfigTimes(unsigned char numberIrrigations) {
+
+    
+    
+    while(numberIrrigations < 3) {
+    
+        unsigned char *zone = zoneTimes[offSetZoneTimes + numberIrrigations];
+        
+        for(unsigned char i = 0; i < 4; i++) {
+        
+            zone[i] = '$';
+        
+        }
+        
+        numberIrrigations++;
+    
+    }
+
+
 }
